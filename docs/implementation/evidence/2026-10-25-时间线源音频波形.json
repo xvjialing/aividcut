@@ -1,0 +1,144 @@
+{
+  "日期": "2026-10-25",
+  "状态": "源波形局部验收；完整P0/P1、双端原生及商业发布未完成",
+  "版本": {
+    "Wails": "v3.0.0-beta.34",
+    "FFmpeg": "9.0.2",
+    "浏览器": "HeadlessChrome 154"
+  },
+  "检查": {
+    "Go": "19个内部包及命令包全量race通过",
+    "前端测试": 189,
+    "Premium严格审计": "0问题",
+    "DESIGN官方lint": "0错误/0警告",
+    "构建": [
+      "macOS本地自签名",
+      "Windows amd64交叉编译"
+    ]
+  },
+  "音频": {
+    "末窗WAV": {
+      "samples": 5777,
+      "buckets": 13,
+      "lastBucketSamples": 17
+    },
+    "压缩窗样本": [
+      176400,
+      176400,
+      44177
+    ],
+    "MP3峰值最大误差": [
+      0,
+      0,
+      0
+    ],
+    "AAC峰值最大误差": [
+      0,
+      0.0005693435668945312,
+      0.0014278814196586609
+    ],
+    "峰值容差": 0.002,
+    "晚起MOV": {
+      "sourceStartUs": 500000,
+      "firstWindowSamples": 154350
+    }
+  },
+  "资源上界": {
+    "提取器": 2,
+    "等待分块": 128,
+    "缓存分块": 128,
+    "源窗微秒": 4000000,
+    "单次解码预算字节": 134217728
+  },
+  "首轮交互观测": {
+    "dirty": false,
+    "path": "/Users/xvjialing/projects/aividcut/work/waveform-browser-check/browser.aividcut",
+    "id": "project-271607707343cbc172b21041",
+    "revision": 6,
+    "clips": [
+      {
+        "kind": "audio",
+        "start": 0,
+        "duration": 300,
+        "speed": [
+          2,
+          1
+        ]
+      },
+      {
+        "kind": "video",
+        "start": 3,
+        "duration": 60,
+        "speed": [
+          1,
+          1
+        ]
+      }
+    ],
+    "requests": 43,
+    "responses": 43,
+    "failures": 1,
+    "cancels": 2,
+    "peak": 1,
+    "errors": [],
+    "reducedMotion": true
+  },
+  "最终Go重开观测": {
+    "dirty": false,
+    "path": "/Users/xvjialing/projects/aividcut/work/waveform-browser-check/browser.aividcut",
+    "id": "project-271607707343cbc172b21041",
+    "revision": 6,
+    "clips": [
+      {
+        "kind": "audio",
+        "start": 0,
+        "duration": 300,
+        "speed": [
+          2,
+          1
+        ]
+      },
+      {
+        "kind": "video",
+        "start": 3,
+        "duration": 60,
+        "speed": [
+          1,
+          1
+        ]
+      }
+    ],
+    "requests": 15,
+    "responses": 15,
+    "failures": 0,
+    "cancels": 0,
+    "peak": 1,
+    "errors": [],
+    "reducedMotion": true
+  },
+  "最终唯一读取数": 15,
+  "最终画布": [
+    {
+      "width": 480,
+      "height": 22,
+      "cssWidth": 480,
+      "state": "ready",
+      "painted": 1740
+    }
+  ],
+  "最终滚动": {
+    "scrollTop": 58,
+    "wave": "ready"
+  },
+  "产物SHA256": {
+    "build/bin/AIVidCut.app/Contents/MacOS/AIVidCut": "9dda8c4c29938017aedfc029ab12ab9f351c31a61dd9daed7e5dc79facf0e978",
+    "build/bin/AIVidCut.exe": "f7612f2acf9105864f55d5b66b1e28e5b897e2d3a10c6f322a828219de08c5f2",
+    "work/bin/waveform-devserver": "c479b0f002be3582d93c275ea11da0c8a1e08cdbf9ecca9cfacbe03bb4e72c1f"
+  },
+  "证据边界": [
+    "首轮真实文件缺失为预期错误，已恢复并重试",
+    "最终观测器独立命名，避免重装观测造成重复计数",
+    "只读观测不替换服务、媒体或绘制",
+    "浏览器波形不代表Wails双端原生或MLT同步验收"
+  ]
+}

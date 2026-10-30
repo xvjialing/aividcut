@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-26",
+  "status": "本阶段局部通过，完整目标继续",
+  "requirements": [
+    "FW-R09",
+    "FW-R10",
+    "FW-R11",
+    "FW-R12",
+    "FW-R17"
+  ],
+  "wails": {
+    "latestVerified": "v3.0.0-beta.34",
+    "goCliRuntimeAligned": true
+  },
+  "tests": {
+    "frontendFiles": 42,
+    "frontendTests": 290,
+    "newDOMTests": 8,
+    "typecheck": true,
+    "format": true,
+    "goAffectedRacePackages": [
+      "application",
+      "generationjobs",
+      "replacements"
+    ],
+    "goResults": "全部通过（缓存）",
+    "productionRoot": true
+  },
+  "browser": {
+    "crossTask": true,
+    "maxTwo": true,
+    "listVideoUnloaded": true,
+    "playback": {
+      "initialMuted": true,
+      "progressedA": true,
+      "singlePlaying": true,
+      "singleAudible": true,
+      "width": 640,
+      "height": 360,
+      "duration": 4
+    },
+    "geometry": {
+      "overflowX": false,
+      "bodyScrollOwner": true,
+      "documentScrollTop": 0
+    },
+    "explicitImport": true,
+    "importFailureRetry": true,
+    "importUndoRedo": true,
+    "imageReadRetry": true,
+    "replacementSingleModal": true,
+    "replacementAppliedAndUndone": true,
+    "errors": [],
+    "modelCalls": []
+  },
+  "keyboard": {
+    "activeBefore": {
+      "tag": "BUTTON",
+      "text": "并排对比"
+    },
+    "escapeCloses": true,
+    "focusRestored": true,
+    "compareReopened": true
+  },
+  "sourceDisappearance": {
+    "missingSavedFileClosesComparison": true,
+    "revision": 5,
+    "originalClipPreserved": true
+  },
+  "builds": {
+    "macLocalSelfSigned": true,
+    "windowsAmd64CrossCompile": true,
+    "mainJSKilobytes": 576.27,
+    "comparisonLazyJSKilobytes": 2.71,
+    "mainChunk500kBWarning": true,
+    "productionSDKLinkTargetWarningsRemain": true,
+    "newNativeWindowAcceptance": false
+  },
+  "designAudit": {
+    "errors": 0,
+    "total": 0,
+    "unresolved": 0,
+    "violations": 0,
+    "warnings": 0
+  },
+  "designLint": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "realModelCalls": 0,
+  "realPaidCalls": 0,
+  "realCLIInference": 0,
+  "accountAcceptance": "按用户要求后置",
+  "fixture": "自绘640x360 PNG，两段640x360/4秒视频与440/660Hz测试音调，内存假适配器与真实Go持久任务/导入器",
+  "screenshots": [
+    "output/playwright/candidate-compare-wide.png",
+    "output/playwright/candidate-compare-900.png"
+  ],
+  "limits": [
+    "最多两个原始成品；没有双路工程合成或逐帧同步",
+    "对比选择不持久化，未新增配方再生成/预算/自动填空档",
+    "完整文件SHA仍在实际导入/替换核查",
+    "双端原生/Windows实机和真实模型质量待续",
+    "Go核心/C++无改动，未新增worker/ASan覆盖",
+    "完整P0–P6和原始范围未完成"
+  ],
+  "documentation": {
+    "Markdown文档数": 91,
+    "本地链接检查数": 451,
+    "正文检查文档数": 64,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browserSessions": [
+      "aividcut-compare",
+      "aividcut-compare-final"
+    ],
+    "nativeProcessStarted": false,
+    "browserClosed": true,
+    "viteStopped": true,
+    "goDevserverStopped": true
+  },
+  "finalCleanLayoutAndKeyboard": {
+    "cleanSession": true,
+    "singleModal": true,
+    "sizes": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "dialogs": 1,
+        "width": 1160,
+        "overflowX": false,
+        "actionGap": "4px"
+      },
+      {
+        "viewport": [
+          900,
+          700
+        ],
+        "dialogs": 1,
+        "width": 868,
+        "overflowX": false,
+        "actionGap": "4px"
+      }
+    ],
+    "escapeCloses": true,
+    "focusRestored": true
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-26",
+  "scope": "macOS原生局部验收，完整目标继续",
+  "startup": {
+    "retainedTraceWindowReadable": true,
+    "retainedTraceCleanlyClosed": true,
+    "cleanBuildStartupReadable": true,
+    "fixedBuildStartupReadable": true,
+    "priorBlankCauseConfirmed": false,
+    "dockRetried": false,
+    "cuaTimeoutMs": 10000
+  },
+  "beforeFix": {
+    "cmdCRevision": 0,
+    "deleteRevision": 1,
+    "pasteRevision": 2,
+    "restoredRevision": 4,
+    "cutClipCount": 3,
+    "cutPasteClipCount": 6,
+    "cutPasteSelected": 3,
+    "restoredAfterCutRevision": 8,
+    "multiTrackSplitRevision": 9,
+    "multiTrackSplitCount": 8,
+    "keyboardDuplicateLostSelectionRevisions": [
+      11,
+      15
+    ],
+    "toolbarDuplicateSelectedRevision": 13,
+    "finalCleanRevision": 16
+  },
+  "afterFix": {
+    "keyboardDuplicateSelectedRevisions": [
+      1,
+      3,
+      5
+    ],
+    "selectedCopyCount": 2,
+    "copyCollisionRevisionUnchanged": 1,
+    "copyCollisionSelectionPreserved": true,
+    "deleteOriginalRevision": 7,
+    "pasteRevision": 8,
+    "pasteSelected": 1,
+    "linkedCutRevision": 11,
+    "linkedPasteRevision": 12,
+    "linkedPasteSelected": 3,
+    "linkedPasteStarts": [
+      270,
+      360,
+      270
+    ],
+    "finalRestoredRevision": 14,
+    "finalClipCount": 6
+  },
+  "frontendTests": 239,
+  "frontendFiles": 34,
+  "files": [
+    "frontend/src/lib/use-editor.ts",
+    "frontend/src/lib/clip-selection.ts",
+    "frontend/src/App.tsx",
+    "frontend/tests/clip-selection.test.ts",
+    "frontend/tests/external-sync-dom.test.tsx"
+  ],
+  "builds": {
+    "macOS": {
+      "sha256": "6ae26630eea00a875e4a8a8c2c0b5cde9f541c0a275a54c42d4868eac86ac383"
+    },
+    "windowsAMD64": {
+      "sha256": "1363ecaf191494072da73b380627ce513ff242b33596765d422120eed15995bc"
+    },
+    "mainBundleKB": 547.87
+  },
+  "windowsNativeVerified": false,
+  "wails": "v3.0.0-beta.34",
+  "nativePlayback": {
+    "mode": "实时合成预览（实验）",
+    "quality": "full",
+    "canvas": [
+      640,
+      360
+    ],
+    "endedFrame": 270,
+    "endedTimecode": "00:00:09:00",
+    "revision": 14,
+    "underrunMeasured": false
+  },
+  "nativeExport": {
+    "taskCompleted": true,
+    "preset": "project",
+    "renderer": "native",
+    "probe": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 640,
+        "height": 360,
+        "avg_frame_rate": "30000/1001",
+        "nb_frames": "270",
+        "duration": "9.009000"
+      },
+      {
+        "codec_type": "audio",
+        "codec_name": "aac",
+        "avg_frame_rate": "0/0",
+        "nb_frames": "424",
+        "duration": "9.009000",
+        "sample_rate": "48000",
+        "channels": 2
+      }
+    ],
+    "fullDecodePassed": true,
+    "sha256": "087235c47ee163d98611411192b966ba2d484e8b9406ee660eabb3cfa859075d"
+  },
+  "cleanup": {
+    "traceInstanceExitedNormally": true,
+    "baselineInstanceExitedNormally": true,
+    "fixedInstanceExitedNormally": true,
+    "finalProjectRevision": 14,
+    "finalClipCount": 6,
+    "projectTitleDirtyMarker": false
+  }
+}

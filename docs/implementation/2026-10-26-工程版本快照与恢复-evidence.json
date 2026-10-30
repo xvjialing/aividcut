@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-26",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R13"
+  ],
+  "phase": "P1局部版本恢复",
+  "wailsLatest": "v3.0.0",
+  "realModelCalls": 0,
+  "realCLIInferenceCalls": 0,
+  "newTests": {
+    "go": 7,
+    "frontendDOM": 5,
+    "bridge": 1
+  },
+  "checks": {
+    "frontend": "46 files, 312 passed",
+    "typecheck": "passed",
+    "prettier": "passed",
+    "goRace": "24 tested packages passed; some cached",
+    "goVet": "passed",
+    "productionAssets": "passed",
+    "macOS": "local self-sign build; native List/Create/Restore verified",
+    "windows": "amd64 cross-build only",
+    "strictUIAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1
+    },
+    "documentation": {
+      "Markdown文档数": 101,
+      "本地链接检查数": 498,
+      "正文检查文档数": 74,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    }
+  },
+  "browser": {
+    "initialClips": 2,
+    "deletedClips": 1,
+    "restoredClips": 2,
+    "restoredRevision": 5,
+    "tamperedVersionRejected": true,
+    "restoredPreviousClips": 1,
+    "returnedClips": 2,
+    "returnedRevision": 7,
+    "viewport": [
+      900,
+      700
+    ],
+    "dialog": [
+      760,
+      668
+    ],
+    "footerVisible": true,
+    "escapeRestoresFocus": true,
+    "longNameCharacters": 80,
+    "longNameHorizontalOverflow": false,
+    "longNameButtonWidth": 341.7578125,
+    "rowWidth": 712
+  },
+  "restartAndNative": {
+    "previousVersionsVisible": 4,
+    "createdVersion": "原生桥接复查",
+    "restoredClips": 2,
+    "restoredRevision": 4,
+    "versionsAfterNative": 6,
+    "ownedProcessExited": true
+  },
+  "persistence": {
+    "finalVersions": 7,
+    "allSnapshotHashesValid": true,
+    "containsSessionToken": false,
+    "originalFileUnmodified": true,
+    "originalFileSHA256": "2826951ce35a787a5f4144612484ddc5fa6557bb4ab694c5697d589d3eb14f4e"
+  },
+  "media": {
+    "videoFrameMD5IdenticalToNativeBaseline": true,
+    "audioPCMIdenticalToNativeBaseline": true,
+    "stereoFloatPCMBytes": 1152000,
+    "outputBytes": 184100,
+    "outputSHA256": "cac06707f4fb17e54a21ce4aa19b301905a00281917dcb995ee3ba3968a206c7",
+    "frames": 90,
+    "durationSeconds": 3,
+    "dimensions": [
+      640,
+      360
+    ]
+  },
+  "limits": {
+    "maxVersionsPerProject": 200,
+    "maxPage": 50,
+    "defaultPage": 20,
+    "maxProjectBytes": 67108864,
+    "maxMetadataBytes": 16384
+  },
+  "limitations": [
+    "具名版本，不是自动崩溃保存或跨会话完整Undo",
+    "源媒体仍在原位置，不是工程收集包",
+    "版本删除、跨工程导入、恢复中心待实现",
+    "真实模型/CLI、Windows实机与商业门槛仍待验收",
+    "主JS约584.31kB与SDK链接警告保留"
+  ],
+  "screenshot": "assets/2026-10-26-project-versions.jpg",
+  "logsDirectory": "work/project-versions-check",
+  "cleanup": {
+    "nativeExitCode": 0,
+    "devAndVite": "terminated intentionally by Ctrl-C",
+    "browserTabs": "closed",
+    "viewport": "reset",
+    "finalExactProcessCheck": "no match"
+  }
+}

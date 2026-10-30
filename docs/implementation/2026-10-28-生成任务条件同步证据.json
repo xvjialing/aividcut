@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-28",
+  "requirements": [
+    "FW-R09",
+    "FW-R10",
+    "FW-R11",
+    "FW-R12",
+    "FW-R15"
+  ],
+  "frontend": {
+    "files": 63,
+    "passed": 444,
+    "newSyncDOMTests": 5,
+    "typecheck": true,
+    "format": true,
+    "productionBuild": true,
+    "strictStaticAuditErrors": 0
+  },
+  "go": {
+    "applicationRace": true,
+    "newSyncCoreTests": 2,
+    "bridgeAndProductionAssets": true,
+    "actualSDKRunNotSkipped": true,
+    "actualFrames": 12,
+    "pcmBytes": 153752,
+    "rgbaBytes": 2764800
+  },
+  "actualSync": {
+    "records": 2000,
+    "fullBytes": 3140999,
+    "unchangedBytes": 98,
+    "measurement": "同步对象JSON，不含桥接封装；没有宣称全部CPU或元数据内存优化",
+    "archiveRestore": [
+      1999,
+      2000
+    ],
+    "pollIntervalMilliseconds": 2500,
+    "narrowViewport": [
+      900,
+      720
+    ],
+    "offlineKeepsCards": 20,
+    "reconnectClearsSyncError": true,
+    "modelGenerations": 0
+  },
+  "native": {
+    "dataDirectory": "/Users/xvjialing/projects/aividcut/work/generation-sync-check/browser-data",
+    "lockVerified": true,
+    "firstPageCards": 20,
+    "secondPageCards": 20,
+    "secondPageRange": [
+      21,
+      40
+    ],
+    "manualRefresh": true,
+    "closed": true
+  },
+  "packages": {
+    "macos": {
+      "path": "build/bin/AIVidCut.app",
+      "sha256": "3efa972de706ed41fc55eaee138b6b2c8ab47547f705e769b4ff9373c818ddef",
+      "deepStrictAdHocSignature": true,
+      "sdkPayloads": 480,
+      "sdkFingerprint": "9912f723202aa5dc8000ac164d50e31c82dc177e9d315ba806e6e204aa1a70e2"
+    },
+    "windows": {
+      "zip": "/Users/xvjialing/projects/aividcut/work/generation-sync-check/AIVidCut-windows-amd64-conditional-sync.zip",
+      "bytes": 112147223,
+      "sha256": "d2b9bf9124ba5eed1a804534fa32ddc2056a4af508d2df1197452b1e09d8f5ab",
+      "files": 764,
+      "exeSHA256": "b0ed0f4fefd4dad19ea35a689c3f960c0a92757694581275149cf4dfb82423ce"
+    },
+    "windowsExecuted": false,
+    "noticesBindingsMatch": true
+  },
+  "release": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "logs": [
+    "work/generation-sync-check/actual-sdk-race.log",
+    "work/generation-sync-check/application-initial.log",
+    "work/generation-sync-check/bridge-go-race.log",
+    "work/generation-sync-check/browser-server.log",
+    "work/generation-sync-check/build-macos.log",
+    "work/generation-sync-check/build-windows.log",
+    "work/generation-sync-check/format-check.log",
+    "work/generation-sync-check/format.log",
+    "work/generation-sync-check/frontend-full.log",
+    "work/generation-sync-check/frontend-initial.log",
+    "work/generation-sync-check/sync-core-tests.log",
+    "work/generation-sync-check/sync-dom-tests.log",
+    "work/generation-sync-check/typecheck-initial.log",
+    "work/generation-sync-check/typecheck.log",
+    "work/generation-sync-check/vite.log"
+  ],
+  "documentation": {
+    "markdownFiles": 172,
+    "localLinks": 993,
+    "originalArchiveSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "errors": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "output": "/absolute/path/to/new-private-package",
+  "worker": "/absolute/path/to/aividcut-mlt-worker",
+  "ffmpeg": "/absolute/path/to/ffmpeg",
+  "ffprobe": "/absolute/path/to/ffprobe",
+  "repository": "/absolute/path/to/selected-mlt-modules",
+  "profiles": "/absolute/path/to/mlt-profiles",
+  "data": "/absolute/path/to/mlt-data",
+  "macdeployqt": "/absolute/path/to/qt/bin/macdeployqt",
+  "qtPlatformPlugins": ["/absolute/path/to/qt/plugins/platforms/libqoffscreen.dylib"],
+  "libraryPaths": ["/absolute/path/to/mlt/lib"],
+  "manifestTool": "/absolute/path/to/media-runtime-manifest",
+  "id": "aividcut-media",
+  "version": "development-test",
+  "arch": "arm64"
+}

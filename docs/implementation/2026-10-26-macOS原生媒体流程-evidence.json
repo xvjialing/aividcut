@@ -1,0 +1,181 @@
+{
+  "date": "2026-10-26",
+  "scope": "macOS原生固定媒体流程；真实账户后置",
+  "wails": "v3.0.0",
+  "realModelCalls": 0,
+  "realCLIInferenceCalls": 0,
+  "native": {
+    "fixtureProject": "native-workflow-fixture",
+    "initial": {
+      "assets": 1,
+      "tracks": 4,
+      "clips": 1,
+      "revision": 0
+    },
+    "placement": {
+      "candidate": "compare-video-b-1",
+      "range": [
+        30,
+        90
+      ],
+      "audio": "keep",
+      "revision": 1,
+      "observedCursorBeforeFix": 89,
+      "observedCursorAfterFix": 30,
+      "selectedCandidate": true
+    },
+    "playback": {
+      "mode": "实时合成·原片",
+      "quality": "full",
+      "width": 640,
+      "height": 360,
+      "observedPlayingFrame": 38,
+      "endedCursor": 90
+    },
+    "undo": {
+      "assets": 1,
+      "tracks": 4,
+      "clips": 1,
+      "revision": 2
+    },
+    "redo": {
+      "assets": 2,
+      "tracks": 5,
+      "clips": 2,
+      "revision": 3
+    },
+    "savedReopened": true,
+    "saveThenReopenSameProcessAfterPickerFix": true,
+    "export": {
+      "systemSaveDialog": true,
+      "filename": "native-result.mp4",
+      "nativeComposition": true,
+      "originalDimensions": true,
+      "taskCompleted": true
+    },
+    "closed": true,
+    "ownedLaunchExitCodes": [
+      0,
+      0,
+      0
+    ],
+    "exactProcessCheck": "no match"
+  },
+  "media": {
+    "video": {
+      "codec": "h264",
+      "width": 640,
+      "height": 360,
+      "frames": 90,
+      "durationSeconds": 3.0
+    },
+    "audio": {
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2,
+      "decodedMonoSamplesWithEncoderPadding": 144000
+    },
+    "frames": [
+      {
+        "outputFrame": 15,
+        "sourceAsset": "compare-original",
+        "sourceFrame": 15,
+        "rgbMeanAbsoluteError": 1.027835648148148
+      },
+      {
+        "outputFrame": 29,
+        "sourceAsset": "compare-original",
+        "sourceFrame": 29,
+        "rgbMeanAbsoluteError": 0.9785358796296296
+      },
+      {
+        "outputFrame": 30,
+        "sourceAsset": "compare-video-b-1",
+        "sourceFrame": 0,
+        "rgbMeanAbsoluteError": 0.21966145833333334,
+        "wrongLowerTrackMeanAbsoluteError": 123.85930989583333
+      },
+      {
+        "outputFrame": 45,
+        "sourceAsset": "compare-video-b-1",
+        "sourceFrame": 15,
+        "rgbMeanAbsoluteError": 0.2192476851851852,
+        "wrongLowerTrackMeanAbsoluteError": 124.2227488425926
+      },
+      {
+        "outputFrame": 89,
+        "sourceAsset": "compare-video-b-1",
+        "sourceFrame": 59,
+        "rgbMeanAbsoluteError": 0.2192476851851852,
+        "wrongLowerTrackMeanAbsoluteError": 125.1197511574074
+      }
+    ],
+    "audioWindows": [
+      {
+        "fromSeconds": 0.2,
+        "toSeconds": 0.8,
+        "rms": 0.08834898447002162,
+        "amplitude440Hz": 0.12490354869648584,
+        "amplitude660Hz": 6.354409306691914e-06
+      },
+      {
+        "fromSeconds": 1.2,
+        "toSeconds": 1.8,
+        "rms": 0.1248309288571972,
+        "amplitude440Hz": 0.1243456586670694,
+        "amplitude660Hz": 0.12525882427830207
+      }
+    ],
+    "project": {
+      "revision": 3,
+      "assets": 2,
+      "tracks": 5,
+      "clips": 2,
+      "candidateRange": [
+        30,
+        90
+      ],
+      "candidateMuted": false,
+      "containsSessionToken": false
+    },
+    "outputBytes": 184100,
+    "outputSHA256": "cac06707f4fb17e54a21ce4aa19b301905a00281917dcb995ee3ba3968a206c7",
+    "realModelCalls": 0
+  },
+  "checks": {
+    "regressionBefore": "1 failed, 15 passed；expected 3 to be 1",
+    "regressionAfter": "16 passed",
+    "frontend": "45 files, 306 tests passed",
+    "typecheck": "passed",
+    "format": "passed",
+    "goProjectstoreRace": "passed",
+    "productionEmbeddedAssets": "passed",
+    "macOSBuild": "passed, local self-sign",
+    "windowsAMD64Build": "passed, cross-compile only",
+    "strictUIAudit": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0,
+      "entry": "cached official designmd dist/index.js"
+    },
+    "documentation": {
+      "Markdown文档数": 99,
+      "本地链接检查数": 488,
+      "正文检查文档数": 72,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    }
+  },
+  "logsDirectory": "work/native-workflow-check",
+  "limitations": [
+    "真实模型/语音/CLI账户和推理未验收",
+    "Windows实机、旧系统、安装/签名/更新和媒体分发许可待验收",
+    "固定3秒640x360样本不代表自然素材质量与整机容量",
+    "本轮未新增字幕/LUT验证",
+    "主包500kB与SDK链接警告保留"
+  ]
+}

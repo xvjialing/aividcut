@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-26",
+  "scope": "局部验收，完整P0–P6继续",
+  "browser": {
+    "requests": [
+      {
+        "label": "修剪选中片段",
+        "commands": [
+          {
+            "type": "trim_clips",
+            "clipIds": [
+              "title",
+              "clip-2"
+            ],
+            "edge": "start",
+            "frameDelta": 10
+          }
+        ]
+      },
+      {
+        "label": "修剪选中片段",
+        "commands": [
+          {
+            "type": "trim_clips",
+            "clipIds": [
+              "title",
+              "clip-2"
+            ],
+            "edge": "end",
+            "frameDelta": -5
+          }
+        ]
+      },
+      {
+        "label": "修剪选中片段",
+        "commands": [
+          {
+            "type": "trim_clips",
+            "clipIds": [
+              "title",
+              "clip-2"
+            ],
+            "edge": "start",
+            "frameDelta": 10
+          }
+        ]
+      },
+      {
+        "label": "修剪选中片段",
+        "commands": [
+          {
+            "type": "trim_clips",
+            "clipIds": [
+              "title",
+              "clip-2"
+            ],
+            "edge": "end",
+            "frameDelta": 40
+          }
+        ]
+      },
+      {
+        "label": "修剪选中片段",
+        "commands": [
+          {
+            "type": "trim_clips",
+            "clipIds": [
+              "title",
+              "clip-2"
+            ],
+            "edge": "start",
+            "frameDelta": -2
+          }
+        ]
+      },
+      {
+        "label": "修剪选中片段",
+        "commands": [
+          {
+            "type": "trim_clips",
+            "clipIds": [
+              "title",
+              "clip-2"
+            ],
+            "edge": "end",
+            "frameDelta": 100
+          }
+        ]
+      },
+      {
+        "label": "修剪选中片段",
+        "commands": [
+          {
+            "type": "trim_clips",
+            "clipIds": [
+              "background"
+            ],
+            "edge": "end",
+            "frameDelta": -1
+          }
+        ]
+      },
+      {
+        "label": "更新轨道",
+        "commands": [
+          {
+            "type": "update_track"
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "final": {
+      "dirty": false,
+      "revision": 12,
+      "clips": 6
+    },
+    "selection": 2
+  },
+  "actualAudio": {
+    "headRetainedFrames": 6,
+    "pcmBytes": 76872,
+    "imageBytes": 1382400,
+    "tailRetainedFrames": 1,
+    "tailPCMBytes": 12808,
+    "bitEqual": true
+  },
+  "actualVideo": {
+    "retainedFrames": 6,
+    "imageBytes": 1382400,
+    "phaseOffset": 3,
+    "speed": "3/2",
+    "lut": 0.37,
+    "rotation": 7,
+    "headAndTailBitEqual": true
+  },
+  "tests": {
+    "frontendTests": 244,
+    "frontendFiles": 34,
+    "goRaceInternalPackages": 20,
+    "testedCommandPackages": 1,
+    "actualMCP": true
+  },
+  "native": {
+    "systemOpen": true,
+    "keyboardHeadDelta": 10,
+    "headStartFrames": [
+      100,
+      100
+    ],
+    "headDurations": [
+      20,
+      20
+    ],
+    "numericEndDelta": -5,
+    "endDurations": [
+      25,
+      25
+    ],
+    "endRevision": 3,
+    "outOfSourceParameter": 100,
+    "outOfSourceRevisionUnchanged": 3,
+    "parameterPreserved": true,
+    "finalRevision": 4,
+    "finalCount": 6,
+    "dirtyMarker": false,
+    "closedNormally": true,
+    "pointerDragVerifiedInNative": false,
+    "windowsNativeVerified": false
+  },
+  "builds": {
+    "macOS": {
+      "sha256": "a56b04a28e6320d2f023da0a1661d64f124e480afdab5763ba18d1543de1f164"
+    },
+    "windowsAMD64": {
+      "sha256": "654c293578fba697c51729238052d462c8b30ae4802bdfd98a27ec9730c311b7"
+    },
+    "wails": "v3.0.0-beta.34",
+    "mainBundleKB": 552.49
+  },
+  "limitations": [
+    "复杂NLE和波纹/滚动/滑动",
+    "跨工程/跨进程剪贴板",
+    "Windows实机",
+    "完整资源/色彩/HDR/分发",
+    "真实模型/CLI账号"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "targetOS": "darwin",
+  "targetArch": "arm64",
+  "packageRoot": "bin/AIVidCut.app",
+  "artifacts": [
+    {
+      "role": "ocr",
+      "path": "bin/AIVidCut.app/Contents/MacOS/AIVidCutOCR"
+    },
+    {
+      "role": "app",
+      "path": "bin/AIVidCut.app/Contents/MacOS/AIVidCut"
+    },
+    {
+      "role": "worker",
+      "path": "bin/AIVidCut.app/Contents/Resources/media/AIVidCutMedia.app/Contents/MacOS/AIVidCutMedia"
+    },
+    {
+      "role": "ffmpeg",
+      "path": "bin/AIVidCut.app/Contents/Resources/media/AIVidCutMedia.app/Contents/MacOS/ffmpeg"
+    },
+    {
+      "role": "ffprobe",
+      "path": "bin/AIVidCut.app/Contents/Resources/media/AIVidCutMedia.app/Contents/MacOS/ffprobe"
+    }
+  ],
+  "runtimeDirectories": [
+    {
+      "role": "mlt_repository",
+      "path": "bin/AIVidCut.app/Contents/Resources/media/AIVidCutMedia.app/Contents/Resources/mlt"
+    },
+    {
+      "role": "mlt_profiles",
+      "path": "bin/AIVidCut.app/Contents/Resources/media/AIVidCutMedia.app/Contents/Resources/mlt-data/profiles"
+    }
+  ],
+  "frontendDirectory": "../frontend/dist"
+}

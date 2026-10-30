@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R03",
+    "FW-R06",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R17"
+  ],
+  "productSourceChanged": false,
+  "wailsVersion": "v3.0.0",
+  "nativeUI": {
+    "systemImport": true,
+    "srtImport": true,
+    "lutApply": true,
+    "independentTitle": true,
+    "originalRealtimeToEnd": true,
+    "undoRedo": true,
+    "saveReopenSameProcess": true,
+    "nativeExport": true,
+    "directoryPickerAndCollection": true,
+    "collectedReopenPlayback": true,
+    "propertyNumericReplacement": "unverified_automation_focus",
+    "titleReplacement": "unverified_automation_focus",
+    "separateApplicationRestart": false,
+    "isolatedAppStopped": true
+  },
+  "isolatedBuild": {
+    "bundleID": "com.wails.aividcut.native-final-20261027",
+    "dataDir": "/Users/xvjialing/projects/aividcut/work/native-final-check/app-data",
+    "mediaFilesCompared": 460,
+    "mediaMismatches": [],
+    "launchToolWaitSecondsApprox": 1334,
+    "launchToolWaitIsAppPerformance": false,
+    "deepStrictSignatureVerified": true
+  },
+  "export": {
+    "videoFrames": 360,
+    "audioSampleFrames": 576000,
+    "peak": 0.5994526743888855,
+    "rms": 0.04484164022231602,
+    "size": 2075630,
+    "sha256": "d93b292466f5865fdb5e625bd449033576e0b4a7f975e4bac3161201f1522002"
+  },
+  "collection": {
+    "assets": [
+      {
+        "kind": "video",
+        "path": "media/efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f.mov",
+        "bytes": 372178639,
+        "fingerprint": "sha256:efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f"
+      },
+      {
+        "kind": "video",
+        "path": "media/3580b675e6291b0286ac763830543a790e7b4ec581f685cf4f8fdf365d2828d3.mov",
+        "bytes": 25266284,
+        "fingerprint": "sha256:3580b675e6291b0286ac763830543a790e7b4ec581f685cf4f8fdf365d2828d3"
+      },
+      {
+        "kind": "lut",
+        "path": "media/3df7eea5fbaf47ca17101a1ae03e58cef79416d9830120f1bc3df48933eb23db.cube",
+        "bytes": 62,
+        "fingerprint": "sha256:3df7eea5fbaf47ca17101a1ae03e58cef79416d9830120f1bc3df48933eb23db"
+      }
+    ],
+    "clips": 4,
+    "revision": 13,
+    "relativePaths": true,
+    "projectSHA256": "c3ca531db32dd3642d688cc6929834fafac803d4717fa8a44cd393d41f82f111"
+  },
+  "staticAudit": {
+    "errors": 0,
+    "total": 0,
+    "unresolved": 0,
+    "violations": 0,
+    "warnings": 0
+  },
+  "ffmpegDrawtext": false,
+  "nativeTextRenderVerified": true,
+  "windowsExecuted": false,
+  "realModelAccountsVerified": false,
+  "releaseVerified": false,
+  "fullGoalComplete": false,
+  "documentation": {
+    "Markdown文档数": 162,
+    "本地链接检查数": 900,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

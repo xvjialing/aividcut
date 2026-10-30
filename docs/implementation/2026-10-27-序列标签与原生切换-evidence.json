@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R12",
+    "FW-R14",
+    "FW-R17"
+  ],
+  "scope": "序列标签、原生EOS切换、Windows候选更新",
+  "schemaVersion": 5,
+  "wails": "3.0.0",
+  "productGoOrNativeChanged": false,
+  "frontend": {
+    "files": 60,
+    "tests": 390,
+    "typecheck": true,
+    "format": true,
+    "productionBuildMacOS": true,
+    "productionBuildWindows": true,
+    "embeddedAssets": true,
+    "premiumStrict": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "designLint": "0 errors"
+  },
+  "native": {
+    "eosHorizontalFrame": 90,
+    "initialRevision": 23,
+    "portraitRevision": 24,
+    "portraitSize": [
+      180,
+      320
+    ],
+    "portraitFPS": "30000/1001",
+    "portraitEosFrame": 90,
+    "keyboardHorizontalRevision": 25,
+    "playheadAfterSwitch": 0,
+    "verificationUnsignedCodeMatchesProduct": true,
+    "unsignedCodeSHA256": "7d91782f6519326c61c6ddc51f6544903341a2aced80d8a857afd4e0b2fe5322",
+    "appSHA256": "babee2bb333a95edddfa4328be9347b7666dece9da8584936f40637d0088289d",
+    "verificationAppSHA256": "93e7c1535bb8b7674ad97b15f2e2faf5a1b20d3991c56d0fd702c03456aa9286",
+    "verificationAppClosed": true
+  },
+  "browser": {
+    "focus": {
+      "clientWidth": 850,
+      "docWidth": 900,
+      "focused": "版本31 摄影剪辑多语言长名称的完整序列标题",
+      "scrollLeft": 6720,
+      "scrollWidth": 7570,
+      "selected": "主时间线",
+      "viewport": 900
+    },
+    "activated": {
+      "documentWidth": 900,
+      "manager": {
+        "bottom": 404.5,
+        "height": 30,
+        "right": 891,
+        "width": 30,
+        "x": 861,
+        "y": 374.5
+      },
+      "panel": {
+        "labelledBy": "timeline-sequences-sequence-tabs-31",
+        "role": "tabpanel"
+      },
+      "scroll": {
+        "client": 850,
+        "left": 6720,
+        "width": 7570
+      },
+      "selected": {
+        "rect": {
+          "bottom": 409,
+          "height": 39,
+          "right": 859,
+          "width": 240,
+          "x": 619,
+          "y": 370
+        },
+        "text": "版本31 摄影剪辑多语言长名称的完整序列标题",
+        "title": "版本31 摄影剪辑多语言长名称的完整序列标题"
+      },
+      "tabs": 32,
+      "viewport": {
+        "height": 720,
+        "width": 900
+      }
+    }
+  },
+  "windowsPackage": {
+    "archive": "work/sequence-tabs-check/AIVidCut-windows-amd64-tabs.zip",
+    "bytes": 108166006,
+    "files": 687,
+    "sha256": "4434c9f47cb85fb7bef41f67ab5ea10b6fb663b90c0f907bc5caf7d30535dbeb",
+    "appSHA256": "f19a9fb8f922ece43c3bf22d89e59d6a2321655a1e72e9ab4bd8f3c5b30ff4bd",
+    "crcVerified": true,
+    "windowsExecuted": false
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "limitations": [
+    "Windows未执行",
+    "真实模型/语音/CLI账户未验",
+    "旧菜单未收到选择事件，根因未定",
+    "自然长工程与双端资源/正式签名/许可发行门槛继续"
+  ],
+  "fullGoalComplete": false,
+  "documentation": {
+    "Markdown文档数": 150,
+    "本地链接检查数": 778,
+    "正文检查文档数": 112,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

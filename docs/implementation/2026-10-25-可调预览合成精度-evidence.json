@@ -1,0 +1,204 @@
+{
+  "date": "2026-10-25",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R15",
+    "FW-R17"
+  ],
+  "wails": "v3.0.0-beta.34",
+  "environment": {
+    "os": "26.6.2",
+    "cpu": "Apple M5 Pro",
+    "memoryBytes": 51539607552
+  },
+  "benchmark": {
+    "projectHeight": 2160,
+    "projectWidth": 3840,
+    "results": [
+      {
+        "frames": 45,
+        "outputHeight": 720,
+        "outputWidth": 1280,
+        "pcmCRC": 1878899869,
+        "prepareMS": 337.668,
+        "pullMaxMS": 615.195,
+        "pullP95MS": 604.133,
+        "quality": "full",
+        "sampledWorkerPeakRSSBytes": 626409472,
+        "samples": 72072
+      },
+      {
+        "frames": 45,
+        "outputHeight": 720,
+        "outputWidth": 1280,
+        "pcmCRC": 1878899869,
+        "prepareMS": 324.413,
+        "pullMaxMS": 178.913,
+        "pullP95MS": 169.118,
+        "quality": "half",
+        "sampledWorkerPeakRSSBytes": 441024512,
+        "samples": 72072
+      },
+      {
+        "frames": 45,
+        "outputHeight": 540,
+        "outputWidth": 960,
+        "pcmCRC": 1878899869,
+        "prepareMS": 322.834,
+        "pullMaxMS": 60.855,
+        "pullP95MS": 56.506,
+        "quality": "quarter",
+        "sampledWorkerPeakRSSBytes": 367624192,
+        "samples": 72072
+      }
+    ],
+    "scope": "同一自建4K负载，顺序执行，前2帧不计pull统计；RSS仅worker每5帧采样，不是整机峰值",
+    "source": "/Users/xvjialing/projects/aividcut/work/preview-quality-check/4k-pattern.mp4"
+  },
+  "browser": {
+    "stages": [
+      {
+        "quality": "half",
+        "width": 320,
+        "height": 180,
+        "frame": 7,
+        "status": "paused"
+      },
+      {
+        "quality": "quarter",
+        "width": 160,
+        "height": 90,
+        "frame": 7,
+        "status": "paused"
+      },
+      {
+        "quality": "full",
+        "width": 640,
+        "height": 360,
+        "frame": 7,
+        "status": "paused"
+      },
+      {
+        "quality": "quarter",
+        "width": 160,
+        "height": 90,
+        "frame": 7,
+        "status": "paused"
+      }
+    ],
+    "starts": [
+      {
+        "renderQuality": "full",
+        "projectId": "native-export-demo",
+        "projectRevision": 0,
+        "frame": 0
+      },
+      {
+        "renderQuality": "half",
+        "projectId": "native-export-demo",
+        "projectRevision": 0,
+        "frame": 7
+      },
+      {
+        "renderQuality": "quarter",
+        "projectId": "native-export-demo",
+        "projectRevision": 0,
+        "frame": 7
+      },
+      {
+        "renderQuality": "full",
+        "projectId": "native-export-demo",
+        "projectRevision": 0,
+        "frame": 7
+      },
+      {
+        "renderQuality": "quarter",
+        "projectId": "native-export-demo",
+        "projectRevision": 0,
+        "frame": 7
+      }
+    ],
+    "tabToQuality": true,
+    "nativePopupVisualVerified": false,
+    "geometry": {
+      "quality": {
+        "left": 403,
+        "right": 529,
+        "width": 126
+      },
+      "heading": {
+        "left": 246,
+        "right": 620
+      },
+      "modeRight": 403,
+      "withinViewport": true,
+      "overlap": false
+    },
+    "errors": [],
+    "core": {
+      "dirty": false,
+      "revision": 0,
+      "clips": 3
+    },
+    "reducedMotion": true
+  },
+  "recovery": {
+    "newProjectDefault": "full",
+    "rejected": "quarter",
+    "reason": "不可用当前画幅在此预览精度下小于16像素，请提高精度重新准备返回工作区预览",
+    "recovered": "full",
+    "width": 32,
+    "height": 32,
+    "dirty": false,
+    "revision": 0
+  },
+  "exportProbe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 640,
+        "height": 360,
+        "time_base": "1/30000",
+        "duration_ts": 30030,
+        "nb_frames": "30"
+      },
+      {
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "time_base": "1/48000",
+        "duration_ts": 48048,
+        "nb_frames": "48"
+      }
+    ]
+  },
+  "sanitizer": {
+    "changedLogs": [],
+    "detectLeaks": false
+  },
+  "checks": {
+    "frontendFiles": 31,
+    "frontendTests": 219,
+    "goRace": {
+      "internal": 20,
+      "cmd": 1,
+      "cmdWithoutTests": 3
+    },
+    "macOSBuild": "passed",
+    "windowsAMD64Build": "passed"
+  },
+  "workerSHA256": "96a0aade7a79426b2fd1339758c52c37e91176b65cd947d8dfcb5babb1e755f9",
+  "screenshots": [
+    "preview-quality-quarter-900.png",
+    "preview-quality-recovered.png"
+  ],
+  "limits": [
+    "仅固定自建负载，非整机峰值",
+    "四分之一仍未达到该样本29.97fps",
+    "系统Select菜单和双端原生待验",
+    "源代理、GPU、字体色彩和完整产品目标仍待"
+  ]
+}

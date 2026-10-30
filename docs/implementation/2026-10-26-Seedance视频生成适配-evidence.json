@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-26",
+  "scope": "Seedance火山方舟北京区标准API局部适配，原P0–P6目标继续",
+  "userDecision": "账户验收稍后，先完成适配",
+  "paidRequests": 0,
+  "accountVerified": false,
+  "channel": "火山方舟北京区标准API",
+  "model": "doubao-seedance-2-5-260628",
+  "browser": {
+    "model": "doubao-seedance-2-5-260628",
+    "catalogueCount": 10,
+    "accountVerified": false,
+    "interceptedSubmissions": [
+      {
+        "connectionId": "browser-fixture",
+        "request": {
+          "id": "e418dd04-8272-4568-bccc-1ef0af0b677e",
+          "providerId": "seedance",
+          "modelId": "doubao-seedance-2-5-260628",
+          "mode": "video.text",
+          "prompt": "清晨海边的空镜，缓慢横移。",
+          "count": 1,
+          "size": "720p",
+          "aspectRatio": "16:9",
+          "outputFormat": "mp4",
+          "durationSeconds": 5,
+          "generateAudio": false
+        },
+        "consent": true
+      }
+    ],
+    "realJobs": 0,
+    "errors": [],
+    "final": {
+      "dirty": false,
+      "revision": 0
+    },
+    "screenshots": [
+      "seedance-review-wide.png",
+      "seedance-900.png"
+    ]
+  },
+  "videoFixture": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "nb_frames": "6"
+      }
+    ],
+    "format": {
+      "duration": "0.250000"
+    }
+  },
+  "checks": {
+    "goRace": "go test -race ./internal/... ./cmd/...：20内部包与1有测试命令包通过",
+    "goVet": "通过",
+    "frontend": {
+      "files": 34,
+      "tests": 247,
+      "typecheck": "通过",
+      "format": "通过",
+      "build": "通过",
+      "mainChunkKB": 553.7
+    },
+    "wails": {
+      "latest": "v3.0.0-beta.34",
+      "moduleCLIAndRuntime": "一致",
+      "macOS": "本地自签名构建通过",
+      "windowsAMD64": "交叉构建通过，未实机"
+    },
+    "premiumAudit": {
+      "findings": [],
+      "mode": "strict",
+      "projectRoot": "/Users/xvjialing/projects/aividcut",
+      "schemaVersion": 1,
+      "summary": {
+        "errors": 0,
+        "total": 0,
+        "unresolved": 0,
+        "violations": 0,
+        "warnings": 0
+      }
+    },
+    "videoFixtureFinalRetest": "go test -race ./internal/generationjobs -run TestSeedance|TestCatalogueDeclaresSeedance -count=1 通过"
+  },
+  "sha256": {
+    "internal/generation/seedance.go": "b64f5350ab9fee891e7b08c2f6cfa1099531e21c27a6efeeb40cf5cec78e49e5",
+    "internal/generation/model.go": "bc444781010b42bcc17b17ea3da50d083f388d14135245d4391a130a88086e16",
+    "internal/generation/http.go": "8d3ba45673963465d06e2cd132e77bbd7aa949ea5c1497a26685d8eab48b29e5",
+    "internal/generation/video.go": "41ffa8edbc229fc4a83d61da4979edc1a86ada71e30c2ae54553e4a4ae89190f",
+    "internal/generation/images.go": "5fe5adf8906246defd3ff5d931a4c907aa3094e8492e957806b15d213252601a",
+    "internal/generation/seedance_test.go": "60f405fc52d7573c85e7aae590566d5433d5e3bdc88cdc76ff06e97bdb8a3a45",
+    "internal/generationjobs/seedance_test.go": "94d1423e0dec9f3470774ce7c49c2de58a420aad9bb793cf16d2afb0f50ccc24",
+    "internal/generationjobs/testdata/seedance-result.mp4": "6da4c6d7d52959bffef83fb25f05091f77f8b752ef86d194982c3499e6d09971",
+    "internal/generationjobs/factory.go": "36a498e8d013f6043a7eea5f9820973e81b5a9f307309f87c332415b9bebcdb0",
+    "internal/generationjobs/manager.go": "4056dca4bef434bbf522477da457fbf5d425900bbdb65aab89c76d93618fb2ad",
+    "internal/application/mcp_requests.go": "9941dcd453a10c96f4f25f7dbc8ede1b1172f53c2c42a2995432f55d9afd14dc",
+    "internal/application/mcp_requests_test.go": "8cce7ec926150ba0674be0f6d423b7a90e2434301f263aa57dc520eb1c336dc4",
+    "frontend/src/generation-types.ts": "adea3075e512de71090f50c56a483b70aed110e162feaf55c1565cb32ee6a4ba",
+    "frontend/src/lib/generation.ts": "9ad90b645df27acc34aa9010a27470e6fbb7f19630f3ced329764c30bcfa10d4",
+    "frontend/src/components/GenerationPanel.tsx": "a852622c5ab4355222d204ab5d879e9d74ef34cfb16fa8ccf2099852d3093a0b",
+    "frontend/src/components/MCPPanel.tsx": "e5d0b7aa544cc3c233075017eedc1d5b1c273d91544acf2921c1adebd132762d",
+    "frontend/tests/generation.test.ts": "ccc37b7350efe65e080e72c75f211b1b36d66c934cbb4cb159880e0871529692",
+    "frontend/tests/generation-dom.test.tsx": "a247806225f84bc6368851d2779c31f9cacc43071d8726252e5f89d6db4f8884",
+    "frontend/tests/workflow-mcp-dom.test.tsx": "4b5dbee8e96d4bb8c135e2fa302810b4ad228d7f1c161f8b00ee3c1167fe1954",
+    "build/bin/AIVidCut.app/Contents/MacOS/AIVidCut": "ed05acfed5d3f87d1beee02f03bd94ffa6490db3430c3cacc9ef508deafb9f04",
+    "build/bin/AIVidCut.exe": "4344c37bdbba03ff81598451b3db6271feec131c21e85b3c4c2aacdf4e6c94db",
+    "output/playwright/seedance-review-wide.png": "e3b37862e0370d52f0178ef7408df22be897eb4cdac63667528e603e1dbea868",
+    "output/playwright/seedance-900.png": "140ef73d930407d6606f1d63d453fa8388c4c5a11a3033dd09bf92c0ddde0dcf"
+  },
+  "documentation": {
+    "Markdown文档数": 73,
+    "本地链接检查数": 359,
+    "正文检查文档数": 46,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browser": "aividcut-seedance已关闭",
+    "vite": "已停止，exit130",
+    "goDevserver": "已停止，exit1",
+    "realGenerationJobs": 0,
+    "projectDirty": false
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-26",
+  "scope": "本地候选镜头和覆盖/取样索引，原完整目标继续",
+  "realModelCalls": 0,
+  "browser": {
+    "index": {
+      "version": "scdet-source-v1",
+      "key": "e67af7124fa75f29003ac9c609e3ee0c6d5eb34f6e4e77f1423035a926deb979",
+      "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+      "sourceDurationUs": 2000000,
+      "detectorVersion": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+      "config": {
+        "threshold": 10,
+        "minDurationUs": 250000
+      },
+      "coverageStartUs": 0,
+      "coverageEndUs": 2000000,
+      "decodedFrames": 50,
+      "rawCutCount": 1,
+      "shots": [
+        {
+          "id": "1d0b6e3575b8c44f8048e4ef7059fa247e727058381a3d62836e3b117b915516",
+          "startUs": 0,
+          "endUs": 1000000,
+          "sampleUs": 500000
+        },
+        {
+          "id": "ffb74eba9ea08a4d81e1200c2e1e1a79dbeccd7d78d954ad418db853a96d89d8",
+          "startUs": 1000000,
+          "endUs": 2000000,
+          "sampleUs": 1500000
+        }
+      ]
+    },
+    "errors": [],
+    "jobs": 1,
+    "modelCalls": 0,
+    "sourcePosition": "1500000",
+    "final": {
+      "dirty": false,
+      "revision": 0,
+      "clips": 0
+    },
+    "cachedStartDidNotCreateJob": true
+  },
+  "restart": {
+    "coldStatus": "cached",
+    "readyStatus": "ready",
+    "coverage": [
+      0,
+      2000000
+    ],
+    "sourcePreview": {
+      "position": 1500000,
+      "loaded": true,
+      "width": 320,
+      "height": 180,
+      "visible": true
+    },
+    "final": {
+      "dirty": false,
+      "revision": 0
+    }
+  },
+  "mcp": {
+    "assetId": "frame-video",
+    "config": {
+      "minDurationUs": 250000,
+      "threshold": 10
+    },
+    "coverageEndUs": 2000000,
+    "coverageStartUs": 0,
+    "note": "候选变化区间及代表性取样，不是语义镜头；图像仍需已允许的源画面工具",
+    "offset": 1,
+    "shots": [
+      {
+        "endUs": 2000000,
+        "id": "ffb74eba9ea08a4d81e1200c2e1e1a79dbeccd7d78d954ad418db853a96d89d8",
+        "sampleUs": 1500000,
+        "startUs": 1000000
+      }
+    ],
+    "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+    "status": "ready",
+    "total": 2,
+    "version": "scdet-source-v1"
+  },
+  "checks": {
+    "go": "全量race22内部包+1有测试命令包与vet通过；缓存进程计数及最终取样交互定向复验通过",
+    "frontend": {
+      "files": 37,
+      "tests": 262,
+      "typecheck": "通过",
+      "format": "通过"
+    },
+    "uiAudit": {
+      "findings": [],
+      "mode": "strict",
+      "projectRoot": "/Users/xvjialing/projects/aividcut",
+      "schemaVersion": 1,
+      "summary": {
+        "errors": 0,
+        "total": 0,
+        "unresolved": 0,
+        "violations": 0,
+        "warnings": 0
+      }
+    },
+    "designLint": "0 errors/0 warnings/1 token-summary info",
+    "build": {
+      "wailsLatest": "v3.0.0-beta.34",
+      "macOS": "本地自签名通过",
+      "windowsAMD64": "交叉编译通过，未实机",
+      "mainChunkKB": 565.66
+    }
+  },
+  "claudeReview": {
+    "installedVersion": "2.1.308",
+    "execution": "policy_unverified保留",
+    "modelCalls": 0,
+    "sources": [
+      "https://code.claude.com/docs/en/cli-reference",
+      "https://code.claude.com/docs/en/settings"
+    ]
+  },
+  "sha256": {
+    "internal/shotindex/model.go": "d7db07beee0fa5cdf9c3429fe5342eb52dc2ccbc05467a8a4c8d58b4403ddd00",
+    "internal/shotindex/model_test.go": "d1d6246087007f9b5a7ca700d08585758bf28380a76b52a554596a140684455b",
+    "internal/media/scenes.go": "5c6077920a93c6a43e3d8fc26fdc4a4648f763e5f7f7d3001d7929b090e2c8e0",
+    "internal/media/scenes_test.go": "f6c2d02638dafb6241ee7f3c8405149d66afb2199dba55834ef2b313eddc024d",
+    "internal/application/shot_index.go": "661a5a1bde0206e52bc663378a7e30bcc61fbc632af9df7787382b4f97bf5195",
+    "internal/application/shot_index_test.go": "27402f1fc9d63ca8b64c496362c2e29dd108d24d7c91b74eaa02a8967fa6c628",
+    "internal/application/service.go": "19dc7a6da84c717ab3d04b841db1a0620c2b88334a3766b1e4bef95745832399",
+    "internal/application/thumbnail.go": "420b74f23f4763eb6c6a1be44a233f67b05efb1421dbd8318b4d21e4682ae42b",
+    "internal/application/mcp.go": "e0e60ae8c4fd4fabce3cabda2da227afe2e5a6b62a8d4c2d4ab3a6c4a8637cfc",
+    "internal/workflows/builtin/source-frames/SKILL.md": "d65c92e5ad871b127f8ec2e1c5678ead0edc21974cbaa7c3181c2cbefb6750d2",
+    "app.go": "c9671945e1d47050c8acde36c3b6aef7a404bc2d9e9dd978973e157ea1fac3a5",
+    "cmd/devserver/main.go": "f5b77a56b7269f815817ee56aeb47c9d2da6b7e913650e5ae733c1f29918f3ab",
+    "frontend/src/shot-index-types.ts": "bf986fe7bf3751cf5c6cc43434c5e59b7ba75b30b2a62d0bedd05204cb043827",
+    "frontend/src/components/ShotIndexPanel.tsx": "49b979b6e26b02298ec6370e6e4d21a5f2d9aad9107af53e5b755938626111e1",
+    "frontend/src/components/AssetSourceBrowser.tsx": "03708495f1b81403ebe2d10fdd800ecafc4e43e3b73c35520c792f2b6bce3841",
+    "frontend/src/lib/bridge.ts": "9782476691dd12e633b453e5f17b344313a0a7ab9c2659876ee95c06040fde89",
+    "frontend/src/App.tsx": "f348965ef3b2be5ac4e3ed41a54cff470a5976b1dc3c74d37e0f976c01c810bb",
+    "frontend/src/styles/app.css": "b75e27903e61f1ed8d7138df4876e53f056841474b3a3e1984ec4a35e564576f",
+    "frontend/tests/shot-index-dom.test.tsx": "d14249e4da86506946a60f8ac454373b6ca755d7423dc8a62b4cde350c2760ba",
+    "build/bin/AIVidCut.app/Contents/MacOS/AIVidCut": "b170e2be0aba3c8e2b67f22f6911900fa7eede449cd0c06802467c55ac6ffd16",
+    "build/bin/AIVidCut.exe": "65d512c2049a9e472bc2bc61f2798a18edfbe04970b6e3b4537f5824cb7a9129",
+    "output/playwright/shot-index-wide.png": "4d62954b62ddd60775f5943e908d9835372bb97ebb24356eb54cea719dcbde3d",
+    "output/playwright/shot-index-900.png": "f4a998d68c9adc947fc9285bd8504161c173b18bbfc6f963a77dea15d37a3f21",
+    "output/playwright/shot-index-source-preview.png": "368eb8e3718a3df5e46b11872c919d9f7bfee37ef5291d44c6406c84fdd1c0fe"
+  },
+  "documentation": {
+    "Markdown文档数": 81,
+    "本地链接检查数": 409,
+    "正文检查文档数": 54,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browser": "aividcut-shots已关闭",
+    "vite": "59463 exit130",
+    "goDevserver": "82206 exit1",
+    "earlierDevserver": "24295 exit1"
+  }
+}

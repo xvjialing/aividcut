@@ -1,0 +1,269 @@
+{
+  "date": "2026-10-26",
+  "scope": "局部验收，完整P0–P6继续",
+  "browser": {
+    "copiedSnapshot": {
+      "id": "clip-paste-9a521023b4fdd55ee54e5cfd-0",
+      "name": "复制时的片段快照",
+      "start": 270,
+      "settingsPreserved": true
+    },
+    "cutCount": 3,
+    "cutCopyCount": 3,
+    "externalRaceRejected": true,
+    "inputDefaultPrevented": [
+      false,
+      false,
+      false
+    ],
+    "requests": [
+      {
+        "method": "ApplyEdit",
+        "input": {
+          "baseRevision": 0,
+          "idempotencyKey": "edb9f9b5-e174-4460-ae51-39a2db79d764",
+          "label": "更新片段",
+          "commands": [
+            {
+              "type": "update_clip",
+              "clip": {
+                "id": "clip-2",
+                "trackId": "track-video-1",
+                "assetId": "59b77cb2359acb317aac89d4",
+                "kind": "video",
+                "name": "复制时的片段快照",
+                "startFrame": 90,
+                "durationFrames": 30,
+                "sourceInUs": 137000,
+                "speedNum": 3,
+                "speedDen": 2,
+                "volume": 1,
+                "muted": false,
+                "transform": {
+                  "x": 0,
+                  "y": 0,
+                  "scale": 0.85,
+                  "rotation": 7
+                },
+                "textStyle": {
+                  "fontSize": 48,
+                  "color": "#ffffff",
+                  "background": "transparent",
+                  "align": "center"
+                },
+                "lut": {
+                  "assetId": "look",
+                  "intensity": 0.37
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "method": "CopyTimelineSelection",
+        "input": {
+          "projectId": "clipboard-real",
+          "sourceEpoch": 2,
+          "baseRevision": 1,
+          "clipIds": [
+            "clip-2"
+          ]
+        }
+      },
+      {
+        "method": "ApplyEdit",
+        "input": {
+          "baseRevision": 2,
+          "idempotencyKey": "6f5ea3da-7387-4e85-ae8e-ffa2bd98bd92",
+          "label": "删除选中片段",
+          "commands": [
+            {
+              "type": "delete_clips",
+              "clipIds": [
+                "clip-2"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "method": "PasteTimelineSelection",
+        "input": {
+          "projectId": "clipboard-real",
+          "sourceEpoch": 2,
+          "baseRevision": 3,
+          "clipboardId": "clipboard-181a2b44691c8081f3a0ed58",
+          "idempotencyKey": "6e28ad0d-9019-44f6-8ff9-d41036f9e3a5",
+          "atFrame": 270
+        }
+      },
+      {
+        "method": "CutTimelineSelection",
+        "input": {
+          "projectId": "clipboard-real",
+          "sourceEpoch": 2,
+          "baseRevision": 6,
+          "clipIds": [
+            "background",
+            "clip-2"
+          ],
+          "idempotencyKey": "c3313dd4-1912-4695-a32a-3706f6265e87"
+        }
+      },
+      {
+        "method": "PasteTimelineSelection",
+        "input": {
+          "projectId": "clipboard-real",
+          "sourceEpoch": 2,
+          "baseRevision": 7,
+          "clipboardId": "clipboard-a48a74f60fd84cbfb990a457",
+          "idempotencyKey": "a154ebc7-ce9d-4632-b0b9-d2760c05ecb1",
+          "atFrame": 270
+        }
+      },
+      {
+        "method": "ApplyEdit",
+        "input": {
+          "baseRevision": 10,
+          "idempotencyKey": "3d689d0f-7555-4e4b-a8c7-57b6ccbbc5e3",
+          "label": "更新轨道",
+          "commands": [
+            {
+              "type": "update_track",
+              "track": {
+                "id": "track-video-1",
+                "name": "视频 1",
+                "kind": "video",
+                "locked": true,
+                "muted": false,
+                "hidden": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "method": "CopyTimelineSelection",
+        "input": {
+          "projectId": "clipboard-real",
+          "sourceEpoch": 2,
+          "baseRevision": 11,
+          "clipIds": [
+            "clip-3"
+          ]
+        }
+      },
+      {
+        "method": "PasteTimelineSelection",
+        "input": {
+          "projectId": "clipboard-real",
+          "sourceEpoch": 2,
+          "baseRevision": 11,
+          "clipboardId": "clipboard-9f1f8fbc90508593d4f35b88",
+          "idempotencyKey": "ecf4f961-565d-45e2-9f52-80db03201857",
+          "atFrame": 270
+        }
+      },
+      {
+        "method": "PasteTimelineSelection",
+        "input": {
+          "projectId": "clipboard-real",
+          "sourceEpoch": 2,
+          "baseRevision": 12,
+          "clipboardId": "clipboard-9f1f8fbc90508593d4f35b88",
+          "idempotencyKey": "11bb6c7a-7a06-49a0-8085-387375a480ec",
+          "atFrame": 270
+        }
+      },
+      {
+        "method": "CopyTimelineSelection",
+        "input": {
+          "projectId": "clipboard-real",
+          "sourceEpoch": 2,
+          "baseRevision": 12,
+          "clipIds": [
+            "clip-2"
+          ]
+        }
+      }
+    ],
+    "errors": [],
+    "final": {
+      "dirty": false,
+      "revision": 12,
+      "clips": 6
+    },
+    "clipboard": {
+      "sourceEpoch": 2,
+      "projectId": "clipboard-real",
+      "version": 9,
+      "available": true,
+      "id": "clipboard-a39fd83d220ec413a761f1f8",
+      "clipCount": 1,
+      "detachedCaptions": 0
+    }
+  },
+  "actualAudioAndText": {
+    "frames": 10,
+    "pictureBytes": 2304000,
+    "pcmBytes": 128128,
+    "cutPasteBitEqual": true
+  },
+  "actualVideo": {
+    "frames": 6,
+    "pictureBytes": 1382400,
+    "phaseOffsetFrames": 2,
+    "sourceInUs": 137000,
+    "speed": "3/2",
+    "lut": 0.37,
+    "rotation": 7,
+    "originalChangedAndDeleted": true,
+    "bitEqual": true
+  },
+  "budget": {
+    "encodedSnapshotBytes": 67108864,
+    "oversized12000TextObjectsRejected": true,
+    "residentMemoryMeasured": false
+  },
+  "tests": {
+    "frontendTests": 235,
+    "frontendFiles": 34,
+    "goRaceInternalPackages": 20,
+    "testedCommandPackages": 1,
+    "supplementalRealVideoRace": true,
+    "supplementalFinalClipboardCoreRace": true,
+    "productionEmbeddedAssets": true
+  },
+  "native": {
+    "commandsVerified": false,
+    "observedBlankWindow": true,
+    "frontendReadyTrace": true,
+    "getBootstrapTrace": true,
+    "getClipboardStatusTrace": true,
+    "automationError": "Computer Use server error -10005: timeoutReached",
+    "rootCauseConfirmed": false,
+    "traceProcessRetained": 20794,
+    "cleanDiskBuildRestored": true,
+    "windowsNativeVerified": false
+  },
+  "limitations": [
+    "原生空白窗口与复制剪切粘贴复查",
+    "跨工程/跨进程剪贴板",
+    "多选修剪",
+    "完整媒体资源/商业发行",
+    "真实模型与CLI账户"
+  ],
+  "builds": {
+    "macOS": {
+      "sha256": "96acfbab165328b9ba330b7b9489d032caedbdf19b042fb52b174e8b1dfe3137",
+      "temporaryTraceMarker": false
+    },
+    "windowsAMD64": {
+      "sha256": "ae16fb2aa61caedf8d98d73d997ecafa2216a2715a5248af8acca2cab237d075",
+      "temporaryTraceMarker": false
+    },
+    "wails": "v3.0.0-beta.34",
+    "mainBundleKB": 547.71
+  }
+}

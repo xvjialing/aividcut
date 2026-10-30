@@ -1,0 +1,433 @@
+{
+  "日期": "2026-10-25",
+  "状态": "可见区与固定负载局部验收；完整P0/P1未完成",
+  "浏览器": {
+    "stages": [
+      {
+        "label": "万片段初始",
+        "rowCount": 7,
+        "clipCount": 28,
+        "top": 0,
+        "left": 0,
+        "height": 305,
+        "width": 1280,
+        "scrollHeight": 13232,
+        "alignmentMax": 0,
+        "headers": [
+          {
+            "id": "v0",
+            "text": "V1视频 1",
+            "pos": "1"
+          },
+          {
+            "id": "v1",
+            "text": "V2视频 2",
+            "pos": "2"
+          },
+          {
+            "id": "v2",
+            "text": "V3视频 3",
+            "pos": "3"
+          },
+          {
+            "id": "v3",
+            "text": "V4视频 4",
+            "pos": "4"
+          },
+          {
+            "id": "v4",
+            "text": "V5视频 5",
+            "pos": "5"
+          },
+          {
+            "id": "v5",
+            "text": "V6视频 6",
+            "pos": "6"
+          },
+          {
+            "id": "v6",
+            "text": "V7视频 7",
+            "pos": "7"
+          }
+        ]
+      },
+      {
+        "label": "键盘跨未挂载轨道到尾部",
+        "rowCount": 7,
+        "clipCount": 21,
+        "top": 12927,
+        "left": 0,
+        "height": 305,
+        "width": 1280,
+        "scrollHeight": 13232,
+        "alignmentMax": 0,
+        "headers": [
+          {
+            "id": "v193",
+            "text": "V194视频 194",
+            "pos": "194"
+          },
+          {
+            "id": "v194",
+            "text": "V195视频 195",
+            "pos": "195"
+          },
+          {
+            "id": "v195",
+            "text": "V196视频 196",
+            "pos": "196"
+          },
+          {
+            "id": "v196",
+            "text": "V197视频 197",
+            "pos": "197"
+          },
+          {
+            "id": "v197",
+            "text": "V198视频 198",
+            "pos": "198"
+          },
+          {
+            "id": "v198",
+            "text": "V199视频 199",
+            "pos": "199"
+          },
+          {
+            "id": "v199",
+            "text": "V200视频 200",
+            "pos": "200"
+          }
+        ]
+      },
+      {
+        "label": "远端横向滚动",
+        "rowCount": 7,
+        "clipCount": 29,
+        "top": 12927,
+        "left": 7800,
+        "height": 305,
+        "width": 1280,
+        "scrollHeight": 13232,
+        "alignmentMax": 0,
+        "headers": [
+          {
+            "id": "v193",
+            "text": "V194视频 194",
+            "pos": "194"
+          },
+          {
+            "id": "v194",
+            "text": "V195视频 195",
+            "pos": "195"
+          },
+          {
+            "id": "v195",
+            "text": "V196视频 196",
+            "pos": "196"
+          },
+          {
+            "id": "v196",
+            "text": "V197视频 197",
+            "pos": "197"
+          },
+          {
+            "id": "v197",
+            "text": "V198视频 198",
+            "pos": "198"
+          },
+          {
+            "id": "v198",
+            "text": "V199视频 199",
+            "pos": "199"
+          },
+          {
+            "id": "v199",
+            "text": "V200视频 200",
+            "pos": "200"
+          }
+        ]
+      },
+      {
+        "label": "真实Go名称编辑与撤销",
+        "rowCount": 7,
+        "clipCount": 29,
+        "top": 12927,
+        "left": 7800,
+        "height": 305,
+        "width": 1280,
+        "scrollHeight": 13232,
+        "alignmentMax": 0,
+        "headers": [
+          {
+            "id": "v193",
+            "text": "V194视频 194",
+            "pos": "194"
+          },
+          {
+            "id": "v194",
+            "text": "V195视频 195",
+            "pos": "195"
+          },
+          {
+            "id": "v195",
+            "text": "V196视频 196",
+            "pos": "196"
+          },
+          {
+            "id": "v196",
+            "text": "V197视频 197",
+            "pos": "197"
+          },
+          {
+            "id": "v197",
+            "text": "V198视频 198",
+            "pos": "198"
+          },
+          {
+            "id": "v198",
+            "text": "V199视频 199",
+            "pos": "199"
+          },
+          {
+            "id": "v199",
+            "text": "V200视频 200",
+            "pos": "200"
+          }
+        ]
+      },
+      {
+        "label": "选择保持而视区离开",
+        "rowCount": 7,
+        "clipCount": 28,
+        "top": 0,
+        "left": 0,
+        "height": 305,
+        "width": 1280,
+        "scrollHeight": 13232,
+        "alignmentMax": 0,
+        "headers": [
+          {
+            "id": "v0",
+            "text": "V1视频 1",
+            "pos": "1"
+          },
+          {
+            "id": "v1",
+            "text": "V2视频 2",
+            "pos": "2"
+          },
+          {
+            "id": "v2",
+            "text": "V3视频 3",
+            "pos": "3"
+          },
+          {
+            "id": "v3",
+            "text": "V4视频 4",
+            "pos": "4"
+          },
+          {
+            "id": "v4",
+            "text": "V5视频 5",
+            "pos": "5"
+          },
+          {
+            "id": "v5",
+            "text": "V6视频 6",
+            "pos": "6"
+          },
+          {
+            "id": "v6",
+            "text": "V7视频 7",
+            "pos": "7"
+          }
+        ]
+      },
+      {
+        "label": "显式定位选区",
+        "rowCount": 7,
+        "clipCount": 28,
+        "top": 12927,
+        "left": 8006,
+        "height": 305,
+        "width": 1280,
+        "scrollHeight": 13232,
+        "alignmentMax": 0,
+        "headers": [
+          {
+            "id": "v193",
+            "text": "V194视频 194",
+            "pos": "194"
+          },
+          {
+            "id": "v194",
+            "text": "V195视频 195",
+            "pos": "195"
+          },
+          {
+            "id": "v195",
+            "text": "V196视频 196",
+            "pos": "196"
+          },
+          {
+            "id": "v196",
+            "text": "V197视频 197",
+            "pos": "197"
+          },
+          {
+            "id": "v197",
+            "text": "V198视频 198",
+            "pos": "198"
+          },
+          {
+            "id": "v198",
+            "text": "V199视频 199",
+            "pos": "199"
+          },
+          {
+            "id": "v199",
+            "text": "V200视频 200",
+            "pos": "200"
+          }
+        ]
+      },
+      {
+        "label": "900x700",
+        "rowCount": 6,
+        "clipCount": 18,
+        "top": 12994,
+        "left": 8006,
+        "height": 238,
+        "width": 740,
+        "scrollHeight": 13232,
+        "alignmentMax": 0,
+        "headers": [
+          {
+            "id": "v194",
+            "text": "V195视频 195",
+            "pos": "195"
+          },
+          {
+            "id": "v195",
+            "text": "V196视频 196",
+            "pos": "196"
+          },
+          {
+            "id": "v196",
+            "text": "V197视频 197",
+            "pos": "197"
+          },
+          {
+            "id": "v197",
+            "text": "V198视频 198",
+            "pos": "198"
+          },
+          {
+            "id": "v198",
+            "text": "V199视频 199",
+            "pos": "199"
+          },
+          {
+            "id": "v199",
+            "text": "V200视频 200",
+            "pos": "200"
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "core": {
+      "dirty": false,
+      "revision": 6,
+      "clips": 10000,
+      "tracks": 200
+    },
+    "reducedMotion": true
+  },
+  "百千级负载": {
+    "results": [
+      {
+        "clips": 100,
+        "tracks": 20,
+        "rows": 6,
+        "mountedClips": 18,
+        "focus": "timeline-track-v19",
+        "top": 1114,
+        "tailLabel": "V20视频 20"
+      },
+      {
+        "clips": 1000,
+        "tracks": 100,
+        "rows": 6,
+        "mountedClips": 12,
+        "focus": "timeline-track-v99",
+        "top": 6394,
+        "tailLabel": "V100视频 100"
+      }
+    ],
+    "dirty": false
+  },
+  "只读查询比较": {
+    "runtime": "v24.16.0",
+    "reports": [
+      {
+        "clips": 100,
+        "tracks": 20,
+        "queries": 500,
+        "buildMs": 0.22570899999999483,
+        "linearP50Ms": 0.0008750000000006253,
+        "linearP95Ms": 0.00520800000000321,
+        "indexP50Ms": 0.0005000000000023874,
+        "indexP95Ms": 0.0023330000000001405,
+        "maxVisited": 45
+      },
+      {
+        "clips": 1000,
+        "tracks": 100,
+        "queries": 500,
+        "buildMs": 0.43012499999999676,
+        "linearP50Ms": 0.004375000000003126,
+        "linearP95Ms": 0.0280830000000023,
+        "indexP50Ms": 0.000542000000002929,
+        "indexP95Ms": 0.0027910000000019863,
+        "maxVisited": 63
+      },
+      {
+        "clips": 10000,
+        "tracks": 200,
+        "queries": 500,
+        "buildMs": 5.096625000000003,
+        "linearP50Ms": 0.08595900000000256,
+        "linearP95Ms": 0.09741700000000719,
+        "indexP50Ms": 0.0036249999999995453,
+        "indexP95Ms": 0.007291999999992527,
+        "maxVisited": 99
+      }
+    ],
+    "limitation": "Node中同一视区/相同结果的只读查询比较；不是React DOM、IPC或整机基准"
+  },
+  "检查": {
+    "前端测试文件": 27,
+    "前端测试项": 201,
+    "类型格式构建": "通过",
+    "设计严格审计": "0问题",
+    "官方DESIGN lint": "0错误/0警告"
+  },
+  "原生观察": {
+    "构建范围": "上一轮已构建客户端；新虚拟轨道和结束状态修正的最终原生复查仍待解锁",
+    "150片段": "实时模式由7帧推进至180帧，播放按钮停止",
+    "整段音轨": "源峰值波形可见，暂停在116帧",
+    "原生欠载计数": "未采集，不补造为0",
+    "声音结尾回归": "实际Worklet消费4800样本、未执行待定rAF时即验证ended；受控网络/控制"
+  },
+  "产物SHA256": {
+    "build/bin/AIVidCut.app/Contents/MacOS/AIVidCut": "58aec346d79e5e1fe5c52f24c3f83374e113c53c38eb82f7a15a9925af0b3983",
+    "build/bin/AIVidCut.exe": "d0f12e83518b02827f2ade10fa473071d834786758896886a711677e4918d395"
+  },
+  "限制": [
+    "Node算法计时不包括React/IPC/核心编辑",
+    "一帧格图负载不代表自然视频或任意密度实时能力",
+    "最终WKWebView与Windows原生尚未验收",
+    "页面热更新时的依赖数组提示单独保留；最终加载流程没有页面脚本错误"
+  ]
+}

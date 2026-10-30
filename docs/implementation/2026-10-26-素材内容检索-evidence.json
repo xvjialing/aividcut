@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-26",
+  "scope": "FW-R04文字索引层局部验收，原完整目标继续",
+  "realModelRequests": 0,
+  "browser": {
+    "requests": [
+      {
+        "sourceEpoch": 1,
+        "projectId": "source-content-fixture",
+        "projectRevision": 0,
+        "text": "相机教程",
+        "assetId": "",
+        "origin": "",
+        "offset": 0,
+        "limit": 40
+      },
+      {
+        "sourceEpoch": 1,
+        "projectId": "source-content-fixture",
+        "projectRevision": 0,
+        "text": "相机教程",
+        "assetId": "",
+        "origin": "asr",
+        "offset": 0,
+        "limit": 40
+      },
+      {
+        "sourceEpoch": 1,
+        "projectId": "source-content-fixture",
+        "projectRevision": 0,
+        "text": "没有这样的内容",
+        "assetId": "",
+        "origin": "asr",
+        "offset": 0,
+        "limit": 40
+      },
+      {
+        "sourceEpoch": 1,
+        "projectId": "source-content-fixture",
+        "projectRevision": 0,
+        "text": "相机教程",
+        "assetId": "",
+        "origin": "asr",
+        "offset": 0,
+        "limit": 40
+      },
+      {
+        "sourceEpoch": 1,
+        "projectId": "source-content-fixture",
+        "projectRevision": 0,
+        "text": "相机教程",
+        "assetId": "",
+        "origin": "asr",
+        "offset": 0,
+        "limit": 40
+      },
+      {
+        "sourceEpoch": 1,
+        "projectId": "source-content-fixture",
+        "projectRevision": 0,
+        "text": "相机教程",
+        "assetId": "",
+        "origin": "",
+        "offset": 0,
+        "limit": 40
+      }
+    ],
+    "raw": {
+      "version": "accepted-text-v1",
+      "query": "相机教程",
+      "origin": "",
+      "offset": 0,
+      "total": 2,
+      "hits": [
+        {
+          "id": "b65217c3273b421ef4e449b1da6a8b82889f9f30b17ffed9dc192575e7f6bf4c",
+          "assetId": "content-audio",
+          "assetName": "本地合成音调（配音来源夹具）",
+          "transcriptId": "fixture-generated",
+          "transcriptRevision": 1,
+          "sourceFingerprint": "sha256:8ef315cd0c2811f75c5af779936d33e13a628fdbe87730166c3315eae996daca",
+          "origin": "tts",
+          "startUs": 500000,
+          "endUs": 1500000,
+          "wordIds": [
+            "one",
+            "two"
+          ],
+          "text": "相机教程Hello World"
+        },
+        {
+          "id": "b988e567438492343289bbb01d9298d907bbb74ebb617504df99e9f46a8b3ae0",
+          "assetId": "content-video",
+          "assetName": "本地合成视频（检索夹具）",
+          "transcriptId": "fixture-transcript",
+          "transcriptRevision": 1,
+          "sourceFingerprint": "sha256:0138d594fce2ce23f6292a0796bb9e412fbe45951012f34dfdf9def7139ef738",
+          "origin": "asr",
+          "startUs": 500000,
+          "endUs": 1500000,
+          "wordIds": [
+            "one",
+            "two"
+          ],
+          "text": "相机教程Hello World"
+        }
+      ],
+      "stats": {
+        "transcripts": 2,
+        "words": 8,
+        "skippedStale": 0,
+        "skippedMissing": 0
+      },
+      "sourceEpoch": 1,
+      "projectId": "source-content-fixture",
+      "projectRevision": 0
+    },
+    "videoInitial": {
+      "tag": "VIDEO",
+      "time": 0.5,
+      "paused": true,
+      "muted": false,
+      "width": 640,
+      "height": 360
+    },
+    "videoEnd": {
+      "time": 1.499,
+      "paused": true
+    },
+    "audioInitial": {
+      "tag": "AUDIO",
+      "time": 0.5,
+      "paused": true
+    },
+    "audioEnd": {
+      "time": 1.499,
+      "paused": true
+    },
+    "errors": [],
+    "final": {
+      "dirty": false,
+      "revision": 0,
+      "clips": 0,
+      "sourceEpoch": 1
+    }
+  },
+  "checks": {
+    "go": "全量race21个内部包和1个有测试命令包、vet通过；最终核心/应用定向race及核心全用例复验通过",
+    "frontend": {
+      "files": 35,
+      "tests": 251,
+      "typecheck": "通过",
+      "format": "通过"
+    },
+    "uiAudit": {
+      "findings": [],
+      "mode": "strict",
+      "projectRoot": "/Users/xvjialing/projects/aividcut",
+      "schemaVersion": 1,
+      "summary": {
+        "errors": 0,
+        "total": 0,
+        "unresolved": 0,
+        "violations": 0,
+        "warnings": 0
+      }
+    },
+    "designLint": "0 errors，0 warnings，1 token-summary info",
+    "build": {
+      "wails": "v3.0.0-beta.34",
+      "macOS": "本地自签名通过",
+      "windowsAMD64": "交叉构建通过，未实机",
+      "mainChunkKB": 554.51,
+      "contentChunkKB": 5.29,
+      "sharedMediaChunkKB": 2.22
+    }
+  },
+  "fixture": "本机FFmpeg生成测试画面/纯音调，转写为人工构造数据，不是ASR或模型输出",
+  "sha256": {
+    "internal/contentindex/index.go": "a43b7fb99aedfa05aa753def23a7b1456f13081b8a53dde2a387960106607cd9",
+    "internal/contentindex/index_test.go": "ecb9deb621c4d1dcab80ffe16a421683108ebcca0db02a104099d40d16c346ba",
+    "internal/editor/caption_readable.go": "b7d3f6a8424a1be90892bc55639a4ee4710f56cd3b95d51cdb79f3e29e22e9bb",
+    "internal/application/content_search.go": "9d640cf4f85cf247df19e299eb8a5a28570bd8d05ce3536dd88d143d3f367014",
+    "internal/application/content_search_test.go": "51cbf7c7710501e7e939db026794ef6aed440c72b0b80d8dcf5a2c72021e3fae",
+    "internal/application/service.go": "133d829b644dd97bd09acb16aaaf8d015bbb4aa9190d20873557a11a05beaad1",
+    "internal/application/mcp.go": "458f3032a1aa05159e3e6a273549118afef223d5dec74b5b62d9ac1586471576",
+    "app.go": "a5a7a373c71591dabd370892894c304456cb6a9ac4ed1d1039ddb86359c00d4e",
+    "cmd/devserver/main.go": "53bb4526cc40d43c991bdd2f4afb89ab67c015896e9eaa2a1a4c0bc9d34fca12",
+    "frontend/src/components/ContentSearchPanel.tsx": "5911f81eb3c257ec357c9f1386f7178d406a1a638d4b3013e3e7eef618863f20",
+    "frontend/src/components/SourceRangeMedia.tsx": "cbf1fbafb945388fafbe186feef2b17e85d5e285ccd50fbee724db007c91e66d",
+    "frontend/src/components/GenerationReplacementDialog.tsx": "a7a5967ba1d724cbc5e5b18881c057f3d65058ca484f808e2c2b243861fea51c",
+    "frontend/src/content-types.ts": "3b6d939c441b8078b0cb90371bc484e3fd68c58d1801babb61408348e70cb31f",
+    "frontend/src/App.tsx": "3d337dc156df43885ee42701e74ee9bd47fb98617b00c6c3d2c1a6529adc2c62",
+    "frontend/src/lib/bridge.ts": "6d50840480b10ecc87887262bad6600b09b8c44115e238f9fe6ad72d7c6acdb8",
+    "frontend/src/styles/app.css": "bb77d28e01388a9e4f748f22dc9a9c08108df77f98c6252af4062bdd5c0ca0c9",
+    "frontend/tests/content-search-dom.test.tsx": "bd9a158698aad1b633525aa4ab6a365a5102453936c6328e605bc3483f783976",
+    "build/bin/AIVidCut.app/Contents/MacOS/AIVidCut": "f5f5364edd167faefaf328894c7b093358f78a0755794dfc9a88be36923dedfb",
+    "build/bin/AIVidCut.exe": "c14e355bf84110a3c41a3f2b7277a7597e330bb0ebaf97f0abdeaf3024ad4ced",
+    "work/content-search-check/本地合成源.mp4": "0138d594fce2ce23f6292a0796bb9e412fbe45951012f34dfdf9def7139ef738",
+    "work/content-search-check/本地合成音调.wav": "8ef315cd0c2811f75c5af779936d33e13a628fdbe87730166c3315eae996daca",
+    "work/content-search-check/fixture.aividcut": "c574c7c6d41b1dc84c6c41b55dafe460d4c81ef1dcb5cdf8ffa221052fa72e89",
+    "output/playwright/content-search-wide.png": "8207e13bf3202f13abd480e45575a37282020da5045b2130705fe63df0d78ef6",
+    "output/playwright/content-source-video.png": "a4627249b224a299660fa18805c95f5e0af7fafa74ccef78eae2a0a94b43f6aa",
+    "output/playwright/content-search-900.png": "d4df58ed036c9440c2cc3594470499adf506370c59cc14f12404e28f14c81b5a"
+  },
+  "documentation": {
+    "Markdown文档数": 75,
+    "本地链接检查数": 371,
+    "正文检查文档数": 48,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browser": "aividcut-content已关闭",
+    "vite": "93217已停止，exit130",
+    "goDevserver": "44405已停止，exit1",
+    "earlierDevserver": "82048已停止，exit1"
+  }
+}

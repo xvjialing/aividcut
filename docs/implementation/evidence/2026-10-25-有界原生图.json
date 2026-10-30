@@ -1,0 +1,767 @@
+{
+  "日期": "2026-10-25",
+  "状态": "有界图与固定负载局部验收，完整P0/P1未完成",
+  "机器": {
+    "CPU": "Apple M5 Pro",
+    "逻辑CPU": 18,
+    "内存字节": 51539607552,
+    "系统": "macOS 26.6.2 (25G83)"
+  },
+  "版本": {
+    "Wails": "v3.0.0-beta.34",
+    "Go": "1.27",
+    "MLT": "7.42.0",
+    "FFmpeg": "9.0.2"
+  },
+  "负载": {
+    "图片128窗口": {
+      "createdAt": "2026-10-25T09:08:11.439955Z",
+      "clips": 1000,
+      "assets": 1,
+      "info": {
+        "projectId": "project-be83fe78d186c23c66962ae9",
+        "projectRevision": 0,
+        "durationFrames": 1000,
+        "position": 0,
+        "playing": false,
+        "width": 320,
+        "height": 180,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "projectSha256": "47fd5b3e7c517c07e3e6c4ca47220cc0af184a71be63ccd5cd0dcda1cbd08029",
+      "workerSha256": "66094f49ab02ac55db40ede208087f0a1c1bb2546ebad7b7f2683f0967c46618",
+      "loadMs": 56.245584,
+      "pullP50Ms": 8.505084,
+      "pullP95Ms": 10.306333,
+      "pullMaxMs": 54.292125,
+      "overBudgetFrames": 7,
+      "decodedSamples": 1601600,
+      "actualImageCrc32": 1913617225,
+      "actualAudioCrc32": 1807211711,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 9,
+          "replacements": 8,
+          "peakXmlBytes": 158657
+        },
+        "visual": {
+          "builds": 7,
+          "hits": 994,
+          "calls": 1001,
+          "fastPathCalls": 0,
+          "filterNs": 294430517,
+          "compositeNs": 16459397,
+          "residentGraphs": 7,
+          "estimatedBytes": 14579712
+        },
+        "audioMix": {
+          "created": 0,
+          "calls": 0,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 0,
+          "peakFrameBytes": 0
+        },
+        "sourceAudio": {
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "opens": 0,
+          "decoderResets": 0,
+          "graphBuilds": 0,
+          "decodedFrames": 0,
+          "gatedFrames": 0,
+          "residentStates": 0,
+          "activeDecoders": 0,
+          "queuedSampleFrames": 0,
+          "peakQueueSampleFrames": 0
+        },
+        "sourceVideo": {
+          "created": 0,
+          "opens": 0,
+          "decodedFrames": 0,
+          "seeks": 0,
+          "anchors": 0,
+          "fallbacks": 0,
+          "activeDecoders": 0,
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "residentStates": 0
+        }
+      },
+      "过程报告": "work/graph-window-1000-image/window128.json",
+      "采样RSS": {
+        "goSampledPeakRssBytes": 15171584,
+        "workerSampledPeakRssBytes": 96780288
+      }
+    },
+    "图片32窗口": {
+      "createdAt": "2026-10-25T09:08:20.119023Z",
+      "clips": 1000,
+      "assets": 1,
+      "info": {
+        "projectId": "project-be83fe78d186c23c66962ae9",
+        "projectRevision": 0,
+        "durationFrames": 1000,
+        "position": 0,
+        "playing": false,
+        "width": 320,
+        "height": 180,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "projectSha256": "47fd5b3e7c517c07e3e6c4ca47220cc0af184a71be63ccd5cd0dcda1cbd08029",
+      "workerSha256": "66094f49ab02ac55db40ede208087f0a1c1bb2546ebad7b7f2683f0967c46618",
+      "loadMs": 24.074167,
+      "pullP50Ms": 1.379583,
+      "pullP95Ms": 1.634417,
+      "pullMaxMs": 12.123958,
+      "overBudgetFrames": 0,
+      "decodedSamples": 1601600,
+      "actualImageCrc32": 1913617225,
+      "actualAudioCrc32": 1807211711,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 34,
+          "replacements": 33,
+          "peakXmlBytes": 39925
+        },
+        "visual": {
+          "builds": 7,
+          "hits": 994,
+          "calls": 1001,
+          "fastPathCalls": 0,
+          "filterNs": 290613590,
+          "compositeNs": 16330714,
+          "residentGraphs": 7,
+          "estimatedBytes": 14579712
+        },
+        "audioMix": {
+          "created": 0,
+          "calls": 0,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 0,
+          "peakFrameBytes": 0
+        },
+        "sourceAudio": {
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "opens": 0,
+          "decoderResets": 0,
+          "graphBuilds": 0,
+          "decodedFrames": 0,
+          "gatedFrames": 0,
+          "residentStates": 0,
+          "activeDecoders": 0,
+          "queuedSampleFrames": 0,
+          "peakQueueSampleFrames": 0
+        },
+        "sourceVideo": {
+          "created": 0,
+          "opens": 0,
+          "decodedFrames": 0,
+          "seeks": 0,
+          "anchors": 0,
+          "fallbacks": 0,
+          "activeDecoders": 0,
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "residentStates": 0
+        }
+      },
+      "过程报告": "work/graph-window-1000-image/window32.json",
+      "采样RSS": {
+        "goSampledPeakRssBytes": 14778368,
+        "workerSampledPeakRssBytes": 63782912
+      }
+    },
+    "万段修复前": {
+      "createdAt": "2026-10-25T09:17:49.607556Z",
+      "clips": 10000,
+      "assets": 1,
+      "info": {
+        "projectId": "project-1fafcd9eafd416f3d1d67c9f",
+        "projectRevision": 0,
+        "durationFrames": 10000,
+        "position": 0,
+        "playing": false,
+        "width": 320,
+        "height": 180,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "projectSha256": "d977edd978ea9ad175e7e37e2f4acaebc6226ff6c17e40bdc134e5f046ef09c1",
+      "workerSha256": "66094f49ab02ac55db40ede208087f0a1c1bb2546ebad7b7f2683f0967c46618",
+      "loadMs": 66.281042,
+      "pullP50Ms": 1.390375,
+      "pullP95Ms": 1.668791,
+      "pullMaxMs": 14.566333,
+      "overBudgetFrames": 0,
+      "decodedSamples": 16016000,
+      "actualImageCrc32": 1579467295,
+      "actualAudioCrc32": 2182089413,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 333,
+          "replacements": 332,
+          "peakXmlBytes": 40023
+        },
+        "visual": {
+          "builds": 7,
+          "hits": 9994,
+          "calls": 10001,
+          "fastPathCalls": 0,
+          "filterNs": 2913525920,
+          "compositeNs": 164436734,
+          "residentGraphs": 7,
+          "estimatedBytes": 14579712
+        },
+        "audioMix": {
+          "created": 0,
+          "calls": 0,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 0,
+          "peakFrameBytes": 0
+        },
+        "sourceAudio": {
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "opens": 0,
+          "decoderResets": 0,
+          "graphBuilds": 0,
+          "decodedFrames": 0,
+          "gatedFrames": 0,
+          "residentStates": 0,
+          "activeDecoders": 0,
+          "queuedSampleFrames": 0,
+          "peakQueueSampleFrames": 0
+        },
+        "sourceVideo": {
+          "created": 0,
+          "opens": 0,
+          "decodedFrames": 0,
+          "seeks": 0,
+          "anchors": 0,
+          "fallbacks": 0,
+          "activeDecoders": 0,
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "residentStates": 0
+        }
+      },
+      "过程报告": "work/graph-window-10000-image/default32.json",
+      "采样RSS": {
+        "goSampledPeakRssBytes": 39944192,
+        "workerSampledPeakRssBytes": 164462592
+      }
+    },
+    "万段最终": {
+      "createdAt": "2026-10-25T09:46:50.605815Z",
+      "clips": 10000,
+      "assets": 1,
+      "info": {
+        "projectId": "project-1fafcd9eafd416f3d1d67c9f",
+        "projectRevision": 0,
+        "durationFrames": 10000,
+        "position": 0,
+        "playing": false,
+        "width": 320,
+        "height": 180,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "projectSha256": "d977edd978ea9ad175e7e37e2f4acaebc6226ff6c17e40bdc134e5f046ef09c1",
+      "workerSha256": "8e039e8f2698d51e181bcc7525a7a4b553b8a4ac4321e5244fe99e24aea0d785",
+      "loadMs": 71.711417,
+      "pullP50Ms": 1.375792,
+      "pullP95Ms": 1.643375,
+      "pullMaxMs": 12.968917,
+      "overBudgetFrames": 0,
+      "decodedSamples": 16016000,
+      "actualImageCrc32": 1579467295,
+      "actualAudioCrc32": 2182089413,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 333,
+          "replacements": 332,
+          "peakXmlBytes": 40023,
+          "liveGraphs": 1,
+          "liveProducers": 162,
+          "liveServices": 910,
+          "liveServicesByKind": {
+            "aividcut.visual": 32,
+            "audioconvert": 65,
+            "avcolor_space": 65,
+            "avdeinterlace": 65,
+            "blank": 32,
+            "color_transform": 65,
+            "colour": 1,
+            "crop": 65,
+            "fieldorder": 65,
+            "imageconvert": 65,
+            "qimage": 32,
+            "resample": 65,
+            "resize": 65,
+            "swresample": 65,
+            "swscale": 65,
+            "unnamed": 97,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 1
+        },
+        "visual": {
+          "builds": 7,
+          "hits": 9994,
+          "calls": 10001,
+          "fastPathCalls": 0,
+          "filterNs": 2909359383,
+          "compositeNs": 163681028,
+          "residentGraphs": 7,
+          "estimatedBytes": 14579712
+        },
+        "audioMix": {
+          "created": 0,
+          "calls": 0,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 0,
+          "peakFrameBytes": 0
+        },
+        "sourceAudio": {
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "opens": 0,
+          "decoderResets": 0,
+          "graphBuilds": 0,
+          "decodedFrames": 0,
+          "gatedFrames": 0,
+          "residentStates": 0,
+          "activeDecoders": 0,
+          "queuedSampleFrames": 0,
+          "peakQueueSampleFrames": 0
+        },
+        "sourceVideo": {
+          "created": 0,
+          "opens": 0,
+          "decodedFrames": 0,
+          "seeks": 0,
+          "anchors": 0,
+          "fallbacks": 0,
+          "activeDecoders": 0,
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "residentStates": 0
+        }
+      },
+      "过程报告": "work/graph-window-10000-image/resample-fixed.json",
+      "采样RSS": {
+        "goSampledPeakRssBytes": 40271872,
+        "workerSampledPeakRssBytes": 57131008
+      }
+    },
+    "音频完整源": {
+      "createdAt": "2026-10-25T09:18:07.253677Z",
+      "clips": 1,
+      "assets": 1,
+      "info": {
+        "projectId": "project-f68131fdb211ec4460df6d77",
+        "projectRevision": 0,
+        "durationFrames": 3597,
+        "position": 0,
+        "playing": false,
+        "width": 64,
+        "height": 36,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "projectSha256": "20edd7efa71cf73124b506e1c024c6350554d78df77fb9a57d1a21452c9fcdee",
+      "workerSha256": "66094f49ab02ac55db40ede208087f0a1c1bb2546ebad7b7f2683f0967c46618",
+      "loadMs": 48.197834,
+      "pullP50Ms": 0.159333,
+      "pullP95Ms": 0.181542,
+      "pullMaxMs": 0.39225,
+      "overBudgetFrames": 0,
+      "decodedSamples": 5760956,
+      "actualImageCrc32": 3445617415,
+      "actualAudioCrc32": 1738377043,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 1,
+          "replacements": 0,
+          "peakXmlBytes": 1975
+        },
+        "visual": {
+          "builds": 0,
+          "hits": 0,
+          "calls": 0,
+          "fastPathCalls": 0,
+          "filterNs": 0,
+          "compositeNs": 0,
+          "residentGraphs": 0,
+          "estimatedBytes": 0
+        },
+        "audioMix": {
+          "created": 1,
+          "calls": 3598,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 5762558,
+          "peakFrameBytes": 12816
+        },
+        "sourceAudio": {
+          "cacheHits": 3597,
+          "cacheMisses": 1,
+          "opens": 1,
+          "decoderResets": 1,
+          "graphBuilds": 1,
+          "decodedFrames": 1938,
+          "gatedFrames": 0,
+          "residentStates": 1,
+          "activeDecoders": 1,
+          "queuedSampleFrames": 48389,
+          "peakQueueSampleFrames": 52573
+        },
+        "sourceVideo": {
+          "created": 0,
+          "opens": 0,
+          "decodedFrames": 0,
+          "seeks": 0,
+          "anchors": 0,
+          "fallbacks": 0,
+          "activeDecoders": 0,
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "residentStates": 0
+        }
+      },
+      "过程报告": "work/graph-window-1000-audio/whole.json",
+      "采样RSS": {
+        "goSampledPeakRssBytes": 13123584,
+        "workerSampledPeakRssBytes": 30146560
+      }
+    },
+    "音频千段最终": {
+      "createdAt": "2026-10-25T09:50:44.691776Z",
+      "clips": 1000,
+      "assets": 1,
+      "info": {
+        "projectId": "project-f68131fdb211ec4460df6d77",
+        "projectRevision": 1,
+        "durationFrames": 3597,
+        "position": 0,
+        "playing": false,
+        "width": 64,
+        "height": 36,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "projectSha256": "f989dac76417ff3fd44a80c5476f4230814fed949d9f5f98912d9f260bdcb422",
+      "workerSha256": "8e039e8f2698d51e181bcc7525a7a4b553b8a4ac4321e5244fe99e24aea0d785",
+      "loadMs": 132.591291,
+      "pullP50Ms": 0.948834,
+      "pullP95Ms": 1.156958,
+      "pullMaxMs": 11.566625,
+      "overBudgetFrames": 0,
+      "decodedSamples": 5760956,
+      "actualImageCrc32": 3445617415,
+      "actualAudioCrc32": 1738377043,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 45,
+          "replacements": 44,
+          "peakXmlBytes": 50377,
+          "liveGraphs": 1,
+          "liveProducers": 22,
+          "liveServices": 130,
+          "liveServicesByKind": {
+            "aividcut.audio_mix": 4,
+            "aividcut.audio_source": 4,
+            "audioconvert": 9,
+            "avcolor_space": 9,
+            "avdeinterlace": 9,
+            "blank": 4,
+            "color_transform": 9,
+            "colour": 5,
+            "crop": 9,
+            "fieldorder": 9,
+            "imageconvert": 9,
+            "resample": 9,
+            "resize": 9,
+            "swresample": 9,
+            "swscale": 9,
+            "unnamed": 13,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 1
+        },
+        "visual": {
+          "builds": 0,
+          "hits": 0,
+          "calls": 0,
+          "fastPathCalls": 0,
+          "filterNs": 0,
+          "compositeNs": 0,
+          "residentGraphs": 0,
+          "estimatedBytes": 0
+        },
+        "audioMix": {
+          "created": 1044,
+          "calls": 3598,
+          "skippedBlankFrames": 105531,
+          "mixedSamples": 5762558,
+          "peakFrameBytes": 12816
+        },
+        "sourceAudio": {
+          "cacheHits": 3597,
+          "cacheMisses": 1,
+          "opens": 1,
+          "decoderResets": 1,
+          "graphBuilds": 1,
+          "decodedFrames": 1938,
+          "gatedFrames": 0,
+          "residentStates": 1,
+          "activeDecoders": 1,
+          "queuedSampleFrames": 48389,
+          "peakQueueSampleFrames": 52573
+        },
+        "sourceVideo": {
+          "created": 0,
+          "opens": 0,
+          "decodedFrames": 0,
+          "seeks": 0,
+          "anchors": 0,
+          "fallbacks": 0,
+          "activeDecoders": 0,
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "residentStates": 0
+        }
+      },
+      "过程报告": "work/graph-window-1000-audio/final.json",
+      "采样RSS": {
+        "goSampledPeakRssBytes": 18743296,
+        "workerSampledPeakRssBytes": 42942464
+      }
+    },
+    "视频完整源": {
+      "createdAt": "2026-10-25T09:33:41.578244Z",
+      "clips": 1,
+      "assets": 1,
+      "info": {
+        "projectId": "project-f700f07f499940cac8df5e70",
+        "projectRevision": 0,
+        "durationFrames": 2696,
+        "position": 0,
+        "playing": false,
+        "width": 1280,
+        "height": 720,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "projectSha256": "d5daa91bcad5f1baea5a19de583cbd9f4705e784e7a39f3b24b7c084f7f7d27f",
+      "workerSha256": "7fc37191ee6e43e40e99f1948a6fb02c1b03d83a68df36b0a5c195456c95c343",
+      "loadMs": 11.159042,
+      "pullP50Ms": 4.186417,
+      "pullP95Ms": 4.493417,
+      "pullMaxMs": 6.388583,
+      "overBudgetFrames": 0,
+      "decodedSamples": 4317914,
+      "actualImageCrc32": 3155604016,
+      "actualAudioCrc32": 1820249527,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 1,
+          "replacements": 0,
+          "peakXmlBytes": 2148,
+          "liveGraphs": 1,
+          "peakReleaseReferences": 0
+        },
+        "visual": {
+          "builds": 1,
+          "hits": 2696,
+          "calls": 2697,
+          "fastPathCalls": 0,
+          "filterNs": 323187829,
+          "compositeNs": 697231310,
+          "residentGraphs": 1,
+          "estimatedBytes": 36864000
+        },
+        "audioMix": {
+          "created": 0,
+          "calls": 0,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 0,
+          "peakFrameBytes": 0
+        },
+        "sourceAudio": {
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "opens": 0,
+          "decoderResets": 0,
+          "graphBuilds": 0,
+          "decodedFrames": 0,
+          "gatedFrames": 0,
+          "residentStates": 0,
+          "activeDecoders": 0,
+          "queuedSampleFrames": 0,
+          "peakQueueSampleFrames": 0
+        },
+        "sourceVideo": {
+          "created": 1,
+          "opens": 1,
+          "decodedFrames": 5399,
+          "seeks": 1,
+          "anchors": 1,
+          "fallbacks": 0,
+          "activeDecoders": 1,
+          "cacheHits": 2696,
+          "cacheMisses": 1,
+          "residentStates": 1
+        }
+      },
+      "过程报告": "work/graph-window-1000-video-720p/whole.json",
+      "采样RSS": {
+        "goSampledPeakRssBytes": 18808832,
+        "workerSampledPeakRssBytes": 66568192
+      }
+    },
+    "视频千段最终": {
+      "createdAt": "2026-10-25T09:50:48.50807Z",
+      "clips": 1000,
+      "assets": 1,
+      "info": {
+        "projectId": "project-f700f07f499940cac8df5e70",
+        "projectRevision": 1,
+        "durationFrames": 2696,
+        "position": 0,
+        "playing": false,
+        "width": 1280,
+        "height": 720,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "projectSha256": "538fc76d7ce1216b25f5e36a5299b4e1864f496ee0acb4fb3ce4b6b064597eb7",
+      "workerSha256": "8e039e8f2698d51e181bcc7525a7a4b553b8a4ac4321e5244fe99e24aea0d785",
+      "loadMs": 22.807125,
+      "pullP50Ms": 4.906916,
+      "pullP95Ms": 5.343791,
+      "pullMaxMs": 12.231375,
+      "overBudgetFrames": 0,
+      "decodedSamples": 4317914,
+      "actualImageCrc32": 3155604016,
+      "actualAudioCrc32": 1820249527,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 34,
+          "replacements": 33,
+          "peakXmlBytes": 29057,
+          "liveGraphs": 1,
+          "liveProducers": 87,
+          "liveServices": 354,
+          "liveServicesByKind": {
+            "aividcut.source_time": 1,
+            "aividcut.visual": 21,
+            "audioconvert": 23,
+            "avcolor_space": 23,
+            "avdeinterlace": 22,
+            "blank": 21,
+            "color_transform": 22,
+            "colour": 1,
+            "crop": 22,
+            "fieldorder": 22,
+            "imageconvert": 23,
+            "resample": 22,
+            "resize": 22,
+            "swresample": 22,
+            "swscale": 22,
+            "unnamed": 64,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 1
+        },
+        "visual": {
+          "builds": 1,
+          "hits": 2696,
+          "calls": 2697,
+          "fastPathCalls": 0,
+          "filterNs": 325820509,
+          "compositeNs": 693932639,
+          "residentGraphs": 1,
+          "estimatedBytes": 36864000
+        },
+        "audioMix": {
+          "created": 0,
+          "calls": 0,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 0,
+          "peakFrameBytes": 0
+        },
+        "sourceAudio": {
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "opens": 0,
+          "decoderResets": 0,
+          "graphBuilds": 0,
+          "decodedFrames": 0,
+          "gatedFrames": 0,
+          "residentStates": 0,
+          "activeDecoders": 0,
+          "queuedSampleFrames": 0,
+          "peakQueueSampleFrames": 0
+        },
+        "sourceVideo": {
+          "created": 34,
+          "opens": 1,
+          "decodedFrames": 5399,
+          "seeks": 1,
+          "anchors": 1,
+          "fallbacks": 0,
+          "activeDecoders": 1,
+          "cacheHits": 2696,
+          "cacheMisses": 1,
+          "residentStates": 1
+        }
+      },
+      "过程报告": "work/graph-window-1000-video-720p/final.json",
+      "采样RSS": {
+        "goSampledPeakRssBytes": 22675456,
+        "workerSampledPeakRssBytes": 73826304
+      }
+    }
+  },
+  "验证": {
+    "Go全量竞态": "19内部包及cmd通过",
+    "原生ASanUBSan秒": 20.963,
+    "新增消毒器日志": [],
+    "前端测试": 189,
+    "构建": [
+      "macOS本地自签名",
+      "Windows amd64交叉编译"
+    ]
+  },
+  "限制": [
+    "静态图及编号视频不是自然摄影复杂度",
+    "ps定时采样可能遗漏峰值，不是完整进程树或独占内存",
+    "ASan detect_leaks=0，不是全堆泄漏检测",
+    "Windows原生及完整发布门槛未完成",
+    "最终客户端UI因再次锁屏待复查"
+  ],
+  "最终workerSHA256": "8e039e8f2698d51e181bcc7525a7a4b553b8a4ac4321e5244fe99e24aea0d785",
+  "产物SHA256": {
+    "build/bin/AIVidCut.app/Contents/MacOS/AIVidCut": "4903859df022093aa06af9e35e30d7a767255ab35c58bb2b6de4d5303262baac",
+    "build/bin/AIVidCut.exe": "96adf5273b9ae60216f86c0deb1854f0237e755c5483bc28469c33f99283bfd7"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R16"
+  ],
+  "processEnvironment": {
+    "PATH": "/usr/bin:/bin",
+    "mediaEnvironmentVariablesRemoved": 5
+  },
+  "processEvents": [
+    {
+      "action": "started",
+      "pid": 52669,
+      "active": {
+        "ffmpeg": "",
+        "ffprobe": "",
+        "worker": "",
+        "repository": "",
+        "profiles": ""
+      },
+      "origins": {
+        "ffmpeg": "path",
+        "ffprobe": "path",
+        "profiles": "unset",
+        "repository": "unset",
+        "worker": "unset"
+      },
+      "restartRequired": false
+    },
+    {
+      "action": "stopped",
+      "pid": 52669,
+      "exitCode": 0
+    },
+    {
+      "action": "started",
+      "pid": 52754,
+      "active": {
+        "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+        "ffprobe": "/opt/homebrew/bin/ffprobe",
+        "worker": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+        "repository": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository",
+        "profiles": "/Users/xvjialing/projects/aividcut/work/mlt-profiles"
+      },
+      "origins": {
+        "ffmpeg": "saved",
+        "ffprobe": "saved",
+        "profiles": "saved",
+        "repository": "saved",
+        "worker": "saved"
+      },
+      "restartRequired": false
+    },
+    {
+      "action": "stopped",
+      "pid": 52754,
+      "exitCode": 0
+    }
+  ],
+  "restartedMedia": {
+    "projectUnchanged": true,
+    "dirtyUndoUnchanged": true,
+    "activeFromSaved": true,
+    "restartRequired": false,
+    "video": {
+      "width": 640,
+      "height": 360,
+      "frames": 90,
+      "fps": "30000/1001",
+      "durationSeconds": 3.003
+    },
+    "pcm": {
+      "bytes": 1153152,
+      "matchesPreviousBaseline": true,
+      "sha256": "d6f4b8f610aa37468d637ba88ca9fdbc451b956620944916c8e5d529262b124f"
+    },
+    "outputSHA256": "f1ac5af2cdfd29f4d495f01dbfc6c2edca2b6d37dafd405c92fd367b454198c7"
+  },
+  "ui": {
+    "narrowViewport": [
+      900,
+      720
+    ],
+    "dialog": {
+      "x": 20,
+      "y": 16,
+      "width": 860,
+      "height": 688
+    },
+    "document": [
+      900,
+      720
+    ],
+    "invalidPathFocused": true,
+    "errorLinked": true,
+    "escapeFocusRestored": true
+  },
+  "checks": {
+    "frontendFiles": 54,
+    "frontendTests": 356,
+    "goRaceTestedPackages": 32,
+    "goVetPassed": true,
+    "macOSBuild": true,
+    "windowsAMD64Build": true,
+    "productionResources": true,
+    "wailsVersion": "3.0.0",
+    "goToolchain": "go1.27.3",
+    "staticDesignAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "documentation": {
+      "Markdown文档数": 117,
+      "本地链接检查数": 584,
+      "正文检查文档数": 90,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    }
+  },
+  "paidModelCalls": 0,
+  "nativeSettingsGUIVerified": false,
+  "windowsRuntimeVerified": false,
+  "limitations": [
+    "独立服务精简环境，不等于双端GUI启动验收",
+    "工具身份与mtime不是签名、许可证或插件逐文件完整性认证",
+    "完整SDK发行、真实账户与CLI推理继续后置"
+  ],
+  "cleanup": {
+    "temporaryBrowserTabClosed": true,
+    "viewportReset": true,
+    "developmentServicesStopped": true,
+    "listenersRemaining": 0
+  }
+}

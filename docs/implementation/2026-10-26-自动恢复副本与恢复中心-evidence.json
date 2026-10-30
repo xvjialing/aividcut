@@ -1,0 +1,222 @@
+{
+  "date": "2026-10-26",
+  "phase": "P1_automatic_recovery",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R13",
+    "FW-R15"
+  ],
+  "wailsLatest": "v3.0.0",
+  "realModelCalls": 0,
+  "realCLIInferenceCalls": 0,
+  "checks": {
+    "frontend": "49 files, 327 tests passed",
+    "typecheck": "passed",
+    "prettier": "passed",
+    "goRace": "26 tested packages passed; some cached",
+    "goVet": "passed",
+    "productionAssets": "passed",
+    "macOSBuild": "local self-sign passed",
+    "windowsAMD64Build": "cross-build passed",
+    "strictUIAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1
+    },
+    "documentation": {
+      "Markdown文档数": 105,
+      "本地链接检查数": 518,
+      "正文检查文档数": 78,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    }
+  },
+  "newTests": {
+    "storeGroups": 4,
+    "applicationGroups": 4,
+    "actualProcessMCPGroup": 1,
+    "frontendCenter": 5,
+    "startupInteraction": 2,
+    "bridge": 1
+  },
+  "capture": {
+    "intervalSeconds": 5,
+    "withoutFrontendNotification": true,
+    "snapshotIOOutsideEditorLock": true,
+    "singleWriter": true,
+    "manualCheckpointInvokedInBrowser": false,
+    "beforeKill": {
+      "status": {
+        "scope": {
+          "projectId": "recovery-workflow-fixture",
+          "projectRevision": 2,
+          "sourceEpoch": 1
+        },
+        "enabled": true,
+        "intervalSeconds": 5,
+        "pending": 0,
+        "startupPending": 0,
+        "unreadable": 0,
+        "protectedAt": "2026-10-26T15:27:09.209644Z",
+        "protectedRevision": 2
+      },
+      "recoveryId": "recovery-73e1c353c471aaf50d1af1e9",
+      "sha256": "f83caf6a86dca18aee6b3dfd3fcf37174b49571b5f27754c660bf2a758418a71",
+      "projectMatchesExpected": true,
+      "recordCount": 1,
+      "manualCheckpointInvoked": false
+    }
+  },
+  "restore": {
+    "restoredRevision": 3,
+    "restoredDirty": true,
+    "restoredProjectPath": "",
+    "canUndo": false,
+    "sourceEpoch": 1,
+    "completeProjectMatchesExpectedApartFromNewRevision": true,
+    "originalFileUnmodified": true,
+    "originalSHA256": "7a8889319b8930d42a26fe7b652d70630dcab4f99a5b85c7028642656435d780"
+  },
+  "media": {
+    "frames": 90,
+    "fps": "30000/1001",
+    "durationSeconds": 3.003,
+    "width": 640,
+    "height": 360,
+    "videoFrameMD5Identical": true,
+    "stereoFloatPCMIdentical": true,
+    "stereoFloatPCMBytes": 1153152,
+    "outputBytes": 405954,
+    "outputSHA256": "ca2b9513cae5954ecc918b587ef9dade9d46da7736a9d0030f39c404498ca725",
+    "normalSaveRemovedActiveRecovery": true,
+    "recoveryStatusAfterSave": {
+      "scope": {
+        "projectId": "recovery-workflow-fixture",
+        "projectRevision": 3,
+        "sourceEpoch": 1
+      },
+      "enabled": true,
+      "intervalSeconds": 5,
+      "pending": 0,
+      "startupPending": 0,
+      "unreadable": 0,
+      "protectedRevision": 0
+    },
+    "originalFileUnmodified": true,
+    "savedProjectMatchesExpectedApartFromNewRevision": true,
+    "realModelCalls": 0
+  },
+  "normalRestart": {
+    "status": {
+      "scope": {
+        "projectId": "project-34dfc7f1944ed5c565fa78cf",
+        "projectRevision": 0,
+        "sourceEpoch": 0
+      },
+      "enabled": true,
+      "intervalSeconds": 5,
+      "pending": 0,
+      "startupPending": 0,
+      "unreadable": 0,
+      "protectedRevision": 0
+    },
+    "recoveryFiles": 0,
+    "automaticDialogObserved": false,
+    "escapeReturnedFocus": true
+  },
+  "processEvents": [
+    {
+      "action": "started",
+      "pid": 24145,
+      "intervalSeconds": 5
+    },
+    {
+      "action": "killed",
+      "pid": 24145,
+      "exitCode": -9
+    },
+    {
+      "action": "started",
+      "pid": 24269,
+      "intervalSeconds": 5
+    },
+    {
+      "action": "stopped",
+      "pid": 24269,
+      "exitCode": 0
+    },
+    {
+      "action": "started",
+      "pid": 24715,
+      "intervalSeconds": 5
+    },
+    {
+      "action": "stopped",
+      "pid": 24715,
+      "exitCode": 0
+    }
+  ],
+  "browser": {
+    "startupPromptObservedAfterKill": true,
+    "explicitRestore": true,
+    "realPlaybackReadyPlayingEnded": true,
+    "saveAsRequired": true,
+    "viewport": [
+      900,
+      700
+    ],
+    "dialog": [
+      760,
+      668
+    ],
+    "horizontalOverflow": false,
+    "footerVisible": true,
+    "escapeReturnedFocus": true,
+    "reloadObservationTimeout": "rebound same Tab4; no backend restart due to timeout"
+  },
+  "failureSemantics": {
+    "currentDirtyBackupFailureStopsRestore": true,
+    "readableTargetCanRestoreDespiteUpdateFailure": true,
+    "originalRecoveryPreservedOnUpdateFailure": true,
+    "staleWritesRetiredOnSaveAndSameIDOpen": true
+  },
+  "limits": {
+    "records": 50,
+    "committedBudgetBytes": 536870912,
+    "projectBytes": 67108864,
+    "headerBytes": 16384,
+    "closeWaitSeconds": 3
+  },
+  "nativeGUI": {
+    "verifiedThisPhase": false,
+    "reason": "previous native access reported locked; not retried"
+  },
+  "limitations": [
+    "Unsubmitted drafts and edits after last successful checkpoint are outside the recovery guarantee",
+    "Not a transaction log, persistent Undo or media copy",
+    "Cleanup center and physical disk failure tests remain",
+    "New Wails GUI, Windows hardware, model accounts and release gates remain",
+    "Main JS about 589.34kB and SDK link warnings remain"
+  ],
+  "screenshot": "assets/2026-10-26-project-recovery.jpg",
+  "logsDirectory": "work/project-recovery-check",
+  "cleanup": {
+    "controllers": "exited 0",
+    "services": "one explicit SIGKILL -9; both normal stops 0",
+    "vite": "intentional Ctrl-C",
+    "browserTab4": "closed",
+    "viewport": "reset",
+    "exactProcessCheck": "no match",
+    "ports43110And5173": "no listeners"
+  }
+}

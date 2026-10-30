@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R02",
+    "FW-R03",
+    "FW-R08",
+    "FW-R11",
+    "FW-R12"
+  ],
+  "actualMedia": {
+    "afterFrames": 279,
+    "commands": [
+      {
+        "fromFrame": 80,
+        "toFrame": 88,
+        "type": "ripple_delete_range"
+      },
+      {
+        "fromFrame": 47,
+        "toFrame": 58,
+        "type": "ripple_delete_range"
+      },
+      {
+        "fromFrame": 26,
+        "toFrame": 28,
+        "type": "ripple_delete_range"
+      }
+    ],
+    "matchedPCMFrames": 279,
+    "matchedRGBAFrames": 279,
+    "originalFrames": 300,
+    "sampleFramesPerVideoFrame": 1600,
+    "savedReopenSame": true,
+    "sourceFixture": "本地合成媒体/人工词时间，非ASR或模型质量证明",
+    "summary": {
+      "cutCount": 3,
+      "removedFrames": 21,
+      "beforeFrames": 300,
+      "afterFrames": 279,
+      "affectedTracks": 6,
+      "totalAffectedClips": 27,
+      "changedOriginalClips": 13,
+      "newClips": 14
+    }
+  },
+  "independentVerification": {
+    "uiMatchesIndependentCoreIgnoringGeneratedIDsAndRevision": true,
+    "frames": 279,
+    "width": 320,
+    "height": 180,
+    "fps": "30/1",
+    "durationSeconds": 9.3,
+    "nativePCMBytes": 3571200,
+    "nativePCMSHA256": "f6eb1eb647bcc5651976e9e37cf19587be2eae49775dbeed597052956beba31b",
+    "outputSHA256": "5b665944555b72840022cefa85e14206c4f3778577d32165d49e50d1c28e713f",
+    "exportAudioCodec": "aac"
+  },
+  "ui": {
+    "defaultScope": "selection",
+    "explicitAllTracks": true,
+    "noCandidateRetainsProject": true,
+    "applyUndoRedo": true,
+    "nativePlaybackReachedEnd": true,
+    "saveSeparateProject": true,
+    "parameterChangeInvalidatesPreview": true,
+    "narrowViewport": [
+      900,
+      720
+    ],
+    "document": [
+      900,
+      720
+    ],
+    "nativeSelectAXExpandedAndEscape": true
+  },
+  "checks": {
+    "frontendTestFiles": 54,
+    "frontendTests": 357,
+    "goRacePackages": 32,
+    "goVet": true,
+    "macOSBuild": true,
+    "windowsAMD64Build": true,
+    "productionResources": true,
+    "wailsVersion": "3.0.0",
+    "documentation": {
+      "Markdown文档数": 119,
+      "本地链接检查数": 596,
+      "正文检查文档数": 92,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    },
+    "staticDesignAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "wailsLatest": "v3.0.0"
+  },
+  "paidModelCalls": 0,
+  "windowsRuntimeVerified": false,
+  "newNativeMacGUIVerified": false,
+  "limitations": [
+    "本地合成媒体与人工词时间，非自然语音或模型质量",
+    "PCM相同比较在AAC编码前",
+    "全轨声音硬切，没有新增淡化",
+    "自然素材/真实账户/完整双端发布门槛继续"
+  ],
+  "cleanup": {
+    "temporaryBrowserTabsClosed": true,
+    "viewportReset": true,
+    "developmentServicesStopped": true,
+    "listenersRemaining": 0
+  }
+}

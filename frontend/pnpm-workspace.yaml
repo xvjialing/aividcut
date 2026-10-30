@@ -1,0 +1,4 @@
+# 保持 pnpm 的隔离链接布局；内容通过同磁盘的用户共享 store 复用。
+nodeLinker: isolated
+# 本机 Corepack/已安装的 pnpm 负责版本选择，避免每个项目再安装一份 pnpm。
+pmOnFail: error

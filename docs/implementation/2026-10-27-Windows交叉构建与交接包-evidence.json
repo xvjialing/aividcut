@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-27",
+  "windowsExecutionVerified": false,
+  "releaseVerified": false,
+  "workerBuild": {
+    "schemaVersion": 1,
+    "target": "x86_64-w64-mingw32",
+    "ucrtProbe": true,
+    "qtMetrics": true,
+    "compiler": {
+      "sha256": "6bcc6fa76d89a520b8b35b9f0b69e35ea8935596108460999f5ae2e1763e378f",
+      "version": "x86_64-w64-mingw32-g++ (GCC) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "sdkVersions": [
+      "7.42.0",
+      "63.1.102",
+      "63.1.102",
+      "61.1.102",
+      "12.1.102",
+      "7.1.102",
+      "10.1.102",
+      "6.12.0"
+    ],
+    "sources": {
+      "native/mlt-worker/main.cpp": "294a82ccf03d77661b8e7b0e7745a19f8fe20c3da47735c12ba4df7ff5b32bae",
+      "native/mlt-worker/audio_probe.cpp": "95d9d2f0118f6689e91859031469dd43e19278788a0a98991622b7879d39a26f",
+      "native/mlt-worker/source_time.cpp": "476cbc4d4273f2740584406c772304697037737d46a4651e2a526def323f17de",
+      "native/mlt-worker/source_audio.cpp": "df0c6bc9f5864c32d18ad55681797486312a0aa0670dbb54b450b1c91922ccfd",
+      "native/mlt-worker/audio_mix.cpp": "d8e26688e5e0cc2ce2d553201dcc38ed786f99c92b4c7af5e2ca55df826b2973",
+      "native/mlt-worker/image_effects.cpp": "fd04fd3b331fa60d13151adeb7248de6d6c250e383c4603d7263b2dd2a9e55f0"
+    },
+    "worker": {
+      "sha256": "43ab7cf2ecc8d8f13f5eccf8d84e96f02b714d43d720bc12d36ac0e9dea8c384",
+      "bytes": 273408
+    },
+    "windowsExecutionVerified": false,
+    "releaseVerified": false
+  },
+  "developmentExtraction": {
+    "files": 3366,
+    "bytes": 42866488,
+    "packages": 4,
+    "releaseVerified": false
+  },
+  "staticClosure": {
+    "peFiles": 149,
+    "imports": 2010,
+    "missing": 0,
+    "workerMissing": false,
+    "delayImports": 0
+  },
+  "media": {
+    "bytes": 251736862,
+    "files": 528,
+    "fingerprint": "9858619cc18e03e064702591a8b8ede9851ae9b9b4e0f406424be18d87fda435",
+    "id": "aividcut-media-windows",
+    "releaseVerified": false,
+    "version": "development-cross"
+  },
+  "relocationVerified": true,
+  "wrongTargetRejected": true,
+  "audit": {
+    "blockers": 0,
+    "reviews": 30,
+    "reviewCodes": {
+      "import_resolution": 27,
+      "ffmpeg_unprobed": 2,
+      "license_closure": 1
+    },
+    "debugSections": {
+      "app": false,
+      "worker": false,
+      "ffmpeg": false,
+      "ffprobe": false
+    }
+  },
+  "archive": {
+    "path": "/Users/xvjialing/projects/aividcut/work/windows-cross-check/AIVidCut-windows-amd64-candidate.zip",
+    "bytes": 108094647,
+    "sha256": "dbebd29e08ff19527e9cf4f1ecbc321147ba00698dc5086c5229881558001d4b",
+    "files": 687,
+    "crcVerified": true
+  },
+  "package": {
+    "path": "/Users/xvjialing/projects/aividcut/work/windows-cross-check/AIVidCut-windows-amd64-candidate",
+    "bytes": 277356072,
+    "licenseFiles": 151,
+    "appSHA256": "f8d0f914aa3471fc136e7e24555f4864bbe47f06a0f0587578383e0f8341029e",
+    "verifierSHA256": "5a153a9c14bd1b070cc04841002c16b9ab31917804e3926932efe6d81243fa50"
+  },
+  "tests": {
+    "crossBuildBoundaries": 4,
+    "resolverBoundaries": 5,
+    "frontendUnchanged": true,
+    "windowsProgramsExecuted": 0,
+    "modelRequests": 0
+  }
+}

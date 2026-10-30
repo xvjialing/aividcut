@@ -1,0 +1,146 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R02",
+    "FW-R05",
+    "FW-R07",
+    "FW-R08",
+    "FW-R11",
+    "FW-R12"
+  ],
+  "actualMedia": {
+    "durationSeconds": 10,
+    "existingFadePreserved": true,
+    "fixture": "本机合成音画/原声/两路同源配乐，人工词时间，非模型质量证明",
+    "frames": 300,
+    "maxIndependentSampleError": 8.501422898987698e-09,
+    "pcmBytes": 3840000,
+    "pcmSHA256": "31a04299a986bbd0bb9aa8ae77532a72bbf5aacccc9678021881a2cbbff2e721",
+    "summary": {
+      "scope": "project",
+      "mode": "set",
+      "examined": 15,
+      "changed": 2,
+      "preserved": 1,
+      "skippedMuted": 0,
+      "skippedType": 12,
+      "unchanged": 0,
+      "scaled": 0
+    }
+  },
+  "independentVerification": {
+    "uiSavedProjectMatchesIndependentCoreExceptRevision": true,
+    "frames": 300,
+    "width": 320,
+    "height": 180,
+    "fps": "30/1",
+    "durationSeconds": 10,
+    "audioCodec": "aac",
+    "outputSHA256": "d61901f8a1461dd638a0bb0c926038c947b1aa4d7690ae55fe5c3adf238a4d76"
+  },
+  "ui": {
+    "emptySelectionDefaultsToSelection": true,
+    "explicitProjectScope": true,
+    "previewSetTwoPreserveOne": true,
+    "previewReplaceThree": true,
+    "previewClearOne": true,
+    "savedPresetWithoutEditing": true,
+    "loadedPresetExplicitly": true,
+    "applied": {
+      "projectMatchesExpectedExceptRevision": true,
+      "revision": 3,
+      "dirty": true,
+      "canUndo": true,
+      "canRedo": false
+    },
+    "undo": {
+      "projectMatchesExpectedExceptRevision": true,
+      "revision": 4,
+      "dirty": false,
+      "canUndo": false,
+      "canRedo": true
+    },
+    "redo": {
+      "projectMatchesExpectedExceptRevision": true,
+      "revision": 5,
+      "dirty": true,
+      "canUndo": true,
+      "canRedo": false
+    },
+    "nativePlaybackReachedEnd": true,
+    "savedSeparateProject": true,
+    "narrowViewport": [
+      900,
+      720
+    ],
+    "document": [
+      900,
+      720
+    ],
+    "clearSettingControlsDisabled": true,
+    "nativeSelectAXExpandedAndEscape": true
+  },
+  "presetRestart": {
+    "reopenedFromIndependentProcess": true,
+    "preset": {
+      "id": "preset-7ba708ca47152e4160c2071e",
+      "name": "声音两端200ms · 保留手动曲线",
+      "workflowId": "audio-fades",
+      "workflowVersion": "1.0.0",
+      "version": 1,
+      "parameters": {
+        "audibleOnly": true,
+        "existingPolicy": "keep",
+        "inMs": 200,
+        "mode": "set",
+        "outMs": 200,
+        "shortPolicy": "scale",
+        "targetKinds": "audio_only"
+      },
+      "createdAt": "2026-10-26T21:22:59.676981Z",
+      "updatedAt": "2026-10-26T21:22:59.676981Z"
+    }
+  },
+  "checks": {
+    "frontendFiles": 55,
+    "frontendTests": 363,
+    "goRacePackages": 32,
+    "goVet": true,
+    "macOSBuild": true,
+    "windowsAMD64Build": true,
+    "productionResources": true,
+    "wailsVersion": "3.0.0",
+    "documentation": {
+      "Markdown文档数": 123,
+      "本地链接检查数": 621,
+      "正文检查文档数": 96,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    },
+    "staticDesignAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "wailsLatest": "v3.0.0"
+  },
+  "paidModelCalls": 0,
+  "newNativeMacGUIVerified": false,
+  "windowsRuntimeVerified": false,
+  "limitations": [
+    "本地合成媒体和人工词时间，非自然声音/模型质量证明",
+    "包络按显示片段范围，不是交叉混音或去爆音保证",
+    "PCM检查在AAC编码前",
+    "真实CLI/账户及完整双端商业门槛继续"
+  ],
+  "cleanup": {
+    "temporaryBrowserTabClosed": true,
+    "viewportReset": true,
+    "developmentServicesStopped": true,
+    "listenersRemaining": 0
+  }
+}

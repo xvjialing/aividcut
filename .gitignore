@@ -1,0 +1,68 @@
+# 系统与编辑器本地文件
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# 本地环境配置；示例配置仍纳入版本管理
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.*.sample
+
+# pnpm / Node 依赖与工具缓存；保留 pnpm-lock.yaml
+node_modules/
+.pnpm-store/
+.vite/
+.vitest/
+*.tsbuildinfo
+
+# Wails 与前端生成文件；build/ 中的源码、图标和配置仍需版本管理
+/frontend/dist/
+/frontend/wailsjs/
+/build/bin/
+/build/darwin/icon.icns
+/build/windows/icon.ico
+.task/
+
+# Python 与原生编译缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+*.test
+*.prof
+
+# 测试报告、日志及临时输出；docs/ 中归档的验收证据继续保留
+coverage/
+.nyc_output/
+test-results/
+playwright-report/
+/.playwright-cli/
+/premium-audit.json
+/output/
+/logs/
+*.log
+*.tmp
+*.temp
+
+# 本地媒体 SDK、调试工程、验证产物与隔离工作区
+/work/
+/.worktrees/
+/tmp/
+/temp/

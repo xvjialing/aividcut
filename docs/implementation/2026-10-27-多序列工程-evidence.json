@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R03",
+    "FW-R07",
+    "FW-R08",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R17"
+  ],
+  "wailsLatest": "v3.0.0",
+  "schemaVersion": 5,
+  "fullSavedProject": {
+    "active": "横屏副本 原生",
+    "sequenceCount": 3,
+    "assets": 5,
+    "order": [
+      "sequence-main",
+      "sequence-f5144baae9cb067df3746d58",
+      "sequence-105254097782d92436e85500"
+    ],
+    "otherNames": [
+      "竖屏 29.97",
+      "主时间线"
+    ]
+  },
+  "tests": {
+    "go": {
+      "tested": 36,
+      "withoutTests": 8
+    },
+    "goRacePassed": true,
+    "goVetPassed": true,
+    "frontendTests": 387,
+    "frontendFiles": 59,
+    "typecheckPassed": true,
+    "formatPassed": true,
+    "productionAssetsPassed": true,
+    "premiumStaticErrors": 0,
+    "capacityAndLegacyGuardPassed": true
+  },
+  "media": {
+    "assetsShared": 5,
+    "copyMatchesOriginal": true,
+    "offlineOtherSequenceNotDecoded": true,
+    "schemaVersion": 5,
+    "sequences": [
+      {
+        "clips": 5,
+        "frames": 90,
+        "id": "sequence-main",
+        "name": "主时间线",
+        "output": "/Users/xvjialing/projects/aividcut/work/sequences-check/sequence-0.mp4",
+        "pcmSHA256": "0bdd62554bc912ee239d9c6c98a1f6302b0c941e2796667e31375d08f84b95a4",
+        "rgbaSHA256": "2211be787e79da55b6356f121853544f39874e17d045df87aef744b008d90301",
+        "samples": 144000,
+        "settings": {
+          "width": 320,
+          "height": 180,
+          "fpsNum": 30,
+          "fpsDen": 1,
+          "sampleRate": 48000
+        }
+      },
+      {
+        "clips": 5,
+        "frames": 90,
+        "id": "sequence-f5144baae9cb067df3746d58",
+        "name": "横屏副本",
+        "output": "/Users/xvjialing/projects/aividcut/work/sequences-check/sequence-1.mp4",
+        "pcmSHA256": "0bdd62554bc912ee239d9c6c98a1f6302b0c941e2796667e31375d08f84b95a4",
+        "rgbaSHA256": "2211be787e79da55b6356f121853544f39874e17d045df87aef744b008d90301",
+        "samples": 144000,
+        "settings": {
+          "width": 320,
+          "height": 180,
+          "fpsNum": 30,
+          "fpsDen": 1,
+          "sampleRate": 48000
+        }
+      },
+      {
+        "clips": 2,
+        "frames": 90,
+        "id": "sequence-105254097782d92436e85500",
+        "name": "竖屏 29.97",
+        "output": "/Users/xvjialing/projects/aividcut/work/sequences-check/sequence-2.mp4",
+        "pcmSHA256": "0b2d8c060b511d73f8f22f9d94fb03d243c04501211cc41d5a8264bc61f15bcd",
+        "rgbaSHA256": "89af3439370796036554d353a72d89b624d093399a61ff2e49d57d01923f9bcf",
+        "samples": 144144,
+        "settings": {
+          "width": 180,
+          "height": 320,
+          "fpsNum": 30000,
+          "fpsDen": 1001,
+          "sampleRate": 48000
+        }
+      }
+    ]
+  },
+  "exports": {
+    "exports": [
+      {
+        "index": 0,
+        "streams": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180,
+            "rate": "30/1",
+            "duration": "3.000000",
+            "frames": "90"
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null,
+            "rate": "0/0",
+            "duration": "3.000000",
+            "frames": "141"
+          }
+        ],
+        "decoded": {
+          "video": {
+            "bytes": 20736000,
+            "sha256": "6c072b485361007062e45132e764de9ac710028964758e68eaf1cf0ebb499025"
+          },
+          "audio": {
+            "bytes": 1152000,
+            "sha256": "94c9dc3063edbe753e99de6ddc5fae406c36b0c0b2f6d71e49fc29595a480fd5"
+          }
+        }
+      },
+      {
+        "index": 1,
+        "streams": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180,
+            "rate": "30/1",
+            "duration": "3.000000",
+            "frames": "90"
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null,
+            "rate": "0/0",
+            "duration": "3.000000",
+            "frames": "141"
+          }
+        ],
+        "decoded": {
+          "video": {
+            "bytes": 20736000,
+            "sha256": "6c072b485361007062e45132e764de9ac710028964758e68eaf1cf0ebb499025"
+          },
+          "audio": {
+            "bytes": 1152000,
+            "sha256": "94c9dc3063edbe753e99de6ddc5fae406c36b0c0b2f6d71e49fc29595a480fd5"
+          }
+        }
+      },
+      {
+        "index": 2,
+        "streams": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 180,
+            "height": 320,
+            "rate": "30000/1001",
+            "duration": "3.003000",
+            "frames": "90"
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null,
+            "rate": "0/0",
+            "duration": "3.003000",
+            "frames": "141"
+          }
+        ],
+        "decoded": {
+          "video": {
+            "bytes": 20736000,
+            "sha256": "0879a7e50b2860edfc444945dd033118e03daddaecfc4533ceed1a24d53a2d1d"
+          },
+          "audio": {
+            "bytes": 1153152,
+            "sha256": "fe05420fd3300624cb0b1072d5054c207bc425a76b19f7b922f0da28604b93ac"
+          }
+        }
+      }
+    ],
+    "originalCopyDecodedIdentical": true
+  },
+  "browser": {
+    "createDuplicateRenameSwitchDeleteUndoRedoSave": true,
+    "localSameIDSelectionCleared": true,
+    "navigationDoesNotDirty": true,
+    "navigationPreservesRedo": true,
+    "nameErrorAndFocus": true,
+    "geometry": {
+      "actionBottom": 660,
+      "documentOverflow": false,
+      "height": 640,
+      "width": 760,
+      "x": 70,
+      "y": 40
+    }
+  },
+  "native": {
+    "bundle": "/Users/xvjialing/projects/aividcut/work/sequences-check/AIVidCutSequenceVerify.app",
+    "dataDirectory": "/Users/xvjialing/projects/aividcut/work/sequences-check/native-data",
+    "bundleIdentifier": "com.wails.aividcut.sequences-check-20261027",
+    "launchMechanism": "CUA Launch Services, Info.plist LSEnvironment",
+    "productionBundleUnchanged": true,
+    "isolatedStateCreated": true,
+    "realFileChooserOpen": true,
+    "threeSequenceFileRead": true,
+    "switchPortraitToLandscapeCopy": true,
+    "renameAndKeyboardUndoRedo": true,
+    "keyboardSave": true,
+    "actualPlaybackToFrame": 90,
+    "windowScreenshot": "/Users/xvjialing/projects/aividcut/work/sequences-check/原生多序列.png",
+    "unconfirmed": "实时原片模式播放到尾后，第三个序列选项选择未确认；尚不能区分自动化输入问题与客户端问题，未标为通过",
+    "nativeRunningAfterInterruption": false,
+    "savedCurrentSequence": "横屏副本 原生"
+  },
+  "builds": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "windowsPackage": {
+    "archive": {
+      "path": "/Users/xvjialing/projects/aividcut/work/sequences-check/AIVidCut-windows-amd64-sequences.zip",
+      "bytes": 108139504,
+      "sha256": "260386caa65ed1cf811a42870747672a4575a21b78bb3ba5500eb72a6f00fbc0",
+      "files": 687,
+      "crcVerified": true
+    },
+    "appSHA256": "4b149f2d6e4de1566e26f84cbc57d0b6f71d7d2392863994d08e07b9b271c31a",
+    "workerSHA256": "43ab7cf2ecc8d8f13f5eccf8d84e96f02b714d43d720bc12d36ac0e9dea8c384",
+    "windowsExecutionVerified": false,
+    "releaseVerified": false
+  },
+  "paidRequests": 0,
+  "agentsUsed": 0,
+  "deferred": [
+    "Windows实机",
+    "真实模型与CLI账户推理",
+    "正式许可/签名安装",
+    "原生实时到尾后的第三项切换复查"
+  ],
+  "goalComplete": false,
+  "cleanup": {
+    "devserverAndViteOldHandlesMissing": true,
+    "ports43175And5174NotListening": true,
+    "nativeAppNotRunning": true,
+    "cuaSessionResetAfterInterruption": true,
+    "unrelatedUserAppsAndTabsUntouched": true,
+    "oldProcessHandlesConfirmedMissing": [
+      86524,
+      50410
+    ]
+  },
+  "documentation": {
+    "Markdown文档数": 149,
+    "本地链接检查数": 764,
+    "正文检查文档数": 112,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

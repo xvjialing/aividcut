@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-26",
+  "phase": "时间区间与全轨波纹删除",
+  "requirements": [
+    "FW-R01",
+    "FW-R02",
+    "FW-R03",
+    "FW-R07",
+    "FW-R08",
+    "FW-R11",
+    "FW-R12",
+    "FW-R17"
+  ],
+  "wails": "v3.0.0-beta.34",
+  "tests": {
+    "frontendFiles": 40,
+    "frontendTests": 278,
+    "fullGoRacePassed": true,
+    "affectedFinalRacePassed": true,
+    "goVetPassed": true,
+    "typecheckPassed": true,
+    "formatPassed": true,
+    "productionAssetsPassed": true,
+    "uiAuditErrors": 0,
+    "designLintErrors": 0
+  },
+  "core": {
+    "command": "ripple_delete_range",
+    "oneAtomicCommand": true,
+    "deterministicNewClipCaptionTrackIds": true,
+    "lockedAffectedTracksRejectAll": true,
+    "protectedManualReadingCaptionRejectsPartial": true,
+    "rawAcceptedWordsRetained": true,
+    "oneUndoRedo": true,
+    "previewAppliedIdsMatch": true
+  },
+  "largeProject": {
+    "clips": 10000,
+    "actualAffected": 6667,
+    "returnedIds": 2000,
+    "returnedEffects": 200,
+    "actualRemovedFrames": 10
+  },
+  "realMedia": {
+    "fpsNum": 30000,
+    "fpsDen": 1001,
+    "speed": "3/2",
+    "sourceInUs": 137000,
+    "existingPhaseFrames": 2,
+    "deletedRange": [
+      6,
+      11
+    ],
+    "oldKeptStart": 11,
+    "newKeptStart": 6,
+    "comparedFrames": 6,
+    "equalPCMBytes": 76880,
+    "equalRGBABytes": 1382400,
+    "included": "原声、独立短音尾和后段文字同步"
+  },
+  "browser": {
+    "range": [
+      30,
+      45
+    ],
+    "oIncludesCurrentFrame": true,
+    "previewReadOnly": true,
+    "mainLeftFrames": 30,
+    "otherInstanceStart": 165,
+    "totalFrames": 285,
+    "manualCaptionPreserved": true,
+    "acceptedWordsUnchanged": true,
+    "undoRestored": true,
+    "redoStable": true,
+    "failureRetry": true,
+    "narrowCancelNoEdit": true,
+    "errors": [],
+    "modelCalls": 0
+  },
+  "wordAndPersistence": {
+    "wordGlobalApplied": true,
+    "otherInstanceStart": 165,
+    "persistence": {
+      "schemaVersion": 2,
+      "dirty": false,
+      "clips": 12
+    }
+  },
+  "modelCalls": 0,
+  "realAccounts": "按用户要求后置",
+  "nativeVerification": "本轮未新增原生窗口操作，之前Mac锁屏；Windows仍只有交叉构建",
+  "builds": {
+    "macOS": "自签名构建通过",
+    "windowsAMD64": "交叉构建通过",
+    "mainJSKB": 569.68,
+    "rippleLazyJSKB": 6.27,
+    "largeChunkWarningRetained": true
+  },
+  "fullGoalComplete": false,
+  "finalLayout": {
+    "finalLayout": true,
+    "narrowApplyButton": {
+      "x": 564,
+      "y": 684.578125,
+      "width": 96,
+      "height": 30.5
+    }
+  },
+  "documentation": {
+    "Markdown文档数": 87,
+    "本地链接检查数": 433,
+    "正文检查文档数": 60,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browserClosed": true,
+    "viteExitCode": 130,
+    "goServerExitCode": 1
+  }
+}

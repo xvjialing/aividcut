@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-25",
+  "scope": "局部验收；完整P0–P6继续",
+  "browser": {
+    "requests": [
+      {
+        "label": "移动选中片段",
+        "commands": [
+          {
+            "type": "move_clips",
+            "clipIds": [
+              "clip-2",
+              "clip-3"
+            ],
+            "frameDelta": 20,
+            "trackDelta": 0
+          }
+        ]
+      },
+      {
+        "label": "删除选中片段",
+        "commands": [
+          {
+            "type": "delete_clips",
+            "clipIds": [
+              "clip-2",
+              "clip-3"
+            ]
+          }
+        ]
+      },
+      {
+        "label": "移动选中片段",
+        "commands": [
+          {
+            "type": "move_clips",
+            "clipIds": [
+              "background",
+              "clip-2"
+            ],
+            "frameDelta": 60,
+            "trackDelta": 0
+          }
+        ]
+      },
+      {
+        "label": "移动选中片段",
+        "commands": [
+          {
+            "type": "move_clips",
+            "clipIds": [
+              "clip-2",
+              "clip-3"
+            ],
+            "frameDelta": 0,
+            "trackDelta": 1
+          }
+        ]
+      },
+      {
+        "label": "移动选中片段",
+        "commands": [
+          {
+            "type": "move_clips",
+            "clipIds": [
+              "clip-2",
+              "clip-3"
+            ],
+            "frameDelta": 10,
+            "trackDelta": 0
+          }
+        ]
+      },
+      {
+        "label": "移动选中片段",
+        "commands": [
+          {
+            "type": "move_clips",
+            "clipIds": [
+              "clip-2",
+              "clip-3"
+            ],
+            "frameDelta": 1,
+            "trackDelta": 0
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "selected": [
+      "clip-2",
+      "clip-3"
+    ],
+    "final": {
+      "dirty": false,
+      "revision": 10,
+      "clips": 6
+    },
+    "boxStart": {
+      "x": 160,
+      "y": 702
+    }
+  },
+  "largeProject": {
+    "total": 10000,
+    "beforeScroll": 28,
+    "afterScroll": {
+      "mounted": 36,
+      "pressed": 36
+    },
+    "dirty": false,
+    "revision": 0,
+    "projectUnchanged": true
+  },
+  "native": {
+    "systemFilePicker": true,
+    "selection": 2,
+    "groupMoveFrames": 10,
+    "movedTimecodes": [
+      "00:00:03:10",
+      "00:00:05:10"
+    ],
+    "undoTimecodes": [
+      "00:00:03:00",
+      "00:00:05:00"
+    ],
+    "finalRevision": 2,
+    "previewFull": [
+      640,
+      360
+    ],
+    "previewQuarter": [
+      160,
+      90
+    ],
+    "endedTimecode": "00:00:09:00",
+    "audioUnderrunMeasured": false,
+    "windowsNativeVerified": false
+  },
+  "actualMedia": {
+    "frames": 10,
+    "shiftFrames": 30,
+    "pictureBytes": 2304000,
+    "pcmBytes": 128128,
+    "bitEqual": true
+  },
+  "tests": {
+    "frontendTests": 229,
+    "frontendFiles": 33,
+    "coreRacePackages": 20,
+    "testedCommandPackages": 1,
+    "additionalMCPAndMediaRace": true
+  },
+  "limitations": [
+    "多选修剪/分割/复制未实现",
+    "Windows只交叉编译",
+    "真实模型和CLI账号未验收",
+    "未证明全部长媒体或整机资源达标"
+  ],
+  "builds": {
+    "macOS": "本地自签名构建通过",
+    "windowsAMD64": "交叉构建通过，未实机",
+    "macBinarySHA256": "834ae103117e7c08e0e21a1ddbffec88c7506e7e89d45dfe3887f779ad3f108c",
+    "windowsBinarySHA256": "a9371f26e399177b0520bd96745604dc7a0f60e5e0d3815027cd4a69925ce69c",
+    "wails": "v3.0.0-beta.34",
+    "mainBundleKB": 540.47
+  }
+}

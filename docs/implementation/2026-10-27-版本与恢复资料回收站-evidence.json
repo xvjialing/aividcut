@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-27",
+  "phase": "P1_snapshot_storage_trash",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R13",
+    "FW-R15"
+  ],
+  "wailsLatest": "v3.0.0",
+  "realModelCalls": 0,
+  "realCLIInferenceCalls": 0,
+  "checks": {
+    "frontend": "50 files,333 tests passed",
+    "typecheck": "passed",
+    "prettier": "passed",
+    "goRace": "27 tested packages passed; some cached",
+    "goVet": "passed",
+    "macOSBuild": "local self-sign passed",
+    "windowsAMD64Build": "cross-build passed",
+    "productionAssets": "passed",
+    "strictUIAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1
+    },
+    "documentation": {
+      "Markdown文档数": 107,
+      "本地链接检查数": 528,
+      "正文检查文档数": 80,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    }
+  },
+  "newTests": {
+    "filesystemGroups": 3,
+    "applicationGroups": 5,
+    "frontendDOM": 5,
+    "bridge": 1
+  },
+  "browser": {
+    "projectUnchangedByStorageUI": true,
+    "dirtyAndUndoPreserved": true,
+    "sourceEpochAndProjectPathPreserved": true,
+    "restoredVersionBytesValid": true,
+    "activeVersionCount": 3,
+    "trashVersionCount": 0,
+    "permanentReviewCancelled": true,
+    "permanentSafeActionFocused": true,
+    "currentRecoveryMoveDisabled": true,
+    "unreadableRecordListedWithoutInventedRevision": true,
+    "viewport": [
+      900,
+      700
+    ],
+    "dialog": [
+      760,
+      668
+    ],
+    "horizontalOverflow": false,
+    "footerVisible": true
+  },
+  "media": {
+    "frames": 90,
+    "fps": "30000/1001",
+    "durationSeconds": 3.003,
+    "width": 640,
+    "height": 360,
+    "allVideoFrameMD5Identical": true,
+    "allStereoFloatPCMIdentical": true,
+    "stereoFloatPCMBytes": 1153152,
+    "outputBytes": 405954,
+    "outputSHA256": "ca2b9513cae5954ecc918b587ef9dade9d46da7736a9d0030f39c404498ca725",
+    "fixtureFileUnmodified": true,
+    "realModelCalls": 0
+  },
+  "cleanupEvidence": {
+    "softMoveAndPermanentDelete": "real temporary filesystem via backend tests",
+    "UI": "cancelled move/purge reviews; actual restore performed",
+    "UIExecutedPermanentDeletion": false
+  },
+  "safety": {
+    "currentRecoveryLocked": true,
+    "currentProjectAndAssetPathsProtected": true,
+    "unknownExtraFilesNotPurged": true,
+    "symlinksNotFollowed": true,
+    "changedProofAndScopeRejected": true,
+    "targetNotOverwritten": true,
+    "noMCPStoragePermissionAdded": true
+  },
+  "limits": {
+    "versionActive": 200,
+    "versionTrash": 200,
+    "recoveryActive": 50,
+    "recoveryTrash": 50,
+    "recoveryBytesPerLocation": 536870912,
+    "scanEntries": 4096,
+    "proofs": 512,
+    "proofMinutes": 10
+  },
+  "nativeGUIVerified": false,
+  "limitations": [
+    "new native GUI and Windows hardware remain",
+    "no automatic expiry or bulk empty",
+    "unknown content and nonrecord staging are not purged",
+    "physical disk failure and long term resource gates remain",
+    "main JS590.20kB and SDK warnings remain"
+  ],
+  "screenshot": "assets/2026-10-27-snapshot-trash.jpg",
+  "logsDirectory": "work/snapshot-trash-check",
+  "cleanup": {
+    "browserTab5": "closed",
+    "viewport": "reset",
+    "goAndVite": "intentional Ctrl-C",
+    "exactProcessCheck": "no match",
+    "ports43110And5173": "no listeners"
+  }
+}

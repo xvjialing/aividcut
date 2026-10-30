@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R11",
+    "FW-R14",
+    "FW-R16"
+  ],
+  "staging": {
+    "payloads": 86,
+    "bytes": 2077605,
+    "privateTestOnly": true,
+    "binaryDependenciesRebased": false
+  },
+  "actual": {
+    "rgbaAndPCMEqualAfterMove": true,
+    "framesEach": 90,
+    "samplesEach": 144000,
+    "PATH": "/nonexistent",
+    "savedOnlyMode": true,
+    "cleanMachineVerified": false
+  },
+  "exports": [
+    {
+      "phase": "before",
+      "frames": 90,
+      "width": 320,
+      "height": 180,
+      "fps": "30/1",
+      "decodedAudioSHA256": "7be693f2b0b15b75f83eba5f082e5be3e0280b995c212df52ad6a761a39e96f0",
+      "decodedVideoSHA256": "4639fcf67feaac8b693272ee783c737b14035485631c7d99655896c26c366828"
+    },
+    {
+      "phase": "moved",
+      "frames": 90,
+      "width": 320,
+      "height": 180,
+      "fps": "30/1",
+      "decodedAudioSHA256": "7be693f2b0b15b75f83eba5f082e5be3e0280b995c212df52ad6a761a39e96f0",
+      "decodedVideoSHA256": "4639fcf67feaac8b693272ee783c737b14035485631c7d99655896c26c366828"
+    }
+  ],
+  "uiGeometry": {
+    "auto": true,
+    "dialog": {
+      "bottom": 704,
+      "height": 688,
+      "left": 20,
+      "right": 880,
+      "top": 16,
+      "width": 860,
+      "x": 20,
+      "y": 16
+    },
+    "document": [
+      900,
+      720
+    ],
+    "paths": [
+      {
+        "disabled": true,
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "value": ""
+      },
+      {
+        "disabled": true,
+        "value": ""
+      }
+    ],
+    "viewport": [
+      900,
+      720
+    ]
+  },
+  "saveFailure": {
+    "auto": true,
+    "error": true,
+    "saveDisabled": true,
+    "staleReadyNotice": false
+  },
+  "ui": {
+    "manualDraftRoundTrip": true,
+    "bundleOriginsShown": true,
+    "manualSaveRequiresRestartWithoutHotSwap": true,
+    "autoModeRestored": true,
+    "focusReturnsMediaTrigger": true
+  },
+  "checks": {
+    "frontendFiles": 57,
+    "frontendTests": 372,
+    "typecheck": true,
+    "format": true,
+    "goRacePackages": 34,
+    "goVet": true,
+    "finalRelatedRaceAndVet": true,
+    "macOSBuild": true,
+    "windowsAMD64Build": true,
+    "productionResources": true,
+    "wailsLatest": "3.0.0",
+    "documentation": {
+      "Markdown文档数": 133,
+      "本地链接检查数": 680,
+      "正文检查文档数": 106,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    },
+    "strictDesignAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1
+    }
+  },
+  "release": {
+    "privateRuntimeBlockers": 46,
+    "privateRuntimeReviews": 4,
+    "verified": false,
+    "binaryDependenciesRebased": false
+  },
+  "paidModelCalls": 0,
+  "windowsRuntimeVerified": false,
+  "newNativeMacGUIVerified": false,
+  "limitations": [
+    "完整SDK装配/manifest生成及动态库重定位继续",
+    "清单哈希不是签名或许可认证",
+    "私有开发SDK仍链接Homebrew，不证明干净机器可用",
+    "模型账户/CLI推理/完整双端商业交付继续"
+  ],
+  "cleanup": {
+    "browserTabsClosed": [
+      23,
+      24
+    ],
+    "viewportReset": true,
+    "testUnlistedFileRemoved": true,
+    "serverStopped": true,
+    "viteStopped": true
+  }
+}

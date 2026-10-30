@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R07",
+    "FW-R08",
+    "FW-R11",
+    "FW-R12",
+    "FW-R16"
+  ],
+  "actualCLI": {
+    "actualIsolationStatus": "policy_unverified",
+    "actualProductionSupported": false,
+    "adapterCheckVisible": true,
+    "authState": "signed_out",
+    "checks": [
+      {
+        "id": "dedicated_profile",
+        "status": "pass",
+        "reason": "独立私有目录未观察到用户配置或启动 hooks；未读取认证文件"
+      },
+      {
+        "id": "arguments",
+        "status": "pass",
+        "reason": "本机帮助列出了规划和隔离参数"
+      },
+      {
+        "id": "process_boundary",
+        "status": "pass",
+        "reason": "使用独立 Unix 进程组，取消时终止整组"
+      },
+      {
+        "id": "local_management",
+        "status": "pass",
+        "reason": "指定系统文件及本机管理配置键未观察到；账户策略由 CLI 启动诊断另查"
+      },
+      {
+        "id": "effective_policy_hooks",
+        "status": "unknown",
+        "reason": "safe-mode 仍允许策略 hooks；该版本尚无已验证的启动前有效策略读取协议",
+        "nextAction": "补齐官方策略诊断或独立操作系统隔离；不会降级启动"
+      },
+      {
+        "id": "execution_protocol_adapter",
+        "status": "pass",
+        "reason": "Claude 2.1.308结构化执行适配已实现；协议回归不等于真实模型或启动策略验收"
+      },
+      {
+        "id": "execution_mcp",
+        "status": "unknown",
+        "reason": "Claude执行协议已接入；safe-mode不加载MCP，restricted仍不能代替启动前managed策略核查",
+        "nextAction": "补齐启动前有效策略验证与真实账户验收，不绕过managed策略"
+      }
+    ],
+    "executeRejectedBeforeInference": true,
+    "installedCLI": "2.1.308",
+    "onlyMetadataCallsAllowedByWrapper": true
+  },
+  "actualCLICalls": [
+    {
+      "args": [
+        "--version"
+      ],
+      "inference": false
+    },
+    {
+      "args": [
+        "--help"
+      ],
+      "inference": false
+    },
+    {
+      "args": [
+        "auth",
+        "status",
+        "--json"
+      ],
+      "inference": false
+    },
+    {
+      "args": [
+        "--version"
+      ],
+      "inference": false
+    },
+    {
+      "args": [
+        "--help"
+      ],
+      "inference": false
+    },
+    {
+      "args": [
+        "auth",
+        "status",
+        "--json"
+      ],
+      "inference": false
+    }
+  ],
+  "officialSDKTypes": {
+    "version": "0.3.308",
+    "tarballBytes": 1385236,
+    "sha512Verified": true,
+    "typeFiles": [
+      "sdk-browser-sdk.d.ts",
+      "sdk-sdk.d.ts"
+    ]
+  },
+  "protocolFixture": {
+    "realSubprocess": true,
+    "realOfficialMCPClientAndLoopbackServer": true,
+    "coreTextClipActuallyAdded": true,
+    "coreUndoVerified": true,
+    "cancelAfterCommitKeepsCommittedOperation": true,
+    "productionPolicyGateBypassAdded": false,
+    "secretsAndImagesNotRetainedInPublicEvents": true,
+    "safeModeEnvironmentPreservedAndConflictingExecutionRejected": true
+  },
+  "checks": {
+    "goRacePackages": 32,
+    "goVet": true,
+    "frontendFiles": 55,
+    "frontendTests": 363,
+    "macOSBuild": true,
+    "windowsAMD64Build": true,
+    "productionResources": true,
+    "wailsVersion": "3.0.0",
+    "documentation": {
+      "Markdown文档数": 125,
+      "本地链接检查数": 630,
+      "正文检查文档数": 98,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    },
+    "staticDesignAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "wailsLatest": "v3.0.0"
+  },
+  "actualClaudeModelInferenceVerified": false,
+  "paidModelCalls": 0,
+  "newNativeMacGUIVerified": false,
+  "windowsRuntimeVerified": false,
+  "limitations": [
+    "生产policy_unverified，启动前有效managed策略未证明",
+    "内部协议夹具不是Claude模型推理验收",
+    "未知事件拒绝，真实事件兼容矩阵待补",
+    "完整双端/账号商业条件与原目标继续"
+  ],
+  "cleanup": {
+    "developmentServicesStarted": false,
+    "browserTabsCreated": false,
+    "nativeAppStarted": false,
+    "temporaryWorkingDirectoryRemoved": true,
+    "listenersRemaining": 0
+  }
+}

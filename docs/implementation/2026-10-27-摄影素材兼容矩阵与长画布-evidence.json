@@ -1,0 +1,1021 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R15"
+  ],
+  "wailsLatest": "v3.0.0",
+  "source": {
+    "title": "Tears of Steel",
+    "credit": "(CC) Blender Foundation | mango.blender.org",
+    "license": "CC BY 3.0",
+    "licenseURL": "https://mango.blender.org/sharing/",
+    "downloadURL": "https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov",
+    "bytes": 372178639,
+    "sha256": "efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f",
+    "nativeDimensions": [
+      1280,
+      534
+    ],
+    "video": "H.264 Main 8bit/24fps",
+    "audio": "MP3/44100Hz",
+    "independentFrames": 17620,
+    "clipWindowSourceSeconds": 130,
+    "distributedInClient": false
+  },
+  "formatCases": [
+    {
+      "id": "original-h264-mp3-mov",
+      "path": "/Users/xvjialing/projects/aividcut/work/natural-media-check/tears_of_steel_720p.mov",
+      "sourceInUs": 130012345,
+      "frames": 120,
+      "fpsNum": 30000,
+      "fpsDen": 1001,
+      "speedNum": 3,
+      "speedDen": 2,
+      "sha256": "efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "id": "hevc-10bit-aac",
+      "path": "/Users/xvjialing/projects/aividcut/work/natural-media-check/derived-photography/hevc-10bit-aac.mp4",
+      "sourceInUs": 12345,
+      "frames": 120,
+      "fpsNum": 30000,
+      "fpsDen": 1001,
+      "speedNum": 3,
+      "speedDen": 2,
+      "sha256": "8f0fd4217585e05af2275fa256c1296cd9a7a271f8568f2f18076ad0a0a3a35a",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "id": "vp9-opus",
+      "path": "/Users/xvjialing/projects/aividcut/work/natural-media-check/derived-photography/vp9-opus.webm",
+      "sourceInUs": 12345,
+      "frames": 120,
+      "fpsNum": 30000,
+      "fpsDen": 1001,
+      "speedNum": 3,
+      "speedDen": 2,
+      "sha256": "e3639645a6dd34769f3493be444b40b41ef91fe1e05d211c19d0c523a631f3e2",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "id": "prores-pcm",
+      "path": "/Users/xvjialing/projects/aividcut/work/natural-media-check/derived-photography/prores-pcm.mov",
+      "sourceInUs": 12345,
+      "frames": 120,
+      "fpsNum": 30000,
+      "fpsDen": 1001,
+      "speedNum": 3,
+      "speedDen": 2,
+      "sha256": "3580b675e6291b0286ac763830543a790e7b4ec581f685cf4f8fdf365d2828d3",
+      "width": 640,
+      "height": 360
+    },
+    {
+      "id": "vfr-h264-aac",
+      "path": "/Users/xvjialing/projects/aividcut/work/natural-media-check/derived-photography/vfr-h264-aac.mp4",
+      "sourceInUs": 12345,
+      "frames": 120,
+      "fpsNum": 30000,
+      "fpsDen": 1001,
+      "speedNum": 3,
+      "speedDen": 2,
+      "sha256": "e7553ffa80f1edac460d0555daca44bdcb6402ba9d584277afb7652468a901e1",
+      "width": 640,
+      "height": 360
+    }
+  ],
+  "matrix": [
+    {
+      "exports": [
+        {
+          "rgbaSHA256": "373a638f5fb53d9ed1e996cedfd799b2849e8702f38e5222fe291bee4ba7a365",
+          "pcmSHA256": "d40ab0e29e73aeae7eb764ae84f4665de1021ac2fb4624fdf9b1492432f0994d",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        },
+        {
+          "rgbaSHA256": "373a638f5fb53d9ed1e996cedfd799b2849e8702f38e5222fe291bee4ba7a365",
+          "pcmSHA256": "d40ab0e29e73aeae7eb764ae84f4665de1021ac2fb4624fdf9b1492432f0994d",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        }
+      ],
+      "id": "original-h264-mp3-mov",
+      "importWarnings": [
+        "tears_of_steel_720p.mov：超过本轮自动计数上限（每文件5分钟、128MiB）；未实测样本数，添加音频时保留声明的微秒末端，不标为采样精度。"
+      ],
+      "inputSHA256": "efa9062d9cdb7a338e40ad530dfdf234806743f29ae6a1a136b97ece4e588e8f",
+      "passed": true,
+      "split": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "885ab6005d5f411e65538fab593f84854d88f5e1285934f5ef64f036f096a5f3",
+        "pcmSHA256": "87783590b37ad556d8a217771f1ec7192a6ea1a0e6adaf33cc322e986a21118f",
+        "peakAmplitude": 0.5747368931770325,
+        "nonzeroChannelSamples": 384384
+      },
+      "whole": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "885ab6005d5f411e65538fab593f84854d88f5e1285934f5ef64f036f096a5f3",
+        "pcmSHA256": "87783590b37ad556d8a217771f1ec7192a6ea1a0e6adaf33cc322e986a21118f",
+        "peakAmplitude": 0.5747368931770325,
+        "nonzeroChannelSamples": 384384
+      }
+    },
+    {
+      "exports": [
+        {
+          "rgbaSHA256": "9d79c9cb1c0aa194dc22bb2a5e3c56b4d49955d4c7a210c65d895f82f39be32c",
+          "pcmSHA256": "e7c4976096f7a22ed782d1054379dd8f880524cd4461d3744d5bb7b801f117ec",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        },
+        {
+          "rgbaSHA256": "9d79c9cb1c0aa194dc22bb2a5e3c56b4d49955d4c7a210c65d895f82f39be32c",
+          "pcmSHA256": "e7c4976096f7a22ed782d1054379dd8f880524cd4461d3744d5bb7b801f117ec",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        }
+      ],
+      "id": "hevc-10bit-aac",
+      "importWarnings": null,
+      "inputSHA256": "8f0fd4217585e05af2275fa256c1296cd9a7a271f8568f2f18076ad0a0a3a35a",
+      "passed": true,
+      "split": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "9db552ee3c7ed181add34dc73c0283bc817c5de83d513c710bf497545c926a49",
+        "pcmSHA256": "55d7cf54699f293e77124b4e778f23ea34f75bd302758ef357a3dabc33f625d3",
+        "peakAmplitude": 0.5665679574012756,
+        "nonzeroChannelSamples": 384382
+      },
+      "whole": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "9db552ee3c7ed181add34dc73c0283bc817c5de83d513c710bf497545c926a49",
+        "pcmSHA256": "55d7cf54699f293e77124b4e778f23ea34f75bd302758ef357a3dabc33f625d3",
+        "peakAmplitude": 0.5665679574012756,
+        "nonzeroChannelSamples": 384382
+      }
+    },
+    {
+      "exports": [
+        {
+          "rgbaSHA256": "df9bcdc50fa4ffaad4a8569a8fce5005c99b91b48c9430f980c9f02dc55bd8d8",
+          "pcmSHA256": "7c89edd9fc28506b964884855ac65b2816625c740f66ef00966af765aa0cc589",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        },
+        {
+          "rgbaSHA256": "df9bcdc50fa4ffaad4a8569a8fce5005c99b91b48c9430f980c9f02dc55bd8d8",
+          "pcmSHA256": "7c89edd9fc28506b964884855ac65b2816625c740f66ef00966af765aa0cc589",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        }
+      ],
+      "id": "vp9-opus",
+      "importWarnings": null,
+      "inputSHA256": "e3639645a6dd34769f3493be444b40b41ef91fe1e05d211c19d0c523a631f3e2",
+      "passed": true,
+      "split": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "bf7432e243a5f5ef7cc8417fc7865302af46eb068a8a0d1db0dda4ac072b90b6",
+        "pcmSHA256": "43ee307dba37511a02bc25387c25c7a5bd13af1ff7e4965f567b7c2f59362a49",
+        "peakAmplitude": 0.5921494364738464,
+        "nonzeroChannelSamples": 384382
+      },
+      "whole": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "bf7432e243a5f5ef7cc8417fc7865302af46eb068a8a0d1db0dda4ac072b90b6",
+        "pcmSHA256": "43ee307dba37511a02bc25387c25c7a5bd13af1ff7e4965f567b7c2f59362a49",
+        "peakAmplitude": 0.5921494364738464,
+        "nonzeroChannelSamples": 384382
+      }
+    },
+    {
+      "exports": [
+        {
+          "rgbaSHA256": "2f3cb29a2b6d5abc9a826134c395bf5b39c57143691e1a36164779b7b41eec29",
+          "pcmSHA256": "131308d39e2696cd9f2527b60960a19a4a961378bfaab13063643892bd0fdbe1",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        },
+        {
+          "rgbaSHA256": "2f3cb29a2b6d5abc9a826134c395bf5b39c57143691e1a36164779b7b41eec29",
+          "pcmSHA256": "131308d39e2696cd9f2527b60960a19a4a961378bfaab13063643892bd0fdbe1",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        }
+      ],
+      "id": "prores-pcm",
+      "importWarnings": null,
+      "inputSHA256": "3580b675e6291b0286ac763830543a790e7b4ec581f685cf4f8fdf365d2828d3",
+      "passed": true,
+      "split": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "7c56336ea81283ee7c7512bc5dc59c5f15513d0a7b3a50e02275501914fd4af4",
+        "pcmSHA256": "f632da067a9942123c7ca177fe2300ffcae105a02f84bd34e1fec520a67a34a9",
+        "peakAmplitude": 0.5747722387313843,
+        "nonzeroChannelSamples": 384344
+      },
+      "whole": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "7c56336ea81283ee7c7512bc5dc59c5f15513d0a7b3a50e02275501914fd4af4",
+        "pcmSHA256": "f632da067a9942123c7ca177fe2300ffcae105a02f84bd34e1fec520a67a34a9",
+        "peakAmplitude": 0.5747722387313843,
+        "nonzeroChannelSamples": 384344
+      }
+    },
+    {
+      "exports": [
+        {
+          "rgbaSHA256": "a1da39e001bde633fa576a9837ad085e97ed4811980017490772f304859c03cb",
+          "pcmSHA256": "e7c4976096f7a22ed782d1054379dd8f880524cd4461d3744d5bb7b801f117ec",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        },
+        {
+          "rgbaSHA256": "a1da39e001bde633fa576a9837ad085e97ed4811980017490772f304859c03cb",
+          "pcmSHA256": "e7c4976096f7a22ed782d1054379dd8f880524cd4461d3744d5bb7b801f117ec",
+          "rgbaBytes": 110592000,
+          "pcmBytes": 1537536
+        }
+      ],
+      "id": "vfr-h264-aac",
+      "importWarnings": null,
+      "inputSHA256": "e7553ffa80f1edac460d0555daca44bdcb6402ba9d584277afb7652468a901e1",
+      "passed": true,
+      "split": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "17e8f14768ebd0a4f4bcff8848616fa08d3e382b8d21879d11414fda40d0d3d6",
+        "pcmSHA256": "55d7cf54699f293e77124b4e778f23ea34f75bd302758ef357a3dabc33f625d3",
+        "peakAmplitude": 0.5665679574012756,
+        "nonzeroChannelSamples": 384382
+      },
+      "whole": {
+        "frames": 120,
+        "samples": 192192,
+        "rgbaSHA256": "17e8f14768ebd0a4f4bcff8848616fa08d3e382b8d21879d11414fda40d0d3d6",
+        "pcmSHA256": "55d7cf54699f293e77124b4e778f23ea34f75bd302758ef357a3dabc33f625d3",
+        "peakAmplitude": 0.5665679574012756,
+        "nonzeroChannelSamples": 384382
+      }
+    }
+  ],
+  "longMovie": {
+    "whole": {
+      "createdAt": "2026-10-27T05:02:22.07818Z",
+      "os": "darwin",
+      "architecture": "arm64",
+      "goVersion": "go1.27.3",
+      "logicalCpus": 18,
+      "projectId": "project-521d710f7bbada12c0aaee4b",
+      "projectRevision": 0,
+      "sequenceId": "sequence-main",
+      "sequenceName": "主时间线",
+      "sequences": 1,
+      "clips": 1,
+      "assets": 1,
+      "info": {
+        "projectId": "project-521d710f7bbada12c0aaee4b",
+        "projectRevision": 0,
+        "durationFrames": 17620,
+        "position": 0,
+        "playing": false,
+        "width": 640,
+        "height": 360,
+        "fpsNum": 24,
+        "fpsDen": 1,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "mltVersion": "7.42.0",
+      "projectSha256": "8bafa4aad2a3eb24cb14fc49b9968f0ea58c43863ab8d3b36357182343854639",
+      "workerSha256": "854fdb96a306ee2bf3d0ca67692af08bff11d9dd92060eb39c170d4e60ec7a02",
+      "inspectMs": 50.053292,
+      "loadMs": 22.543875,
+      "seekMs": 1.373542,
+      "seeks": [
+        {
+          "position": 0,
+          "elapsedMs": 8.725958,
+          "audioStartSample": 0,
+          "samples": 2000,
+          "imageCrc32": 2093058454,
+          "audioCrc32": 246662339
+        },
+        {
+          "position": 17619,
+          "elapsedMs": 616.602167,
+          "audioStartSample": 35238000,
+          "samples": 2000,
+          "imageCrc32": 2093058454,
+          "audioCrc32": 1467803533
+        },
+        {
+          "position": 8400,
+          "elapsedMs": 337.610708,
+          "audioStartSample": 16800000,
+          "samples": 2000,
+          "imageCrc32": 3626500317,
+          "audioCrc32": 3104114943
+        },
+        {
+          "position": 8400,
+          "elapsedMs": 1.461125,
+          "audioStartSample": 16800000,
+          "samples": 2000,
+          "imageCrc32": 3626500317,
+          "audioCrc32": 3104114943
+        },
+        {
+          "position": 0,
+          "elapsedMs": 5.637833,
+          "audioStartSample": 0,
+          "samples": 2000,
+          "imageCrc32": 2093058454,
+          "audioCrc32": 246662339
+        }
+      ],
+      "seekP50Ms": 8.725958,
+      "seekDiagnosticsBefore": {
+        "graph": {
+          "loads": 1,
+          "replacements": 0,
+          "peakXmlBytes": 3759,
+          "liveGraphs": 1,
+          "liveProducers": 8,
+          "liveServices": 37,
+          "liveServicesByKind": {
+            "aividcut.audio_mix": 1,
+            "aividcut.audio_source": 1,
+            "aividcut.source_time": 1,
+            "aividcut.visual": 1,
+            "audioconvert": 3,
+            "avcolor_space": 3,
+            "avdeinterlace": 2,
+            "color_transform": 2,
+            "colour": 2,
+            "crop": 2,
+            "fieldorder": 2,
+            "imageconvert": 3,
+            "resample": 2,
+            "resize": 2,
+            "swresample": 2,
+            "swscale": 2,
+            "unnamed": 5,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 0
+        },
+        "visual": {
+          "builds": 0,
+          "hits": 0,
+          "calls": 0,
+          "fastPathCalls": 0,
+          "filterNs": 0,
+          "compositeNs": 0,
+          "residentGraphs": 0,
+          "estimatedBytes": 0
+        },
+        "audioMix": {
+          "created": 1,
+          "calls": 0,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 0,
+          "peakFrameBytes": 0
+        },
+        "sourceAudio": {
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "opens": 0,
+          "decoderResets": 0,
+          "graphBuilds": 0,
+          "decodedFrames": 0,
+          "gatedFrames": 0,
+          "residentStates": 0,
+          "activeDecoders": 0,
+          "queuedSampleFrames": 0,
+          "peakQueueSampleFrames": 0
+        },
+        "sourceVideo": {
+          "created": 1,
+          "opens": 0,
+          "decodedFrames": 0,
+          "seeks": 0,
+          "anchors": 0,
+          "fallbacks": 0,
+          "activeDecoders": 0,
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "residentStates": 0
+        }
+      },
+      "seekDiagnosticsAfter": {
+        "graph": {
+          "loads": 1,
+          "replacements": 0,
+          "peakXmlBytes": 3759,
+          "liveGraphs": 1,
+          "liveProducers": 8,
+          "liveServices": 37,
+          "liveServicesByKind": {
+            "aividcut.audio_mix": 1,
+            "aividcut.audio_source": 1,
+            "aividcut.source_time": 1,
+            "aividcut.visual": 1,
+            "audioconvert": 3,
+            "avcolor_space": 3,
+            "avdeinterlace": 2,
+            "color_transform": 2,
+            "colour": 2,
+            "crop": 2,
+            "fieldorder": 2,
+            "imageconvert": 3,
+            "resample": 2,
+            "resize": 2,
+            "swresample": 2,
+            "swscale": 2,
+            "unnamed": 5,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 0
+        },
+        "visual": {
+          "builds": 1,
+          "hits": 4,
+          "calls": 5,
+          "fastPathCalls": 0,
+          "filterNs": 2849207,
+          "compositeNs": 235665,
+          "residentGraphs": 1,
+          "estimatedBytes": 9600000
+        },
+        "audioMix": {
+          "created": 1,
+          "calls": 5,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 10000,
+          "peakFrameBytes": 16000
+        },
+        "sourceAudio": {
+          "cacheHits": 4,
+          "cacheMisses": 1,
+          "opens": 3,
+          "decoderResets": 3,
+          "graphBuilds": 3,
+          "decodedFrames": 41505,
+          "gatedFrames": 0,
+          "residentStates": 1,
+          "activeDecoders": 1,
+          "queuedSampleFrames": 2491,
+          "peakQueueSampleFrames": 51196
+        },
+        "sourceVideo": {
+          "created": 1,
+          "opens": 1,
+          "decodedFrames": 78,
+          "seeks": 4,
+          "anchors": 1,
+          "fallbacks": 0,
+          "activeDecoders": 1,
+          "cacheHits": 4,
+          "cacheMisses": 1,
+          "residentStates": 1
+        }
+      },
+      "seekP95Ms": 616.602167,
+      "seekMaxMs": 616.602167,
+      "pullP50Ms": 2.29175,
+      "pullP95Ms": 3.199917,
+      "pullMaxMs": 4.828167,
+      "frameBudgetMs": 41.666666666666664,
+      "overBudgetFrames": 0,
+      "decodedSamples": 35240000,
+      "decodedNonzeroChannelSamples": 70468994,
+      "decodedPeakAmplitude": 1.1270307302474976,
+      "actualImageCrc32": 3752102140,
+      "actualAudioCrc32": 3106862619,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 1,
+          "replacements": 0,
+          "peakXmlBytes": 3759,
+          "liveGraphs": 1,
+          "liveProducers": 8,
+          "liveServices": 37,
+          "liveServicesByKind": {
+            "aividcut.audio_mix": 1,
+            "aividcut.audio_source": 1,
+            "aividcut.source_time": 1,
+            "aividcut.visual": 1,
+            "audioconvert": 3,
+            "avcolor_space": 3,
+            "avdeinterlace": 2,
+            "color_transform": 2,
+            "colour": 2,
+            "crop": 2,
+            "fieldorder": 2,
+            "imageconvert": 3,
+            "resample": 2,
+            "resize": 2,
+            "swresample": 2,
+            "swscale": 2,
+            "unnamed": 5,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 0
+        },
+        "visual": {
+          "builds": 1,
+          "hits": 17625,
+          "calls": 17626,
+          "fastPathCalls": 0,
+          "filterNs": 8597412498,
+          "compositeNs": 813071989,
+          "residentGraphs": 1,
+          "estimatedBytes": 9600000
+        },
+        "audioMix": {
+          "created": 1,
+          "calls": 17626,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 35252000,
+          "peakFrameBytes": 16000
+        },
+        "sourceAudio": {
+          "cacheHits": 17625,
+          "cacheMisses": 1,
+          "opens": 3,
+          "decoderResets": 3,
+          "graphBuilds": 3,
+          "decodedFrames": 69605,
+          "gatedFrames": 0,
+          "residentStates": 1,
+          "activeDecoders": 1,
+          "queuedSampleFrames": 46467,
+          "peakQueueSampleFrames": 51253
+        },
+        "sourceVideo": {
+          "created": 1,
+          "opens": 1,
+          "decodedFrames": 17696,
+          "seeks": 4,
+          "anchors": 1,
+          "fallbacks": 0,
+          "activeDecoders": 1,
+          "cacheHits": 17625,
+          "cacheMisses": 1,
+          "residentStates": 1
+        }
+      },
+      "limitations": [
+        "没有设备播放、WebView、模型或CLI；连续pull是原生吞吐诊断，不是整个客户端实时性能验收。",
+        "RSS仅定时采样，可能遗漏瞬时峰值；不同进程的RSS包含共享页面，不能相加视为独占物理内存。",
+        "资源采样在启动worker前开始，但定时查询仍可能遗漏短暂启动峰值；采样进程本身会影响调度。",
+        "此工具不判断内容语义、音色质量、完整字体/色彩或商业发行许可。"
+      ],
+      "frames": 17620,
+      "resources": {
+        "schemaVersion": 2,
+        "method": "复用客户端processstats原生读取，仅含身份已确认的本进程及后代；RSS为采样观测值，GPU/WebView/设备体验不在此诊断内。",
+        "goPid": 88148,
+        "workerPid": 88149,
+        "workerIdentity": "88149:1793077342078795000",
+        "goSampledPeakRssBytes": 16908288,
+        "workerSampledPeakRssBytes": 69746688,
+        "confirmedTreeSampledPeakRssBytes": 85016576,
+        "confirmedTreeSampledPeakCpuPercent": 105.87329364764639,
+        "samplesDropped": 0,
+        "failedSamples": 0,
+        "partialSamples": 0
+      },
+      "resourceSamples": 446
+    },
+    "split": {
+      "createdAt": "2026-10-27T05:03:06.680405Z",
+      "os": "darwin",
+      "architecture": "arm64",
+      "goVersion": "go1.27.3",
+      "logicalCpus": 18,
+      "projectId": "project-521d710f7bbada12c0aaee4b",
+      "projectRevision": 1,
+      "sequenceId": "sequence-main",
+      "sequenceName": "主时间线",
+      "sequences": 1,
+      "clips": 1000,
+      "assets": 1,
+      "info": {
+        "projectId": "project-521d710f7bbada12c0aaee4b",
+        "projectRevision": 1,
+        "durationFrames": 17620,
+        "position": 0,
+        "playing": false,
+        "width": 640,
+        "height": 360,
+        "fpsNum": 24,
+        "fpsDen": 1,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "mltVersion": "7.42.0",
+      "projectSha256": "2006bbffd689c61d2201faf119245d3c159453335890f28fbc84c4033aaac8ed",
+      "workerSha256": "854fdb96a306ee2bf3d0ca67692af08bff11d9dd92060eb39c170d4e60ec7a02",
+      "inspectMs": 35.507625,
+      "loadMs": 59.505125,
+      "seekMs": 1.950834,
+      "seeks": [
+        {
+          "position": 0,
+          "elapsedMs": 8.767416,
+          "audioStartSample": 0,
+          "samples": 2000,
+          "imageCrc32": 2093058454,
+          "audioCrc32": 246662339
+        },
+        {
+          "position": 17619,
+          "elapsedMs": 619.171666,
+          "audioStartSample": 35238000,
+          "samples": 2000,
+          "imageCrc32": 2093058454,
+          "audioCrc32": 1467803533
+        },
+        {
+          "position": 8400,
+          "elapsedMs": 343.459834,
+          "audioStartSample": 16800000,
+          "samples": 2000,
+          "imageCrc32": 3626500317,
+          "audioCrc32": 3104114943
+        },
+        {
+          "position": 8400,
+          "elapsedMs": 1.972333,
+          "audioStartSample": 16800000,
+          "samples": 2000,
+          "imageCrc32": 3626500317,
+          "audioCrc32": 3104114943
+        },
+        {
+          "position": 0,
+          "elapsedMs": 11.355291,
+          "audioStartSample": 0,
+          "samples": 2000,
+          "imageCrc32": 2093058454,
+          "audioCrc32": 246662339
+        }
+      ],
+      "seekP50Ms": 11.355291,
+      "seekDiagnosticsBefore": {
+        "graph": {
+          "loads": 1,
+          "replacements": 0,
+          "peakXmlBytes": 28153,
+          "liveGraphs": 1,
+          "liveProducers": 98,
+          "liveServices": 487,
+          "liveServicesByKind": {
+            "aividcut.audio_mix": 11,
+            "aividcut.audio_source": 11,
+            "aividcut.source_time": 1,
+            "aividcut.visual": 11,
+            "audioconvert": 33,
+            "avcolor_space": 33,
+            "avdeinterlace": 32,
+            "blank": 20,
+            "color_transform": 32,
+            "colour": 12,
+            "crop": 32,
+            "fieldorder": 32,
+            "imageconvert": 33,
+            "resample": 32,
+            "resize": 32,
+            "swresample": 32,
+            "swscale": 32,
+            "unnamed": 65,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 0
+        },
+        "visual": {
+          "builds": 0,
+          "hits": 0,
+          "calls": 0,
+          "fastPathCalls": 0,
+          "filterNs": 0,
+          "compositeNs": 0,
+          "residentGraphs": 0,
+          "estimatedBytes": 0
+        },
+        "audioMix": {
+          "created": 11,
+          "calls": 0,
+          "skippedBlankFrames": 0,
+          "mixedSamples": 0,
+          "peakFrameBytes": 0
+        },
+        "sourceAudio": {
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "opens": 0,
+          "decoderResets": 0,
+          "graphBuilds": 0,
+          "decodedFrames": 0,
+          "gatedFrames": 0,
+          "residentStates": 0,
+          "activeDecoders": 0,
+          "queuedSampleFrames": 0,
+          "peakQueueSampleFrames": 0
+        },
+        "sourceVideo": {
+          "created": 1,
+          "opens": 0,
+          "decodedFrames": 0,
+          "seeks": 0,
+          "anchors": 0,
+          "fallbacks": 0,
+          "activeDecoders": 0,
+          "cacheHits": 0,
+          "cacheMisses": 0,
+          "residentStates": 0
+        }
+      },
+      "seekDiagnosticsAfter": {
+        "graph": {
+          "loads": 4,
+          "replacements": 3,
+          "peakXmlBytes": 30791,
+          "liveGraphs": 1,
+          "liveProducers": 98,
+          "liveServices": 487,
+          "liveServicesByKind": {
+            "aividcut.audio_mix": 11,
+            "aividcut.audio_source": 11,
+            "aividcut.source_time": 1,
+            "aividcut.visual": 11,
+            "audioconvert": 33,
+            "avcolor_space": 33,
+            "avdeinterlace": 32,
+            "blank": 20,
+            "color_transform": 32,
+            "colour": 12,
+            "crop": 32,
+            "fieldorder": 32,
+            "imageconvert": 33,
+            "resample": 32,
+            "resize": 32,
+            "swresample": 32,
+            "swscale": 32,
+            "unnamed": 65,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 1
+        },
+        "visual": {
+          "builds": 1,
+          "hits": 4,
+          "calls": 5,
+          "fastPathCalls": 0,
+          "filterNs": 2743834,
+          "compositeNs": 233666,
+          "residentGraphs": 1,
+          "estimatedBytes": 9600000
+        },
+        "audioMix": {
+          "created": 43,
+          "calls": 5,
+          "skippedBlankFrames": 50,
+          "mixedSamples": 10000,
+          "peakFrameBytes": 16000
+        },
+        "sourceAudio": {
+          "cacheHits": 4,
+          "cacheMisses": 1,
+          "opens": 3,
+          "decoderResets": 3,
+          "graphBuilds": 3,
+          "decodedFrames": 41505,
+          "gatedFrames": 0,
+          "residentStates": 1,
+          "activeDecoders": 1,
+          "queuedSampleFrames": 2491,
+          "peakQueueSampleFrames": 51196
+        },
+        "sourceVideo": {
+          "created": 4,
+          "opens": 1,
+          "decodedFrames": 78,
+          "seeks": 4,
+          "anchors": 1,
+          "fallbacks": 0,
+          "activeDecoders": 1,
+          "cacheHits": 4,
+          "cacheMisses": 1,
+          "residentStates": 1
+        }
+      },
+      "seekP95Ms": 619.171666,
+      "seekMaxMs": 619.171666,
+      "pullP50Ms": 2.796208,
+      "pullP95Ms": 3.802166,
+      "pullMaxMs": 11.002959,
+      "frameBudgetMs": 41.666666666666664,
+      "overBudgetFrames": 0,
+      "decodedSamples": 35240000,
+      "decodedNonzeroChannelSamples": 70468994,
+      "decodedPeakAmplitude": 1.1270307302474976,
+      "actualImageCrc32": 3752102140,
+      "actualAudioCrc32": 3106862619,
+      "nativeDiagnostics": {
+        "graph": {
+          "loads": 95,
+          "replacements": 94,
+          "peakXmlBytes": 30854,
+          "liveGraphs": 1,
+          "liveProducers": 84,
+          "liveServices": 423,
+          "liveServicesByKind": {
+            "aividcut.audio_mix": 9,
+            "aividcut.audio_source": 9,
+            "aividcut.source_time": 1,
+            "aividcut.visual": 9,
+            "audioconvert": 29,
+            "avcolor_space": 29,
+            "avdeinterlace": 28,
+            "blank": 18,
+            "color_transform": 28,
+            "colour": 10,
+            "crop": 28,
+            "fieldorder": 28,
+            "imageconvert": 29,
+            "resample": 28,
+            "resize": 28,
+            "swresample": 28,
+            "swscale": 28,
+            "unnamed": 55,
+            "xml-string": 1
+          },
+          "peakReleaseReferences": 1
+        },
+        "visual": {
+          "builds": 1,
+          "hits": 17625,
+          "calls": 17626,
+          "fastPathCalls": 0,
+          "filterNs": 8761709069,
+          "compositeNs": 835107096,
+          "residentGraphs": 1,
+          "estimatedBytes": 9600000
+        },
+        "audioMix": {
+          "created": 1120,
+          "calls": 17626,
+          "skippedBlankFrames": 190940,
+          "mixedSamples": 35252000,
+          "peakFrameBytes": 16000
+        },
+        "sourceAudio": {
+          "cacheHits": 17625,
+          "cacheMisses": 1,
+          "opens": 3,
+          "decoderResets": 3,
+          "graphBuilds": 3,
+          "decodedFrames": 69605,
+          "gatedFrames": 0,
+          "residentStates": 1,
+          "activeDecoders": 1,
+          "queuedSampleFrames": 46467,
+          "peakQueueSampleFrames": 51253
+        },
+        "sourceVideo": {
+          "created": 95,
+          "opens": 1,
+          "decodedFrames": 17696,
+          "seeks": 4,
+          "anchors": 1,
+          "fallbacks": 0,
+          "activeDecoders": 1,
+          "cacheHits": 17625,
+          "cacheMisses": 1,
+          "residentStates": 1
+        }
+      },
+      "limitations": [
+        "没有设备播放、WebView、模型或CLI；连续pull是原生吞吐诊断，不是整个客户端实时性能验收。",
+        "RSS仅定时采样，可能遗漏瞬时峰值；不同进程的RSS包含共享页面，不能相加视为独占物理内存。",
+        "资源采样在启动worker前开始，但定时查询仍可能遗漏短暂启动峰值；采样进程本身会影响调度。",
+        "此工具不判断内容语义、音色质量、完整字体/色彩或商业发行许可。"
+      ],
+      "frames": 17620,
+      "resources": {
+        "schemaVersion": 2,
+        "method": "复用客户端processstats原生读取，仅含身份已确认的本进程及后代；RSS为采样观测值，GPU/WebView/设备体验不在此诊断内。",
+        "goPid": 88446,
+        "workerPid": 88447,
+        "workerIdentity": "88447:1793077386681270000",
+        "goSampledPeakRssBytes": 20430848,
+        "workerSampledPeakRssBytes": 75218944,
+        "confirmedTreeSampledPeakRssBytes": 95059968,
+        "confirmedTreeSampledPeakCpuPercent": 106.89255622075765,
+        "samplesDropped": 0,
+        "failedSamples": 0,
+        "partialSamples": 0
+      },
+      "resourceSamples": 539
+    }
+  },
+  "fix": {
+    "files": [
+      "internal/playback/compile.go",
+      "internal/playback/compile_source.go"
+    ],
+    "helper": "boundedProducer",
+    "defaultBoundaryFrames": 15000,
+    "explicitLengthAndOut": true,
+    "nativeWorkerChanged": false,
+    "privateDiagnosticShipped": false,
+    "longCanvasBoundaryCases": [
+      14999,
+      15000,
+      30000
+    ],
+    "actualVideoComparedToIsolatedFrames": [
+      0,
+      14999,
+      15000,
+      17619,
+      7000
+    ]
+  },
+  "verification": {
+    "actualSDKRacePackages": [
+      "playback",
+      "exporter",
+      "application",
+      "media"
+    ],
+    "vet": true,
+    "afterFixMatrixPassed": true,
+    "productionAssets": true,
+    "macOSBundleSignature": true,
+    "newGUIValidation": false,
+    "windowsExecuted": false
+  },
+  "windowsPackage": {
+    "path": "work/natural-media-check/AIVidCut-windows-amd64-long-timeline.zip",
+    "files": 691,
+    "bytes": 111990282,
+    "sha256": "75e0b7429ab2c36e6aa1321c57ea14daa2eef9cbe04808483e7a1bc8a95ff529",
+    "appSHA256": "8479cb04861d70a4fd4808456fe22bf102ee41cefbd67406f8371c5f4602b938",
+    "crcVerified": true,
+    "windowsExecuted": false,
+    "tools": {
+      "preview-benchmark.exe": "4e475943e0230533a3602fe497d9d847ada4ecacd9a97d4abaf5ca670bb56b31",
+      "preview-video-fixture.exe": "23cb219ef67de94de477f8b8c86a50647591703fbcc2ccf4f0f24106a70fd8b3",
+      "measure_windows_media.ps1": "896f06a9006b060dc3dc9a00fa69a864a7eb5ec2c4393c089ee1196f8b2e3ba4"
+    }
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "limitations": [
+    "样本组合不能代表所有同名编码",
+    "派生十位/VFR不能代替原始相机HDR或手机录制",
+    "未覆盖GUI/音频设备/GPU和Windows实际运行",
+    "模型/语音/CLI账户及商业发行继续"
+  ],
+  "documentation": {
+    "Markdown文档数": 157,
+    "本地链接检查数": 824,
+    "正文检查文档数": 119,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-25",
+  "scope": "局部验收，完整P0–P6继续",
+  "browser": {
+    "requests": [
+      {
+        "label": "分割选中片段",
+        "commands": [
+          {
+            "type": "split_clips",
+            "clipIds": [
+              "title",
+              "clip-2"
+            ],
+            "atFrame": 100
+          }
+        ]
+      },
+      {
+        "label": "复制到播放头",
+        "commands": [
+          {
+            "type": "duplicate_clips",
+            "clipIds": [
+              "clip-2",
+              "clip-3"
+            ],
+            "atFrame": 270
+          }
+        ]
+      },
+      {
+        "label": "复制到播放头",
+        "commands": [
+          {
+            "type": "duplicate_clips",
+            "clipIds": [
+              "clip-2",
+              "clip-3"
+            ],
+            "atFrame": 270
+          }
+        ]
+      },
+      {
+        "label": "分割选中片段",
+        "commands": [
+          {
+            "type": "split_clips",
+            "clipIds": [
+              "title",
+              "clip-2"
+            ],
+            "atFrame": 100
+          }
+        ]
+      },
+      {
+        "label": "复制到播放头",
+        "commands": [
+          {
+            "type": "duplicate_clips",
+            "clipIds": [
+              "clip-2",
+              "clip-3"
+            ],
+            "atFrame": 90
+          }
+        ]
+      },
+      {
+        "label": "更新轨道",
+        "commands": [
+          {
+            "type": "update_track",
+            "track": {
+              "id": "track-video-1",
+              "name": "视频 1",
+              "kind": "video",
+              "locked": true,
+              "muted": false,
+              "hidden": false
+            }
+          }
+        ]
+      }
+    ],
+    "copySelection": [
+      "clip-4d8a74ba416bcb12bb9972a1",
+      "clip-4a9202b183f26a753620691d"
+    ],
+    "copySettingsPreserved": true,
+    "copies": [
+      {
+        "id": "clip-4d8a74ba416bcb12bb9972a1",
+        "start": 270,
+        "duration": 30
+      },
+      {
+        "id": "clip-4a9202b183f26a753620691d",
+        "start": 330,
+        "duration": 30
+      }
+    ],
+    "errors": [],
+    "final": {
+      "dirty": false,
+      "revision": 10,
+      "clips": 6
+    },
+    "failureInjection": "仅GetBootstrap 503，不替换工程/媒体或成功响应"
+  },
+  "actualMedia": {
+    "frames": 10,
+    "splitFrame": 2,
+    "duplicateFrame": 30,
+    "pictureBytes": 2304000,
+    "pcmBytes": 128128,
+    "bitEqualAfterSplitAndCopy": true
+  },
+  "coreLargeSelection": {
+    "before": 10000,
+    "after": 20000,
+    "firstCopyFrame": 40000,
+    "lastCopyFrame": 79996,
+    "idempotentRetryCount": 20000,
+    "undoCount": 10000
+  },
+  "tests": {
+    "frontend": 231,
+    "frontendFiles": 33,
+    "fullGoRaceInternalPackages": 20,
+    "testedCommandPackages": 1,
+    "subsequentAgentApplicationRace": true,
+    "subsequentConstructCoreRace": true
+  },
+  "agent": {
+    "newCommands": [
+      "move_clips",
+      "delete_clips",
+      "split_clips",
+      "duplicate_clips"
+    ],
+    "maxExplicitIDsPerCommand": 1000,
+    "existingObjectScopePreserved": true,
+    "newCopiesConfinedToSelectedTimeWindow": true,
+    "realCLIInference": false
+  },
+  "nativeNewFeaturesVerified": false,
+  "windowsNativeVerified": false,
+  "limitations": [
+    "剪贴板快照/粘贴",
+    "多选修剪",
+    "新功能双端原生",
+    "真实模型和CLI账户",
+    "完整媒体资源及商业发行"
+  ],
+  "builds": {
+    "macOS": "本地自签名构建通过",
+    "windowsAMD64": "交叉构建通过，未实机",
+    "wails": "v3.0.0-beta.34",
+    "macBinarySHA256": "014c9a6466ee2213f64f83833ebc597d5abfe1b09dab65d4ccc2e784eac24f9c",
+    "windowsBinarySHA256": "0e2e08be7a8205b73e39fc366b742cb0c1eee9bdb7c9f10435222e5ce68295c2",
+    "mainBundleKB": 542.11
+  }
+}

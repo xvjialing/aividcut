@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-26",
+  "status": "本阶段局部通过，完整目标继续",
+  "requirements": [
+    "FW-R09",
+    "FW-R10",
+    "FW-R11",
+    "FW-R12",
+    "FW-R17"
+  ],
+  "wails": {
+    "latestVerified": "v3.0.0-beta.34",
+    "goCliRuntimeAligned": true
+  },
+  "tests": {
+    "frontendFiles": 44,
+    "frontendTests": 299,
+    "newFrontendTests": 9,
+    "newGoTestGroups": 3,
+    "goFullInternalAndCommandsRace": true,
+    "goVet": true,
+    "frontendTypes": true,
+    "frontendFormat": true,
+    "productionRoot": true
+  },
+  "browser": {
+    "cancelPreservesDraft": true,
+    "exactConnectionAndDraft": true,
+    "sparseDefaultsPreserved": true,
+    "videoParameters": {
+      "size": "768P",
+      "seconds": 4
+    },
+    "explicitImageImport": true,
+    "importFailureRetry": true,
+    "importUndoRedo": true,
+    "clipsUnchanged": true,
+    "geometry": {
+      "dialogCount": 1,
+      "overflowX": false,
+      "documentScrollTop": 0
+    },
+    "confirmationPayload": {
+      "newID": true,
+      "parentRecipeId": "compare-image",
+      "mode": "image.edit",
+      "referenceCount": 1,
+      "contextBound": true,
+      "consent": true
+    },
+    "confirmationIntercepted": true,
+    "staleContextRejectedByGo": true,
+    "realModelCalls": 0,
+    "errors": []
+  },
+  "cleanLayoutAndKeyboard": {
+    "cleanSession": true,
+    "sizes": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "dialogCount": 1,
+        "width": 760,
+        "height": 620,
+        "overflowX": false,
+        "documentScrollTop": 0
+      },
+      {
+        "viewport": [
+          900,
+          700
+        ],
+        "dialogCount": 1,
+        "width": 760,
+        "height": 620,
+        "overflowX": false,
+        "documentScrollTop": 0
+      }
+    ],
+    "existingCandidateReused": true,
+    "referenceRoleChinese": true,
+    "escapeCloses": true,
+    "cancelReturnsFocus": true,
+    "loadFocusesPrompt": true
+  },
+  "provenance": {
+    "parentRecipePersistedAndReopenedByLocalFixture": true,
+    "referenceOriginalHashPreservedAcrossChangedSourceProject": true,
+    "candidateTamperRejected": true,
+    "preparationNoCredentialOrModelRead": true,
+    "staleReviewAndParentRejectedBeforeCredentials": true,
+    "legacyContextOptional": true
+  },
+  "builds": {
+    "macOSLocalSelfSigned": true,
+    "windowsAmd64CrossCompile": true,
+    "mainJSKilobytes": 580.95,
+    "reuseLazyJSKilobytes": 5.7,
+    "mainChunk500kBWarning": true,
+    "productionSDKLinkTargetWarningsRemain": true,
+    "newNativeAcceptance": false
+  },
+  "designAudit": {
+    "errors": 0,
+    "total": 0,
+    "unresolved": 0,
+    "violations": 0,
+    "warnings": 0
+  },
+  "designLint": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "accountAcceptance": "用户要求后置",
+  "realModelCalls": 0,
+  "paidCalls": 0,
+  "realCLIInference": 0,
+  "confirmationValidation": "浏览器拦截新确认载荷，实际Go拒绝旧上下文；成功持久子配方使用内存假适配器验证",
+  "screenshots": [
+    "output/playwright/generation-reuse-wide.png",
+    "output/playwright/generation-reuse-900.png"
+  ],
+  "limits": [
+    "只复用当前工程成功任务",
+    "继续修改仅PNG/JPEG及已声明image.edit",
+    "原始稀疏可选字段保持服务商默认语义，不保证跨版本语义等价",
+    "草稿/导入是分开的操作；失败可保留已成功导入图片",
+    "新功能原生双端、Windows实机、模型质量及真实CLI仍待",
+    "未新增视频编辑延长/任意跨模型迁移/预算/专用MCP复用入口",
+    "C++未改，未新增worker/ASan覆盖",
+    "完整P0–P6及原始范围未完成"
+  ],
+  "documentation": {
+    "Markdown文档数": 93,
+    "本地链接检查数": 460,
+    "正文检查文档数": 66,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browserSessionsClosed": [
+      "aividcut-reuse",
+      "aividcut-reuse-final"
+    ],
+    "viteStopped": true,
+    "goDevserverStopped": true,
+    "nativeProcessStarted": false
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "date": "2026-10-28",
+  "requirements": [
+    "FW-R04",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14"
+  ],
+  "schemaVersion": 7,
+  "frontend": {
+    "files": 64,
+    "passed": 453,
+    "newWindowsDOMTests": 2,
+    "typecheck": true,
+    "format": true,
+    "strictStaticAuditErrors": 0,
+    "productionEmbedChecked": true
+  },
+  "go": {
+    "relatedRacePackages": [
+      "application",
+      "editor",
+      "ocr",
+      "projectstore",
+      "projectcollect",
+      "projectversions",
+      "projectrecovery",
+      "contentindex",
+      "mcpserver"
+    ],
+    "passed": true,
+    "newWindowsContractTests": 5,
+    "windowsPlatformFilesCrossCompiledInMain": true,
+    "nativeWindowsRuntimeVerified": false
+  },
+  "packaging": {
+    "pythonTests": 5,
+    "powershellParsedScripts": [
+      "build_windows_ocr.ps1",
+      "make_windows_msix_logos.ps1",
+      "Build-MSIX.ps1"
+    ],
+    "powershellExecutedWindowsCode": false,
+    "realCandidatePreparation": {
+      "sourceFiles": 767,
+      "sourceBytes": 290949710,
+      "ocrPayloadPresent": false,
+      "fixtureLogos": true,
+      "identityIsFixture": true,
+      "makeAppxExecuted": false,
+      "snapshotVerified": true
+    }
+  },
+  "windowsOCR": {
+    "nativeSource": "native/ocr-windows/main.cpp",
+    "sourceSHA256": "7ee4a664f2ffd9af0ee7dca74c382001b151d1c4473c85ee877f737dce9b5371",
+    "nativeCompiled": false,
+    "packageIdentityRequired": true,
+    "recognitionExecuted": false,
+    "confidence": null,
+    "modelRevision": null,
+    "makeAppxExecuted": false,
+    "signed": false,
+    "installed": false
+  },
+  "macRegression": {
+    "actualVisionRunNotSkipped": true,
+    "bilingual": true,
+    "blank": true,
+    "videoActualCounter": "SOURCE SECOND 2",
+    "positionUs": 2000000,
+    "nativeV7OpenedV6": true,
+    "oldFileSchema": 6,
+    "oldFileSHA256": "4b59fff5e956deb0d5d8229fe19233903037f8c5e880f1060c33b74664b3fed1",
+    "oldFileUnchanged": true,
+    "revisionAfterDiscard": 5,
+    "nativeClosed": true
+  },
+  "artifacts": {
+    "windows": {
+      "path": "/Users/xvjialing/projects/aividcut/work/windows-ocr-check/AIVidCut-windows-amd64-ocr-contract.zip",
+      "bytes": 113754863,
+      "files": 767,
+      "sha256": "738cb4977715b3018cebcf840dce4b818edffea9a248287002024feedde07224",
+      "crcVerified": true
+    },
+    "buildKit": {
+      "path": "/Users/xvjialing/projects/aividcut/work/windows-ocr-check/Windows-OCR-Build-Kit.zip",
+      "bytes": 603899,
+      "files": 11,
+      "sha256": "88ae441e7030dce666acff0de83626bbcef6fb3531d7b91e17e1405bc5d293b0",
+      "crcVerified": true
+    },
+    "appSHA256": "4538521793023c700c556645aa33d1a2120913394637d986f1903b1746052ecc",
+    "nativeOCRCompiled": false,
+    "windowsExecuted": false
+  },
+  "macArtifact": {
+    "path": "build/bin/AIVidCut.app",
+    "sha256": "7623561b28970be37498c42b6a03bb08b187c3f3c55d1096a5d9d8c5c0a1bd32",
+    "deepStrictAdHocSignature": true
+  },
+  "noticesBindingsMatch": true,
+  "release": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "wails": {
+    "version": "3.0.0",
+    "source": "https://github.com/wailsapp/wails/releases/latest",
+    "verifiedDate": "2026-10-28"
+  },
+  "limits": [
+    "Windows C++/WinRT源码与构建步骤未在Windows编译/运行",
+    "MSIX清单准备不是MakeAppx、签名或安装验收",
+    "具体Publisher/证书及用户目标设备待后续明确",
+    "真实模型/语音/CLI账号、完整资源与发行门槛保持"
+  ],
+  "fullGoalComplete": false,
+  "logs": [
+    "work/windows-ocr-check/actual-vision-and-source.log",
+    "work/windows-ocr-check/build-macos.log",
+    "work/windows-ocr-check/build-windows.log",
+    "work/windows-ocr-check/contracts-race.log",
+    "work/windows-ocr-check/core-initial.log",
+    "work/windows-ocr-check/format-check.log",
+    "work/windows-ocr-check/format.log",
+    "work/windows-ocr-check/frontend-full.log",
+    "work/windows-ocr-check/frontend-initial.log",
+    "work/windows-ocr-check/full-core-race.log",
+    "work/windows-ocr-check/msix-preparation-tests.log",
+    "work/windows-ocr-check/powershell-syntax.log",
+    "work/windows-ocr-check/production-assets.log",
+    "work/windows-ocr-check/typecheck-initial.log",
+    "work/windows-ocr-check/typecheck.log"
+  ],
+  "documentation": {
+    "markdownFiles": 177,
+    "localLinks": 1030,
+    "originalArchiveSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "errors": []
+  }
+}

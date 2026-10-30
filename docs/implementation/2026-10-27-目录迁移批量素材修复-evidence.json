@@ -1,0 +1,234 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R06",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R17"
+  ],
+  "wailsLatest": "v3.0.0",
+  "scope": "按新旧根目录映射恢复已知SHA256素材",
+  "limits": {
+    "assets": 256,
+    "readBytes": 68719476736,
+    "operationSeconds": 180,
+    "previewMinutes": 10,
+    "preparedPlans": 32,
+    "recentRequestIdentities": 512
+  },
+  "tests": {
+    "go": {
+      "tested": 36,
+      "withoutTests": 8
+    },
+    "goRacePassed": true,
+    "goVetPassed": true,
+    "productionAssetsPassed": true,
+    "frontendTests": 380,
+    "frontendFiles": 58,
+    "frontendTypecheckPassed": true,
+    "formatPassed": true,
+    "premiumStaticErrors": 0,
+    "historicalExcludedWorkPackages": [
+      "work/lut-blend-check",
+      "work/native-export-check",
+      "work/proxy-check",
+      "work/resource-profile-check"
+    ],
+    "repeatedCancellationCount": 40
+  },
+  "realMedia": {
+    "nativeFrames": 90,
+    "nativeSamples": 144000,
+    "rgbaIdentical": true,
+    "pcmIdentical": true,
+    "before": {
+      "assets": 5,
+      "clips": 5,
+      "frames": 90,
+      "pcmSHA256": "0bdd62554bc912ee239d9c6c98a1f6302b0c941e2796667e31375d08f84b95a4",
+      "phase": "before",
+      "projectPath": "/Users/xvjialing/projects/aividcut/work/batch-relink-check/migration.aividcut",
+      "rgbaSHA256": "2211be787e79da55b6356f121853544f39874e17d045df87aef744b008d90301",
+      "samples": 144000
+    },
+    "after": {
+      "assets": 5,
+      "clips": 5,
+      "frames": 90,
+      "pcmSHA256": "0bdd62554bc912ee239d9c6c98a1f6302b0c941e2796667e31375d08f84b95a4",
+      "phase": "after",
+      "projectPath": "/Users/xvjialing/projects/aividcut/work/batch-relink-check/migration.aividcut",
+      "rgbaSHA256": "2211be787e79da55b6356f121853544f39874e17d045df87aef744b008d90301",
+      "samples": 144000
+    },
+    "independentExportDecode": {
+      "before": {
+        "video": {
+          "sha256": "6c072b485361007062e45132e764de9ac710028964758e68eaf1cf0ebb499025",
+          "bytes": 20736000
+        },
+        "audio": {
+          "sha256": "94c9dc3063edbe753e99de6ddc5fae406c36b0c0b2f6d71e49fc29595a480fd5",
+          "bytes": 1152000
+        },
+        "streams": [
+          {
+            "codec": "h264",
+            "frames": "90",
+            "duration": "3.000000",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "codec": "aac",
+            "frames": "141",
+            "duration": "3.000000",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "after": {
+        "video": {
+          "sha256": "6c072b485361007062e45132e764de9ac710028964758e68eaf1cf0ebb499025",
+          "bytes": 20736000
+        },
+        "audio": {
+          "sha256": "94c9dc3063edbe753e99de6ddc5fae406c36b0c0b2f6d71e49fc29595a480fd5",
+          "bytes": 1152000
+        },
+        "streams": [
+          {
+            "codec": "h264",
+            "frames": "90",
+            "duration": "3.000000",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "codec": "aac",
+            "frames": "141",
+            "duration": "3.000000",
+            "width": null,
+            "height": null
+          }
+        ]
+      }
+    }
+  },
+  "realProject": {
+    "goPackages": {
+      "tested": 36,
+      "noTests": 8
+    },
+    "allAssetBusinessMetadataUnchanged": true,
+    "allClipsTracksTranscriptsSettingsUnchanged": true,
+    "onceAppliedRevision": 5,
+    "undoRevision": 6,
+    "savedRevision": 7,
+    "reopenRevision": 7,
+    "missingAfterApply": 0,
+    "missingAfterUndo": 5,
+    "missingAfterReopen": 0,
+    "reopenDirty": false
+  },
+  "browserLayout": {
+    "wide": {
+      "actionsBottom": 684,
+      "bodyClientHeight": 523,
+      "bodyOverflow": "auto",
+      "bodyScrollHeight": 834,
+      "columns": "404px 404px",
+      "dialogWidth": 868,
+      "documentOverflow": false,
+      "height": 720,
+      "width": 900
+    },
+    "narrow": {
+      "actionsBottom": 684,
+      "columns": "600px",
+      "dialog": {
+        "height": 688,
+        "width": 648,
+        "x": 16
+      },
+      "height": 720,
+      "scrollOverflow": "auto",
+      "width": 680
+    }
+  },
+  "browserKeyboard": {
+    "dialogOpen": false,
+    "focusedID": "batch-relink-trigger",
+    "playhead": null
+  },
+  "browserChecks": {
+    "emptyPathFieldFocus": true,
+    "sameNameDifferentContentReported": true,
+    "matchedAssetsApplied": 5,
+    "singleUndoRedo": true,
+    "saveReopen": true,
+    "originalPreviewPlayedToFrame": 90,
+    "emptyMissingCount": 0,
+    "scrollTopObserved": 628.5,
+    "siblingPrimitives": "Modal/Field/Input/Button/replacement-dialog-body/run/navigateEditor"
+  },
+  "builds": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "windowsPackage": {
+    "archive": {
+      "path": "/Users/xvjialing/projects/aividcut/work/batch-relink-check/AIVidCut-windows-amd64-relink.zip",
+      "bytes": 108114404,
+      "sha256": "75312ef20039f701c89a411e9ff25852865215f952fdeac813b0ef4c31d74c89",
+      "files": 687,
+      "crcVerified": true
+    },
+    "appSHA256": "95d2caf3de5c3bb969b17038f785bb6f78617f710867f19de602f3427f32f1e4",
+    "workerSHA256": "43ab7cf2ecc8d8f13f5eccf8d84e96f02b714d43d720bc12d36ac0e9dea8c384",
+    "windowsExecutionVerified": false,
+    "releaseVerified": false
+  },
+  "deferred": {
+    "windowsNative": true,
+    "macNativeGUI": "CUA报告锁屏，未重复询问解锁",
+    "modelAccounts": true,
+    "cliInference": true,
+    "releaseVerified": false
+  },
+  "agentsUsed": 0,
+  "paidRequests": 0,
+  "cleanup": {
+    "removedThisTurnIntermediate": "/Users/xvjialing/projects/aividcut/build/bin/AIVidCut-windows.YhjnzL",
+    "bytes": 272429773,
+    "keptWindowsArchive": true,
+    "keptWindowsCandidate": true,
+    "keptMacSDKBundle": true,
+    "serversStopped": true,
+    "browserClosedAndViewportReset": true,
+    "finalDuplicateBuildRemoved": {
+      "path": "/Users/xvjialing/projects/aividcut/build/bin/AIVidCut-windows.oxm3ed",
+      "bytes": 272429773
+    }
+  },
+  "documentation": {
+    "Markdown文档数": 147,
+    "本地链接检查数": 746,
+    "正文检查文档数": 112,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

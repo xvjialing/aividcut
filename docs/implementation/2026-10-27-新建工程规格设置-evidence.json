@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R17"
+  ],
+  "actualMedia": [
+    {
+      "frames": 90,
+      "name": "portrait",
+      "previewHeight": 1280,
+      "previewWidth": 720,
+      "sampleFrames": 144144,
+      "savedReopenSettingsSame": true,
+      "settings": {
+        "width": 720,
+        "height": 1280,
+        "fpsNum": 30000,
+        "fpsDen": 1001,
+        "sampleRate": 48000
+      }
+    },
+    {
+      "frames": 90,
+      "name": "square",
+      "previewHeight": 1024,
+      "previewWidth": 1024,
+      "sampleFrames": 172800,
+      "savedReopenSettingsSame": true,
+      "settings": {
+        "width": 1024,
+        "height": 1024,
+        "fpsNum": 25,
+        "fpsDen": 1,
+        "sampleRate": 48000
+      }
+    }
+  ],
+  "independentVerification": {
+    "exports": [
+      {
+        "name": "portrait",
+        "width": 720,
+        "height": 1280,
+        "fps": "30000/1001",
+        "frames": 90,
+        "durationSeconds": 3.003,
+        "audioCodec": "aac",
+        "sha256": "8c3a18fe6afcd4729144f6779aa1ab29bff0bd05c392fb9cee113a7cd885aa5f"
+      },
+      {
+        "name": "square",
+        "width": 1024,
+        "height": 1024,
+        "fps": "25/1",
+        "frames": 90,
+        "durationSeconds": 3.6,
+        "audioCodec": "aac",
+        "sha256": "15b8f9991e64a20407add212f8d15f409dc33e5b57e68d65eb5dd442b9ffd601"
+      }
+    ],
+    "uiSavedSettingsMatch": true,
+    "concurrentWorkSurvivedStaleNewDialog": true,
+    "uiDirty": false,
+    "uiUndoRetained": true
+  },
+  "ui": {
+    "defaultSettingsRetained": true,
+    "portrait2997Created": true,
+    "emptyWidthPreservedAndErrorLinked": true,
+    "escapeReturnsNewTrigger": true,
+    "staleWindowRejected": true,
+    "concurrentTitleAndUndoRetained": true,
+    "unsavedConfirmationStillActive": true,
+    "savedSeparateProject": true,
+    "narrowViewport": [
+      900,
+      720
+    ],
+    "document": [
+      900,
+      720
+    ],
+    "dialog": {
+      "width": 560,
+      "height": 577.0390625,
+      "x": 170,
+      "y": 71.48046875
+    }
+  },
+  "checks": {
+    "frontendFiles": 56,
+    "frontendTests": 366,
+    "goRacePackages": 32,
+    "goVet": true,
+    "macOSBuild": true,
+    "windowsAMD64Build": true,
+    "productionResources": true,
+    "wailsVersion": "3.0.0",
+    "frontendTypecheck": true,
+    "frontendFormat": true,
+    "documentation": {
+      "markdownFiles": 127,
+      "localLinks": 642,
+      "bodyChecks": 100,
+      "requirements": 17,
+      "errors": 0,
+      "originalSnapshotSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3"
+    },
+    "strictDesignAudit": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "cleanup": {
+    "browserTabClosed": true,
+    "developmentPortsWithoutListeners": [
+      43110,
+      5173
+    ]
+  },
+  "paidModelCalls": 0,
+  "newNativeMacGUIVerified": false,
+  "windowsRuntimeVerified": false,
+  "limitations": [
+    "仅新建空工程，不做旧工程时间重映射",
+    "当前建项边界4K像素/2–120fps/48kHz",
+    "非丢帧时间码",
+    "真实账户/完整双端与原目标继续"
+  ]
+}

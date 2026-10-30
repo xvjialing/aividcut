@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R03",
+    "FW-R11",
+    "FW-R12",
+    "FW-R15"
+  ],
+  "schemaVersion": 3,
+  "frontend": {
+    "files": 52,
+    "tests": 347
+  },
+  "go": {
+    "fullRaceTestedPackages": 29,
+    "fullRacePassed": true,
+    "vetPassed": true,
+    "finalCaptionAndPlaybackGuardsPassed": true
+  },
+  "media": {
+    "CJKFontBytes": 16437364,
+    "CJKFontInfo": {
+      "copyright": "© 2014-2021 Adobe (http://www.adobe.com/).",
+      "license": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.",
+      "licenseUrl": "http://scripts.sil.org/OFL",
+      "family": "Noto Sans CJK SC",
+      "style": "Regular",
+      "fullName": "Noto Sans CJK SC",
+      "weight": 400,
+      "italic": false
+    },
+    "CJKFontSHA256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "after": {
+      "pcmSHA256": "645053ec9f8e09f46741b88484b2e13a279a2c7f0825f336c99ed14f919be38d",
+      "rgbaSHA256": "d10502684847665be6a7a0d7c0c834e4b6c928315aded250a196dbc02b66179e"
+    },
+    "allOriginalFontPathsUnavailable": true,
+    "before": {
+      "pcmSHA256": "645053ec9f8e09f46741b88484b2e13a279a2c7f0825f336c99ed14f919be38d",
+      "rgbaSHA256": "d10502684847665be6a7a0d7c0c834e4b6c928315aded250a196dbc02b66179e"
+    },
+    "fonts": 3,
+    "frames": 90,
+    "fullRGBAAndPCMIdentical": true,
+    "missingOriginalFontRejected": true,
+    "portableFontProject": "/Users/xvjialing/projects/aividcut/work/project-font-check/collected-font-project/project.aividcut",
+    "schemaVersion": 3,
+    "usedFonts": 2
+  },
+  "browser": {
+    "fontChoiceUndoRedo": true,
+    "savedTitleFamily": "Go Mono",
+    "savedSchema": 3,
+    "savedNoSessionURLs": true,
+    "nativePreparedAtFrame": 40,
+    "viewport": {
+      "width": 900,
+      "height": 720
+    },
+    "tabBounds": {
+      "panelRight": 212,
+      "tabLeft": 9,
+      "tabRight": 170,
+      "selectedLeft": 126,
+      "selectedRight": 170
+    },
+    "homeEndChecked": true,
+    "finalColdPageErrors": []
+  },
+  "realModelCalls": 0,
+  "wailsLatest": "v3.0.0",
+  "limits": {
+    "fontFileBytes": 33554432,
+    "fontUsedCount": 32,
+    "fontUsedBytes": 134217728,
+    "nativeMatchedInstances": 8
+  },
+  "pending": [
+    "双端原生操作",
+    "复杂字形与更多字体格式",
+    "完整字体许可资料",
+    "整机资源",
+    "真实账户/CLI和完整发布门槛"
+  ],
+  "nativeRegression": {
+    "playbackPassed": true,
+    "exporterPassed": true,
+    "workerBuiltWithExplicitSDK": true
+  },
+  "build": {
+    "macosSelfSigned": true,
+    "windowsAmd64CrossCompile": true,
+    "productionResourcesPassed": true,
+    "newNativeGuiChecked": false
+  },
+  "design": {
+    "strictErrors": 0,
+    "strictWarnings": 0,
+    "lintErrors": 0,
+    "lintWarnings": 0
+  },
+  "documentation": {
+    "Markdown文档数": 111,
+    "本地链接检查数": 552,
+    "正文检查文档数": 84,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "agentTabsClosed": true,
+    "viewportReset": true,
+    "backendStopped": true,
+    "viteStopped": true
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-26",
+  "phase": "按文字定位与删减",
+  "requirements": [
+    "FW-R01",
+    "FW-R02",
+    "FW-R03",
+    "FW-R07",
+    "FW-R08",
+    "FW-R11",
+    "FW-R12",
+    "FW-R17"
+  ],
+  "wails": "v3.0.0-beta.34",
+  "tests": {
+    "frontendFiles": 38,
+    "frontendTests": 267,
+    "goRaceInternalPackages": 22,
+    "goRaceTestedCommands": 1,
+    "goVetPassed": true,
+    "typecheckPassed": true,
+    "prettierPassed": true,
+    "staticUIAuditErrors": 0,
+    "designLintErrors": 0,
+    "rootPackage": "默认标签无测试；go test -tags production . 嵌入资源测试通过",
+    "standaloneProductionTestLinkerWarnings": "本机SDK对象版本与默认11.0链接目标警告；正式构建使用工程声明macOS13，未在本轮放宽最低系统承诺"
+  },
+  "builds": {
+    "macOS": "自签名构建通过",
+    "windowsAMD64": "交叉编译通过；Windows实机未验收",
+    "mainJSKB": 566.95,
+    "transcriptCutLazyJSKB": 7.27,
+    "largeChunkWarningRetained": true
+  },
+  "realMedia": {
+    "fixture": "本机FFmpeg合成视频与660Hz音调，非识别/模型结果",
+    "fpsNum": 30000,
+    "fpsDen": 1001,
+    "speedNum": 3,
+    "speedDen": 2,
+    "sourceInUs": 137000,
+    "existingPhaseFrames": 2,
+    "removedTimelineRange": [
+      6,
+      11
+    ],
+    "keptFramesCompared": 6,
+    "pcmBytesEqual": 76880,
+    "rgbaBytesEqual": 1382400,
+    "byteEqualityPassed": true
+  },
+  "browser": {
+    "sourcePreview": {
+      "paused": true,
+      "muted": false,
+      "currentTime": 1
+    },
+    "selection": {
+      "startFrame": 30,
+      "endFrame": 45
+    },
+    "apply": {
+      "revision": 3,
+      "clips": 12,
+      "left": 30,
+      "right": 75,
+      "rightStart": 30
+    },
+    "undoRestored": true,
+    "redoRestored": true,
+    "otherInstanceUnchanged": true,
+    "acceptedTranscriptUnchanged": true,
+    "manualCaptionPreserved": true,
+    "sourceFailureRetry": true,
+    "unsavedCorrectionBlocked": true,
+    "width": 900,
+    "errors": [],
+    "modelCalls": 0
+  },
+  "persistence": {
+    "schemaVersion": 2,
+    "revision": 5,
+    "clips": 12,
+    "sourceEpochChanged": true,
+    "dirty": false,
+    "transcriptsRetained": true,
+    "mediaPropertiesRetained": true
+  },
+  "macOSNative": {
+    "app": "build/bin/AIVidCut.app",
+    "openWithSystemPicker": true,
+    "instancePopupVerified": true,
+    "locatedRange": [
+      30,
+      45
+    ],
+    "applyRevision": 3,
+    "appliedClipCount": 12,
+    "leftVideoAndAudioFrames": 30,
+    "rightVideoAndAudioFrames": 75,
+    "rightStart": 30,
+    "otherInstanceStart": 180,
+    "otherInstanceDuration": 120,
+    "cmdZUndoRevision": 4,
+    "undoClipCount": 11,
+    "undoVideoAndAudioFrames": 120,
+    "runtimeBridgeVerified": true,
+    "workerUnavailableInThisLaunch": true,
+    "nativeCompositePlaybackClaimed": false
+  },
+  "screenshots": [
+    "output/playwright/transcript-cut-review.png",
+    "output/playwright/transcript-cut-900.png"
+  ],
+  "modelCalls": 0,
+  "realAccountAcceptance": "按用户指令后置",
+  "fullGoalComplete": false,
+  "limitations": [
+    "词时间和帧量化不是音素精度，需试听",
+    "只闭合当前完整音画组，未选片段不波纹移动",
+    "跨切口的人工阅读字幕受保护，需先人工整理",
+    "原生本轮启动未配置媒体worker",
+    "Windows实机与发行门槛、真实CLI/模型账户及完整P0–P6仍需继续"
+  ],
+  "documentation": {
+    "Markdown文档数": 83,
+    "本地链接检查数": 417,
+    "正文检查文档数": 56,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browserClosed": true,
+    "viteExitCode": 130,
+    "goServerExitCode": 1,
+    "nativeExitedVerifiedByProcessCheck": true
+  }
+}

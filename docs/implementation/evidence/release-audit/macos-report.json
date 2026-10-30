@@ -1,0 +1,1046 @@
+{
+  "schemaVersion": 1,
+  "targetOS": "darwin",
+  "targetArch": "arm64",
+  "packageRoot": "/Users/xvjialing/projects/aividcut/build/bin/AIVidCut.app",
+  "artifacts": [
+    {
+      "role": "app",
+      "path": "/Users/xvjialing/projects/aividcut/build/bin/AIVidCut.app/Contents/MacOS/AIVidCut",
+      "resolvedPath": "/Users/xvjialing/projects/aividcut/build/bin/AIVidCut.app/Contents/MacOS/AIVidCut",
+      "sha256": "222385873ccc581e7f83fd0ec479957b539facea671c522c254e9cb79b9cb62b",
+      "bytes": 18081776,
+      "format": "darwin",
+      "architectures": [
+        "arm64"
+      ],
+      "imports": [
+        {
+          "name": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Security.framework/Versions/A/Security",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/WebKit.framework/Versions/A/WebKit",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libSystem.B.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libobjc.A.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libresolv.9.dylib",
+          "system": true
+        }
+      ],
+      "debugSections": false,
+      "goVersion": "go1.27.3",
+      "goSettings": {
+        "-buildmode": "exe",
+        "-tags": "production",
+        "-trimpath": "true",
+        "CGO_ENABLED": "1",
+        "GOARCH": "arm64",
+        "GOOS": "darwin"
+      },
+      "goModules": [
+        {
+          "path": "github.com/99designs/go-keychain",
+          "version": "v0.0.0-20191008050251-8e49817e8af4",
+          "sum": "h1:/vQbFIOMbk2FiG/kXiLl8BRyzTWDw7gX/Hz7Dd5eDMs="
+        },
+        {
+          "path": "github.com/99designs/keyring",
+          "version": "v1.2.2",
+          "sum": "h1:pZd3neh/EmUzWONb35LxQfvuY7kiSXAq3HQd97+XBn0="
+        },
+        {
+          "path": "github.com/adrg/xdg",
+          "version": "v0.5.3",
+          "sum": "h1:xRnxJXne7+oWDatRhR1JLnvuccuIeCoBu2rtuLqQB78="
+        },
+        {
+          "path": "github.com/dvsekhvalnov/jose2go",
+          "version": "v1.5.0",
+          "sum": "h1:3j8ya4Z4kMCwT5nXIKFSV84YS+HdqSSO0VsTQxaLAeM="
+        },
+        {
+          "path": "github.com/google/jsonschema-go",
+          "version": "v0.4.3",
+          "sum": "h1:/DBOLZTfDow7pe2GmaJNhltueGTtDKICi8V8p+DQPd0="
+        },
+        {
+          "path": "github.com/gorilla/websocket",
+          "version": "v1.5.3",
+          "sum": "h1:saDtZ6Pbx/0u+bgYQ3q96pZgCzfhKXGPqt7kZ72aNNg="
+        },
+        {
+          "path": "github.com/modelcontextprotocol/go-sdk",
+          "version": "v1.7.0",
+          "sum": "h1:yqjY2dsbKAC0LSuWZVBMrHgiG8ukXv6NRo0JiALay44="
+        },
+        {
+          "path": "github.com/mtibben/percent",
+          "version": "v0.2.1",
+          "sum": "h1:5gssi8Nqo8QU/r2pynCm+hBQHpkB/uNK7BJCFogWdzs="
+        },
+        {
+          "path": "github.com/segmentio/asm",
+          "version": "v1.1.3",
+          "sum": "h1:WM03sfUOENvvKexOLp+pCqgb/WDjsi7EK8gIsICtzhc="
+        },
+        {
+          "path": "github.com/segmentio/encoding",
+          "version": "v0.5.4",
+          "sum": "h1:OW1VRern8Nw6ITAtwSZ7Idrl3MXCFwXHPgqESYfvNt0="
+        },
+        {
+          "path": "github.com/wailsapp/wails/v3",
+          "version": "v3.0.0",
+          "sum": "h1:lBe89kFu23bVz1dc1H9v0srkHQgWsy7BAKpH4sLQuDw="
+        },
+        {
+          "path": "github.com/yosida95/uritemplate/v3",
+          "version": "v3.0.2",
+          "sum": "h1:Ed3Oyj9yrmi9087+NczuL5BwkIc4wvTb5zIM+UJPGz4="
+        },
+        {
+          "path": "golang.org/x/image",
+          "version": "v0.47.0",
+          "sum": "h1:za/8gVz++PPZqmZJBNSISICN5Rrj5zixP/8K++fgmqo="
+        },
+        {
+          "path": "golang.org/x/net",
+          "version": "v0.60.0",
+          "sum": "h1:79p50tfZlm0J9YfoDsSi639qSXNGVwEzOPLCxM2FsYU="
+        },
+        {
+          "path": "golang.org/x/oauth2",
+          "version": "v0.35.0",
+          "sum": "h1:Mv2mzuHuZuY2+bkyWXIHMfhNdJAdwW3FuWeCPYN5GVQ="
+        },
+        {
+          "path": "golang.org/x/sync",
+          "version": "v0.24.0",
+          "sum": "h1:iqiDrGoDgyuvAKrhLQthUEzU/R378N78gXbBjxed7oA="
+        },
+        {
+          "path": "golang.org/x/sys",
+          "version": "v0.49.0",
+          "sum": "h1:XbzkgYJHdqh/8m2Uu0W/dQv8nktxx4BFHp1M0gROTXA="
+        },
+        {
+          "path": "golang.org/x/term",
+          "version": "v0.46.0",
+          "sum": "h1:3+OXuTbaKDgwk8jTi3aSLHRlmWqHEUDUtxnbFigO4YE="
+        },
+        {
+          "path": "golang.org/x/text",
+          "version": "v0.43.0",
+          "sum": "h1:1QivrlhwAsnMOcqgOdl9my7s9OyZl8O5/UGUTJVXoWc="
+        },
+        {
+          "path": "golang.org/x/time",
+          "version": "v0.15.0",
+          "sum": "h1:bbrp8t3bGUeFOx08pvsMYRTCVSMk89u4tKbNOZbp88U="
+        }
+      ]
+    },
+    {
+      "role": "worker",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "resolvedPath": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "sha256": "6e33dfeef4c284b265d69f928dc28079ec895a86b3c758de2dca1e17a2f25901",
+      "bytes": 291168,
+      "format": "darwin",
+      "architectures": [
+        "arm64"
+      ],
+      "imports": [
+        {
+          "name": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers",
+          "system": true
+        },
+        {
+          "name": "/opt/homebrew/opt/ffmpeg/lib/libavcodec.63.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/ffmpeg/lib/libavfilter.12.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/ffmpeg/lib/libavformat.63.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/ffmpeg/lib/libavutil.61.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/ffmpeg/lib/libswresample.7.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/ffmpeg/lib/libswscale.10.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/mlt/lib/libmlt-7.7.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/qtbase/lib/QtCore.framework/Versions/A/QtCore",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/qtbase/lib/QtGui.framework/Versions/A/QtGui",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/qtbase/lib/QtWidgets.framework/Versions/A/QtWidgets",
+          "system": false
+        },
+        {
+          "name": "/usr/lib/libSystem.B.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libc++.1.dylib",
+          "system": true
+        }
+      ],
+      "debugSections": false
+    },
+    {
+      "role": "ffmpeg",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "resolvedPath": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/bin/ffmpeg",
+      "sha256": "768609fb3f463ff9272bebac61478515f19e43c5343b0c60dde2e6230c40013e",
+      "bytes": 426512,
+      "format": "darwin",
+      "architectures": [
+        "arm64"
+      ],
+      "imports": [
+        {
+          "name": "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+          "system": true
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavcodec.63.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavdevice.63.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavfilter.12.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavformat.63.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavutil.61.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libswresample.7.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libswscale.10.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/dav1d/lib/libdav1d.7.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/lame/lib/libmp3lame.0.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/libvmaf/lib/libvmaf.3.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/libvpx/lib/libvpx.12.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/openssl@4/lib/libcrypto.4.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/openssl@4/lib/libssl.4.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/opus/lib/libopus.0.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/svt-av1/lib/libSvtAv1Enc.4.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/x264/lib/libx264.165.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/x265/lib/libx265.217.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/xz/lib/liblzma.5.dylib",
+          "system": false
+        },
+        {
+          "name": "/usr/lib/libSystem.B.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libbz2.1.0.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libiconv.2.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libz.1.dylib",
+          "system": true
+        }
+      ],
+      "debugSections": false,
+      "probe": {
+        "artifactSHA256": "768609fb3f463ff9272bebac61478515f19e43c5343b0c60dde2e6230c40013e",
+        "version": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+        "configuration": "--prefix=/opt/homebrew/Cellar/ffmpeg/9.0.2_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon",
+        "gpl": true,
+        "nonfree": false
+      }
+    },
+    {
+      "role": "ffprobe",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "resolvedPath": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/bin/ffprobe",
+      "sha256": "b8d6a076993f4269f71ed090af524093d38a810d4481b38bc9bc1853d91b4612",
+      "bytes": 253488,
+      "format": "darwin",
+      "architectures": [
+        "arm64"
+      ],
+      "imports": [
+        {
+          "name": "/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL",
+          "system": true
+        },
+        {
+          "name": "/System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox",
+          "system": true
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavcodec.63.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavdevice.63.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavfilter.12.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavformat.63.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavutil.61.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libswresample.7.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libswscale.10.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/dav1d/lib/libdav1d.7.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/lame/lib/libmp3lame.0.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/libvmaf/lib/libvmaf.3.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/libvpx/lib/libvpx.12.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/openssl@4/lib/libcrypto.4.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/openssl@4/lib/libssl.4.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/opus/lib/libopus.0.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/svt-av1/lib/libSvtAv1Enc.4.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/x264/lib/libx264.165.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/x265/lib/libx265.217.dylib",
+          "system": false
+        },
+        {
+          "name": "/opt/homebrew/opt/xz/lib/liblzma.5.dylib",
+          "system": false
+        },
+        {
+          "name": "/usr/lib/libSystem.B.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libbz2.1.0.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libiconv.2.dylib",
+          "system": true
+        },
+        {
+          "name": "/usr/lib/libz.1.dylib",
+          "system": true
+        }
+      ],
+      "debugSections": false,
+      "probe": {
+        "artifactSHA256": "b8d6a076993f4269f71ed090af524093d38a810d4481b38bc9bc1853d91b4612",
+        "version": "ffprobe version 9.0.2 Copyright (c) 2007-2026 the FFmpeg developers",
+        "configuration": "--prefix=/opt/homebrew/Cellar/ffmpeg/9.0.2_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon",
+        "gpl": true,
+        "nonfree": false
+      }
+    }
+  ],
+  "directories": [
+    {
+      "role": "mlt_repository",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository",
+      "files": 7,
+      "bytes": 0,
+      "sha256": "2dd9a6fa81e9cd55a1dfc138c8c83cef63f854b0b136cffaae2693c63cd086c2"
+    },
+    {
+      "role": "mlt_profiles",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-profiles",
+      "files": 76,
+      "bytes": 15269,
+      "sha256": "72396273213f47970218db692ea4e84dc4136061ff53f24ac389856fed91c103"
+    },
+    {
+      "role": "frontend",
+      "path": "/Users/xvjialing/projects/aividcut/frontend/dist",
+      "files": 31,
+      "bytes": 874062,
+      "sha256": "20dfa1c734a8c984079662ff09dc9b3cc71c766fe239717acf11f8af68742c81"
+    }
+  ],
+  "findings": [
+    {
+      "level": "blocker",
+      "code": "outside_package",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "产物在发行包外；开发机可用不等于随包可用"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/ffmpeg/lib/libavcodec.63.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/ffmpeg/lib/libavfilter.12.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/ffmpeg/lib/libavformat.63.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/ffmpeg/lib/libavutil.61.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/ffmpeg/lib/libswresample.7.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/ffmpeg/lib/libswscale.10.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/mlt/lib/libmlt-7.7.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/qtbase/lib/QtCore.framework/Versions/A/QtCore"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/qtbase/lib/QtGui.framework/Versions/A/QtGui"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/Users/xvjialing/projects/aividcut/work/bin/aividcut-mlt-worker",
+      "message": "链接包外库：/opt/homebrew/opt/qtbase/lib/QtWidgets.framework/Versions/A/QtWidgets"
+    },
+    {
+      "level": "blocker",
+      "code": "outside_package",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "产物在发行包外；开发机可用不等于随包可用"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavcodec.63.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavdevice.63.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavfilter.12.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavformat.63.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavutil.61.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libswresample.7.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libswscale.10.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/dav1d/lib/libdav1d.7.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/lame/lib/libmp3lame.0.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/libvmaf/lib/libvmaf.3.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/libvpx/lib/libvpx.12.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/openssl@4/lib/libcrypto.4.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/openssl@4/lib/libssl.4.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/opus/lib/libopus.0.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/svt-av1/lib/libSvtAv1Enc.4.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/x264/lib/libx264.165.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/x265/lib/libx265.217.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "链接包外库：/opt/homebrew/opt/xz/lib/liblzma.5.dylib"
+    },
+    {
+      "level": "review",
+      "code": "ffmpeg_gpl",
+      "path": "/opt/homebrew/bin/ffmpeg",
+      "message": "观察到GPL构建，需核对分发范围、许可证及对应源码"
+    },
+    {
+      "level": "blocker",
+      "code": "outside_package",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "产物在发行包外；开发机可用不等于随包可用"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavcodec.63.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavdevice.63.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavfilter.12.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavformat.63.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libavutil.61.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libswresample.7.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/Cellar/ffmpeg/9.0.2_1/lib/libswscale.10.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/dav1d/lib/libdav1d.7.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/lame/lib/libmp3lame.0.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/libvmaf/lib/libvmaf.3.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/libvpx/lib/libvpx.12.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/openssl@4/lib/libcrypto.4.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/openssl@4/lib/libssl.4.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/opus/lib/libopus.0.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/svt-av1/lib/libSvtAv1Enc.4.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/x264/lib/libx264.165.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/x265/lib/libx265.217.dylib"
+    },
+    {
+      "level": "blocker",
+      "code": "external_import",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "链接包外库：/opt/homebrew/opt/xz/lib/liblzma.5.dylib"
+    },
+    {
+      "level": "review",
+      "code": "ffmpeg_gpl",
+      "path": "/opt/homebrew/bin/ffprobe",
+      "message": "观察到GPL构建，需核对分发范围、许可证及对应源码"
+    },
+    {
+      "level": "blocker",
+      "code": "runtime_outside_package",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository",
+      "message": "运行时目录不在发行包内"
+    },
+    {
+      "level": "blocker",
+      "code": "external_symlink",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltavformat.so",
+      "message": "符号链接指向发行包外"
+    },
+    {
+      "level": "review",
+      "code": "symlink_not_walked",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltavformat.so",
+      "message": "不递归跟随目录内符号链接，需核对目标内容"
+    },
+    {
+      "level": "blocker",
+      "code": "external_symlink",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltcore.so",
+      "message": "符号链接指向发行包外"
+    },
+    {
+      "level": "review",
+      "code": "symlink_not_walked",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltcore.so",
+      "message": "不递归跟随目录内符号链接，需核对目标内容"
+    },
+    {
+      "level": "blocker",
+      "code": "external_symlink",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltnormalize.so",
+      "message": "符号链接指向发行包外"
+    },
+    {
+      "level": "review",
+      "code": "symlink_not_walked",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltnormalize.so",
+      "message": "不递归跟随目录内符号链接，需核对目标内容"
+    },
+    {
+      "level": "blocker",
+      "code": "external_symlink",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltplus.so",
+      "message": "符号链接指向发行包外"
+    },
+    {
+      "level": "review",
+      "code": "symlink_not_walked",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltplus.so",
+      "message": "不递归跟随目录内符号链接，需核对目标内容"
+    },
+    {
+      "level": "blocker",
+      "code": "external_symlink",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltqt6.so",
+      "message": "符号链接指向发行包外"
+    },
+    {
+      "level": "review",
+      "code": "symlink_not_walked",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltqt6.so",
+      "message": "不递归跟随目录内符号链接，需核对目标内容"
+    },
+    {
+      "level": "blocker",
+      "code": "external_symlink",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltresample.so",
+      "message": "符号链接指向发行包外"
+    },
+    {
+      "level": "review",
+      "code": "symlink_not_walked",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltresample.so",
+      "message": "不递归跟随目录内符号链接，需核对目标内容"
+    },
+    {
+      "level": "blocker",
+      "code": "external_symlink",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltxml.so",
+      "message": "符号链接指向发行包外"
+    },
+    {
+      "level": "review",
+      "code": "symlink_not_walked",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltxml.so",
+      "message": "不递归跟随目录内符号链接，需核对目标内容"
+    },
+    {
+      "level": "blocker",
+      "code": "runtime_outside_package",
+      "path": "/Users/xvjialing/projects/aividcut/work/mlt-profiles",
+      "message": "运行时目录不在发行包内"
+    },
+    {
+      "level": "review",
+      "code": "license_closure",
+      "message": "需按实际MLT模块、Qt、FFmpeg及其它依赖核对许可文本、构建方式和对应源码；不以顶层包名代替许可闭包"
+    }
+  ],
+  "blockers": 58,
+  "reviews": 10,
+  "releaseVerified": false,
+  "limits": [
+    "普通导入表不覆盖PE延迟导入、动态MLT/Qt加载和所有传递依赖，不是完整SBOM",
+    "未验证签名/公证、对应源码、许可履行、专利和双端安装运行",
+    "去符号/trimpath不能保证源码或前端资源不可提取",
+    "前端扫描仅覆盖指定dist目录，不证明嵌入二进制逐字节相同"
+  ]
+}

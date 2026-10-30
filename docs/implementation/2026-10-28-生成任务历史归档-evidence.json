@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-28",
+  "requirements": [
+    "FW-R09",
+    "FW-R10",
+    "FW-R11",
+    "FW-R12",
+    "FW-R15"
+  ],
+  "implementation": {
+    "activeLimit": 2000,
+    "archiveLimit": 20000,
+    "pageSize": 20,
+    "startupArchiveBodyReads": false,
+    "paidIDsReserved": true,
+    "caseInsensitiveCollisionsRejected": true,
+    "recordVersionsPreserved": [
+      1,
+      2
+    ],
+    "mediaMovedOrDeleted": false,
+    "newMCPTools": false
+  },
+  "verification": {
+    "coreArchiveTests": 11,
+    "frontendFiles": 62,
+    "frontendTests": 435,
+    "archiveDOMTests": 6,
+    "typecheck": true,
+    "format": true,
+    "productionBuild": true,
+    "productionEmbed": true,
+    "racePackages": [
+      "generationjobs",
+      "application"
+    ],
+    "explicitNativeSDKUsed": true,
+    "vet": true,
+    "staticUIAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "preparedCandidateAfterArchive": {
+      "frames": 12,
+      "pcmBytes": 153752,
+      "rgbaBytes": 2764800,
+      "matchesManualSource": true
+    },
+    "browser": {
+      "postCount": 1,
+      "posts": [
+        {
+          "estimateForwarded": false,
+          "n": 2
+        }
+      ],
+      "projectRevision": 3,
+      "clips": 3,
+      "assets": [
+        {
+          "id": "archive-ui-fixture-1",
+          "path": "/Users/xvjialing/projects/aividcut/work/generation-archive-check/browser-data/generation/assets/archive-ui-fixture/result-01.png",
+          "bytes": 144,
+          "sha256": "d1df0646e5bf768b52b7df08dcc6574bce2068a2bd0b7856737a28f99c86d664"
+        },
+        {
+          "id": "archive-ui-fixture-2",
+          "path": "/Users/xvjialing/projects/aividcut/work/generation-archive-check/browser-data/generation/assets/archive-ui-fixture/result-02.png",
+          "bytes": 144,
+          "sha256": "d1df0646e5bf768b52b7df08dcc6574bce2068a2bd0b7856737a28f99c86d664"
+        },
+        {
+          "id": "91a660e8018b9a47e75f1761",
+          "path": "/Users/xvjialing/projects/aividcut/work/generation-archive-check/browser-data/fixture-tone.wav",
+          "bytes": 576044,
+          "sha256": "06cf5e5a5c9a4b760cfca1c7773beec431fa30041396a74cb25c82b59260ea29"
+        }
+      ],
+      "projectSHA256": "746e1770b3c1fd9ad6978473d78d3613025896e65885138f214835e5c0be9d84",
+      "browserArchiveRestorePassed": true,
+      "quoteAmount": "0.60",
+      "currency": "CNY",
+      "narrowViewport": {
+        "width": 900,
+        "height": 720,
+        "dialogWidth": 460,
+        "dialogHeight": 422.6328125,
+        "horizontalOverflow": false
+      },
+      "escapeRestoresFocus": "归档管理",
+      "viewportReset": true
+    },
+    "native": {
+      "videoFrames": 90,
+      "audioSampleFrames": 144000,
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "durationSeconds": 3.0,
+      "audioFinite": true,
+      "peak": 0.12856779992580414,
+      "rms": 0.08818592696455081,
+      "bytes": 96563,
+      "sha256": "648d4df86e6e0657fde8366fd664dc149d2543ae210dacdb089891cc3462e996",
+      "projectAndMediaUnchanged": true,
+      "providerPostCount": 1,
+      "exportWhileJobArchived": true
+    },
+    "nativeArchiveRestore": true,
+    "nativeAppClosed": true,
+    "temporaryBrowserClosed": true,
+    "temporaryServicesStopped": true,
+    "realAccountUsed": false,
+    "windowsExecuted": false
+  },
+  "build": {
+    "wailsVersion": "v3.0.0",
+    "latestSource": "https://github.com/wailsapp/wails/releases/tag/v3.0.0",
+    "macExecutableSHA256": "d01db279f445dfc80219756dfac0a7874d93e01f53314b2c7790947c23433abb",
+    "deepStrictSignature": true,
+    "noticesBindingsMatch": true,
+    "windows": {
+      "path": "work/generation-archive-check/AIVidCut-windows-amd64-history-archive.zip",
+      "files": 764,
+      "bytes": 112144073,
+      "sha256": "0c48a9292525c7c777b6626937aa33aff3cf5148092d4553f1cd6dc4a5052174",
+      "appSHA256": "9ad8260fc8cfc1dfd23296272bf04fc571aa56ca81aeb147255f638f80cd7a96",
+      "crcVerified": true,
+      "windowsExecuted": false
+    }
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "documentation": {
+    "markdownFiles": 168,
+    "localLinks": 959,
+    "originalArchiveSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "errors": []
+  }
+}

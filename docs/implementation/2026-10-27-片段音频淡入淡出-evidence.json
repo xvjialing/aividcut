@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R02",
+    "FW-R05",
+    "FW-R11",
+    "FW-R12"
+  ],
+  "actualMedia": {
+    "durationSeconds": 10,
+    "fixture": "本地合成音画、独立B-roll、连续配乐、人工词时间与工程字体，非模型质量或自然语音证明",
+    "frames": 300,
+    "maxIndependentMixError": 7.178750816017043e-09,
+    "musicFadeUs": 1000000,
+    "nativePCMBytes": 3840000,
+    "nativePCMSHA256": "c22c42c6b8d7f7c37c761329d93c12b2433df52499437243cfbbebfae3cfd2f8",
+    "rgbaFramesUnchanged": 300,
+    "savedReopenSame": true,
+    "schemaVersion": 4,
+    "splitPCMIdentical": true,
+    "voiceFadeUs": 200000
+  },
+  "independentVerification": {
+    "uiProjectMatchesIndependentFadesExceptRevision": true,
+    "uiSavedSchemaVersion": 4,
+    "uiDirty": false,
+    "uiCanUndo": true,
+    "outputFrames": 300,
+    "outputWidth": 320,
+    "outputHeight": 180,
+    "outputFPS": "30/1",
+    "outputDurationSeconds": 10,
+    "audioCodec": "aac",
+    "outputSHA256": "1e751cfcdf4b171d94aec14022a6264dd6055b3f8e65ac889ff733b598600116"
+  },
+  "ui": {
+    "musicInOutUs": 1000000,
+    "voiceInOutUs": 200000,
+    "invalid999SecondsRejected": true,
+    "undoRedoAndClearUndo": true,
+    "inputDraftCountFinallyZero": true,
+    "nativePlaybackReachedEnd": true,
+    "savedSeparateV4Project": true,
+    "narrowViewport": [
+      900,
+      720
+    ],
+    "document": [
+      900,
+      720
+    ],
+    "inputsValid": true,
+    "inputRects": [
+      {
+        "x": 666,
+        "right": 770.5
+      },
+      {
+        "x": 780.5,
+        "right": 885
+      }
+    ]
+  },
+  "checks": {
+    "frontendFiles": 55,
+    "frontendTests": 361,
+    "goRacePackages": 32,
+    "goVet": true,
+    "nativePlaybackAndExporterFullRegression": true,
+    "macOSBuild": true,
+    "windowsAMD64Build": true,
+    "productionResources": true,
+    "wailsVersion": "3.0.0",
+    "documentation": {
+      "Markdown文档数": 121,
+      "本地链接检查数": 609,
+      "正文检查文档数": 94,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    },
+    "staticDesignAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "wailsLatest": "v3.0.0"
+  },
+  "paidModelCalls": 0,
+  "newNativeMacGUIVerified": false,
+  "windowsRuntimeVerified": false,
+  "limitations": [
+    "输出片段范围线性淡化，不是交叉混音或去爆音保证",
+    "真实晚起/短音尾不补长，极短曲线需试听",
+    "PCM验证在AAC编码前",
+    "自然语音/模型账户/双端完整商业发布门槛继续"
+  ],
+  "cleanup": {
+    "temporaryBrowserTabClosed": true,
+    "viewportReset": true,
+    "developmentServicesStopped": true,
+    "listenersRemaining": 0
+  }
+}

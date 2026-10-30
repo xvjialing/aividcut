@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-25",
+  "requirements": [
+    "FW-R01",
+    "FW-R04",
+    "FW-R11",
+    "FW-R12",
+    "FW-R15",
+    "FW-R17"
+  ],
+  "wails": "v3.0.0-beta.34",
+  "browser": {
+    "samples": [
+      {
+        "label": "浏览源画面，约 0.00 秒",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "label": "浏览源画面，约 0.97 秒",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "label": "浏览源画面，约 1.95 秒",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "label": "浏览源画面，约 2.92 秒",
+        "width": 320,
+        "height": 180
+      },
+      {
+        "label": "浏览源画面，约 3.90 秒",
+        "width": 320,
+        "height": 180
+      }
+    ],
+    "geometry": {
+      "x": 666,
+      "y": 267.59375,
+      "width": 219,
+      "height": 123.1875,
+      "withinViewport": true
+    },
+    "errors": [],
+    "core": {
+      "dirty": false,
+      "revision": 1,
+      "sourceEpoch": 0,
+      "assets": 3,
+      "clips": 0
+    },
+    "keyboard": [
+      "Home",
+      "End"
+    ]
+  },
+  "missing": {
+    "reason": "缩略图源文件不可读取，请重新定位素材",
+    "dirty": false,
+    "revision": 1
+  },
+  "reopen": {
+    "restored": true,
+    "reopened": true,
+    "oldURLStatus": 404,
+    "staleRequestError": "缩略图所属工程实例已切换",
+    "sourceEpochBefore": 0,
+    "sourceEpochAfter": 1,
+    "dirty": false,
+    "revision": 1,
+    "assets": 3,
+    "clips": 0
+  },
+  "fixtures": [
+    {
+      "name": "左右源图.png",
+      "bytes": 1509,
+      "sha256": "a9aa8d681eb39ec5b0872bff578825980656361b403fd19678c0ac170ab703e6"
+    },
+    {
+      "name": "四段颜色.mp4",
+      "bytes": 3198,
+      "sha256": "a4352baa0195152a29ba7049648c0c4168bd36970d0a24a68439dcb6b4abdc4a"
+    },
+    {
+      "name": "旋转.mp4",
+      "bytes": 3198,
+      "sha256": "074f74cb9d3dca3cfaf2dc3f3f1cd9b36be82777915cd8e33f536125698d1efc"
+    }
+  ],
+  "screenshots": [
+    "thumbnail-video-end.png",
+    "thumbnail-900-image.png",
+    "thumbnail-missing.png",
+    "thumbnail-reopened.png"
+  ],
+  "checks": {
+    "frontendFiles": 29,
+    "frontendTests": 210,
+    "goRaceInternalPackages": 19,
+    "goRaceCmdPackages": 1,
+    "cmdPackagesWithoutTests": 3,
+    "finalRelatedRace": [
+      "internal/media",
+      "internal/application",
+      "internal/localmedia"
+    ],
+    "macOSBuild": "本地自签名构建通过；新界面原生操作未验",
+    "windowsBuild": "amd64交叉编译通过；实机未验",
+    "premiumAuditErrors": 0,
+    "premiumAuditWarnings": 0,
+    "designmdErrors": 0,
+    "designmdWarnings": 0
+  },
+  "limits": {
+    "jpegWidth": 320,
+    "jpegHeight": 180,
+    "jpegBytes": 262144,
+    "thumbnailExtractors": 2,
+    "thumbnailPending": 128,
+    "thumbnailCached": 128,
+    "blobCount": 128,
+    "blobBytes": 33554432,
+    "extractTimeoutSeconds": 10,
+    "fallbackSourceBytes": 33554432,
+    "fallbackPixels": 8388608
+  },
+  "nativeStatus": "最新解锁回复后工具仍报告Mac锁屏；保留旧原生进程88863，未关闭或重启"
+}

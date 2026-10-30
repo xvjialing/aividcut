@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R11",
+    "FW-R14",
+    "FW-R16"
+  ],
+  "commandResults": [
+    {
+      "target": "macos",
+      "reportExit": 0,
+      "blockers": 58,
+      "reviews": 10,
+      "architectures": [
+        "arm64"
+      ],
+      "imports": 13,
+      "checkExit": 1
+    },
+    {
+      "target": "windows",
+      "reportExit": 0,
+      "blockers": 5,
+      "reviews": 1,
+      "architectures": [
+        "amd64"
+      ],
+      "imports": 1,
+      "checkExit": 1
+    }
+  ],
+  "embeddedNegative": {
+    "syntheticSourceMapRejected": true,
+    "negativeExit": 1,
+    "fixtureRemoved": true,
+    "restoredProductionExit": 0
+  },
+  "localLicenseInputs": [
+    {
+      "role": "mlt-build-recipe",
+      "path": "/opt/homebrew/Cellar/mlt/7.42.0/.brew/mlt.rb",
+      "bytes": 2470,
+      "sha256": "54a1ada8ec30fa130e111219d5d12866435721273f8614b508121390e976a422"
+    },
+    {
+      "role": "ffmpeg-license",
+      "path": "/opt/homebrew/Cellar/ffmpeg/9.0.2_1/LICENSE.md",
+      "bytes": 4346,
+      "sha256": "2e1d16c72fd74e12063776371da757322f8b77589386532f4fd8634bde7de1af"
+    },
+    {
+      "role": "mlt-license",
+      "path": "/opt/homebrew/Cellar/mlt/7.42.0/COPYING",
+      "bytes": 26521,
+      "sha256": "592987e8510228d546540b84a22444bde98e48d03078d3b2eefcd889bec5ce8c"
+    }
+  ],
+  "selectedModuleIdentities": [
+    {
+      "module": "libmltavformat.so",
+      "selectedPath": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltavformat.so",
+      "resolvedPath": "/opt/homebrew/Cellar/mlt/7.42.0/lib/mlt/libmltavformat.so",
+      "bytes": 198064,
+      "sha256": "b26734ffa45d3221c2edc2575430baaeb86f2b8b6fa051ea85a1bea7c3a9a28d"
+    },
+    {
+      "module": "libmltcore.so",
+      "selectedPath": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltcore.so",
+      "resolvedPath": "/opt/homebrew/Cellar/mlt/7.42.0/lib/mlt/libmltcore.so",
+      "bytes": 178800,
+      "sha256": "6cb6616c71018c3b102c5300e66939dcf81b08447b1ddc2f0050b7cbb2eede71"
+    },
+    {
+      "module": "libmltnormalize.so",
+      "selectedPath": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltnormalize.so",
+      "resolvedPath": "/opt/homebrew/Cellar/mlt/7.42.0/lib/mlt/libmltnormalize.so",
+      "bytes": 36784,
+      "sha256": "ddc127d7c4ff0c8d9bb38df5f0e0c669dea1529bc7e86a582841edb9aee91603"
+    },
+    {
+      "module": "libmltplus.so",
+      "selectedPath": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltplus.so",
+      "resolvedPath": "/opt/homebrew/Cellar/mlt/7.42.0/lib/mlt/libmltplus.so",
+      "bytes": 206640,
+      "sha256": "46e9782845696e3951d4aca6e7ed2440338f37a45082d1253f5afe03fc2dc65e"
+    },
+    {
+      "module": "libmltqt6.so",
+      "selectedPath": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltqt6.so",
+      "resolvedPath": "/opt/homebrew/Cellar/mlt/7.42.0/lib/mlt/libmltqt6.so",
+      "bytes": 351488,
+      "sha256": "ab15fa11a61b6cd6ae2ef46f85740e8ba114e4937e22101df922479a99804778"
+    },
+    {
+      "module": "libmltresample.so",
+      "selectedPath": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltresample.so",
+      "resolvedPath": "/opt/homebrew/Cellar/mlt/7.42.0/lib/mlt/libmltresample.so",
+      "bytes": 37408,
+      "sha256": "5ee97a0e07333305076443034dcecd6bbe6e7e3b85cb710b0fcb8138fb268cfc"
+    },
+    {
+      "module": "libmltxml.so",
+      "selectedPath": "/Users/xvjialing/projects/aividcut/work/mlt-selected-repository/libmltxml.so",
+      "resolvedPath": "/opt/homebrew/Cellar/mlt/7.42.0/lib/mlt/libmltxml.so",
+      "bytes": 81984,
+      "sha256": "3a15e59415f0756c6254cc3d445067d1bed54a2d6fc697efe02d394a32ea8be8"
+    }
+  ],
+  "checks": {
+    "goRacePackages": 33,
+    "goVet": true,
+    "finalFocusedRaceAndVet": true,
+    "productionResources": true,
+    "toolDarwinARM64Build": true,
+    "toolWindowsAMD64Build": true,
+    "artifactSHA256IndependentlyMatched": true,
+    "wailsLatest": "3.0.0",
+    "releaseCheckMakeExit": 2,
+    "documentation": {
+      "Markdown文档数": 131,
+      "本地链接检查数": 668,
+      "正文检查文档数": 104,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    },
+    "codesignVerification": {
+      "strictDeepVerifyExit": 0,
+      "signature": "adhoc",
+      "teamIdentifierSet": false
+    },
+    "frontendDirectoryDigestRestored": true
+  },
+  "signing": {
+    "macOSStrictLocalCodesignVerified": true,
+    "signature": "adhoc",
+    "teamIdentifierSet": false
+  },
+  "releaseVerified": false,
+  "nativeMacGUIVerified": false,
+  "nativeMacBlocker": "工具报告Mac锁屏",
+  "windowsRuntimeVerified": false,
+  "paidModelCalls": 0,
+  "sources": [
+    "https://www.ffmpeg.org/legal.html",
+    "https://www.qt.io/development/open-source-lgpl-obligations",
+    "https://raw.githubusercontent.com/mltframework/mlt/v7.42.0/src/modules/normalize/filter_volume.c",
+    "https://raw.githubusercontent.com/mltframework/mlt/v7.42.0/src/modules/qt/filter_qtext.cpp"
+  ],
+  "limitations": [
+    "普通导入不覆盖延迟导入/动态插件/完整传递依赖",
+    "静态报告不是完整SBOM或法律授权",
+    "当前无随包可重定位双端媒体SDK",
+    "真实账户/CLI推理/完整双端商业交付继续"
+  ],
+  "cleanup": {
+    "syntheticSourceMapRemoved": true,
+    "servicesStarted": false,
+    "nativeAppsLaunched": false,
+    "browserTabsCreated": false
+  }
+}

@@ -1,0 +1,46 @@
+:root {
+  color-scheme: dark;
+  --color-background: #11151a;
+  --color-surface: #191e25;
+  --color-surface-raised: #232a34;
+  --color-surface-hover: #2c3541;
+  --color-viewer: #0a0c0f;
+  --color-border: #343e4c;
+  --color-border-soft: #262e39;
+  --color-text: #e8edf3;
+  --color-muted: #a4b0bf;
+  --color-faint: #8996a6;
+  --color-control-border: #607087;
+  --color-accent: #aec9ff;
+  --color-on-accent: #14233c;
+  --color-selection: #29436d;
+  --color-success: #9bd2b4;
+  --color-warning: #e4c58b;
+  --color-danger: #f1a7ac;
+  --color-track-video: #36547c;
+  --color-track-audio: #315d56;
+  --color-track-text: #6b543c;
+  --color-track-caption: #5b496e;
+  --color-scroll-thumb: #465260;
+  --color-scroll-track: #161b22;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --text-body: 13px;
+  --text-small: 11px;
+  --radius-sm: 4px;
+  --radius-control: 6px;
+  --radius-panel: 10px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --duration-feedback: 120ms;
+  --track-header-width: 160px;
+  --native-window-controls-inset: 88px;
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  color: var(--color-text);
+  background: var(--color-background);
+}

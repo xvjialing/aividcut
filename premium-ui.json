@@ -1,0 +1,44 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": [
+    "frontend/src"
+  ],
+  "locale": "zh-CN",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": [
+    "Select/Listbox",
+    "Form",
+    "Scrollbar",
+    "Toast",
+    "CRUD"
+  ],
+  "ownership": {
+    "Select/Listbox": "native"
+  },
+  "requiredCommands": [
+    "typecheck",
+    "unit",
+    "build"
+  ],
+  "commands": {
+    "typecheck": "pnpm --dir frontend run typecheck",
+    "unit": "pnpm --dir frontend test",
+    "build": "pnpm --dir frontend run build"
+  },
+  "evidence": {
+    "failurePaths": "frontend/tests/bridge.test.ts",
+    "timeMapping": "frontend/tests/editor.test.ts",
+    "closeProtection": "frontend/tests/close-protection.test.ts",
+    "draftValidation": "frontend/tests/draft-dom.test.tsx",
+    "generationCapabilities": "frontend/tests/generation.test.ts",
+    "generationConsentAndRecovery": "frontend/tests/generation-dom.test.tsx",
+    "agentBoundaries": "frontend/tests/agent.test.ts",
+    "agentConsentAndApply": "frontend/tests/agent-dom.test.tsx",
+    "speechBoundaries": "frontend/tests/speech.test.ts",
+    "speechConsentAndApply": "frontend/tests/speech-dom.test.tsx",
+    "workflowAndMCP": "frontend/tests/workflow-mcp-dom.test.tsx",
+    "externalRevisionDrafts": "frontend/tests/external-sync-dom.test.tsx",
+    "exportRanges": "frontend/tests/export-options.test.ts",
+    "exportSettings": "frontend/tests/export-settings-dom.test.tsx"
+  }
+}

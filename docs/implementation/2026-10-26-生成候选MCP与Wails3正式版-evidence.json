@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-26",
+  "status": "本阶段局部通过，完整目标继续",
+  "requirements": [
+    "FW-R01",
+    "FW-R07",
+    "FW-R08",
+    "FW-R09",
+    "FW-R10",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R16",
+    "FW-R17"
+  ],
+  "wails": {
+    "latest": "v3.0.0",
+    "goModule": "v3.0.0",
+    "cli": "v3.0.0",
+    "runtime": "3.0.0",
+    "languageBaseline": "1.26.0",
+    "projectToolchain": "go1.27.3",
+    "cliCompiler": "go1.27.3",
+    "releaseSource": "https://github.com/wailsapp/wails/releases/tag/v3.0.0",
+    "sequentialLockfileReinstallCompleted": true
+  },
+  "newTools": [
+    "aividcut_list_generation_candidates",
+    "aividcut_preview_generation_placement",
+    "aividcut_apply_generation_placement",
+    "aividcut_preview_generation_replacement",
+    "aividcut_apply_generation_replacement"
+  ],
+  "guards": {
+    "readOnlyPreviewsNoWriteTools": true,
+    "noPrivatePathsURLsPixels": true,
+    "scopeStringOwnership": true,
+    "manualAndConnectionMixRejected": true,
+    "stoppedProbeNoPreviewOrEdit": true,
+    "sameIDReopenInvalidates": true,
+    "receiptDistinguishesNewDuplicateAndUndo": true,
+    "priceRequestsStillHumanConfirmation": true,
+    "sourceFramePermissionUnchanged": true
+  },
+  "protocolTests": {
+    "newGroups": 6,
+    "realSDKLoopback": true,
+    "runnerEndpointToolsAndAudit": true,
+    "promptLimitUnicode": 500,
+    "pageDefault": 20,
+    "pageMaximum": 100,
+    "newTestsEvidence": "work/generation-mcp-check/mcp-new.log"
+  },
+  "verification": {
+    "goFullInternalAndCommandRace": true,
+    "goVet": true,
+    "frontendFiles": 45,
+    "frontendTests": 305,
+    "frontendTypes": true,
+    "frontendFormat": true,
+    "productionRoot": true,
+    "explicitActualMediaRace": true
+  },
+  "mediaRegression": {
+    "PCMBytes": 153752,
+    "RGBABytes": 2764800,
+    "unchangedAgainstManual": true,
+    "boundCaptionAndManualProtection": true,
+    "fullOriginalLUTCaptionCapture": true,
+    "syntheticWordTimingsOnly": true
+  },
+  "native": {
+    "moduleVersion": "v3.0.0",
+    "compiler": "go1.27.3",
+    "runtimePackage": "3.0.0",
+    "nativeURL": "wails://localhost/",
+    "initialClips": 0,
+    "addTextClips": 1,
+    "undoClips": 0,
+    "redoAndSaveClips": 1,
+    "savedRevision": 3,
+    "systemSaveDialog": true,
+    "isolatedDataDirectory": true,
+    "source": "实际CUA原生操作及保存文件交叉核对",
+    "notFullNativeAcceptance": true
+  },
+  "builds": {
+    "macLocalSelfSigned": true,
+    "windowsAmd64CrossCompile": true,
+    "mainJSKilobytes": 582.76,
+    "mainChunk500kBWarning": true,
+    "productionSDKLinkTargetWarningRemains": true,
+    "fullWindowsNativeAcceptance": false
+  },
+  "designAudit": {
+    "errors": 0,
+    "total": 0,
+    "unresolved": 0,
+    "violations": 0,
+    "warnings": 0
+  },
+  "designLint": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "accountAcceptance": "用户要求后置",
+  "realModelCalls": 0,
+  "realPaidCalls": 0,
+  "realCLIInference": 0,
+  "limits": [
+    "SDK/Runner不替代真实Codex/Claude登录和推理",
+    "Windows实机和完整双端媒体/字体/色彩/资源/发行未完成",
+    "候选元数据不代表模型已看懂画面，画面工具仍独立许可",
+    "原子事务开始后可完成，停止不回滚已完成编辑",
+    "未新增图片复用MCP/单独导库工具或预算/视频编辑延长",
+    "C++未改，无新增worker/ASan覆盖",
+    "完整P0–P6目标继续"
+  ],
+  "cleanup": {
+    "isolatedNativeSessionExit": 0,
+    "extraEmptyWindowClosed": true,
+    "exactProcessCheckNoMatches": true,
+    "newBrowserSessionCreated": false
+  },
+  "documentation": {
+    "Markdown文档数": 97,
+    "本地链接检查数": 479,
+    "正文检查文档数": 70,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

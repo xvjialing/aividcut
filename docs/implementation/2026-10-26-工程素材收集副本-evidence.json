@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-26",
+  "phase": "P1工程可迁移性局部实现",
+  "requirements": [
+    "FW-R01",
+    "FW-R06",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R15"
+  ],
+  "wailsLatest": "v3.0.0",
+  "realModelCalls": 0,
+  "realCLIInferenceCalls": 0,
+  "checks": {
+    "frontend": "47 files, 319 tests passed",
+    "typecheck": "passed",
+    "prettier": "passed",
+    "goRace": "25 tested packages passed; some cached",
+    "goVet": "passed",
+    "productionAssets": "passed",
+    "macOSBuild": "passed; local self-sign",
+    "windowsAMD64Build": "passed; cross-build only",
+    "applicationDirtyAndUndoProtection": "passed",
+    "strictUIAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1
+    },
+    "documentation": {
+      "Markdown文档数": 103,
+      "本地链接检查数": 508,
+      "正文检查文档数": 76,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    }
+  },
+  "newTests": {
+    "collectorGroups": 5,
+    "applicationGroups": 1,
+    "frontendComponentAndUtility": 6,
+    "desktopBridge": 1
+  },
+  "browser": {
+    "draftCommittedBeforeOpen": true,
+    "capturedRevision": 1,
+    "assetCount": 5,
+    "sourceBytes": 830343,
+    "existingDirectoryRejected": true,
+    "openCopyUnsavedProtection": true,
+    "continuedEditingThenExplicitlyOpenedCopy": true,
+    "viewport": [
+      900,
+      700
+    ],
+    "dialog": [
+      760,
+      668
+    ],
+    "footerVisible": true,
+    "horizontalOverflow": false,
+    "realOriginalPlaybackReadyPlayingEnded": true,
+    "realNativeExportViaUI": true,
+    "startPreservedDirtyAndRevision": true
+  },
+  "package": {
+    "assetCount": 5,
+    "clipCount": 4,
+    "uniqueFiles": 4,
+    "sourceBytesIncludingDuplicate": 830343,
+    "uniqueCopiedBytes": 829355,
+    "savedBytes": 988,
+    "allHashesValid": true,
+    "allOriginalPathsUnavailable": true,
+    "allFieldsPreservedExceptSnapshotNameRevisionAndAssetPaths": true,
+    "unknownSourceFingerprintCount": 1,
+    "portableProjectPath": "/Users/xvjialing/projects/aividcut/work/project-collect-check/moved/独立工程/project.aividcut",
+    "originalFileRevision": 0,
+    "copiedRevision": 1,
+    "originalFileSHA256": "c991f0259a13966977983a734f5a4378e4dd03845666d622785a79e38830f6d6"
+  },
+  "media": {
+    "portableProjectPath": "/Users/xvjialing/projects/aividcut/work/project-collect-check/moved/独立工程/project.aividcut",
+    "allAssetPathsWithinMovedPackage": true,
+    "missingAssets": 0,
+    "dirtyAfterReopen": false,
+    "videoFrameMD5Identical": true,
+    "stereoFloatPCMIdentical": true,
+    "stereoFloatPCMBytes": 1153152,
+    "outputBytes": 404945,
+    "outputSHA256": "c1a4de135147bc2a051f19c1e26ae08215694fb681c5c96a324c111b95a05067",
+    "sourceInUs": 137000,
+    "lutIntensity": 0.37,
+    "caption": "工程迁移验收",
+    "realModelCalls": 0,
+    "videoFrames": 90,
+    "fps": "30000/1001",
+    "durationSeconds": 3.003,
+    "dimensions": [
+      640,
+      360
+    ]
+  },
+  "nativeGUI": {
+    "status": "pending",
+    "reason": "Mac locked",
+    "newWailsMethodsInvokedInRealWindow": false,
+    "folderChooserVerified": false,
+    "ownedLaunchStopped": true,
+    "exitCode": 0
+  },
+  "limits": {
+    "copyBufferBytes": 262144,
+    "jobsConcurrent": 1,
+    "jobsPendingLimit": 8,
+    "projectFileBytes": 67108864,
+    "folderNameCharacters": 80
+  },
+  "cleanup": {
+    "browserClosed": true,
+    "viewportReset": true,
+    "devAndVite": "terminated intentionally by Ctrl-C",
+    "ownedNative": "terminated after locked observation",
+    "exactProcessCheck": "no match",
+    "ownedWorkerProcessCheck": "no match"
+  },
+  "limitations": [
+    "原生文件夹选择及新Wails方法GUI待解锁后补验",
+    "Windows实机、字体跨设备一致性待验",
+    "目录副本不含账户/任务历史/独立版本库/代理",
+    "强杀断电可能留下未完成目录，不续传且不覆盖重用",
+    "未现场验磁盘满/设备拔出/网络文件系统与整机资源",
+    "主JS约585.90kB与SDK链接警告保留"
+  ],
+  "screenshot": "assets/2026-10-26-project-collect.jpg",
+  "logsDirectory": "work/project-collect-check"
+}

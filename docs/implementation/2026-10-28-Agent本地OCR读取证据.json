@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-28",
+  "requirements": [
+    "FW-R02",
+    "FW-R04",
+    "FW-R07",
+    "FW-R08",
+    "FW-R11",
+    "FW-R12"
+  ],
+  "schemaVersion": 7,
+  "implementation": {
+    "tool": "aividcut_read_source_ocr",
+    "sourcePermissionRequired": true,
+    "returnsJPEG": false,
+    "returnsPreviewCredentials": false,
+    "returnsLocalPath": false,
+    "retainsHumanDraft": false,
+    "writesProject": false,
+    "scopeEvidenceLimits": {
+      "internalExecution": 20,
+      "externalSession": 128
+    },
+    "usesSharedOCR": true,
+    "skillUpdated": true
+  },
+  "tests": {
+    "newGoTests": 6,
+    "relatedRacePackages": [
+      "application",
+      "localagent",
+      "workflows",
+      "mcpserver",
+      "ocr"
+    ],
+    "allPassed": true,
+    "frontendFiles": 64,
+    "frontendPassed": 453,
+    "typecheck": true,
+    "format": true,
+    "productionEmbed": true,
+    "staticAuditErrors": 0
+  },
+  "actualMCP": {
+    "realLoopbackTransport": true,
+    "realAppleVision": true,
+    "imageAndVideo": true,
+    "videoPositionUs": 2000000,
+    "videoActualCounter": "SOURCE SECOND 2",
+    "textContentBlocksPerResult": 1,
+    "sourceFrames": 2,
+    "projectHashUnchanged": true,
+    "skipped": false,
+    "modelInference": false
+  },
+  "executionFixture": {
+    "realMCP": true,
+    "modelInference": false,
+    "toolAndSkillInjected": true,
+    "frameEvidencePersisted": true,
+    "reopenWithoutReplay": true,
+    "rawOCRNotAutomaticallyPersisted": true,
+    "laterSummaryAndAcceptedNotesMayContainText": true
+  },
+  "codexMetadata": {
+    "nativeVersion": "0.164.0",
+    "scope": "临时独立检测作用域，不代表全局用户登录状态",
+    "auth": "signed_out",
+    "status": "needs_login",
+    "restrictedFeaturesAndRequirementsChecked": true,
+    "singleFirstPartyMCPChecked": true,
+    "modelInference": false,
+    "authenticationFilesCopied": false
+  },
+  "claude": {
+    "policyGate": "policy_unverified",
+    "relaxed": false,
+    "inferenceVerified": false
+  },
+  "artifacts": {
+    "macos": {
+      "path": "build/bin/AIVidCut.app",
+      "appSHA256": "fd226333c87c3d080f987e35630f6f090558212daa70cc47b07237eceb7a35ad",
+      "signatureChecked": true
+    },
+    "windows": {
+      "path": "/Users/xvjialing/projects/aividcut/work/agent-ocr-check/AIVidCut-windows-amd64-agent-ocr.zip",
+      "bytes": 113754495,
+      "files": 767,
+      "sha256": "f9a639fa37efbcad6ce89d02c2f652392fbb4fd497b1ee314f52ca1ff2a1ab9f",
+      "appSHA256": "0c4f74769182cfb7daf4bd50dab9243b50814a54d605927553e20a661a052b7a",
+      "crcVerified": true,
+      "windowsExecuted": false
+    },
+    "applicationNoticeBindingsMatch": true
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "wails": {
+    "version": "3.0.0",
+    "checked": "2026-10-28",
+    "source": "https://github.com/wailsapp/wails/releases/latest"
+  },
+  "nativeWindowRetestedThisStage": false,
+  "displayLayerChanged": false,
+  "fullGoalComplete": false,
+  "toolingIncident": {
+    "automaticReviewTimedOutBeforeExecution": true,
+    "retryRanBeforeIncompleteTestEditWasFixed": true,
+    "testSyntaxFixed": true,
+    "finalTestsPassed": true,
+    "unresolvedApproval": false
+  },
+  "logs": [
+    "work/agent-ocr-check/actual-mcp-vision.log",
+    "work/agent-ocr-check/build-macos.log",
+    "work/agent-ocr-check/build-windows.log",
+    "work/agent-ocr-check/codex-readonly-metadata.log",
+    "work/agent-ocr-check/core-full-race.log",
+    "work/agent-ocr-check/format-check.log",
+    "work/agent-ocr-check/frontend-full.log",
+    "work/agent-ocr-check/mcp-contracts-race.log",
+    "work/agent-ocr-check/production-assets.log",
+    "work/agent-ocr-check/typecheck.log"
+  ],
+  "documentation": {
+    "markdownFiles": 179,
+    "localLinks": 1043,
+    "originalArchiveSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "errors": []
+  }
+}

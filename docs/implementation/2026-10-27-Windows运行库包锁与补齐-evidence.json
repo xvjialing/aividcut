@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R11",
+    "FW-R14",
+    "FW-R16"
+  ],
+  "repositorySnapshots": [
+    {
+      "url": "https://mirror.msys2.org/mingw/ucrt64/ucrt64.db",
+      "bytes": 592207,
+      "sha256": "50c24fca04171bc999e3ba959674c5ffdefd775eef4e73584806e19c326493fe",
+      "signatureVerified": false
+    },
+    {
+      "url": "https://mirror.msys2.org/mingw/ucrt64/ucrt64.files",
+      "bytes": 6560838,
+      "sha256": "f6f75963697869384d525d60b1d25b0b026108c1a3b08cb9419139f57f77a1c0",
+      "signatureVerified": false
+    }
+  ],
+  "scan": {
+    "images": 148,
+    "edges": 1989,
+    "missingEdges": 0,
+    "missingNames": [],
+    "workerMissing": true,
+    "delayedEdges": 0,
+    "releaseVerified": false
+  },
+  "offlineReplay": {
+    "packages": 100,
+    "networkAllowed": false,
+    "sameTree": true,
+    "tree": {
+      "sha256": "fca554bce8ac25b72bc0d308314a460f52a87fa819697304fab9566dd4a564e6",
+      "files": 778,
+      "bytes": 349122559
+    },
+    "releaseVerified": false
+  },
+  "missingWorkerRejected": {
+    "exit": 1,
+    "outputCreated": false,
+    "reason": "装配未完成，保留路径：装配需要worker、身份和明确新输出目录"
+  },
+  "checks": {
+    "pythonTests": 4,
+    "syntax": true,
+    "wailsLatest": "3.0.0",
+    "documentation": {
+      "Markdown文档数": 142,
+      "本地链接检查数": 716,
+      "正文检查文档数": 112,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    }
+  },
+  "windowsWorkerBuilt": false,
+  "windowsProgramsExecuted": false,
+  "systemSDKInstalled": false,
+  "signatureVerified": false,
+  "releaseVerified": false,
+  "paidModelCalls": 0,
+  "limitations": [
+    "运行集合不含编译SDK和本项目worker",
+    "系统DLL列表是声明而非目标注册表证明",
+    "PGP/源码许可与Windows实机/动态加载/签名安装未验",
+    "真实模型与CLI及完整原目标继续"
+  ],
+  "cleanup": {
+    "removedGeneratedCopies": [
+      {
+        "directory": "roots-runtime",
+        "generatedBytes": 80098757
+      },
+      {
+        "directory": "runtime-pass-1",
+        "generatedBytes": 304460737
+      },
+      {
+        "directory": "runtime-pass-2",
+        "generatedBytes": 347397460
+      },
+      {
+        "directory": "runtime-pass-3",
+        "generatedBytes": 348130031
+      },
+      {
+        "directory": "offline-replay",
+        "generatedBytes": 349185377
+      }
+    ],
+    "keptFinalRuntime": "runtime-pass-4",
+    "keptAllLocksAndLogs": true,
+    "freedBytes": 1429272362
+  }
+}

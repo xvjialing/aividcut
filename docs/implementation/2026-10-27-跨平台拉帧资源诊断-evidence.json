@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R14",
+    "FW-R15",
+    "FW-R16"
+  ],
+  "wailsLatest": "v3.0.0",
+  "device": {
+    "cpu": "Apple M5 Pro",
+    "physicalMemoryBytes": 51539607552,
+    "logicalCPUs": 18,
+    "osVersion": "26.6.2",
+    "architecture": "arm64"
+  },
+  "source": {
+    "origin": "本工具自建编号画面/440Hz正弦",
+    "durationSeconds": 300,
+    "width": 640,
+    "height": 360,
+    "inputFPS": "60/1",
+    "timelineFPS": "30000/1001",
+    "hasBFrames": 2,
+    "audio": "AAC/48000Hz",
+    "sha256": "8b2b05226811c405b5b07d66fb1203d0e1370c27dce320eed53e9346a971a545"
+  },
+  "actualMedia": {
+    "whole": {
+      "clips": 1,
+      "decodedSamples": 14398384,
+      "decodedNonzeroChannelSamples": 28796768,
+      "decodedPeakAmplitude": 0.10282663255929947,
+      "actualImageCrc32": 875742564,
+      "actualAudioCrc32": 2059922638,
+      "loadMs": 15.975875,
+      "pullP50Ms": 1.056167,
+      "pullP95Ms": 1.090459,
+      "pullMaxMs": 1.358541,
+      "seekP50Ms": 6.718083,
+      "seekP95Ms": 98.158667,
+      "frames": 8990,
+      "resources": {
+        "schemaVersion": 2,
+        "method": "复用客户端processstats原生读取，仅含身份已确认的本进程及后代；RSS为采样观测值，GPU/WebView/设备体验不在此诊断内。",
+        "goPid": 62362,
+        "workerPid": 62363,
+        "workerIdentity": "62363:1793073881956854000",
+        "goSampledPeakRssBytes": 14729216,
+        "workerSampledPeakRssBytes": 47415296,
+        "confirmedTreeSampledPeakRssBytes": 62128128,
+        "confirmedTreeSampledPeakCpuPercent": 106.42463607950994,
+        "samplesDropped": 0,
+        "failedSamples": 0,
+        "partialSamples": 0
+      }
+    },
+    "split": {
+      "clips": 1000,
+      "decodedSamples": 14398384,
+      "decodedNonzeroChannelSamples": 28796768,
+      "decodedPeakAmplitude": 0.10282663255929947,
+      "actualImageCrc32": 875742564,
+      "actualAudioCrc32": 2059922638,
+      "loadMs": 60.599792,
+      "pullP50Ms": 3.012417,
+      "pullP95Ms": 3.358875,
+      "pullMaxMs": 18.077,
+      "seekP50Ms": 19.139875,
+      "seekP95Ms": 104.936125,
+      "frames": 8990,
+      "resources": {
+        "schemaVersion": 2,
+        "method": "复用客户端processstats原生读取，仅含身份已确认的本进程及后代；RSS为采样观测值，GPU/WebView/设备体验不在此诊断内。",
+        "goPid": 62427,
+        "workerPid": 62428,
+        "workerIdentity": "62428:1793073892579192000",
+        "goSampledPeakRssBytes": 20168704,
+        "workerSampledPeakRssBytes": 65765376,
+        "confirmedTreeSampledPeakRssBytes": 85934080,
+        "confirmedTreeSampledPeakCpuPercent": 108.07105175697748,
+        "samplesDropped": 0,
+        "failedSamples": 0,
+        "partialSamples": 0
+      }
+    }
+  },
+  "failures": {
+    "timeout": {
+      "exit": 1,
+      "failure": "context deadline exceeded",
+      "frames": 11,
+      "workerPID": 63036,
+      "workerStopped": true,
+      "resourceSamples": 8
+    },
+    "interrupt": {
+      "exit": 1,
+      "failure": "context canceled",
+      "frames": 39,
+      "workerPID": 63038,
+      "workerStopped": true,
+      "resourceSamples": 12
+    },
+    "startup-failure": {
+      "exit": 1,
+      "failure": "原生媒体进程结束或协议读取失败",
+      "frames": 0,
+      "workerPID": 0,
+      "workerStopped": null,
+      "resourceSamples": 1
+    }
+  },
+  "verification": {
+    "racePackages": [
+      "cmd/preview-benchmark",
+      "internal/processstats",
+      "internal/resourceprofile",
+      "internal/application"
+    ],
+    "builtNoTests": [
+      "cmd/preview-video-fixture"
+    ],
+    "vet": true,
+    "productionAssets": true,
+    "macOSBundleDeepStrictSignature": true,
+    "powerShellParser": {
+      "errors": 0,
+      "statements": 21,
+      "parserVersion": "7.6.9"
+    },
+    "windowsExecuted": false
+  },
+  "windowsPackage": {
+    "path": "work/benchmark-resources-check/AIVidCut-windows-amd64-diagnostics.zip",
+    "files": 691,
+    "bytes": 111987176,
+    "sha256": "b69fb3c5197b38f37a5dbe13429176cc8f159387c55e9f9c011da5bc93862019",
+    "appSHA256": "3b6e673056763abdb8eefbaa8d074ed92a9863818ceb032cd11d0b49734e66d1",
+    "crcVerified": true,
+    "windowsExecuted": false,
+    "tools": {
+      "preview-benchmark.exe": {
+        "sha256": "2e6c72227f135481d1dd251ef791dadb7089156a41be57ab33eb950f28bf86b7",
+        "bytes": 4640256
+      },
+      "preview-video-fixture.exe": {
+        "sha256": "369f737293fea46eb4ea7a0d6abe4390af1b8dd7168fc1c02b29a4ead824cc72",
+        "bytes": 4597760
+      },
+      "measure_windows_media.ps1": {
+        "sha256": "896f06a9006b060dc3dc9a00fa69a864a7eb5ec2c4393c089ee1196f8b2e3ba4",
+        "bytes": 5012
+      }
+    }
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "limitations": [
+    "固定合成素材/原生吞吐，不含自然摄影/设备时钟/WebView/GPU",
+    "Windows本轮只交叉编译与语法检查",
+    "真实账户、完整设备矩阵和商业发行门槛继续"
+  ],
+  "multiSequence": {
+    "sequenceId": "sequence-f5144baae9cb067df3746d58",
+    "sequenceName": "横屏副本 原生",
+    "sequences": 3,
+    "clips": 5,
+    "decodedSamples": 144000,
+    "decodedNonzeroChannelSamples": 287998,
+    "actualImageCrc32": 3434127023,
+    "actualAudioCrc32": 2331677404,
+    "frames": 90
+  },
+  "documentation": {
+    "Markdown文档数": 152,
+    "本地链接检查数": 790,
+    "正文检查文档数": 114,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

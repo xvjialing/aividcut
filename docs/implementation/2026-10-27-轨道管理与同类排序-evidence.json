@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R07",
+    "FW-R11",
+    "FW-R12",
+    "FW-R17"
+  ],
+  "actualMedia": {
+    "afterRGB": [
+      21,
+      20,
+      221
+    ],
+    "beforeRGB": [
+      221,
+      20,
+      21
+    ],
+    "clipsUnchanged": true,
+    "frames": 30,
+    "hiddenKeepsAudio": true,
+    "hiddenRGB": [
+      221,
+      20,
+      21
+    ],
+    "hiddenVideoKeepsOwnAudio": true,
+    "pcmSHA256": "e54cddb6cd3358befcc70614da5d99e213d8739302a93ca9c495131eb7995b82",
+    "renameAndMoveOneUndoRedo": true,
+    "sampleFrames": 48000,
+    "saveReopenTracksSame": true
+  },
+  "independentExports": [
+    {
+      "name": "before",
+      "width": 320,
+      "height": 180,
+      "fps": "30/1",
+      "frames": 30,
+      "meanRGB": [
+        220.0,
+        19.0,
+        22.0
+      ],
+      "decodedAudioSHA256": "9c3e5da56aaab1bab2d5783998d15485a5bbd96fe926fd37ff4eeb1acb2b3766",
+      "fileSHA256": "18cfb4c2ab5c7052de369af8f03281ac2ceb1840c9253016ae1ecee2155ce8c8"
+    },
+    {
+      "name": "after",
+      "width": 320,
+      "height": 180,
+      "fps": "30/1",
+      "frames": 30,
+      "meanRGB": [
+        21.0,
+        20.0,
+        221.0
+      ],
+      "decodedAudioSHA256": "9c3e5da56aaab1bab2d5783998d15485a5bbd96fe926fd37ff4eeb1acb2b3766",
+      "fileSHA256": "d1f23648be320fad0275f446ed017fce6b0d11a091f1ba14d67415c70000d5d1"
+    },
+    {
+      "name": "hidden",
+      "width": 320,
+      "height": 180,
+      "fps": "30/1",
+      "frames": 30,
+      "meanRGB": [
+        220.0,
+        19.0,
+        22.0
+      ],
+      "decodedAudioSHA256": "9c3e5da56aaab1bab2d5783998d15485a5bbd96fe926fd37ff4eeb1acb2b3766",
+      "fileSHA256": "18cfb4c2ab5c7052de369af8f03281ac2ceb1840c9253016ae1ecee2155ce8c8"
+    }
+  ],
+  "browserHiddenVideo": {
+    "currentTime": 0.001404,
+    "hidden": "hidden",
+    "mediaMounted": true,
+    "muted": false,
+    "paused": false
+  },
+  "ui": {
+    "renameMoveOneUndoRedo": true,
+    "emptyDeleteAndUndo": true,
+    "deleteReturnsTimelineFocus": true,
+    "staleWindowRetainedInputAndCurrentEdit": true,
+    "nativeOrderMenuInspected": true,
+    "viewport": [
+      900,
+      720
+    ],
+    "document": [
+      900,
+      720
+    ],
+    "dialog": [
+      460,
+      454.890625
+    ],
+    "savedSeparateFile": true
+  },
+  "checks": {
+    "frontendFiles": 57,
+    "frontendTests": 371,
+    "typecheck": true,
+    "format": true,
+    "goRacePackages": 32,
+    "goVet": true,
+    "realMCPTransportPermissionAndUndo": true,
+    "macOSBuild": true,
+    "windowsAMD64Build": true,
+    "productionResources": true,
+    "wailsLatest": "3.0.0",
+    "documentation": {
+      "Markdown文档数": 129,
+      "本地链接检查数": 654,
+      "正文检查文档数": 102,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    },
+    "strictDesignAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "designLint": {
+      "errors": 0,
+      "warnings": 0,
+      "infos": 1
+    }
+  },
+  "paidModelCalls": 0,
+  "windowsRuntimeVerified": false,
+  "newNativeMacGUIVerified": false,
+  "limitations": [
+    "同类交换，跨类型重排/独奏/分组另验",
+    "仅可撤销空轨删除，无内容级联或永久删除",
+    "未保存轨道窗口草稿不进入自动恢复",
+    "真实账户/CLI推理和完整双端商业交付继续"
+  ],
+  "independentUIAndOwnVideo": {
+    "uiSavedCurrentNameAndOrder": true,
+    "uiTracks": 5,
+    "uiClips": 3,
+    "ownVideoDecodedAudioHashes": [
+      "9c3e5da56aaab1bab2d5783998d15485a5bbd96fe926fd37ff4eeb1acb2b3766",
+      "9c3e5da56aaab1bab2d5783998d15485a5bbd96fe926fd37ff4eeb1acb2b3766"
+    ]
+  },
+  "cleanup": {
+    "browserTabsClosed": [
+      21,
+      22
+    ],
+    "viewportReset": true,
+    "developmentPortsWithoutListeners": [
+      43110,
+      5173
+    ]
+  }
+}

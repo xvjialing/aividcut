@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-25",
+  "requirements": [
+    "FW-R01",
+    "FW-R03",
+    "FW-R06",
+    "FW-R11",
+    "FW-R12",
+    "FW-R15",
+    "FW-R17"
+  ],
+  "wails": "v3.0.0-beta.34",
+  "mediaMetrics": [
+    "native_test.go:176: 原生中文导出14帧/22423样本，像素平均差0.633333，白字像素511，声音RMS差0.00156857",
+    "native_test.go:264: 实际原画幅3840×2160、48000Hz、1帧/1602有效样本",
+    "native_test.go:264: 实际原画幅1080×1920、44100Hz、1帧/1472有效样本",
+    "native_test.go:302: 152片段窗口导出150帧，末帧白字像素512",
+    "native_test.go:388: 源137ms/1.5倍速/37%LUT/叠加，第3全局帧导出像素平均差3.556013",
+    "native_test.go:388: 源137ms/1.5倍速/37%LUT/叠加，第16全局帧导出像素平均差3.809774",
+    "native_test.go:432: 5777样本源尾导出最后1帧，前段RMS0.184170，尾部静音RMS0.00000000"
+  ],
+  "browser": {
+    "keyboardTab": true,
+    "nativePopupVisualVerified": false,
+    "invalid": {
+      "focused": "to",
+      "message": "导出区间需要满足 0 ≤ 起始帧 < 结束帧 ≤ 30。请保留想要的范围并修改帧数。",
+      "from": "3",
+      "to": "2",
+      "path": "/Users/xvjialing/projects/aividcut/work/native-export-check/ui-output-recheck.mp4"
+    },
+    "geometry": {
+      "width": 460,
+      "height": 652.375,
+      "withinViewport": true,
+      "scrollHeight": 650,
+      "clientHeight": 650
+    },
+    "requests": 3,
+    "jobs": [
+      {
+        "status": "failed",
+        "message": "当前 ffmpeg 构建不含 drawtext，不能导出文字/字幕；请配置具备文字渲染能力的工具"
+      },
+      {
+        "status": "succeeded",
+        "message": "已完成",
+        "outputPath": "/Users/xvjialing/projects/aividcut/work/native-export-check/ui-output-recheck.mp4"
+      }
+    ],
+    "core": {
+      "dirty": false,
+      "revision": 0,
+      "clips": 3
+    },
+    "errors": [],
+    "reducedMotion": true
+  },
+  "previewExportComparison": {
+    "exportFrame": 0,
+    "height": 360,
+    "meanAbsoluteRGBError": 1.0393547453703704,
+    "previewFrame": 3,
+    "width": 640
+  },
+  "outputProbe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 640,
+        "height": 360,
+        "time_base": "1/30000",
+        "duration_ts": 14014,
+        "nb_frames": "14"
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "time_base": "1/48000",
+        "duration_ts": 22423,
+        "nb_frames": "23"
+      }
+    ]
+  },
+  "decodedAudioSamples": 22423,
+  "sanitizer": {
+    "changedLogs": [],
+    "detectLeaks": false,
+    "result": "tests passed"
+  },
+  "checks": {
+    "goRace": {
+      "internal": 20,
+      "cmd": 1,
+      "cmdWithoutTests": 3
+    },
+    "frontendTestFiles": 31,
+    "frontendTests": 216,
+    "macOSBuild": "本地自签名通过，原生操作未验",
+    "windowsBuild": "amd64交叉编译通过，原生SDK/实机未验",
+    "premiumAuditErrors": 0,
+    "premiumAuditWarnings": 0
+  },
+  "workerSHA256": "96a0aade7a79426b2fd1339758c52c37e91176b65cd947d8dfcb5babb1e755f9",
+  "outputSHA256": "39809919e3ffba45c08611f5d6f90ed8a2fe5ba0ed7ddc24bd201c3219cf7d71",
+  "rawMediaLimits": {
+    "previewRGBABytes": 8294400,
+    "offlineRGBABytes": 33177600,
+    "PCMBytes": 1048576,
+    "nativeDecodeGraphMaxClips": 128
+  },
+  "screenshots": [
+    "native-export-settings-wide.png",
+    "native-export-range-error-900.png",
+    "native-export-ready-900.png",
+    "native-export-completed-900.png",
+    "native-export-preview-frame3.png",
+    "native-export-output-frame.png"
+  ],
+  "remaining": [
+    "双端原生及系统Select菜单",
+    "自然长媒体/整机资源与GPU",
+    "完整字体/色彩矩阵",
+    "其他采样率连续/区间转换相位",
+    "正式SDK分发与签名更新",
+    "原规划真实模型和CLI账号验证"
+  ]
+}

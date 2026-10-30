@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-28",
+  "requirements": [
+    "FW-R09",
+    "FW-R10",
+    "FW-R12",
+    "FW-R15",
+    "FW-R17"
+  ],
+  "implementation": {
+    "pageSize": 20,
+    "allMetadataRetained": true,
+    "unknownGuardUsesAllJobs": true,
+    "candidatePoolUsesAllJobs": true,
+    "previousMediaUsesExistingUnmountPause": true,
+    "goCoreChanged": false,
+    "metadataIPCOptimized": false
+  },
+  "verification": {
+    "redTestsFailed": 3,
+    "frontendFiles": 63,
+    "frontendTests": 439,
+    "newRegressionTests": 4,
+    "typecheck": true,
+    "format": true,
+    "productionBuild": true,
+    "productionEmbed": true,
+    "staticUIAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "browser": {
+      "records": 2000,
+      "candidatesPerRecord": 2,
+      "browserVisibleCards": 20,
+      "browserVisibleImages": 40,
+      "firstRange": "1-20 / 2000",
+      "nextRange": "21-40 / 2000",
+      "crossPageComparison": true,
+      "comparisonImages": 2,
+      "comparisonDisablesPaging": true,
+      "viewportWidth": 900,
+      "horizontalOverflow": false,
+      "modelPostCount": 0,
+      "allMetadataRetainedForSubmissionGuard": true
+    },
+    "native": {
+      "loadedRecords": 2000,
+      "firstPageCards": 20,
+      "secondPageCards": 20,
+      "secondPageFirstPrompt": "分页压力记录 21",
+      "appClosed": true
+    },
+    "temporaryBrowserClosed": true,
+    "viewportReset": true,
+    "temporaryServersStopped": true,
+    "realAccountUsed": false
+  },
+  "build": {
+    "wailsVersion": "v3.0.0",
+    "latestSource": "https://github.com/wailsapp/wails/releases/tag/v3.0.0",
+    "macExecutableSHA256": "8d58804b9b1170f0a1e87897147eef3f7f856b5e40c5f0ca26b9a31ea7facff5",
+    "windows": {
+      "path": "work/generation-paging-check/AIVidCut-windows-amd64-history-paging.zip",
+      "files": 764,
+      "bytes": 112142890,
+      "sha256": "0b04924174e5e1b814a14962739e6e084f96a78a9126ec5372d08614f9c52ef1",
+      "appSHA256": "aae88443343fcc3eb652602d9fb7bacea5518e91d8e5cf833dcfa92ba9dc4224",
+      "crcVerified": true,
+      "windowsExecuted": false
+    },
+    "noticesBindingsMatch": true
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "documentation": {
+    "markdownFiles": 170,
+    "localLinks": 977,
+    "originalArchiveSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "errors": []
+  }
+}

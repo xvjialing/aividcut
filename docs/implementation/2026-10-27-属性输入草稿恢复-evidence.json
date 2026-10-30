@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R03",
+    "FW-R11",
+    "FW-R12",
+    "FW-R15"
+  ],
+  "frontend": {
+    "files": 51,
+    "tests": 340,
+    "newTests": 7,
+    "roundedDisplayDoesNotCreatePrecisionDraft": true
+  },
+  "wailsLatest": "v3.0.0",
+  "process": [
+    {
+      "action": "started",
+      "pid": 32330,
+      "intervalSeconds": 5
+    },
+    {
+      "action": "killed",
+      "pid": 32330,
+      "exitCode": -9
+    },
+    {
+      "action": "started",
+      "pid": 32459,
+      "intervalSeconds": 5
+    },
+    {
+      "action": "stopped",
+      "pid": 32459,
+      "exitCode": 0
+    },
+    {
+      "action": "started",
+      "pid": 32565,
+      "intervalSeconds": 5
+    },
+    {
+      "action": "stopped",
+      "pid": 32565,
+      "exitCode": 0
+    }
+  ],
+  "media": {
+    "frames": 90,
+    "durationSeconds": 3.003,
+    "stereoFloatPCMIdentical": true,
+    "stereoFloatPCMBytes": 1153152,
+    "changedVideoFrames": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89
+    ],
+    "projectMatchesExceptCaptionAndRevision": true,
+    "originalFileUnmodified": true,
+    "outputSHA256": "cd56af8200585bf764a57fafc8f38f72c359dc867cf0cca82761895008831200",
+    "realModelCalls": 0
+  },
+  "browser": {
+    "uncommittedTextPersistedWhileFocused": true,
+    "initialProjectRevision": 3,
+    "initialProjectDirty": false,
+    "restoredInNewPage": true,
+    "appliedRevision": 5,
+    "undoRevision": 6,
+    "redoRevision": 7,
+    "numericEmptyRejected": true,
+    "numericCorrectionSeparatelyReviewed": true,
+    "deleteReviewCancelled": true,
+    "uiPermanentDeletePerformed": false,
+    "viewport": {
+      "width": 900,
+      "height": 720
+    },
+    "dialog": {
+      "x": 70,
+      "y": 20,
+      "width": 760,
+      "height": 680
+    }
+  },
+  "realModelCalls": 0,
+  "limitations": [
+    "原生双端界面另验",
+    "最大工程首次保护延迟另验",
+    "断电目录提交另验",
+    "未登记表单和核对窗二次修正不另存"
+  ],
+  "go": {
+    "fullRaceTestedPackages": 28,
+    "finalDraftAndApplicationRacePassed": true,
+    "vetPassed": true
+  },
+  "build": {
+    "macosSelfSigned": true,
+    "windowsAmd64CrossCompile": true,
+    "productionResourcesPassed": true,
+    "nativeGuiChecked": false
+  },
+  "design": {
+    "strictErrors": 0,
+    "strictWarnings": 0,
+    "lintErrors": 0,
+    "lintWarnings": 0
+  },
+  "documentation": {
+    "Markdown文档数": 109,
+    "本地链接检查数": 539,
+    "正文检查文档数": 82,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "ownedBackendStopped": true,
+    "viteStopped": true,
+    "browserTabsClosed": true,
+    "viewportReset": true
+  }
+}

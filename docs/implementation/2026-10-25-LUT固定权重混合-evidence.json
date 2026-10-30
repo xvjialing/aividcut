@@ -1,0 +1,363 @@
+{
+  "date": "2026-10-25",
+  "requirements": [
+    "FW-R01",
+    "FW-R06",
+    "FW-R11",
+    "FW-R15"
+  ],
+  "wails": "v3.0.0-beta.34",
+  "sources": [
+    "https://github.com/FFmpeg/FFmpeg/blob/n9.0.2/libavfilter/vf_blend.c",
+    "https://github.com/FFmpeg/FFmpeg/blob/n9.0.2/libavfilter/vf_blend_init.h"
+  ],
+  "environment": {
+    "os": "26.6.2",
+    "cpu": "Apple M5 Pro",
+    "memoryBytes": 51539607552
+  },
+  "ablationBefore": [
+    {
+      "frames": 18,
+      "intensity": 0.37,
+      "pcmCRC": 3259531042,
+      "pullP95MS": 56.432,
+      "quality": "quarter",
+      "visual": {
+        "builds": 1,
+        "hits": 17,
+        "calls": 36,
+        "fastPathCalls": 18,
+        "filterNs": 655369335,
+        "compositeNs": 5649209,
+        "residentGraphs": 1,
+        "estimatedBytes": 49581360
+      }
+    },
+    {
+      "frames": 18,
+      "intensity": 1,
+      "pcmCRC": 3259531042,
+      "pullP95MS": 27.711,
+      "quality": "quarter",
+      "visual": {
+        "builds": 1,
+        "hits": 17,
+        "calls": 36,
+        "fastPathCalls": 18,
+        "filterNs": 141862333,
+        "compositeNs": 5670208,
+        "residentGraphs": 1,
+        "estimatedBytes": 49581360
+      }
+    },
+    {
+      "frames": 18,
+      "intensity": 0,
+      "pcmCRC": 3259531042,
+      "pullP95MS": 26.132,
+      "quality": "quarter",
+      "visual": {
+        "builds": 1,
+        "hits": 17,
+        "calls": 36,
+        "fastPathCalls": 18,
+        "filterNs": 108539877,
+        "compositeNs": 5771580,
+        "residentGraphs": 1,
+        "estimatedBytes": 49581360
+      }
+    }
+  ],
+  "pairedBenchmark": [
+    {
+      "frames": 45,
+      "height": 720,
+      "pcmCRC": 1878899869,
+      "prepareMS": 315.362,
+      "pullMaxMS": 600.571,
+      "pullP95MS": 597.382,
+      "quality": "full",
+      "rgbaCRC": 4098797519,
+      "sampledWorkerPeakRSSBytes": 626376704,
+      "samples": 72072,
+      "version": "before",
+      "visual": {
+        "builds": 1,
+        "hits": 44,
+        "calls": 90,
+        "fastPathCalls": 45,
+        "filterNs": 23650892207,
+        "compositeNs": 255795713,
+        "residentGraphs": 1,
+        "estimatedBytes": 294151200
+      },
+      "width": 1280
+    },
+    {
+      "frames": 45,
+      "height": 720,
+      "pcmCRC": 1878899869,
+      "prepareMS": 312.942,
+      "pullMaxMS": 185.23,
+      "pullP95MS": 177.318,
+      "quality": "full",
+      "rgbaCRC": 4098797519,
+      "sampledWorkerPeakRSSBytes": 626196480,
+      "samples": 72072,
+      "version": "after",
+      "visual": {
+        "builds": 1,
+        "hits": 44,
+        "calls": 90,
+        "fastPathCalls": 45,
+        "filterNs": 4437090838,
+        "compositeNs": 226861454,
+        "residentGraphs": 1,
+        "estimatedBytes": 294151200
+      },
+      "width": 1280
+    },
+    {
+      "frames": 45,
+      "height": 720,
+      "pcmCRC": 1878899869,
+      "prepareMS": 353.263,
+      "pullMaxMS": 175.498,
+      "pullP95MS": 171.727,
+      "quality": "half",
+      "rgbaCRC": 2666444159,
+      "sampledWorkerPeakRSSBytes": 484687872,
+      "samples": 72072,
+      "version": "before",
+      "visual": {
+        "builds": 1,
+        "hits": 44,
+        "calls": 90,
+        "fastPathCalls": 45,
+        "filterNs": 6119853714,
+        "compositeNs": 55498124,
+        "residentGraphs": 1,
+        "estimatedBytes": 98517120
+      },
+      "width": 1280
+    },
+    {
+      "frames": 45,
+      "height": 720,
+      "pcmCRC": 1878899869,
+      "prepareMS": 337.848,
+      "pullMaxMS": 62.653,
+      "pullP95MS": 58.203,
+      "quality": "half",
+      "rgbaCRC": 2666444159,
+      "sampledWorkerPeakRSSBytes": 441106432,
+      "samples": 72072,
+      "version": "after",
+      "visual": {
+        "builds": 1,
+        "hits": 44,
+        "calls": 90,
+        "fastPathCalls": 45,
+        "filterNs": 1243539116,
+        "compositeNs": 55527252,
+        "residentGraphs": 1,
+        "estimatedBytes": 98517120
+      },
+      "width": 1280
+    },
+    {
+      "frames": 45,
+      "height": 540,
+      "pcmCRC": 1878899869,
+      "prepareMS": 325.13,
+      "pullMaxMS": 61.23,
+      "pullP95MS": 57.295,
+      "quality": "quarter",
+      "rgbaCRC": 491931523,
+      "sampledWorkerPeakRSSBytes": 367607808,
+      "samples": 72072,
+      "version": "before",
+      "visual": {
+        "builds": 1,
+        "hits": 44,
+        "calls": 90,
+        "fastPathCalls": 45,
+        "filterNs": 1641881912,
+        "compositeNs": 14433834,
+        "residentGraphs": 1,
+        "estimatedBytes": 49581360
+      },
+      "width": 960
+    },
+    {
+      "frames": 45,
+      "height": 540,
+      "pcmCRC": 1878899869,
+      "prepareMS": 321.927,
+      "pullMaxMS": 33.588,
+      "pullP95MS": 29.642,
+      "quality": "quarter",
+      "rgbaCRC": 491931523,
+      "sampledWorkerPeakRSSBytes": 367624192,
+      "samples": 72072,
+      "version": "after",
+      "visual": {
+        "builds": 1,
+        "hits": 44,
+        "calls": 90,
+        "fastPathCalls": 45,
+        "filterNs": 417323125,
+        "compositeNs": 14526919,
+        "residentGraphs": 1,
+        "estimatedBytes": 49581360
+      },
+      "width": 960
+    }
+  ],
+  "exhaustiveRGBA": [
+    {
+      "intensity": 1e-09,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 1,
+      "changedComponents": 130560
+    },
+    {
+      "intensity": 1e-06,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 1,
+      "changedComponents": 4644
+    },
+    {
+      "intensity": 0.01,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 1,
+      "changedComponents": 352
+    },
+    {
+      "intensity": 0.123456789,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 1,
+      "changedComponents": 908
+    },
+    {
+      "intensity": 0.25,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 0,
+      "changedComponents": 0
+    },
+    {
+      "intensity": 0.37,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 0,
+      "changedComponents": 0
+    },
+    {
+      "intensity": 0.5,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 0,
+      "changedComponents": 0
+    },
+    {
+      "intensity": 0.73,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 1,
+      "changedComponents": 36
+    },
+    {
+      "intensity": 0.99,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 1,
+      "changedComponents": 164
+    },
+    {
+      "intensity": 0.999999999,
+      "pairs": 65536,
+      "components": 262144,
+      "maxDifference": 1,
+      "changedComponents": 130560
+    }
+  ],
+  "nativeComparisonLines": [
+    "native_blend_test.go:78: full/0.000000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: full/0.000001000，旋转半透明3帧最大差2，变化分量7335，PCM 543357535=543357535",
+    "native_blend_test.go:78: full/0.123456789，旋转半透明3帧最大差1，变化分量1203，PCM 543357535=543357535",
+    "native_blend_test.go:78: full/0.370000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: full/0.500000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: full/0.990000000，旋转半透明3帧最大差1，变化分量2199，PCM 543357535=543357535",
+    "native_blend_test.go:78: full/1.000000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: half/0.000000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: half/0.000001000，旋转半透明3帧最大差2，变化分量2145，PCM 543357535=543357535",
+    "native_blend_test.go:78: half/0.123456789，旋转半透明3帧最大差1，变化分量366，PCM 543357535=543357535",
+    "native_blend_test.go:78: half/0.370000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: half/0.500000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: half/0.990000000，旋转半透明3帧最大差1，变化分量456，PCM 543357535=543357535",
+    "native_blend_test.go:78: half/1.000000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: quarter/0.000000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: quarter/0.000001000，旋转半透明3帧最大差1，变化分量765，PCM 543357535=543357535",
+    "native_blend_test.go:78: quarter/0.123456789，旋转半透明3帧最大差1，变化分量102，PCM 543357535=543357535",
+    "native_blend_test.go:78: quarter/0.370000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: quarter/0.500000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535",
+    "native_blend_test.go:78: quarter/0.990000000，旋转半透明3帧最大差1，变化分量261，PCM 543357535=543357535",
+    "native_blend_test.go:78: quarter/1.000000000，旋转半透明3帧最大差0，变化分量0，PCM 543357535=543357535"
+  ],
+  "browser": {
+    "audio": {
+      "ended": {
+        "type": "consumed",
+        "epoch": 2,
+        "sample": 72072,
+        "position": 44,
+        "end": true
+      },
+      "progressCount": 165,
+      "maximumConsumed": 72072,
+      "maximumUnderrun": 0,
+      "maximumUnderrunEvents": 0,
+      "maximumStartupWait": 3072
+    },
+    "quality": "quarter",
+    "sourceWidth": 3840,
+    "sourceHeight": 2160,
+    "outputWidth": 960,
+    "outputHeight": 540,
+    "frames": 45,
+    "core": {
+      "dirty": false,
+      "revision": 0,
+      "clips": 3
+    },
+    "errors": []
+  },
+  "sanitizer": {
+    "changedLogs": [],
+    "detectLeaks": false
+  },
+  "checks": {
+    "goRace": {
+      "internal": 20,
+      "cmd": 1,
+      "cmdWithoutTests": 3
+    },
+    "frontendFiles": 31,
+    "frontendTests": 219,
+    "macOSBuild": "passed",
+    "windowsAMD64Build": "passed"
+  },
+  "beforeWorkerSHA256": "96a0aade7a79426b2fd1339758c52c37e91176b65cd947d8dfcb5babb1e755f9",
+  "afterWorkerSHA256": "c700d1bfe6ad61c7c654e913476a0ea25f7b49c7cf7fbf1bcccb92c9d0aed07e",
+  "limits": [
+    "固定45帧自建样本不是任意4K实时承诺",
+    "个别8位分量有1级舍入差异",
+    "完整资源/平台/SDK与原模型CLI目标仍保留"
+  ]
+}

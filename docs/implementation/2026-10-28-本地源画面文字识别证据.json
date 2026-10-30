@@ -1,0 +1,213 @@
+{
+  "date": "2026-10-28",
+  "requirements": [
+    "FW-R04",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R15"
+  ],
+  "status": "通用契约及macOS首个适配器已验，完整需求继续",
+  "frontend": {
+    "files": 64,
+    "passed": 451,
+    "newOCRDOMTests": 7,
+    "typecheck": true,
+    "format": true,
+    "strictUIAuditErrors": 0,
+    "actualProductionEmbed": true
+  },
+  "core": {
+    "relatedRacePackages": [
+      "application",
+      "editor",
+      "projectstore",
+      "projectcollect",
+      "projectversions",
+      "projectrecovery",
+      "ocr",
+      "releaseaudit",
+      "mcpserver"
+    ],
+    "passed": true,
+    "newOCRTests": 6,
+    "cancelledLiveProcess": true,
+    "boundedInputOutput": true,
+    "schema": 6,
+    "migrates": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "actualVision": {
+    "engine": "apple-vision",
+    "revision": 3,
+    "languages": [
+      "zh-Hans",
+      "zh-Hant",
+      "en-US"
+    ],
+    "fakeRecognition": false,
+    "testSkipped": false,
+    "bilingualImage": true,
+    "blankLines": 0,
+    "videoPositionUs": 2000000,
+    "actualVideoCounterRecognized": "SOURCE SECOND 2",
+    "actualMisrecognition": "AIVidCut → AlVidCut",
+    "manualReviewRequired": true,
+    "maxFrame": [
+      960,
+      540
+    ]
+  },
+  "browser": {
+    "realService": true,
+    "manualCorrectionAccept": true,
+    "undo": true,
+    "searchMatchesAfterCorrection": 1,
+    "evidenceRead": true,
+    "narrowViewport": [
+      900,
+      720
+    ],
+    "horizontalOverflow": false,
+    "closed": true
+  },
+  "native": {
+    "path": "/Users/xvjialing/projects/aividcut/work/ocr-check/AIVidCutOCRVerify.app",
+    "defaultBundledWorker": true,
+    "environmentWorkerOverride": false,
+    "acceptedAndSaved": true,
+    "finalBuildReopenAndRecognition": true,
+    "finalRecognitionDiscardKeptRevision": 5,
+    "closed": true
+  },
+  "savedProject": {
+    "path": "/Users/xvjialing/projects/aividcut/work/ocr-check/画面文字识别验收.aividcut",
+    "schema": 6,
+    "revision": 5,
+    "analyses": 2,
+    "lastAcceptedLines": [
+      "AIVidCut 原生核对文字",
+      "SOURCE FRAME 120",
+      "这是源画面，不是自动字幕"
+    ],
+    "sha256": "4b59fff5e956deb0d5d8229fe19233903037f8c5e880f1060c33b74664b3fed1"
+  },
+  "packages": {
+    "macos": {
+      "path": "build/bin/AIVidCut.app",
+      "appSHA256": "fa14824fda3a311ef20bd74f46bf2bb01f651beb7384a42c3ac91fa4dbda0eea",
+      "ocrSHA256": "d3e40411c9875be24ac97c928d3071e37851a27f7eb901566cbc4ab90a60f65d",
+      "ocrSourceAndArtifactBinding": true,
+      "deepStrictAdHocSignature": true
+    },
+    "windows": {
+      "zip": "/Users/xvjialing/projects/aividcut/work/ocr-check/AIVidCut-windows-amd64-source-ocr.zip",
+      "bytes": 112161811,
+      "sha256": "0ec0fd66e76f557611e6cfb70896aaa0370dd794baf1b1ae922fd91d28817aeb",
+      "files": 764,
+      "exeSHA256": "50b7a635876b77e4079897ade984bede4f93646bfa7d94e40574732687e4e3dc",
+      "windowsExecuted": false
+    },
+    "noticesBindingsMatch": true
+  },
+  "ocrBuild": {
+    "schemaVersion": 1,
+    "component": "AIVidCutOCR",
+    "source": "native/ocr/main.swift",
+    "sourceSHA256": "0e24bdbb1b471ff7e3433b4e66f4f88c4bee741e0f9716affa27233c74f524d4",
+    "artifactSHA256": "d3e40411c9875be24ac97c928d3071e37851a27f7eb901566cbc4ab90a60f65d",
+    "target": "arm64-apple-macosx13.0",
+    "swiftCompiler": "Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)\nTarget: arm64-apple-macosx26.0",
+    "appleSDKVersion": "27.0",
+    "imports": [
+      "\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.0.0)",
+      "\t/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (compatibility version 64.0.0, current version 2050.0.0)",
+      "\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 5027.0.69)",
+      "\t/System/Library/Frameworks/Vision.framework/Versions/A/Vision (compatibility version 1.0.0, current version 10.0.44)",
+      "\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)",
+      "\t/usr/lib/swift/libswiftAVFoundation.dylib (compatibility version 1.0.0, current version 2450.77.5, weak)",
+      "\t/usr/lib/swift/libswiftAccelerate.dylib (compatibility version 1.0.0, current version 82.0.0, weak)",
+      "\t/usr/lib/swift/libswiftCompression.dylib (compatibility version 1.0.0, current version 18.0.0, weak)",
+      "\t/usr/lib/swift/libswiftCore.dylib (compatibility version 0.0.0, current version 0.0.0)",
+      "\t/usr/lib/swift/libswiftCoreAudio.dylib (compatibility version 1.0.0, current version 482.102.10, weak)",
+      "\t/usr/lib/swift/libswiftCoreFoundation.dylib (compatibility version 1.0.0, current version 120.100.0, weak)",
+      "\t/usr/lib/swift/libswiftCoreImage.dylib (compatibility version 1.0.0, current version 3.0.0, weak)",
+      "\t/usr/lib/swift/libswiftCoreMIDI.dylib (compatibility version 1.0.0, current version 6.0.0, weak)",
+      "\t/usr/lib/swift/libswiftDarwin.dylib (compatibility version 1.0.0, current version 428.0.10, weak)",
+      "\t/usr/lib/swift/libswiftDispatch.dylib (compatibility version 1.0.0, current version 1605.0.2, weak)",
+      "\t/usr/lib/swift/libswiftIOKit.dylib (compatibility version 1.0.0, current version 1.0.0, weak)",
+      "\t/usr/lib/swift/libswiftMetal.dylib (compatibility version 1.0.0, current version 382.5.3, weak)",
+      "\t/usr/lib/swift/libswiftObjectiveC.dylib (compatibility version 1.0.0, current version 973.1.0, weak)",
+      "\t/usr/lib/swift/libswiftQuartzCore.dylib (compatibility version 1.0.0, current version 5.0.0, weak)",
+      "\t/usr/lib/swift/libswiftUniformTypeIdentifiers.dylib (compatibility version 1.0.0, current version 917.0.1, weak)",
+      "\t/usr/lib/swift/libswiftXPC.dylib (compatibility version 1.0.0, current version 167.0.2, weak)",
+      "\t/usr/lib/swift/libswiftos.dylib (compatibility version 1.0.0, current version 1090.0.0, weak)",
+      "\t/usr/lib/swift/libswiftsimd.dylib (compatibility version 1.0.0, current version 25.0.0, weak)"
+    ],
+    "recognition": {
+      "engine": "apple-vision",
+      "revision": 3,
+      "languages": [
+        "zh-Hans",
+        "zh-Hant",
+        "en-US"
+      ]
+    },
+    "limitations": [
+      "最低系统为构建目标，实际兼容仍需对应设备验证",
+      "不随包分发Swift编译器或Apple系统框架",
+      "此记录不构成整个产品的商业发行许可批准"
+    ]
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "limitations": [
+    "Windows OCR适配器未实现且未实机运行",
+    "仅选定源帧，不覆盖整段字幕或完整OCR准确率",
+    "真实模型/语音/CLI账号及Claude策略仍待",
+    "完整设备资源、许可、签名安装更新未完成"
+  ],
+  "fullGoalComplete": false,
+  "logs": [
+    "work/ocr-check/actual-vision.log",
+    "work/ocr-check/adapter-and-audit-race.log",
+    "work/ocr-check/bridge-initial.log",
+    "work/ocr-check/browser-server.log",
+    "work/ocr-check/build-macos.log",
+    "work/ocr-check/build-windows.log",
+    "work/ocr-check/core-initial.log",
+    "work/ocr-check/fixture-create.log",
+    "work/ocr-check/format-check.log",
+    "work/ocr-check/format.log",
+    "work/ocr-check/frontend-full.log",
+    "work/ocr-check/frontend-initial.log",
+    "work/ocr-check/full-core-race.log",
+    "work/ocr-check/production-assets.log",
+    "work/ocr-check/release-audit-test.log",
+    "work/ocr-check/targeted-core.log",
+    "work/ocr-check/typecheck-initial.log",
+    "work/ocr-check/typecheck.log",
+    "work/ocr-check/vite.log"
+  ],
+  "documentation": {
+    "markdownFiles": 174,
+    "localLinks": 1012,
+    "originalArchiveSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "errors": []
+  }
+}

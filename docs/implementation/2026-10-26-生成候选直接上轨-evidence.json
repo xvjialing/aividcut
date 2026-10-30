@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-26",
+  "status": "本阶段局部通过，完整目标继续",
+  "requirements": [
+    "FW-R01",
+    "FW-R09",
+    "FW-R10",
+    "FW-R11",
+    "FW-R12",
+    "FW-R17"
+  ],
+  "wails": {
+    "latestVerified": "v3.0.0-beta.34",
+    "goCliRuntimeAligned": true
+  },
+  "tests": {
+    "frontendFiles": 45,
+    "frontendTests": 305,
+    "newDOMTests": 6,
+    "newApplicationTestGroups": 3,
+    "goFullInternalAndCommandRace": true,
+    "goVet": true,
+    "explicitActualMediaRace": true,
+    "types": true,
+    "format": true,
+    "productionRoot": true
+  },
+  "actualMedia": {
+    "fps": "30000/1001",
+    "canvas": [
+      320,
+      180
+    ],
+    "startFrame": 7,
+    "sourceInUs": 137000,
+    "framesCompared": 12,
+    "PCMBytes": 153752,
+    "RGBABytes": 2764800,
+    "equalToIndependentManualSource": true,
+    "mutedPCMBytes": 153752,
+    "mutedAllZero": true,
+    "mutedPixelsUnchanged": true,
+    "automaticVideoFrames": 60,
+    "requestedFourSecondsButActualShorterRejected": true,
+    "syntheticAcceptedWordsOnly": true,
+    "newBoundCaptionCount": 1,
+    "originalManualCaptionPreserved": true,
+    "mutedPersistentCaptionSourceRejected": true
+  },
+  "browser": {
+    "compareToPlacementSingleModal": true,
+    "playhead": 19,
+    "sharedMarkedRange": [
+      10,
+      20
+    ],
+    "sourceInUs": 137000,
+    "embeddedAudio": true,
+    "realShortSourceRejected": true,
+    "previewReadOnly": true,
+    "applyFailureRetry": true,
+    "atomicAssetTrackClip": true,
+    "originalClipUnchanged": true,
+    "selectedNewClip": true,
+    "undoRedo": true,
+    "undoOldPreviewNoReplay": true,
+    "savedReopened": true,
+    "oldInstanceRejected": true,
+    "layout": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "dialogCount": 1,
+        "overflowX": false,
+        "documentScrollTop": 0
+      },
+      {
+        "viewport": [
+          900,
+          700
+        ],
+        "dialogCount": 1,
+        "overflowX": false,
+        "documentScrollTop": 0
+      }
+    ],
+    "errors": [],
+    "modelCalls": []
+  },
+  "keyboardAndAutoDuration": {
+    "markersNotPersisted": true,
+    "escapeAndCancelNoEdit": true,
+    "focusReturns": true,
+    "existingAssetReused": true,
+    "automaticVideoFrames": 120,
+    "defaultMuted": true,
+    "internalBodyScroll": 310,
+    "documentScrollTop": 0
+  },
+  "extensionWarning": {
+    "correctExtensionWarning": true,
+    "framesAdded": 30,
+    "noSpuriousRemovalWarning": true,
+    "previewOnly": true
+  },
+  "builds": {
+    "macLocalSelfSigned": true,
+    "windowsAmd64CrossCompile": true,
+    "newNativeWindowAcceptance": false,
+    "mainJSKilobytes": 582.76,
+    "placementLazyJSKilobytes": 7.75,
+    "mainChunk500kBWarning": true,
+    "productionSDKLinkTargetWarningsRemain": true
+  },
+  "designAudit": {
+    "errors": 0,
+    "total": 0,
+    "unresolved": 0,
+    "violations": 0,
+    "warnings": 0
+  },
+  "designLint": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "accountAcceptance": "用户要求后置",
+  "realModelCalls": 0,
+  "paidCalls": 0,
+  "realCLIInference": 0,
+  "screenshots": [
+    "output/playwright/candidate-placement-wide.png",
+    "output/playwright/candidate-placement-900.png"
+  ],
+  "limits": [
+    "新增/叠加或已有空轨，非覆盖/波纹插入/自动找空档",
+    "声音在同一视频内按画面源窗使用，未拆独立音轨或保留画面外音尾",
+    "未知总样本按声明微秒窗使用，不宣称所有媒体样本无损",
+    "未新增专用MCP候选上轨工具",
+    "新功能原生双端/Windows实机和真实账户质量未验收",
+    "C++未改，未新增worker/ASan覆盖",
+    "完整P0–P6与原始目标未完成"
+  ],
+  "documentation": {
+    "Markdown文档数": 95,
+    "本地链接检查数": 469,
+    "正文检查文档数": 68,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browserSessionsClosed": [
+      "aividcut-placement",
+      "aividcut-placement-final",
+      "aividcut-placement-warning"
+    ],
+    "viteStopped": true,
+    "goDevserverStopped": true,
+    "nativeProcessStarted": false
+  }
+}

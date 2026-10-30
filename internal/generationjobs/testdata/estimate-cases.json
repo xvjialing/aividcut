@@ -1,0 +1,472 @@
+[
+  {
+    "name": "未知保持未知",
+    "request": {
+      "mode": "image.generate"
+    },
+    "input": null,
+    "expected": null
+  },
+  {
+    "name": "三张一角",
+    "request": {
+      "mode": "image.generate",
+      "count": 3,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.1"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.10",
+      "quantity": 3,
+      "amount": "0.30"
+    }
+  },
+  {
+    "name": "六位小数",
+    "request": {
+      "mode": "image.edit",
+      "count": 3,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.000001"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.000001",
+      "quantity": 3,
+      "amount": "0.000003"
+    }
+  },
+  {
+    "name": "尾零规范化",
+    "request": {
+      "mode": "image.edit",
+      "count": 0,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "12.340000"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "12.34",
+      "quantity": 1,
+      "amount": "12.34"
+    }
+  },
+  {
+    "name": "七秒视频",
+    "request": {
+      "mode": "video.text",
+      "count": 1,
+      "durationSeconds": 7
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "video_second",
+      "unitPrice": "0.29"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "video_second",
+      "unitPrice": "0.29",
+      "quantity": 7,
+      "amount": "2.03"
+    }
+  },
+  {
+    "name": "两段视频",
+    "request": {
+      "mode": "video.reference",
+      "count": 2,
+      "durationSeconds": 6
+    },
+    "input": {
+      "currency": "USD",
+      "unit": "video_second",
+      "unitPrice": "0.03"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "USD",
+      "unit": "video_second",
+      "unitPrice": "0.03",
+      "quantity": 12,
+      "amount": "0.36"
+    }
+  },
+  {
+    "name": "整次请求",
+    "request": {
+      "mode": "video.image",
+      "count": 3,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "request",
+      "unitPrice": "1.25"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "request",
+      "unitPrice": "1.25",
+      "quantity": 1,
+      "amount": "1.25"
+    }
+  },
+  {
+    "name": "显式零价",
+    "request": {
+      "mode": "image.generate",
+      "count": 2,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.00",
+      "quantity": 2,
+      "amount": "0.00"
+    }
+  },
+  {
+    "name": "百万计价单位",
+    "request": {
+      "mode": "image.generate",
+      "count": 1000000,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.000001"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.000001",
+      "quantity": 1000000,
+      "amount": "1.00"
+    }
+  },
+  {
+    "name": "单价最大精度",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "999999999.999999"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "999999999.999999",
+      "quantity": 1,
+      "amount": "999999999.999999"
+    }
+  },
+  {
+    "name": "接近整数上界",
+    "request": {
+      "mode": "image.generate",
+      "count": 10000,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "922337203.685477"
+    },
+    "expected": {
+      "basis": "manual-unit-v1",
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "922337203.685477",
+      "quantity": 10000,
+      "amount": "9223372036854.77"
+    }
+  },
+  {
+    "name": "默认时长不猜测",
+    "request": {
+      "mode": "video.text",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "video_second",
+      "unitPrice": "0.10"
+    },
+    "error": true
+  },
+  {
+    "name": "负时长",
+    "request": {
+      "mode": "video.text",
+      "count": 1,
+      "durationSeconds": -1
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "video_second",
+      "unitPrice": "0.10"
+    },
+    "error": true
+  },
+  {
+    "name": "计价数量超界",
+    "request": {
+      "mode": "video.text",
+      "count": 2,
+      "durationSeconds": 1000000
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "video_second",
+      "unitPrice": "0.10"
+    },
+    "error": true
+  },
+  {
+    "name": "负数量",
+    "request": {
+      "mode": "image.generate",
+      "count": -1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.10"
+    },
+    "error": true
+  },
+  {
+    "name": "图片单位用于视频",
+    "request": {
+      "mode": "video.text",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.10"
+    },
+    "error": true
+  },
+  {
+    "name": "视频单位用于图片",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 5
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "video_second",
+      "unitPrice": "0.10"
+    },
+    "error": true
+  },
+  {
+    "name": "未知单位",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "token",
+      "unitPrice": "0.10"
+    },
+    "error": true
+  },
+  {
+    "name": "未知币种",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "EUR",
+      "unit": "image",
+      "unitPrice": "0.10"
+    },
+    "error": true
+  },
+  {
+    "name": "空单价",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": ""
+    },
+    "error": true
+  },
+  {
+    "name": "负单价",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "-0.1"
+    },
+    "error": true
+  },
+  {
+    "name": "指数",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "1e-2"
+    },
+    "error": true
+  },
+  {
+    "name": "前导零",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "00.10"
+    },
+    "error": true
+  },
+  {
+    "name": "空格",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": " 0.1"
+    },
+    "error": true
+  },
+  {
+    "name": "七位小数",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "0.1234567"
+    },
+    "error": true
+  },
+  {
+    "name": "十位整数",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "1000000000"
+    },
+    "error": true
+  },
+  {
+    "name": "全角数字",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "０.１"
+    },
+    "error": true
+  },
+  {
+    "name": "无穷",
+    "request": {
+      "mode": "image.generate",
+      "count": 1,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "Infinity"
+    },
+    "error": true
+  },
+  {
+    "name": "整数溢出",
+    "request": {
+      "mode": "image.generate",
+      "count": 1000000,
+      "durationSeconds": 0
+    },
+    "input": {
+      "currency": "CNY",
+      "unit": "image",
+      "unitPrice": "999999999.999999"
+    },
+    "error": true
+  }
+]

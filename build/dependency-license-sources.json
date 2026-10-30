@@ -1,0 +1,9 @@
+[
+  {
+    "component": "npm:@wailsio/runtime@3.0.0",
+    "file": "build/notices/wails-runtime-3.0.0-LICENSE.txt",
+    "sha256": "cede95c28e6e9d67d1c1e49e8ba3c20250c7d4080c3faca1579b6732327ae40d",
+    "sourceURL": "https://raw.githubusercontent.com/wailsapp/wails/7b11001b92b712210b27d8cb53430e83f67ad8e4/v3/LICENSE",
+    "commit": "7b11001b92b712210b27d8cb53430e83f67ad8e4"
+  }
+]

@@ -1,0 +1,264 @@
+{
+  "date": "2026-10-26",
+  "phase": "源视频代理预览",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R15",
+    "FW-R17"
+  ],
+  "wails": "v3.0.0-beta.34",
+  "tests": {
+    "frontendFiles": 39,
+    "frontendTests": 273,
+    "goInternalPackagesChecked": 23,
+    "goInternalPackagesWithTests": 22,
+    "testedCommandPackages": 1,
+    "goFullRacePassed": true,
+    "affectedFinalRacePassed": true,
+    "goVetPassed": true,
+    "typecheckPassed": true,
+    "formatPassed": true,
+    "productionEmbeddedAssetsPassed": true,
+    "standaloneProductionLinkerWarnings": "本机SDK对象版本与默认11.0链接目标警告，正式构建仍沿用工程最低macOS13声明，不扩展系统兼容承诺",
+    "nativePlaybackSuitePassed": true,
+    "asanUbsanProxyPassed": true,
+    "lsanClaimed": false
+  },
+  "environment": {
+    "cpu": "Apple M5 Pro",
+    "memoryBytes": 51539607552,
+    "macOS": "26.6.2",
+    "workerSHA256": "c96df698ac8951ebae539f98732de6d3becf0728444a697bed3b537c8bd4e471"
+  },
+  "budget": {
+    "maxFrames": 1000000,
+    "scanBytes": 134217728,
+    "lineBytes": 65536,
+    "taskHours": 4,
+    "fileBytes": 2147483648,
+    "publishedCacheBytes": 8589934592,
+    "entries": 32,
+    "inProgressExtraBytes": 2147483648
+  },
+  "media": {
+    "fixtures": "本地合成素材，没有真实账号或人物素材",
+    "proofCases": [
+      "普通CFR",
+      "晚起且音频更长",
+      "旋转",
+      "VFR/B帧",
+      "非方形像素SAR"
+    ],
+    "comparisons": [
+      {
+        "comparedFrames": 5,
+        "fixture": "晚起视频.mp4",
+        "maxRGBAMAE": 0,
+        "originalFormatOriginUs": 0,
+        "pcmEqualBytes": 64080,
+        "sourceInUs": 2137000,
+        "windowFrames": 3
+      },
+      {
+        "comparedFrames": 5,
+        "fixture": "旋转.mp4",
+        "maxRGBAMAE": 0,
+        "originalFormatOriginUs": 0,
+        "pcmEqualBytes": 64080,
+        "sourceInUs": 137000,
+        "windowFrames": 3
+      },
+      {
+        "comparedFrames": 5,
+        "fixture": "vfr.mp4",
+        "maxRGBAMAE": 0.17212239583333333,
+        "originalFormatOriginUs": 0,
+        "pcmEqualBytes": 64080,
+        "sourceInUs": 137000,
+        "windowFrames": 3
+      },
+      {
+        "comparedFrames": 5,
+        "fixture": "sar.mp4",
+        "maxRGBAMAE": 0.29532552083333335,
+        "originalFormatOriginUs": 0,
+        "pcmEqualBytes": 64080,
+        "sourceInUs": 137000,
+        "windowFrames": 3
+      }
+    ],
+    "nonzeroOriginalAudioVerified": true,
+    "phaseSpeedWindowCase": {
+      "fpsNum": 30000,
+      "fpsDen": 1001,
+      "speed": "3/2",
+      "sourceInUs": 137000,
+      "existingPhaseFrames": 2,
+      "windowFrames": 3,
+      "positions": [
+        2,
+        3,
+        8,
+        13,
+        2
+      ],
+      "pcmBytes": [
+        12808,
+        12816,
+        12816,
+        12816,
+        12808
+      ],
+      "rgbaMAE": 0
+    }
+  },
+  "benchmark": {
+    "fixtureOnly": true,
+    "generationSeconds": 1.5982046250000002,
+    "notWholeApplicationRSS": true,
+    "proxyProof": {
+      "originUs": 0,
+      "frames": 90,
+      "timelineSha256": "36315de83e1d196b94e73ba56b2421af1b0415b87a2aa2d514d0f7144f3a8128",
+      "width": 960,
+      "height": 540,
+      "proxyFingerprint": "sha256:edd91206fd4ec47e9ebca07408876178afd6c26bbbcf523256f30ed2b65205ec",
+      "bytes": 1640143
+    },
+    "rows": [
+      {
+        "frames": 45,
+        "height": 540,
+        "mode": "original",
+        "pcmCRC": 1878899869,
+        "prepareMS": 335.895,
+        "pullMaxMS": 31.284,
+        "pullP95MS": 27.363,
+        "quality": "quarter",
+        "sampledWorkerPeakRSSBytes": 367706112,
+        "samples": 72072,
+        "width": 960
+      },
+      {
+        "frames": 45,
+        "height": 540,
+        "mode": "proxy",
+        "pcmCRC": 1878899869,
+        "prepareMS": 302.58,
+        "pullMaxMS": 12.058,
+        "pullP95MS": 11.981,
+        "quality": "quarter",
+        "sampledWorkerPeakRSSBytes": 290521088,
+        "samples": 72072,
+        "width": 960
+      }
+    ]
+  },
+  "browser": {
+    "ready": {
+      "width": 960,
+      "height": 540,
+      "frames": 90,
+      "bytes": 1640143
+    },
+    "activeClearBlocked": true,
+    "rebuildSucceeded": true,
+    "actualProxyAssets": 1,
+    "originalVideoAssets": 0,
+    "endedFrame": 45,
+    "inFlight": 0,
+    "projectUnchanged": true,
+    "dirty": false,
+    "revision": 0,
+    "geometry": {
+      "headingBottom": 135,
+      "canvasTop": 135,
+      "headingHeight": 40,
+      "pictureHeight": 99.6015625,
+      "overlap": false
+    },
+    "errors": [],
+    "modelCalls": 0
+  },
+  "cancelAndColdCache": {
+    "observedTranscoding": true,
+    "cancelledProcess": true,
+    "partialCleanupVerified": true,
+    "coldStatus": "cached",
+    "verifiedStatus": "ready",
+    "proxyBytes": 1640143,
+    "projectDirty": false,
+    "modelCalls": 0
+  },
+  "export": {
+    "height": 2160,
+    "previewQualityWasQuarter": true,
+    "range": [
+      0,
+      3
+    ],
+    "source": "原片；传入的非法VisualSources已强制移除",
+    "width": 3840
+  },
+  "native": {
+    "systemPickerPassed": true,
+    "nativeProfileMenuPassed": true,
+    "generatedViaWailsBridge": {
+      "profile": "540p",
+      "width": 960,
+      "height": 540,
+      "frames": 90,
+      "MiBDisplayed": 1.6
+    },
+    "unchangedProjectRevision": 0,
+    "proxyPlaybackMenuAndPlaybackVerified": false,
+    "remainingReason": "选择时间线时Mac锁屏，未尝试解锁；原生代理模式及播放待补",
+    "ownedAppExitCode": 0
+  },
+  "builds": {
+    "macOS": "最终自签名构建通过",
+    "windowsAMD64": "最终交叉编译通过，非Windows实机",
+    "mainJSKB": 568.22,
+    "proxyLazyChunkKB": 4.5,
+    "largeChunkWarningRetained": true
+  },
+  "screenshots": [
+    "output/playwright/proxy-realtime-wide.png",
+    "output/playwright/proxy-realtime-900.png"
+  ],
+  "modelCalls": 0,
+  "realAccounts": "按用户指令后置",
+  "fullGoalComplete": false,
+  "limitations": [
+    "仅当前4K像素源范围；透明/HDR/隔行/动态几何代理拒绝",
+    "代理为有损预览，色彩/细节需原片和全精度核对",
+    "FFprobe扫描与转码的整机进程树/自然长素材资源仍待量化",
+    "macOS原生代理模式播放被锁屏中断，Windows实机未验收",
+    "完整模型/CLI质量、格式/字体/色彩与商业发行门槛仍需继续"
+  ],
+  "globalCacheCleanup": {
+    "cancelPreservedCache": true,
+    "confirmedGlobalClear": true,
+    "cacheVideos": 0,
+    "cacheBytes": 0,
+    "dirty": false,
+    "revision": 0
+  },
+  "documentation": {
+    "Markdown文档数": 85,
+    "本地链接检查数": 425,
+    "正文检查文档数": 58,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browserClosed": true,
+    "viteExitCode": 130,
+    "goServerExitCode": 1,
+    "nativeExitCode": 0
+  }
+}

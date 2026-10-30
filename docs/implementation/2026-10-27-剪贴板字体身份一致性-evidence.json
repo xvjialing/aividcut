@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R03",
+    "FW-R11",
+    "FW-R12"
+  ],
+  "wails": "v3.0.0",
+  "reproducedBeforeFix": {
+    "coreChangedFontForms": [
+      "text",
+      "standalone-caption",
+      "bound-source"
+    ],
+    "applicationSameProjectReopen": true
+  },
+  "implementation": {
+    "file": "internal/editor/clipboard.go",
+    "change": "将TextStyle.FontAssetID加入所需资源身份集合",
+    "projectSchemaChanged": false,
+    "newPermissions": false
+  },
+  "verification": {
+    "racePackages": [
+      "editor",
+      "application",
+      "projectstore",
+      "projectfonts",
+      "localagent",
+      "workflows"
+    ],
+    "vet": true,
+    "actualFontFrames": 30,
+    "actualRGBABytes": 6912000,
+    "actualRGBASHA256": "1f6ee529073c91c6f769d50bf79539775ada30acd43e8e65e6a8dbc2e965995a",
+    "nonblankBaseline": true,
+    "differentFontContrast": true,
+    "actualRelinkPasteUndoRedoSaveReopen": true,
+    "productionAssetCheck": true,
+    "macOSBundleDeepStrictSignature": true,
+    "frontendChanged": false,
+    "newGUIValidation": false
+  },
+  "windowsPackage": {
+    "path": "work/clipboard-font-check/AIVidCut-windows-amd64-clipboard-font.zip",
+    "files": 691,
+    "bytes": 111991942,
+    "sha256": "2146541aec1afc3865d34f42bef6c4e18dfdc3c4f614d142b19bd45306ca3123",
+    "appSHA256": "cf2ccf6e5fdddf3c232353e341a333d36f9680f7ea8ee2ec7cf14e1e1235413f",
+    "crcVerified": true,
+    "windowsExecuted": false,
+    "tools": {
+      "preview-benchmark.exe": "9e8d5470a6493e69385128f6b26fd9073d6c0d4a4cabf5caeaf53dba4b76b20c",
+      "preview-video-fixture.exe": "23cb219ef67de94de477f8b8c86a50647591703fbcc2ccf4f0f24106a70fd8b3",
+      "measure_windows_media.ps1": "896f06a9006b060dc3dc9a00fa69a864a7eb5ec2c4393c089ee1196f8b2e3ba4"
+    }
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "limitations": [
+    "Windows未实际执行",
+    "任意字体/复杂语言与自然素材待验",
+    "跨序列/跨工程/跨进程剪贴板仍未实施",
+    "真实模型/语音/CLI账户与商业发行继续"
+  ],
+  "documentation": {
+    "Markdown文档数": 154,
+    "本地链接检查数": 805,
+    "正文检查文档数": 116,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

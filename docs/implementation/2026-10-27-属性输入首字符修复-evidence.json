@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R03",
+    "FW-R12",
+    "FW-R17"
+  ],
+  "rootCause": "capture_phase_status_rerender_restores_old_controlled_value",
+  "fix": {
+    "collectRawSynchronously": true,
+    "deferPendingStatusUntilNextTask": true,
+    "persistDebounceMilliseconds": 1000,
+    "cancelStatusOnCompositionAndUnmount": true,
+    "oldReceiptCannotClaimNewInputProtected": true
+  },
+  "tests": {
+    "preFixRegressionFailures": 2,
+    "targetedTestsPassed": 18,
+    "frontendFiles": 61,
+    "frontendTestsPassed": 429,
+    "typecheck": true,
+    "format": true,
+    "productionEmbed": true,
+    "staticUIAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    }
+  },
+  "nativeDiagnostic": {
+    "preFixDigitInputDelivered": true,
+    "preFixReactNumberChanges": 0,
+    "postFixReactNumberChanges": 4,
+    "confirmedSelectionThenFirstDigit": "1",
+    "committedDurationFrames": 120,
+    "durationRevision": 14,
+    "committedTitle": "原生首字完整保留",
+    "titleRevision": 15,
+    "chinesePaste": true,
+    "systemIMEVerified": false,
+    "invalidDraftCloseGuard": true,
+    "privateAppsStopped": true,
+    "tracePort43182Closed": true
+  },
+  "finalNativeProductionVerification": {
+    "status": "passed",
+    "verifiedDate": "2026-10-28",
+    "toolReportedLocked": false,
+    "unlockQuestionPending": false,
+    "firstDigitRetained": "1",
+    "durationFrames": 120,
+    "revisionAfterTrim": 14,
+    "revisionAfterTitle": 15,
+    "chineseTitle": "原生首字完整保留",
+    "chineseInputMethod": "paste",
+    "actualSystemIMEVerified": false,
+    "savedProject": {
+      "revision": 15,
+      "videoDurationFrames": 120,
+      "title": "原生首字完整保留",
+      "clipCount": 4,
+      "assetsAndTracksPreserved": true
+    },
+    "reopenedThroughSystemDialog": true,
+    "nativePlaybackToEnd": true,
+    "endFrame": 120,
+    "saveReopenExportVerified": true,
+    "export": {
+      "videoFrames": 120,
+      "audioSampleFrames": 192000,
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "durationSeconds": 4.0,
+      "audioFinite": true,
+      "peak": 0.5994526743888855,
+      "rms": 0.061985614738435585,
+      "bytes": 765423,
+      "sha256": "e71ac04f60c0632d4dfd910cafa1662367b4fcbd1d205216c0d5907ed77f1feb"
+    },
+    "appClosedCleanly": true,
+    "nativeInventoryIsRunning": false
+  },
+  "productionSeparation": {
+    "productionSHA256": "9f439946c5ec6c399d0348e6ca103c479e2d5d4aa1d4a07b8fa13bbf5eb72871",
+    "debugMarkersAbsentFromProduct": true,
+    "sameMarkersPresentInPrivateDiagnostic": true,
+    "productionAndTestCopyUnsignedCodeMatch": true,
+    "unsignedSHA256": "cfa4a8d0a55c79346c2dd90d05c572b55160711b3f23f0895ab2b977ecebd985"
+  },
+  "build": {
+    "wailsVersion": "v3.0.0",
+    "officialLatestURL": "https://github.com/wailsapp/wails/releases/tag/v3.0.0",
+    "macExecutableSHA256": "9f439946c5ec6c399d0348e6ca103c479e2d5d4aa1d4a07b8fa13bbf5eb72871",
+    "deepStrictSignatureVerified": true,
+    "signedNoticesBindingsVerified": true,
+    "windows": {
+      "path": "work/native-input-check/AIVidCut-windows-amd64-input-fix.zip",
+      "files": 764,
+      "bytes": 112123895,
+      "sha256": "30bd63f1e3e3f42ce6ea4a85411070638186ee6d288d4857c317bdd425d560a0",
+      "appSHA256": "5feb3e1ca026e580f89910bb8ee0a30952dca222750c7667b8bf8ff6de72ccdd",
+      "crcVerified": true,
+      "windowsExecuted": false
+    }
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "documentation": {
+    "markdownFiles": 166,
+    "localLinks": 930,
+    "originalArchiveSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "errors": []
+  },
+  "finalNativeVerificationHistory": [
+    {
+      "status": "waiting_for_manual_unlock",
+      "toolReportedLocked": true,
+      "unlockQuestionPending": true,
+      "saveReopenExportVerified": false
+    }
+  ],
+  "lastVerifiedDate": "2026-10-28",
+  "wailsLatestRechecked": {
+    "date": "2026-10-28",
+    "version": "v3.0.0",
+    "url": "https://github.com/wailsapp/wails/releases/tag/v3.0.0"
+  },
+  "documentationSupplement": {
+    "markdownFiles": 166,
+    "localLinks": 941,
+    "originalArchiveSHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "errors": []
+  }
+}

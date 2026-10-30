@@ -1,0 +1,1387 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R11",
+    "FW-R14",
+    "FW-R16"
+  ],
+  "wailsLatest": "v3.0.0",
+  "frontend": {
+    "schemaVersion": 1,
+    "packageLockSHA256": "306b0723127cc6c8fa7668f13948d54da7bc68bc0e4103ca997cdac4575e764e",
+    "packages": [
+      {
+        "name": "@floating-ui/core",
+        "version": "1.8.0",
+        "lockPath": "node_modules/@floating-ui/core",
+        "integrity": "sha512-0CIZ5itps/8x7BG8dEIhs53BvCUH2PCoogtakwRTut+Arm58sJooJ0AuZhLw2HJYIR5cMLNPBSS728sPho2khQ==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 19547
+      },
+      {
+        "name": "@floating-ui/dom",
+        "version": "1.8.0",
+        "lockPath": "node_modules/@floating-ui/dom",
+        "integrity": "sha512-yXSrzeHZBTZadLOlfyhCkJHNeLJnHRnRInwdZ40L7ZiaAtrBwoYlsDrX3v5zB1Utk7CLfzcOVnVVWoXEky7Ceg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 18370
+      },
+      {
+        "name": "@floating-ui/react-dom",
+        "version": "2.1.9",
+        "lockPath": "node_modules/@floating-ui/react-dom",
+        "integrity": "sha512-JDjEFGCpImxDCA7JJKviA0M9+RtmJdj0m/NVU5IMgBK+AmZouAQQ7/+2GLH0GXXY0YMw9oXPB8hKdbPYg5QLYg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 6906
+      },
+      {
+        "name": "@floating-ui/utils",
+        "version": "0.2.12",
+        "lockPath": "node_modules/@floating-ui/utils",
+        "integrity": "sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==",
+        "declaredLicense": "MIT",
+        "modules": 2,
+        "renderedBytes": 8450
+      },
+      {
+        "name": "@radix-ui/primitive",
+        "version": "1.2.0",
+        "lockPath": "node_modules/@radix-ui/primitive",
+        "integrity": "sha512-KABY+VMIRPJL+Vyzv/335FEhXXD/xDv8BMb1kl48/aXJZMH0LtHCTx5ga5RnxaEP3nZHtmTLf1P9vanmFX46bw==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 1802
+      },
+      {
+        "name": "@radix-ui/react-arrow",
+        "version": "1.1.17",
+        "lockPath": "node_modules/@radix-ui/react-arrow",
+        "integrity": "sha512-67jjcVvxjXCCStnTW3Z+M7jmaFMuMR7M2JgpDzH4w7JSRrikmzhjfYgP/09ECb8n7whnsgh1ifJ+Ie96qEj+pQ==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 698
+      },
+      {
+        "name": "@radix-ui/react-compose-refs",
+        "version": "1.1.5",
+        "lockPath": "node_modules/@radix-ui/react-compose-refs",
+        "integrity": "sha512-+48PbAAbq3didjJxa+OaWY2ZwgAKsNiRGyeHKszblZMQ+kcpd9pAaT11cMkGEie0vsOi3QdeTE6d5Fe3Gn61kA==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 1030
+      },
+      {
+        "name": "@radix-ui/react-context",
+        "version": "1.3.0",
+        "lockPath": "node_modules/@radix-ui/react-context",
+        "integrity": "sha512-v5AYEocMISkbJ+1fTXzZpiFv7NRr3D2WiYbLIKf+FkmJ8VkP6d503eV2n34MFussHXY1pcoq3yfJiQH77dc4Mg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 4142
+      },
+      {
+        "name": "@radix-ui/react-dialog",
+        "version": "1.3.1",
+        "lockPath": "node_modules/@radix-ui/react-dialog",
+        "integrity": "sha512-+0E4qvVTwjAWra9sEhJ+9BTsvHE00zkUuNw1VGh7S+Gc13dfYk+S1PVQdchWDj+XYHhAai7Z7IpzXVDCGsDplg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 10210
+      },
+      {
+        "name": "@radix-ui/react-dismissable-layer",
+        "version": "1.2.1",
+        "lockPath": "node_modules/@radix-ui/react-dismissable-layer",
+        "integrity": "sha512-KIfDcAsx+oVylFZ4xryVKusJUrLLhTQmfnJW4kwk4Km5myvhHCrj04hnWWUC166+xD4DHdH8tQGylwYX1h6+Pg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 12124
+      },
+      {
+        "name": "@radix-ui/react-focus-guards",
+        "version": "1.2.0",
+        "lockPath": "node_modules/@radix-ui/react-focus-guards",
+        "integrity": "sha512-MPm5R0iRGUDrDnPNxmLBkv+X7pN4XKzt+MbWJEuJQsH3NFH4omrbpXpucyYCCKTSt+na/ZxGhEWQrWTZ0285cA==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 1315
+      },
+      {
+        "name": "@radix-ui/react-focus-scope",
+        "version": "1.3.1",
+        "lockPath": "node_modules/@radix-ui/react-focus-scope",
+        "integrity": "sha512-ugeMhbXt4y5S2T1GnIqbWDKEN962PDwnX1fN0eKOOgf5f63Dh2mn8F1FUySlgW0iF6GiVsRF32DzuDIWTUyQJg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 9634
+      },
+      {
+        "name": "@radix-ui/react-id",
+        "version": "1.1.4",
+        "lockPath": "node_modules/@radix-ui/react-id",
+        "integrity": "sha512-TMQp2llA+RYn7JcjnrMnz7wN4pcVttPZnRZo52PLQsoLVKzNlVwUeHmfePgTgRluXFvlD3GD5g5MOVVTJCO0qA==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 588
+      },
+      {
+        "name": "@radix-ui/react-popper",
+        "version": "1.4.0",
+        "lockPath": "node_modules/@radix-ui/react-popper",
+        "integrity": "sha512-yCWRvLeGv9Pz3+efwHqGPp70mZ56r3kfIgQVF56Oj2aAa4uP/Tb+IE59wNcc+758rctqbCKx4LbK8II/r7Bn0Q==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 10211
+      },
+      {
+        "name": "@radix-ui/react-portal",
+        "version": "1.2.0",
+        "lockPath": "node_modules/@radix-ui/react-portal",
+        "integrity": "sha512-StX7xXnaRU41VvFtMm9zlhVGz8XF6GmWWTXftkQaY+tqVkbs/R9UmAp5mLzHHapk5hM9RMZQvO/3usyIP/g42g==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 741
+      },
+      {
+        "name": "@radix-ui/react-presence",
+        "version": "1.1.11",
+        "lockPath": "node_modules/@radix-ui/react-presence",
+        "integrity": "sha512-Z7/atlkab36Z8hm+V8zYc79r0W+tiOB1o0tun1By94JyadkekLQmtEAnBSP9XKXBNQsStoStS4+gX10JpS5akA==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 5630
+      },
+      {
+        "name": "@radix-ui/react-primitive",
+        "version": "2.2.0",
+        "lockPath": "node_modules/@radix-ui/react-primitive",
+        "integrity": "sha512-HCTSPMNqv55Qk0IX4geJbpyXazmqulcimwuyjxTkKi29v+QZbG2Zho9BnbBq4YS2PF+KlNb2CXoLz66uUmblkg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 1071
+      },
+      {
+        "name": "@radix-ui/react-slot",
+        "version": "1.5.0",
+        "lockPath": "node_modules/@radix-ui/react-slot",
+        "integrity": "sha512-tyYd9ddPXAysAbdbD9eYxgwpCSv6f3PncqVSNKQFSR5lcJVLz3cb/pANDoYrLiHBpXv7skortyUgGUWsYuPPFQ==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 6056
+      },
+      {
+        "name": "@radix-ui/react-tooltip",
+        "version": "1.4.1",
+        "lockPath": "node_modules/@radix-ui/react-tooltip",
+        "integrity": "sha512-NxLFGSFtZ78zVfcoOhTwR1xwqo5qx1Jh8Pw6FMZ9McCaqfRzz7/gIRahs2Oy5XlPgQ+8QkUcKbN5B0U44J/kCg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 18880
+      },
+      {
+        "name": "@radix-ui/react-use-callback-ref",
+        "version": "1.1.5",
+        "lockPath": "node_modules/@radix-ui/react-use-callback-ref",
+        "integrity": "sha512-Y5GBf4NKeADoXI1geiMlMuMoURT3k9MizzzKhGb/m55H94aGigZ01PIpkvsO6lML13BA6XYAXSJ6gza7vTn5nw==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 709
+      },
+      {
+        "name": "@radix-ui/react-use-controllable-state",
+        "version": "1.3.0",
+        "lockPath": "node_modules/@radix-ui/react-use-controllable-state",
+        "integrity": "sha512-TAcBI7bw2ljYCbv4+zuTSd6zICu8pRt6SDN2vJ/Z06K2MXh6I9WYFe/A9ovlFDtR5HVHGm5iDxDoABm/++dbKg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 4509
+      },
+      {
+        "name": "@radix-ui/react-use-effect-event",
+        "version": "0.0.5",
+        "lockPath": "node_modules/@radix-ui/react-use-effect-event",
+        "integrity": "sha512-7cshFL8HGS/7HEiHH+9kL9HBwp2sa9yX18Knwek6KYWmXwM7pegMgta2AXMQKI+rq3JnfSj9x8wYqFMTdG1Jgg==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 913
+      },
+      {
+        "name": "@radix-ui/react-use-layout-effect",
+        "version": "1.1.4",
+        "lockPath": "node_modules/@radix-ui/react-use-layout-effect",
+        "integrity": "sha512-K20DkRkUwDnxEYMBPcg3Y6voLkEy5p5QQmszZgLngKKiC7dzBR/aEuK3w1qlx2JWDUNH6FluahYdgR3BP+QbYw==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 152
+      },
+      {
+        "name": "@radix-ui/react-use-size",
+        "version": "1.1.5",
+        "lockPath": "node_modules/@radix-ui/react-use-size",
+        "integrity": "sha512-V1McDQkMGzgivwqdu7u96APs7oi0Jvj9LTzgq3WWrDZqxWdAqU9yZnZQqk5OizGFR8badUQwZsrlao7MOlWYOA==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 1376
+      },
+      {
+        "name": "@radix-ui/react-visually-hidden",
+        "version": "1.2.13",
+        "lockPath": "node_modules/@radix-ui/react-visually-hidden",
+        "integrity": "sha512-feijiN1oPk4rck4u9Dm9tsU4mT6Wp9oeEEhaz1WUEs1VuqLf8xzsFG+Qk+uWq6TnMH9O+WRECRg0NftyP9E4Fw==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 752
+      },
+      {
+        "name": "@wailsio/runtime",
+        "version": "3.0.0",
+        "lockPath": "node_modules/@wailsio/runtime",
+        "integrity": "sha512-NkFJXYWD/4Y3TcHAqfIeST4oybtwv9dVWTmriZTMFbINYiQ2FB3Wr4MjsQ7o0BNynEj2GslmUisNejnixEmLVQ==",
+        "declaredLicense": "MIT",
+        "modules": 18,
+        "renderedBytes": 66338
+      },
+      {
+        "name": "aria-hidden",
+        "version": "1.2.6",
+        "lockPath": "node_modules/aria-hidden",
+        "integrity": "sha512-ik3ZgC9dY/lYVVM++OISsaYDeg1tb0VtP5uL3ouh1koGOaUMDPpbFIei4JkFimWUFPn90sbMNMXQAIVOlnYKJA==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 3623
+      },
+      {
+        "name": "get-nonce",
+        "version": "1.0.1",
+        "lockPath": "node_modules/get-nonce",
+        "integrity": "sha512-FJhYRoDaiatfEkUK8HKlicmu/3SGFD51q3itKDGoSTysQJBnfOcxU5GxnhE1E6soB76MbT0MBtnKJuXyAx+96Q==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 209
+      },
+      {
+        "name": "lucide-react",
+        "version": "1.61.0",
+        "lockPath": "node_modules/lucide-react",
+        "integrity": "sha512-v2SQPPPNjnr+BlhL9Spuzmo5yR+hLkftfuE4E3jaxdNPgSH0hJKPcLJBP7yAta87jQNPsSERS59PJjCJ/CorBA==",
+        "declaredLicense": "ISC",
+        "modules": 68,
+        "renderedBytes": 31701
+      },
+      {
+        "name": "react",
+        "version": "19.3.1",
+        "lockPath": "node_modules/react",
+        "integrity": "sha512-QNhWdt7nrgVWWQG58QuGsAR3jv3Hbe4mb4vz7w2csnHavciZJgda1CPNaldF6eVxv90ud3jUXpKlHL69gO38yw==",
+        "declaredLicense": "MIT",
+        "modules": 4,
+        "renderedBytes": 17166
+      },
+      {
+        "name": "react-dom",
+        "version": "19.3.1",
+        "lockPath": "node_modules/react-dom",
+        "integrity": "sha512-Y0bARz53lhEC1NMCASs0/j+faB/zqt3R8hpvg1e8+61ZVJ4UL0UdC4cBbXfZMcIuhrfgeILTLe+ZeBCavQPtKQ==",
+        "declaredLicense": "MIT",
+        "modules": 4,
+        "renderedBytes": 536687
+      },
+      {
+        "name": "react-remove-scroll",
+        "version": "2.7.2",
+        "lockPath": "node_modules/react-remove-scroll",
+        "integrity": "sha512-Iqb9NjCCTt6Hf+vOdNIZGdTiH1QSqr27H/Ek9sv/a97gfueI/5h1s3yRi1nngzMUaOOToin5dI1dXKdXiF+u0Q==",
+        "declaredLicense": "MIT",
+        "modules": 7,
+        "renderedBytes": 12311
+      },
+      {
+        "name": "react-remove-scroll-bar",
+        "version": "2.3.8",
+        "lockPath": "node_modules/react-remove-scroll-bar",
+        "integrity": "sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==",
+        "declaredLicense": "MIT",
+        "modules": 3,
+        "renderedBytes": 3837
+      },
+      {
+        "name": "react-style-singleton",
+        "version": "2.2.3",
+        "lockPath": "node_modules/react-style-singleton",
+        "integrity": "sha512-b6jSvxvVnyptAiLjbkWLE/lOnR4lfTtDAl+eUC7RZy+QQWc6wRzIV2CE6xBuMmDxc2qIihtDCZD5NPOFl7fRBQ==",
+        "declaredLicense": "MIT",
+        "modules": 3,
+        "renderedBytes": 1580
+      },
+      {
+        "name": "rolldown",
+        "version": "1.2.15",
+        "lockPath": "node_modules/rolldown",
+        "integrity": "sha512-6odND+fel5zVw3I4Yc2e69gvguDnX0CAAGiNDZSq4ik5WUcaLrkD2GLuog0XcODbor31hZ5ayEMgVDno+KPV5g==",
+        "declaredLicense": "MIT",
+        "modules": 1,
+        "renderedBytes": 1419
+      },
+      {
+        "name": "scheduler",
+        "version": "0.28.0",
+        "lockPath": "node_modules/scheduler",
+        "integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==",
+        "declaredLicense": "MIT",
+        "modules": 2,
+        "renderedBytes": 9212
+      },
+      {
+        "name": "tslib",
+        "version": "2.8.1",
+        "lockPath": "node_modules/tslib",
+        "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==",
+        "declaredLicense": "0BSD",
+        "modules": 1,
+        "renderedBytes": 1038
+      },
+      {
+        "name": "use-callback-ref",
+        "version": "1.3.3",
+        "lockPath": "node_modules/use-callback-ref",
+        "integrity": "sha512-jQL3lRnocaFtu3V00JToYz/4QkNWswxijDaCVNZRiRTO3HQDLsdu1ZtmIUvV4yPp+rvWm5j0y0TG/S61cuijTg==",
+        "declaredLicense": "MIT",
+        "modules": 3,
+        "renderedBytes": 1605
+      },
+      {
+        "name": "use-sidecar",
+        "version": "1.1.3",
+        "lockPath": "node_modules/use-sidecar",
+        "integrity": "sha512-Fedw0aZvkhynoPYlA5WXrMCAMm+nSWdZt6lzJQ7Ok8S6Q+VsHmHpRWndVRJ8Be0ZbkfPc5LRYH+5XrzXcEeLRQ==",
+        "declaredLicense": "MIT",
+        "modules": 2,
+        "renderedBytes": 2277
+      },
+      {
+        "name": "vite",
+        "version": "8.3.5",
+        "lockPath": "node_modules/vite",
+        "integrity": "sha512-z1YpjieJ9g0ebTmQpLBv/oq9E3F9EIlOe+7LahW8SrE3LTiG3udBRUXQOlYXP9b+IC2q2phHeVxj9xGlw34OEQ==",
+        "declaredLicense": "MIT",
+        "modules": 2,
+        "renderedBytes": 4285
+      }
+    ],
+    "chunks": [
+      {
+        "file": "assets/AgentExecutionPanel-DIruu44l.js",
+        "bytes": 17266,
+        "sha256": "13f2b7159c26c9abcf46bc3a3c983b79de936120ce13fd7d4d86327925bdb6b9"
+      },
+      {
+        "file": "assets/BatchRelinkDialog-BQ1M-7FX.js",
+        "bytes": 7120,
+        "sha256": "0f575f61b39330d4311938a0765dac646ec432f0fe2ff0bb9c9cdc866c538e9d"
+      },
+      {
+        "file": "assets/CandidateComparisonDialog-Daa0QNqj.js",
+        "bytes": 2810,
+        "sha256": "4bc21d31d13e1893efe339597d19519e89b3adb113f20f6f0439a2c31a395abc"
+      },
+      {
+        "file": "assets/CaptionLayoutEditor-DBxErt-r.js",
+        "bytes": 2557,
+        "sha256": "24d5e49ada4c01564be2ee19e9921172434ab0b519507bcc202385f752b8bced"
+      },
+      {
+        "file": "assets/CaptionLayoutPanel-Cv3gNv3Y.js",
+        "bytes": 5034,
+        "sha256": "bab1bc4f4c30fd53196492b29dc0388f8769f76c5fb82ff044091e79d1621fc8"
+      },
+      {
+        "file": "assets/ContentSearchPanel-BwAzp96X.js",
+        "bytes": 8021,
+        "sha256": "08a6fc2ff86cc3864a09ebae5a17f2166b803fad45980deb2d8f1525c5bbf147"
+      },
+      {
+        "file": "assets/dist-bOB6xheE.js",
+        "bytes": 38074,
+        "sha256": "e1ecaee53af663894325ecb5f6ea9cf075e60a34621288c74bd329df36202950"
+      },
+      {
+        "file": "assets/FrameCapturePanel-DL-9hvCE.js",
+        "bytes": 5344,
+        "sha256": "2931eea7b58106e6df7f104a15fa0f985c28f1d42b2873e6eb61606eb8a1a2e5"
+      },
+      {
+        "file": "assets/GenerationPlacementDialog-hs2j6CBv.js",
+        "bytes": 7751,
+        "sha256": "c677d2444fe233011227ad252a53bf2bd08cebb1e8e4dab39565e43843609c99"
+      },
+      {
+        "file": "assets/GenerationReplacementDialog-DKGbNNG1.js",
+        "bytes": 6144,
+        "sha256": "7d671604009b0c058b7a1523e259b8c215675f60bc4a2584d04de5b5629de57f"
+      },
+      {
+        "file": "assets/GenerationReuseDialog-BSkyB9BY.js",
+        "bytes": 5709,
+        "sha256": "35ff7c28c4f320c9c5f2d5ad38b716dc0763412cb118483810f45d5d46e08cdc"
+      },
+      {
+        "file": "assets/index-B5qQxeEq.js",
+        "bytes": 623083,
+        "sha256": "d69772161e02d35a4c0bbb35d5e75799ee1c2d77081fa572a877e932e75d2733"
+      },
+      {
+        "file": "assets/index-BNRUEbjG.css",
+        "bytes": 52181,
+        "sha256": "b07989e2df42e446ab49f11325fad5b242eb9d5d48c76c106ffa11962e86ecea"
+      },
+      {
+        "file": "assets/InspectorDraftsDialog-DmA01yHo.js",
+        "bytes": 7777,
+        "sha256": "64d48badddda5b18e56d59ed42692d98eaef0bf34a8271a0b1b72f2cefad7367"
+      },
+      {
+        "file": "assets/MediaToolsDialog-BnkwuNdo.js",
+        "bytes": 7981,
+        "sha256": "7178e4f93a1a25dc09d4add7554260120652c1f5e34fb3ae6fb7e67bc67eb276"
+      },
+      {
+        "file": "assets/PreviewProxyPanel-CJo-8d5x.js",
+        "bytes": 4508,
+        "sha256": "90fb31985f7bd0f69f244836c99922f44460b4e92e1bf55248555f3eca5f4f14"
+      },
+      {
+        "file": "assets/project-collect--qNmGvan.js",
+        "bytes": 858,
+        "sha256": "3cdbac37ae9651af74e13e2d00a6dfdb8931a14811a50940ca63fed48b190a1b"
+      },
+      {
+        "file": "assets/ProjectCollectDialog-DCNPwHvE.js",
+        "bytes": 4565,
+        "sha256": "8ab256ac6acadc29835a2f5d6a9b3f9205caa51d54691240a622e4c437d567e0"
+      },
+      {
+        "file": "assets/ProjectSnapshotList-BtvayqE-.js",
+        "bytes": 731,
+        "sha256": "39c550770f07c590b4c7de1a23c0949faac643ac1036483adf52b219170fe643"
+      },
+      {
+        "file": "assets/ProjectVersionsDialog-GKJsDrXF.js",
+        "bytes": 5556,
+        "sha256": "24c14a0104119facebeb5e5ac0ee9e14048633d093b750c531b6005b52dfef11"
+      },
+      {
+        "file": "assets/RealtimePreviewSurface-BP1hcYIR.js",
+        "bytes": 22534,
+        "sha256": "01c04b7b643e990b9098a2ad29a46f3cbb313a4953dbf84798104d1a681f700b"
+      },
+      {
+        "file": "assets/RecoveryCenterDialog-VzFr0xTC.js",
+        "bytes": 5803,
+        "sha256": "741085a867b384df70bf48df13cb740dfe5026170966a154c01f331700b7ff22"
+      },
+      {
+        "file": "assets/ResourceMonitorDialog-C27_EVw5.js",
+        "bytes": 8170,
+        "sha256": "40abddaa630bd50a8797362c2b938bbc48b5fb127dcf7f4c569b577a696d52c6"
+      },
+      {
+        "file": "assets/RippleRangeTools-OFu8xyHJ.js",
+        "bytes": 6276,
+        "sha256": "baeea12357f2811d55226282b67ae4ea767c6f780cfea0939d0b63fe093f4290"
+      },
+      {
+        "file": "assets/rolldown-runtime-XKyaHtl9.js",
+        "bytes": 726,
+        "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7"
+      },
+      {
+        "file": "assets/SequenceManagerDialog-C67Qehav.js",
+        "bytes": 5687,
+        "sha256": "87b04c7a3d9a29670fa87744ea2281946440e16585a8a0e3ff67afebc1010042"
+      },
+      {
+        "file": "assets/SnapshotStorageDialog-C9-lIlCH.js",
+        "bytes": 6308,
+        "sha256": "0673a6bfe22737c775da000a4813141d9ac6d82fc0ebbe1111a60e05e991edba"
+      },
+      {
+        "file": "assets/SourceRangeMedia-DgnCRpk0.js",
+        "bytes": 2223,
+        "sha256": "e80baa787f7d3b9082ec8e8c9395ad91ad1587443f0e515ad8c4243546b1c932"
+      },
+      {
+        "file": "assets/SpeechAudioResult-CyJREMV9.js",
+        "bytes": 8747,
+        "sha256": "7d29cedfa5bafef53396972a964f7bf131a0ccc948c45b6a58c39c319ca2e164"
+      },
+      {
+        "file": "assets/TranscriptCutPanel-Cano9kQD.js",
+        "bytes": 7551,
+        "sha256": "3fc8b9f5cd869b3d72067a9c01fea03c656bd524ad18c473c68afe1f182d5e87"
+      }
+    ],
+    "applicationModules": 88,
+    "generatedModules": 3,
+    "generatedModuleOwners": [
+      "rolldown",
+      "vite"
+    ],
+    "unknownGeneratedModules": 0,
+    "licenseApproval": false
+  },
+  "macos": {
+    "components": 61,
+    "textBytes": 189319,
+    "missingTextComponents": 1,
+    "issues": [
+      {
+        "component": "npm:react-remove-scroll-bar@2.3.8",
+        "reason": "精确版本包未提供顶层许可/声明文本；不得用元数据表达式代替原文"
+      }
+    ],
+    "binding": {
+      "schemaVersion": 1,
+      "artifactSHA256": "7da13ddf0052de68587e151019f7b89ba366dc4ebae8797d4c4936b2df2a3aeb",
+      "noticesInventorySHA256": "3c8517e496c1edd102cdee52ebc93a9d47e27da1f36783f4080e9e46bd4cfbf0",
+      "noticesTreeSHA256": "71d28c503cec9ef39722265b501e05941749008991195acf828726646c60e9f2",
+      "files": [
+        {
+          "path": "NOTICES.md",
+          "sha256": "b6393755db74da6f15e81157b749c04ba0330768bb3fd6d43954e4a96af8b536",
+          "bytes": 11665
+        },
+        {
+          "path": "inventory.json",
+          "sha256": "3c8517e496c1edd102cdee52ebc93a9d47e27da1f36783f4080e9e46bd4cfbf0",
+          "bytes": 40587
+        },
+        {
+          "path": "texts/go/11104fef1a0e6268ef1829d2/LICENSE",
+          "sha256": "4a69823387cc23ba25881ae73923d89db013bb5571780f1eea48910d7cc8357a",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/go/29774b2de7fb21c497089851/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/29774b2de7fb21c497089851/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/2ee56f630d436b5642a0eecb/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/2ee56f630d436b5642a0eecb/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/4fd37222bc8be3f99fd20e20/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/576dcc553bdae194f0d899f6/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/576dcc553bdae194f0d899f6/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/6332a44a8f3b66b6e61e39f9/LICENSE",
+          "sha256": "e2a78de21d6d8ded2dff0f3189cd32e011630d785da127ebfbc8949012c0947b",
+          "bytes": 1064
+        },
+        {
+          "path": "texts/go/6dcfce16d1f3256ad83a101c/LICENSE",
+          "sha256": "fb119fabde05e05b70b07f445b3f41863b22326c0ebb5b7bee9f0309112d3640",
+          "bytes": 1107
+        },
+        {
+          "path": "texts/go/786b2b55021f9ef3ac78ae2d/LICENSE",
+          "sha256": "f57f886a33e0ae7b50093f19051e65edcd1fde7cde63caa6b1ba4254856f4e4f",
+          "bytes": 1077
+        },
+        {
+          "path": "texts/go/7d6051ca2dad7821eb4568bc/LICENSE",
+          "sha256": "039c69774070226d213bced933176be4ec396c9b101cd9a13e82a2c390c6c90a",
+          "bytes": 1075
+        },
+        {
+          "path": "texts/go/80c86ce33a8a398b56818515/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/80c86ce33a8a398b56818515/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/8bd068a161452022ed8ce397/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/8bd068a161452022ed8ce397/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/94522395f674eb05f66e4d5d/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/94522395f674eb05f66e4d5d/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/94d1a870907ee93bb3a24492/LICENSE",
+          "sha256": "af679003d933f045393a6a029f43da113f9ae364eac651d9ae268392985580f5",
+          "bytes": 12223
+        },
+        {
+          "path": "texts/go/9ad44d7925eeabd7ab5fd89d/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/9ad44d7925eeabd7ab5fd89d/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/9aeb99eb41bf5d140e565562/AUTHORS",
+          "sha256": "fdebefabdd93d9701887ac1fa4df716322f71651000442cfd947325648a06675",
+          "bytes": 234
+        },
+        {
+          "path": "texts/go/9aeb99eb41bf5d140e565562/LICENSE",
+          "sha256": "2be1b548b0387ca8948e1bb9434e709126904d15f622cc2d0d8e7f186e4d122d",
+          "bytes": 1312
+        },
+        {
+          "path": "texts/go/be80a394fa334b0281605f43/LICENSE",
+          "sha256": "2d56c53449691d85d9aea245eb8dac12713e9075d70d5557b82ae1e94805b357",
+          "bytes": 1087
+        },
+        {
+          "path": "texts/go/dbda4bd39a2852a45850d2b8/LICENSE",
+          "sha256": "d6d71a1f7dc6539e371120cc7af6e3257e55ca79634d473211f217b8965b0f16",
+          "bytes": 1073
+        },
+        {
+          "path": "texts/go/f244f0b2f84f760b8875ba96/LICENSE",
+          "sha256": "0761aadfb1921103752869ee942d4a71bdd54494697684d4b13dc17ad9781191",
+          "bytes": 1546
+        },
+        {
+          "path": "texts/go/f92b80919b705394d9a7c627/LICENSE",
+          "sha256": "c9b003992c61becee037549814a89434c05780288f14c190b554dc30b7fddf5f",
+          "bytes": 1067
+        },
+        {
+          "path": "texts/go/ff4728b73d491ec9b74ddcdc/LICENSE",
+          "sha256": "cede95c28e6e9d67d1c1e49e8ba3c20250c7d4080c3faca1579b6732327ae40d",
+          "bytes": 1076
+        },
+        {
+          "path": "texts/npm/05f1057425fd4c18e868ad85/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/0d787f7d0b95cbb49288296e/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/13cefd51066630a2dde252a4/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        },
+        {
+          "path": "texts/npm/1485e93063bdd2fe761a7add/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/1fed4be38d173757e5daf571/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/25ef22a2376322329ac7e998/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/2cd821b9442a2fa0cd24ca06/LICENSE",
+          "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+          "bytes": 1302
+        },
+        {
+          "path": "texts/npm/332487aa778aed41f8d29dd3/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/44c839af6dc8cf98fe4183ee/LICENSE",
+          "sha256": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/494f2376b44bf65de4a3dade/wails-runtime-3.0.0-LICENSE.txt",
+          "sha256": "cede95c28e6e9d67d1c1e49e8ba3c20250c7d4080c3faca1579b6732327ae40d",
+          "bytes": 1076
+        },
+        {
+          "path": "texts/npm/50ffe646326afe0b6331d099/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/531411c19f3ae30165be1b8e/LICENSE.txt",
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+          "bytes": 655
+        },
+        {
+          "path": "texts/npm/5609a1079879dda522ef8b67/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+          "bytes": 1089
+        },
+        {
+          "path": "texts/npm/59285e73b61f5d178f9a2b01/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/593d187c75befae6aa56b38c/LICENSE",
+          "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+          "bytes": 3208
+        },
+        {
+          "path": "texts/npm/63705d745109bd5d268dda9f/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+          "bytes": 1089
+        },
+        {
+          "path": "texts/npm/713de85aadc4873736e9177c/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/73fa0e9f6f0bd8d0b1a7b3df/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/744c3718b8583384b299c22c/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/7686bf8caf6f5a672877329e/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/83ffee276d2a1d959cbf8f78/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/857b4b5970661a077b52091f/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/8dc0d6fe55b33c7bd1d017ec/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        },
+        {
+          "path": "texts/npm/9cb640942e9765e26269b217/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/a01403e626b3cd641dd80012/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/ac2516f46025755ce11aeeab/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/ae3bce4d5500463c3e26906b/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+          "bytes": 1089
+        },
+        {
+          "path": "texts/npm/b58c46b76cd60d79a1e4db02/LICENSE.md",
+          "sha256": "a22152baa1aef74402443008e767e7c689a524c0909d19b0431d97f5ab066a13",
+          "bytes": 98196
+        },
+        {
+          "path": "texts/npm/bbb42906db9656f6c97c9b02/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/bbefaa0c9b70b06762b5bf0f/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/c208b265f740858ad6445f41/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/d0a658f64ef2cdd7af887cd9/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/d3d40f0ae5f54711ae84bbc4/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/dcd5e47484802541a242bc18/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/ef2a2a1a16720ce1bb800a1c/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/f7035f5aaa73dd43f56e451a/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        },
+        {
+          "path": "texts/npm/fb5f28c9aecd8817d79313d8/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/fbb1a8607f3c43ddb0aa5c32/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/fca42d06f414856c6079ea19/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+          "bytes": 1089
+        },
+        {
+          "path": "texts/toolchain/34ac82c2be1f5c9d6b572566/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/toolchain/34ac82c2be1f5c9d6b572566/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        }
+      ],
+      "licenseApproval": false
+    }
+  },
+  "windows": {
+    "components": 62,
+    "textBytes": 190440,
+    "missingTextComponents": 1,
+    "issues": [
+      {
+        "component": "npm:react-remove-scroll-bar@2.3.8",
+        "reason": "精确版本包未提供顶层许可/声明文本；不得用元数据表达式代替原文"
+      }
+    ],
+    "artifacts": [
+      {
+        "name": "desktop",
+        "sha256": "6b0883d6518305c71f965173f4cc3296047ae4d5fefcf8e669a8ccc8b1438d94",
+        "bytes": 20710400,
+        "goVersion": "go1.27.3",
+        "target": {
+          "-trimpath": "true",
+          "CGO_ENABLED": "0",
+          "GOARCH": "amd64",
+          "GOOS": "windows"
+        }
+      },
+      {
+        "name": "media-runtime-manifest",
+        "sha256": "5a153a9c14bd1b070cc04841002c16b9ab31917804e3926932efe6d81243fa50",
+        "bytes": 3195904,
+        "goVersion": "go1.27.3",
+        "target": {
+          "-trimpath": "true",
+          "CGO_ENABLED": "0",
+          "GOARCH": "amd64",
+          "GOOS": "windows"
+        }
+      },
+      {
+        "name": "preview-benchmark",
+        "sha256": "4e475943e0230533a3602fe497d9d847ada4ecacd9a97d4abaf5ca670bb56b31",
+        "bytes": 4640768,
+        "goVersion": "go1.27.3",
+        "target": {
+          "-trimpath": "true",
+          "CGO_ENABLED": "0",
+          "GOARCH": "amd64",
+          "GOOS": "windows"
+        }
+      },
+      {
+        "name": "preview-video-fixture",
+        "sha256": "23cb219ef67de94de477f8b8c86a50647591703fbcc2ccf4f0f24106a70fd8b3",
+        "bytes": 4597760,
+        "goVersion": "go1.27.3",
+        "target": {
+          "-trimpath": "true",
+          "CGO_ENABLED": "0",
+          "GOARCH": "amd64",
+          "GOOS": "windows"
+        }
+      }
+    ],
+    "binding": {
+      "schemaVersion": 1,
+      "artifactSHA256": "6b0883d6518305c71f965173f4cc3296047ae4d5fefcf8e669a8ccc8b1438d94",
+      "noticesInventorySHA256": "c212367f41657ec731606932657503dba8870a4fd73164d83edf9c1ca87a4e15",
+      "noticesTreeSHA256": "12a57ca2c7cad861d8f35cb9edf039ab5f36ce793524430dfd7e33fe0c34d556",
+      "files": [
+        {
+          "path": "NOTICES.md",
+          "sha256": "5e4c9739f8f06a23d9d3fceb65fe8dea97d3656e733f568f79cdd61a2ef0a805",
+          "bytes": 11805
+        },
+        {
+          "path": "inventory.json",
+          "sha256": "c212367f41657ec731606932657503dba8870a4fd73164d83edf9c1ca87a4e15",
+          "bytes": 42310
+        },
+        {
+          "path": "texts/go/11104fef1a0e6268ef1829d2/LICENSE",
+          "sha256": "4a69823387cc23ba25881ae73923d89db013bb5571780f1eea48910d7cc8357a",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/go/19acd35a38de2fd1f47dd2e8/LICENSE",
+          "sha256": "1702a813fa31858c0d6c7788216fa3dd202472265716998024654c252fc7bb41",
+          "bytes": 1077
+        },
+        {
+          "path": "texts/go/29774b2de7fb21c497089851/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/29774b2de7fb21c497089851/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/2ee56f630d436b5642a0eecb/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/2ee56f630d436b5642a0eecb/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/4fd37222bc8be3f99fd20e20/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/576dcc553bdae194f0d899f6/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/576dcc553bdae194f0d899f6/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/6332a44a8f3b66b6e61e39f9/LICENSE",
+          "sha256": "e2a78de21d6d8ded2dff0f3189cd32e011630d785da127ebfbc8949012c0947b",
+          "bytes": 1064
+        },
+        {
+          "path": "texts/go/6dcfce16d1f3256ad83a101c/LICENSE",
+          "sha256": "fb119fabde05e05b70b07f445b3f41863b22326c0ebb5b7bee9f0309112d3640",
+          "bytes": 1107
+        },
+        {
+          "path": "texts/go/786b2b55021f9ef3ac78ae2d/LICENSE",
+          "sha256": "f57f886a33e0ae7b50093f19051e65edcd1fde7cde63caa6b1ba4254856f4e4f",
+          "bytes": 1077
+        },
+        {
+          "path": "texts/go/80c86ce33a8a398b56818515/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/80c86ce33a8a398b56818515/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/8bd068a161452022ed8ce397/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/8bd068a161452022ed8ce397/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/94522395f674eb05f66e4d5d/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/94522395f674eb05f66e4d5d/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/94d1a870907ee93bb3a24492/LICENSE",
+          "sha256": "af679003d933f045393a6a029f43da113f9ae364eac651d9ae268392985580f5",
+          "bytes": 12223
+        },
+        {
+          "path": "texts/go/9ad44d7925eeabd7ab5fd89d/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/go/9ad44d7925eeabd7ab5fd89d/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        },
+        {
+          "path": "texts/go/9aeb99eb41bf5d140e565562/AUTHORS",
+          "sha256": "fdebefabdd93d9701887ac1fa4df716322f71651000442cfd947325648a06675",
+          "bytes": 234
+        },
+        {
+          "path": "texts/go/9aeb99eb41bf5d140e565562/LICENSE",
+          "sha256": "2be1b548b0387ca8948e1bb9434e709126904d15f622cc2d0d8e7f186e4d122d",
+          "bytes": 1312
+        },
+        {
+          "path": "texts/go/be80a394fa334b0281605f43/LICENSE",
+          "sha256": "2d56c53449691d85d9aea245eb8dac12713e9075d70d5557b82ae1e94805b357",
+          "bytes": 1087
+        },
+        {
+          "path": "texts/go/ca3b9f1b1f21cd69a6293551/LICENSE",
+          "sha256": "d883dbca28769ff23dd4368a8edb7ad9f9f23a8f86adde2875c6e41a828aac62",
+          "bytes": 1119
+        },
+        {
+          "path": "texts/go/dbda4bd39a2852a45850d2b8/LICENSE",
+          "sha256": "d6d71a1f7dc6539e371120cc7af6e3257e55ca79634d473211f217b8965b0f16",
+          "bytes": 1073
+        },
+        {
+          "path": "texts/go/f244f0b2f84f760b8875ba96/LICENSE",
+          "sha256": "0761aadfb1921103752869ee942d4a71bdd54494697684d4b13dc17ad9781191",
+          "bytes": 1546
+        },
+        {
+          "path": "texts/go/f92b80919b705394d9a7c627/LICENSE",
+          "sha256": "c9b003992c61becee037549814a89434c05780288f14c190b554dc30b7fddf5f",
+          "bytes": 1067
+        },
+        {
+          "path": "texts/go/ff4728b73d491ec9b74ddcdc/LICENSE",
+          "sha256": "cede95c28e6e9d67d1c1e49e8ba3c20250c7d4080c3faca1579b6732327ae40d",
+          "bytes": 1076
+        },
+        {
+          "path": "texts/npm/05f1057425fd4c18e868ad85/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/0d787f7d0b95cbb49288296e/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/13cefd51066630a2dde252a4/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        },
+        {
+          "path": "texts/npm/1485e93063bdd2fe761a7add/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/1fed4be38d173757e5daf571/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/25ef22a2376322329ac7e998/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/2cd821b9442a2fa0cd24ca06/LICENSE",
+          "sha256": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+          "bytes": 1302
+        },
+        {
+          "path": "texts/npm/332487aa778aed41f8d29dd3/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/44c839af6dc8cf98fe4183ee/LICENSE",
+          "sha256": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/494f2376b44bf65de4a3dade/wails-runtime-3.0.0-LICENSE.txt",
+          "sha256": "cede95c28e6e9d67d1c1e49e8ba3c20250c7d4080c3faca1579b6732327ae40d",
+          "bytes": 1076
+        },
+        {
+          "path": "texts/npm/50ffe646326afe0b6331d099/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/531411c19f3ae30165be1b8e/LICENSE.txt",
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+          "bytes": 655
+        },
+        {
+          "path": "texts/npm/5609a1079879dda522ef8b67/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+          "bytes": 1089
+        },
+        {
+          "path": "texts/npm/59285e73b61f5d178f9a2b01/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/593d187c75befae6aa56b38c/LICENSE",
+          "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+          "bytes": 3208
+        },
+        {
+          "path": "texts/npm/63705d745109bd5d268dda9f/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+          "bytes": 1089
+        },
+        {
+          "path": "texts/npm/713de85aadc4873736e9177c/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/73fa0e9f6f0bd8d0b1a7b3df/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/744c3718b8583384b299c22c/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/7686bf8caf6f5a672877329e/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/83ffee276d2a1d959cbf8f78/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/857b4b5970661a077b52091f/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/8dc0d6fe55b33c7bd1d017ec/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        },
+        {
+          "path": "texts/npm/9cb640942e9765e26269b217/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/a01403e626b3cd641dd80012/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/ac2516f46025755ce11aeeab/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/ae3bce4d5500463c3e26906b/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+          "bytes": 1089
+        },
+        {
+          "path": "texts/npm/b58c46b76cd60d79a1e4db02/LICENSE.md",
+          "sha256": "a22152baa1aef74402443008e767e7c689a524c0909d19b0431d97f5ab066a13",
+          "bytes": 98196
+        },
+        {
+          "path": "texts/npm/bbb42906db9656f6c97c9b02/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/bbefaa0c9b70b06762b5bf0f/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/c208b265f740858ad6445f41/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/d0a658f64ef2cdd7af887cd9/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/d3d40f0ae5f54711ae84bbc4/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071
+        },
+        {
+          "path": "texts/npm/dcd5e47484802541a242bc18/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/ef2a2a1a16720ce1bb800a1c/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/f7035f5aaa73dd43f56e451a/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        },
+        {
+          "path": "texts/npm/fb5f28c9aecd8817d79313d8/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/fbb1a8607f3c43ddb0aa5c32/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063
+        },
+        {
+          "path": "texts/npm/fca42d06f414856c6079ea19/LICENSE",
+          "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce",
+          "bytes": 1089
+        },
+        {
+          "path": "texts/toolchain/34ac82c2be1f5c9d6b572566/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+          "bytes": 1453
+        },
+        {
+          "path": "texts/toolchain/34ac82c2be1f5c9d6b572566/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+          "bytes": 1303
+        }
+      ],
+      "licenseApproval": false
+    },
+    "executed": false
+  },
+  "verification": {
+    "pythonTests": 7,
+    "frontendTests": 390,
+    "typecheck": true,
+    "format": true,
+    "productionEmbed": true,
+    "dualBuild": true,
+    "macOSDeepStrictSignature": true,
+    "newGUIValidation": false
+  },
+  "windowsPackage": {
+    "path": "work/dependency-notices-check/AIVidCut-windows-amd64-notices.zip",
+    "files": 764,
+    "bytes": 112087084,
+    "sha256": "f8fb6dae3a3febf9e8b3393b3b21010254419c24426c2630790d293761d328d4",
+    "appSHA256": "6b0883d6518305c71f965173f4cc3296047ae4d5fefcf8e669a8ccc8b1438d94",
+    "crcVerified": true,
+    "windowsExecuted": false,
+    "tools": {
+      "preview-benchmark.exe": "4e475943e0230533a3602fe497d9d847ada4ecacd9a97d4abaf5ca670bb56b31",
+      "preview-video-fixture.exe": "23cb219ef67de94de477f8b8c86a50647591703fbcc2ccf4f0f24106a70fd8b3",
+      "measure_windows_media.ps1": "896f06a9006b060dc3dc9a00fa69a864a7eb5ec2c4393c089ee1196f8b2e3ba4"
+    }
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "licenseApproval": false,
+  "documentation": {
+    "Markdown文档数": 159,
+    "本地链接检查数": 839,
+    "正文检查文档数": 121,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

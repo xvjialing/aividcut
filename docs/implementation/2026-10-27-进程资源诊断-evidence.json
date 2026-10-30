@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R14",
+    "FW-R15"
+  ],
+  "frontend": {
+    "files": 53,
+    "tests": 351
+  },
+  "verified": {
+    "profiles": {
+      "preview": {
+        "samples": 4,
+        "intervalMs": 1000,
+        "sampledPeakRSSBytes": 181780480,
+        "sampledPeakCPUPercent": 28.214991912148477,
+        "roles": [
+          "application",
+          "media"
+        ],
+        "programs": [
+          "aividcut-mlt-worker",
+          "media-profile"
+        ],
+        "queryMaxMs": 1.486125,
+        "executableFileSHA256": "a76768c6e1365cf5a3e4d02ed812cd19ac8f0c2430ff893204d29c546b99ad0b"
+      },
+      "export": {
+        "samples": 17,
+        "intervalMs": 100,
+        "sampledPeakRSSBytes": 999358464,
+        "sampledPeakCPUPercent": 359.4138878419952,
+        "roles": [
+          "application",
+          "encoding",
+          "media"
+        ],
+        "programs": [
+          "aividcut-mlt-worker",
+          "ffmpeg",
+          "media-profile"
+        ],
+        "queryMaxMs": 1.104583,
+        "executableFileSHA256": "19e2f81c47303037f0db67f4cd0fb3b07c8b0689b61a9a3dcb1488160539966f"
+      },
+      "ui-preview": {
+        "samples": 164,
+        "intervalMs": 1000,
+        "sampledPeakRSSBytes": 208945152,
+        "sampledPeakCPUPercent": 24.191436182565436,
+        "roles": [
+          "application",
+          "media"
+        ],
+        "programs": [
+          "aividcut-dev",
+          "aividcut-mlt-worker"
+        ],
+        "queryMaxMs": 3.246083,
+        "executableFileSHA256": "8d25fddf189a6f758efd5b204f2d16f3a2117fc5f71e1d4b3fc93528fe40b13c"
+      }
+    },
+    "projectUnchanged": true,
+    "dirtyUndoRedoUnchanged": true,
+    "export": {
+      "width": 3840,
+      "height": 2160,
+      "frames": 90,
+      "durationSeconds": 3.003,
+      "sha256": "6c0ade267ec9bae53b1d2789885bc382ec69445f0083d8e61edfec0c4b0396f3"
+    },
+    "realModelCalls": 0
+  },
+  "cpuUnits": {
+    "rawComparison": "reportedDelta=4824038 posixDeltaNs=200147000 ratio=0.0241",
+    "convertedComparison": "reportedDelta=200857000 posixDeltaNs=200156000 ratio=1.0035"
+  },
+  "browser": {
+    "startedExplicitly": true,
+    "backgroundRecordingObserved": true,
+    "stoppedSamples": 164,
+    "exportedThroughUI": true,
+    "viewport": {
+      "width": 900,
+      "height": 720
+    },
+    "dialog": {
+      "x": 20,
+      "y": 16,
+      "width": 860,
+      "height": 688
+    },
+    "unknownGPUShown": true,
+    "unattributedWebKitDisclosed": true
+  },
+  "wailsLatest": "v3.0.0",
+  "realModelCalls": 0,
+  "pending": [
+    "完整WebView归属",
+    "GPU/显存",
+    "Windows实测",
+    "整机/长素材/目标设备",
+    "真实账户及完整发布门槛"
+  ],
+  "go": {
+    "fullRaceTestedPackages": 31,
+    "racePassed": true,
+    "vetPassed": true,
+    "windowsCollectorCrossCompile": true
+  },
+  "build": {
+    "macosSelfSigned": true,
+    "windowsAmd64": true,
+    "productionResourcesPassed": true,
+    "newNativeGuiChecked": false
+  },
+  "design": {
+    "strictErrors": 0,
+    "strictWarnings": 0,
+    "lintErrors": 0,
+    "lintWarnings": 0
+  },
+  "documentation": {
+    "Markdown文档数": 113,
+    "本地链接检查数": 562,
+    "正文检查文档数": 86,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "backendStopped": true,
+    "viteStopped": true,
+    "agentTabClosed": true,
+    "viewportReset": true
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R07",
+    "FW-R11",
+    "FW-R14",
+    "FW-R15",
+    "FW-R16"
+  ],
+  "wailsLatest": "v3.0.0",
+  "implementation": {
+    "sharedPackage": "internal/managedprocess",
+    "productionConstructors": 18,
+    "windowsSuspendedBeforeAssign": true,
+    "jobKillOnClose": true,
+    "uniqueOwnerThreadBeforeResume": true,
+    "fallbackToUnmanaged": false,
+    "permissionSandbox": false
+  },
+  "verification": {
+    "macActualGrandchildHeartbeatStops": true,
+    "nativeSDKRacePackages": [
+      "managedprocess",
+      "localagent",
+      "playback",
+      "media",
+      "exporter",
+      "application"
+    ],
+    "vet": true,
+    "windowsArchitecturesCompiled": [
+      "amd64",
+      "arm64"
+    ],
+    "windowsExecuted": false,
+    "nativeWindowsJobTestExecuted": false,
+    "productionEmbed": true,
+    "dualBuild": true,
+    "macOSSignature": true,
+    "newGUI": false
+  },
+  "windowsVerificationPackage": {
+    "path": "work/managed-process-check/Windows-Process-Lifecycle-Checks.zip",
+    "bytes": 2910042,
+    "sha256": "65f53ea01a202e3005e66b85f40ecc92d805db9e342d778b47d5ffca4db7c49a",
+    "windowsExecuted": false,
+    "files": [
+      {
+        "name": "managedprocess-windows.test.exe",
+        "sha256": "dcffd8bf0b083ec20c0511be941de6436eca2ea60fa9445ef347c3a91bb17732"
+      },
+      {
+        "name": "managedprocess-windows-arm64.test.exe",
+        "sha256": "8882e815fbd1e96caf17dd547d692f90959844feff5abfd9c82452db96db50cd"
+      }
+    ]
+  },
+  "windowsClientPackage": {
+    "path": "work/managed-process-check/AIVidCut-windows-amd64-process-jobs.zip",
+    "files": 764,
+    "bytes": 112124434,
+    "sha256": "b411d5872a48baf5b638c8ca27ec97a9ea1c4313c00df143c1cd597e0998a2a1",
+    "appSHA256": "68bdaf9cdbef2ce5cfb071c14d96f37a222e13211ce8fd1e73c9c6afc59d654f",
+    "crcVerified": true,
+    "windowsExecuted": false,
+    "tools": {
+      "preview-benchmark.exe": "2bbb5b855a51a563cbd4598bad90294a5605b74dfe9b811ca552a7be1c38cb28",
+      "preview-video-fixture.exe": "a3d9a6b70aad6129060074c39e5eae5fe5b46e8a12223ae9b91579ff21d9079d",
+      "measure_windows_media.ps1": "896f06a9006b060dc3dc9a00fa69a864a7eb5ec2c4393c089ee1196f8b2e3ba4"
+    }
+  },
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "policyGates": [
+    "Windows platform_unverified保持",
+    "Claude policy_unverified保持",
+    "账户后置"
+  ],
+  "fullGoalComplete": false,
+  "documentation": {
+    "Markdown文档数": 161,
+    "本地链接检查数": 852,
+    "正文检查文档数": 123,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

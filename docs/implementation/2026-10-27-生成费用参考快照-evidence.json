@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R09",
+    "FW-R10",
+    "FW-R11",
+    "FW-R12"
+  ],
+  "wails": {
+    "checkedDate": "2026-10-27",
+    "releaseTag": "v3.0.0",
+    "sourceURL": "https://github.com/wailsapp/wails/releases/tag/v3.0.0",
+    "latestURL": "https://github.com/wailsapp/wails/releases/latest",
+    "moduleCliRuntimeAligned": true
+  },
+  "implementation": {
+    "manualPriceOnly": true,
+    "currencies": [
+      "CNY",
+      "USD"
+    ],
+    "units": [
+      "request",
+      "image",
+      "video_second"
+    ],
+    "decimalPlaces": 6,
+    "integerArithmetic": true,
+    "unknownDifferentFromZero": true,
+    "providerPayloadIncludesEstimate": false,
+    "recipeIncludesEstimate": false,
+    "legacyV1SignaturePreserved": true,
+    "quotedRecordVersion": 2,
+    "recomputeOnLoad": true,
+    "projectScopedRetryCache": true,
+    "unknownRetryLocksOriginalEstimate": true
+  },
+  "verification": {
+    "sharedCases": 29,
+    "frontendFiles": 61,
+    "frontendTests": 424,
+    "typecheck": true,
+    "format": true,
+    "productionBuild": true,
+    "productionEmbed": true,
+    "vet": true,
+    "racePackages": [
+      "generation",
+      "generationjobs",
+      "application"
+    ],
+    "explicitNativeSDKUsed": true,
+    "newNativeWindowVerified": false,
+    "realAccountUsed": false,
+    "staticUIAudit": {
+      "errors": 0,
+      "total": 0,
+      "unresolved": 0,
+      "violations": 0,
+      "warnings": 0
+    },
+    "browser": {
+      "posts": [
+        {
+          "estimateForwarded": false,
+          "n": 3
+        }
+      ],
+      "jobID": "2be6edfc-a75b-44ff-840b-20682f07b5ef",
+      "jobVersion": 2,
+      "status": "succeeded",
+      "candidateCount": 3,
+      "estimate": {
+        "basis": "manual-unit-v1",
+        "currency": "CNY",
+        "unit": "image",
+        "unitPrice": "0.10",
+        "quantity": 3,
+        "amount": "0.30"
+      },
+      "estimateInProviderPayload": false,
+      "estimateInRecipe": false,
+      "backendRestartVerified": true,
+      "postCountAfterRestart": 1,
+      "narrowViewport": {
+        "width": 900,
+        "height": 720,
+        "dialogWidth": 460,
+        "clientHeight": 686,
+        "scrollHeight": 777,
+        "horizontalOverflow": false,
+        "cancelDidNotSubmit": true,
+        "sixDecimalAmount": "0.000003"
+      },
+      "invalidInputFocused": true,
+      "enterDidNotSubmit": true,
+      "viewportReset": true
+    },
+    "temporaryTabClosed": true,
+    "temporaryServersStopped": true
+  },
+  "windowsPackage": {
+    "path": "work/generation-estimate-check/AIVidCut-windows-amd64-estimates.zip",
+    "files": 764,
+    "bytes": 112123686,
+    "sha256": "3d5fe99e22e01d1eba8018a5ba12868070e3556c0b8c3bb57bfe6d139ac2e359",
+    "appSHA256": "c8f12c157f6c287f924c9edc686d8bef7afbcb5b4d022bba09012f2bdab51468",
+    "crcVerified": true,
+    "windowsExecuted": false
+  },
+  "macExecutableSHA256": "a440839839b0997a8e7fe3ebc063d42b3bd782fe7abdf8ceef04d3c26bcbf640",
+  "signAndNoticesBindingsVerified": true,
+  "releaseAudits": {
+    "macos": {
+      "blockers": 0,
+      "reviews": 3,
+      "releaseVerified": false
+    },
+    "windows": {
+      "blockers": 0,
+      "reviews": 30,
+      "releaseVerified": false
+    }
+  },
+  "fullGoalComplete": false,
+  "documentation": {
+    "Markdown文档数": 164,
+    "本地链接检查数": 916,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  }
+}

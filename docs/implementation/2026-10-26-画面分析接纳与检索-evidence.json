@@ -1,0 +1,255 @@
+{
+  "date": "2026-10-26",
+  "scope": "结构化画面分析候选、人工接纳和已接纳字面检索；原完整目标继续",
+  "realModelCalls": 0,
+  "prepared": {
+    "bootstrapBeforeAcceptance": {
+      "clipCount": 0,
+      "dirty": false,
+      "projectId": "source-frame-demo",
+      "revision": 0,
+      "schemaVersion": 2,
+      "sourceEpoch": 2
+    },
+    "candidate": {
+      "analysis": {
+        "acceptedAt": "0001-01-01T00:00:00Z",
+        "assetId": "frame-video",
+        "coverage": "sampled_frames",
+        "frames": [
+          {
+            "assetId": "frame-video",
+            "assetName": "红蓝源视频.mp4",
+            "height": 540,
+            "id": "a9723a8c58a0d53bbf26fda627ebbda61a6487b36c4193bb0c84ceae15e82b38",
+            "imageSha256": "1cb5a74c09bebd1a151ec0e99985b687a0ccce4a8bb697ae90ba80a0af1754f3",
+            "positionUs": 200000,
+            "profile": "detail",
+            "recipeVersion": "detail-jpeg-v1",
+            "requestedPositionUs": 200000,
+            "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+            "width": 960
+          },
+          {
+            "assetId": "frame-video",
+            "assetName": "红蓝源视频.mp4",
+            "height": 540,
+            "id": "ad6ba718f83d12f020936270a5f2e928f8f497d4ddc98e925852572609a1160d",
+            "imageSha256": "2b7e5b92ba204f7b19eee7ffaec494cc6252ea2a178ed9f254fe09a92d373fae",
+            "positionUs": 1200000,
+            "profile": "detail",
+            "recipeVersion": "detail-jpeg-v1",
+            "requestedPositionUs": 1200000,
+            "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+            "width": 960
+          }
+        ],
+        "id": "visual-analysis-dee186f34bde26797ce917e9",
+        "methodVersion": "visual-notes-v1",
+        "notes": [
+          {
+            "evidenceIds": [
+              "a9723a8c58a0d53bbf26fda627ebbda61a6487b36c4193bb0c84ceae15e82b38"
+            ],
+            "id": "visual-analysis-dee186f34bde26797ce917e9-note-1",
+            "kind": "observation",
+            "tags": [
+              "红色",
+              "取样"
+            ],
+            "text": "本地确定性夹具：0.200秒取样为红色画面，不代表整段。"
+          },
+          {
+            "evidenceIds": [
+              "ad6ba718f83d12f020936270a5f2e928f8f497d4ddc98e925852572609a1160d"
+            ],
+            "id": "visual-analysis-dee186f34bde26797ce917e9-note-2",
+            "kind": "inference",
+            "tags": [
+              "开场"
+            ],
+            "text": "本地夹具的未确认推断：蓝色画面可能用于开场；需人工判断。"
+          },
+          {
+            "evidenceIds": [
+              "a9723a8c58a0d53bbf26fda627ebbda61a6487b36c4193bb0c84ceae15e82b38",
+              "ad6ba718f83d12f020936270a5f2e928f8f497d4ddc98e925852572609a1160d"
+            ],
+            "id": "visual-analysis-dee186f34bde26797ce917e9-note-3",
+            "kind": "suggestion",
+            "tags": [
+              "色彩对比",
+              "开场"
+            ],
+            "text": "本地夹具建议：可以比较红蓝两处取样作为开场方案，不自动改时间线。"
+          }
+        ],
+        "producer": "external-mcp",
+        "sourceDurationUs": 2000000,
+        "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+        "sourceKind": "video"
+      },
+      "canApprove": true,
+      "createdAt": "2026-10-26T03:16:52.887224Z",
+      "id": "visual-analysis-dee186f34bde26797ce917e9",
+      "kind": "analysis",
+      "message": "等待用户在客户端核对；尚未调用收费服务或写出文件",
+      "projectId": "source-frame-demo",
+      "projectRevision": 0,
+      "status": "pending",
+      "updatedAt": "2026-10-26T03:16:52.887224Z"
+    },
+    "fixtureOnly": true,
+    "frames": {
+      "frames": [
+        {
+          "assetId": "frame-video",
+          "assetName": "红蓝源视频.mp4",
+          "height": 540,
+          "id": "a9723a8c58a0d53bbf26fda627ebbda61a6487b36c4193bb0c84ceae15e82b38",
+          "imageSha256": "1cb5a74c09bebd1a151ec0e99985b687a0ccce4a8bb697ae90ba80a0af1754f3",
+          "positionUs": 200000,
+          "profile": "detail",
+          "recipeVersion": "detail-jpeg-v1",
+          "requestedPositionUs": 200000,
+          "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+          "width": 960
+        },
+        {
+          "assetId": "frame-video",
+          "assetName": "红蓝源视频.mp4",
+          "height": 540,
+          "id": "ad6ba718f83d12f020936270a5f2e928f8f497d4ddc98e925852572609a1160d",
+          "imageSha256": "2b7e5b92ba204f7b19eee7ffaec494cc6252ea2a178ed9f254fe09a92d373fae",
+          "positionUs": 1200000,
+          "profile": "detail",
+          "recipeVersion": "detail-jpeg-v1",
+          "requestedPositionUs": 1200000,
+          "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+          "width": 960
+        }
+      ],
+      "note": "依次对应下方JPEG图像；近似源取样，不含时间线/LUT效果。观察需引用证据ID；抽样不能代表未查看的整段。",
+      "projectId": "source-frame-demo",
+      "sourceEpoch": 2
+    },
+    "modelAcceptanceDenied": true,
+    "pixels": [
+      [
+        254,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        254
+      ]
+    ],
+    "realCLIOrModelCalls": 0
+  },
+  "browser": {
+    "errors": [],
+    "acceptRequests": 1,
+    "removeRequests": 1,
+    "modelOrFeeCalls": 0,
+    "final": {
+      "schemaVersion": 2,
+      "revision": 5,
+      "analyses": 1,
+      "dirty": false,
+      "clips": 0
+    },
+    "inspectionWasFixture": true
+  },
+  "management": {
+    "removed": true,
+    "undoRestored": true,
+    "withoutSearch": true,
+    "final": {
+      "schemaVersion": 2,
+      "revision": 7,
+      "analyses": 1,
+      "dirty": false
+    }
+  },
+  "checks": {
+    "go": "全量race21内部包+1测试命令包、vet通过",
+    "frontend": {
+      "files": 36,
+      "tests": 259,
+      "typecheck": "通过",
+      "format": "通过"
+    },
+    "strictUI": {
+      "findings": [],
+      "mode": "strict",
+      "projectRoot": "/Users/xvjialing/projects/aividcut",
+      "schemaVersion": 1,
+      "summary": {
+        "errors": 0,
+        "total": 0,
+        "unresolved": 0,
+        "violations": 0,
+        "warnings": 0
+      }
+    },
+    "designLint": "0 errors/0 warnings/1 token-summary info",
+    "build": {
+      "wailsLatest": "v3.0.0-beta.34",
+      "moduleCLIAndRuntime": "一致",
+      "macOS": "本地自签名通过",
+      "windowsAMD64": "交叉构建通过，未实机",
+      "mainChunkKB": 560.66,
+      "contentChunkKB": 8.02
+    }
+  },
+  "sha256": {
+    "internal/editor/visual_analysis.go": "872e3b7f837f0bb44e5f66f8448f418d1c77dcb37d9b99b7f6ece164bfa20b86",
+    "internal/editor/visual_analysis_test.go": "52f947234ae5965509a7052625ff6487cf20452456a31d1e721a89e7e68a93a0",
+    "internal/editor/model.go": "87cad9fc525c7078751dadd227daa416a1944ca8cdf8ed93e9c4400139a51497",
+    "internal/editor/engine.go": "f4997b797740b9b903d5cadcbbcaa13df71a3de20f8fa6c9ccba250adccbe834",
+    "internal/editor/validate.go": "0527a21daca50a9a84f6d891d9ea46a470e245197f4f302f66b25a4ba1a8e4f5",
+    "internal/projectstore/store.go": "d9051d5c81bb493896dfef0d5cf6f992935e3895a06e5d9e59726e5523968b13",
+    "internal/projectstore/store_test.go": "2233ef0915ddcaec53429fd8ecf8e87888dbb7ea29861df880deffc288762721",
+    "internal/application/visual_analysis.go": "fa35338aab8e6dd3fe5e631184c2e1736ce21389c57fd1b31827563465807e1b",
+    "internal/application/visual_analysis_test.go": "664f8a423ed8b21aaa561c51960195b5095f668983a596514d04ebe3834aaba5",
+    "internal/application/mcp.go": "01fb998bc096350738931803427c65515dfe7ff5389c56276007f0db416433f4",
+    "internal/application/mcp_requests.go": "3e62c8b531b700dce0c009869a89571588e3c44a715145576c16910b7e407043",
+    "internal/application/source_frames.go": "4043e4c28c74ff8382dbc5c3e81fe7c6a123037424684acc55ff2f0b4e9608f3",
+    "internal/application/service.go": "80058d860eec4ec0bf5c2379becd0ce336a3201d76847a6a705f14fb59ac9c83",
+    "internal/contentindex/index.go": "97cf6d8e780becf2ebd55c4f7a2729d1fce297be57f71d295af7231b2aa647fb",
+    "internal/contentindex/index_test.go": "67b78cadf2363c363d53d19eb0df04d191e4a223456177f6f31566e828e8a5a4",
+    "internal/localagent/context_projection.go": "e6ae20476599dfa97c83571c0cb4adf2904e46c685a4d4e1963a35397f811590",
+    "internal/workflows/builtin/source-frames/SKILL.md": "9d317dd652bfb9c42478230f747626bb6d5c4ed66cda0327e6dd1056c5a94b2f",
+    "app.go": "4d54e37461c284c823569eb300c50e5b850e8c4230deebacdc2c53260b7afcf3",
+    "cmd/devserver/main.go": "26f6dc1ed740fff44379eeb5733f1448f6d6e25722851016bb416e0ca5c0a03b",
+    "frontend/src/visual-analysis-types.ts": "f8f9a9f51efe64d82786e03ece6ad9d7f6d83eb05249232fca048b03b6c76d5e",
+    "frontend/src/components/MCPPanel.tsx": "337dca15bf72c3bf0ad7fc979972415e39c3f545c19157bb3b6053a0223e088b",
+    "frontend/src/components/ContentSearchPanel.tsx": "8d1bb17fe086ee2ac664d356e16e4d5c0efe85f52b1f6052d0d603b7d71ed393",
+    "frontend/src/components/SourceFrameEvidenceViewer.tsx": "56006fe164046e4fdb1ae8ab98b2f8f5ce5b673f9509da15968a5fc44253e5da",
+    "frontend/src/App.tsx": "995fa7325f9fda2bc1cd03babcbd0ebcd69c6adf91b4b547c5fce609939af763",
+    "frontend/src/lib/bridge.ts": "49a18119cd8f9315b385a3cea4c3bb0174ded74d193ba58cf745326ae9d61f6e",
+    "frontend/tests/content-search-dom.test.tsx": "740f7249f43308d80ce1382e2992bdf3aa3be7529aef9064e7a6adecc89f56db",
+    "frontend/tests/workflow-mcp-dom.test.tsx": "3fcfb3398e24cf79a4510c9d5254deef0c261888240823c229b36f4932138a69",
+    "frontend/tests/visual-analysis-fixtures.ts": "115f5354a9d8606446b5ce7ab38bbc232d0460c39537851d8a15532d8cf860b1",
+    "build/bin/AIVidCut.app/Contents/MacOS/AIVidCut": "d81a186cead7ea797ea9bfa8b7365392a1aa05dc492b5c1f24f0ff2ca35427a9",
+    "build/bin/AIVidCut.exe": "b7c3cf8ed7a17280211aaa7375dee205a33ee6ce10e5f17d62a9553f3da2e27e",
+    "output/playwright/visual-analysis-review.png": "1506aa1285c1e77474d120cc3f5e60beefb9b123f6131f818fb74779ebe3a7ef",
+    "output/playwright/visual-analysis-search-900.png": "369b9fc24fbffb2aee4ceabe565245ea819342ee76603477b4bc3e2d0d781620",
+    "output/playwright/visual-analysis-manage-900.png": "016aea67ba67473dcc47c8a33af84cc32bd5cfb61f0c33e1712541ee1affe210"
+  },
+  "documentation": {
+    "Markdown文档数": 79,
+    "本地链接检查数": 398,
+    "正文检查文档数": 52,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browser": "aividcut-visual已关闭",
+    "vite": "65440 exit130",
+    "goDevserver": "1911 exit1"
+  }
+}

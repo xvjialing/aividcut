@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R01",
+    "FW-R11",
+    "FW-R12",
+    "FW-R15"
+  ],
+  "comparison": {
+    "samples": [
+      {
+        "name": "standard-1",
+        "mode": "standard",
+        "rssMiB": 952.0,
+        "peakCPUPercent": 361.8721349913529,
+        "durationMs": 1649.119,
+        "bytes": 3562005,
+        "ssimToLosslessYUV": 0.998017,
+        "sha256": "6c0ade267ec9bae53b1d2789885bc382ec69445f0083d8e61edfec0c4b0396f3",
+        "frames": 90,
+        "fps": "30000/1001",
+        "durationSeconds": 3.003,
+        "PCMBytes": 1153152,
+        "PCMIdentical": true,
+        "encoderSEI": "x264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=2 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00"
+      },
+      {
+        "name": "standard-2",
+        "mode": "standard",
+        "rssMiB": 950.5625,
+        "peakCPUPercent": 354.80144778089766,
+        "durationMs": 1626.83,
+        "bytes": 3562005,
+        "ssimToLosslessYUV": 0.998017,
+        "sha256": "6c0ade267ec9bae53b1d2789885bc382ec69445f0083d8e61edfec0c4b0396f3",
+        "frames": 90,
+        "fps": "30000/1001",
+        "durationSeconds": 3.003,
+        "PCMBytes": 1153152,
+        "PCMIdentical": true,
+        "encoderSEI": "x264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=2 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00"
+      },
+      {
+        "name": "standard-3",
+        "mode": "standard",
+        "rssMiB": 949.078125,
+        "peakCPUPercent": 354.1091093283728,
+        "durationMs": 1620.758,
+        "bytes": 3562005,
+        "ssimToLosslessYUV": 0.998017,
+        "sha256": "6c0ade267ec9bae53b1d2789885bc382ec69445f0083d8e61edfec0c4b0396f3",
+        "frames": 90,
+        "fps": "30000/1001",
+        "durationSeconds": 3.003,
+        "PCMBytes": 1153152,
+        "PCMIdentical": true,
+        "encoderSEI": "x264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=2 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00"
+      },
+      {
+        "name": "lower-1",
+        "mode": "lower",
+        "rssMiB": 642.3125,
+        "peakCPUPercent": 203.6420844806983,
+        "durationMs": 3236.091,
+        "bytes": 3428282,
+        "ssimToLosslessYUV": 0.997717,
+        "sha256": "8bd6c2fd21196e6a9a9a7120be64fed1ddba3578083a27aa8bb7132c782cf720",
+        "frames": 90,
+        "fps": "30000/1001",
+        "durationSeconds": 3.003,
+        "PCMBytes": 1153152,
+        "PCMIdentical": true,
+        "encoderSEI": "x264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=4 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00"
+      },
+      {
+        "name": "lower-2",
+        "mode": "lower",
+        "rssMiB": 642.0625,
+        "peakCPUPercent": 207.63695526317093,
+        "durationMs": 3235.538,
+        "bytes": 3428282,
+        "ssimToLosslessYUV": 0.997717,
+        "sha256": "8bd6c2fd21196e6a9a9a7120be64fed1ddba3578083a27aa8bb7132c782cf720",
+        "frames": 90,
+        "fps": "30000/1001",
+        "durationSeconds": 3.003,
+        "PCMBytes": 1153152,
+        "PCMIdentical": true,
+        "encoderSEI": "x264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=4 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00"
+      },
+      {
+        "name": "lower-3",
+        "mode": "lower",
+        "rssMiB": 642.90625,
+        "peakCPUPercent": 205.42471985593465,
+        "durationMs": 3234.445,
+        "bytes": 3428282,
+        "ssimToLosslessYUV": 0.997717,
+        "sha256": "8bd6c2fd21196e6a9a9a7120be64fed1ddba3578083a27aa8bb7132c782cf720",
+        "frames": 90,
+        "fps": "30000/1001",
+        "durationSeconds": 3.003,
+        "PCMBytes": 1153152,
+        "PCMIdentical": true,
+        "encoderSEI": "x264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=4 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00"
+      }
+    ],
+    "summary": {
+      "standard": {
+        "medianRSSMiB": 950.5625,
+        "medianDurationMs": 1626.83,
+        "ssimMin": 0.998017
+      },
+      "lower": {
+        "medianRSSMiB": 642.3125,
+        "medianDurationMs": 3235.538,
+        "ssimMin": 0.997717
+      },
+      "rssReductionPercent": 32.42816753238215,
+      "standardBitstreamMatchesBeforeFeature": true
+    },
+    "qualityTradeoffDisclosed": true,
+    "noMemoryHardLimitClaim": true,
+    "realModelCalls": 0
+  },
+  "ui": {
+    "projectUnchanged": true,
+    "dirtyUndoUnchanged": true,
+    "width": 3840,
+    "height": 2160,
+    "frames": 90,
+    "durationSeconds": 3.003,
+    "sha256": "8bd6c2fd21196e6a9a9a7120be64fed1ddba3578083a27aa8bb7132c782cf720",
+    "lowerMemoryEncoderConfirmed": true,
+    "encoderSEI": "x264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=1 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=4 rc=crf mbtree=1 crf=20.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00"
+  },
+  "frontend": {
+    "files": 53,
+    "tests": 352
+  },
+  "realModelCalls": 0,
+  "pending": [
+    "自然长片/主观质量/跨设备",
+    "Windows原生与并发资源",
+    "完整WebView/GPU",
+    "原模型CLI及发布目标"
+  ],
+  "go": {
+    "racePassed": true,
+    "testedPackages": 31,
+    "vetPassed": true,
+    "nativePlaybackExporterPassed": true,
+    "lowerMemoryCancellationPassed": true,
+    "mcpPreparedWithoutExportPassed": true
+  },
+  "build": {
+    "macosSelfSigned": true,
+    "windowsAmd64": true,
+    "productionResourcesPassed": true,
+    "wailsLatest": "v3.0.0"
+  },
+  "design": {
+    "strictErrors": 0,
+    "strictWarnings": 0,
+    "lintErrors": 0,
+    "lintWarnings": 0
+  },
+  "documentation": {
+    "Markdown文档数": 115,
+    "本地链接检查数": 572,
+    "正文检查文档数": 88,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "backendStopped": true,
+    "viteStopped": true,
+    "agentTabClosed": true,
+    "viewportReset": true
+  }
+}

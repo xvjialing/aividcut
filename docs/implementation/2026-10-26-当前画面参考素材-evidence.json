@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-26",
+  "status": "本阶段局部通过，完整目标继续",
+  "requirements": [
+    "FW-R01",
+    "FW-R04",
+    "FW-R09",
+    "FW-R10",
+    "FW-R11",
+    "FW-R12",
+    "FW-R17"
+  ],
+  "wails": {
+    "latestVerified": "v3.0.0-beta.34",
+    "goCliRuntimeAligned": true,
+    "queryEvidence": "work/frame-capture-check/wails-latest.json"
+  },
+  "tests": {
+    "frontendFiles": 41,
+    "frontendTests": 282,
+    "frontendTypecheck": true,
+    "frontendFormat": true,
+    "goFullRace": true,
+    "goAffectedFinalRace": true,
+    "goVet": true,
+    "productionRoot": true
+  },
+  "actualMedia": {
+    "canvas": [
+      640,
+      360
+    ],
+    "frame": 36,
+    "subtitleChangedPixels": 2494,
+    "lutBlueBecomesRed": true,
+    "sourceJPEGRemainsBlue": true,
+    "sourcePositionUs": 1200000,
+    "originalFullDespiteQuarterAndInvalidProxy": true,
+    "referencePNGBytesRead": 8112,
+    "evidence": "work/frame-capture-check/actual-media.log"
+  },
+  "browser": {
+    "timeline": {
+      "width": 3840,
+      "height": 2160,
+      "frame": 7
+    },
+    "source": {
+      "width": 960,
+      "height": 540
+    },
+    "captures": 2,
+    "clipsUnchanged": true,
+    "undoNoReplay": true,
+    "redoRestored": true,
+    "noConnectionNeeded": true,
+    "failedRetry": true,
+    "errors": [],
+    "modelSubmissions": []
+  },
+  "layout": {
+    "documentScrollTop": 0,
+    "ownedScroller": 1
+  },
+  "saveReopen": {
+    "saved": true,
+    "reopened": true,
+    "capturedAssets": 2,
+    "projectVersion": 2,
+    "sourceEpochChanged": true,
+    "clipsUnchanged": true
+  },
+  "persistentFiles": {
+    "schemaVersion": 2,
+    "capturedFiles": [
+      {
+        "kind": "timeline",
+        "width": 3840,
+        "height": 2160,
+        "bytes": 1153925,
+        "sha256": "05dabfbb95ccfc55c5e5f7c6808dd9b5b8f40eaf410fa6cc14f32551931227b8",
+        "originApplied": true
+      },
+      {
+        "kind": "source",
+        "width": 960,
+        "height": 540,
+        "bytes": 22428,
+        "sha256": "2cabcef55474334a2ec1f00b0af061e72be63bd2046ed6ed0b9580c96f5e864d",
+        "originApplied": true
+      }
+    ],
+    "allFingerprintsVerified": true
+  },
+  "builds": {
+    "macOSLocalSelfSigned": true,
+    "windowsAmd64CrossCompile": true,
+    "newNativeWindowAcceptance": false,
+    "mainJSKilobytes": 571.61,
+    "captureLazyJSKilobytes": 5.34,
+    "mainChunkWarning": true,
+    "productionSDKLinkerWarningsRemain": true
+  },
+  "realModelCalls": 0,
+  "paidGenerationCalls": 0,
+  "realCLIInferenceCalls": 0,
+  "accountAcceptance": "用户要求后置",
+  "limits": [
+    "源JPEG最高960×540且为近似源位置",
+    "来源清单为应用伴随资料；工程迁移需要带走素材并重新链接",
+    "没有新增HDR/广色域或全部自然媒体组合保证",
+    "新功能双端原生操作及Windows实机仍待",
+    "本轮C++未改；没有新增worker/ASan覆盖",
+    "完整P0–P6和原需求范围未完成"
+  ],
+  "screenshots": [
+    "output/playwright/frame-capture-wide.png",
+    "output/playwright/frame-capture-900.png"
+  ],
+  "designAudit": {
+    "errors": 0,
+    "total": 0,
+    "unresolved": 0,
+    "violations": 0,
+    "warnings": 0
+  },
+  "designLint": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "documentation": {
+    "Markdown文档数": 89,
+    "本地链接检查数": 442,
+    "正文检查文档数": 62,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browserSessionClosed": "aividcut-capture",
+    "viteExit": 130,
+    "goDevserverExit": 1,
+    "nativeProcessStarted": false
+  }
+}

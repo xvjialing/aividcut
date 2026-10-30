@@ -1,0 +1,259 @@
+{
+  "date": "2026-10-26",
+  "scope": "Agent源画面输入与证据局部验收，原完整目标继续",
+  "realCLIOrModelCalls": 0,
+  "fixture": {
+    "dirty": false,
+    "fixtureOnly": true,
+    "frames": [
+      {
+        "id": "a9723a8c58a0d53bbf26fda627ebbda61a6487b36c4193bb0c84ceae15e82b38",
+        "assetId": "frame-video",
+        "assetName": "红蓝源视频.mp4",
+        "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+        "requestedPositionUs": 200000,
+        "positionUs": 200000,
+        "imageSha256": "1cb5a74c09bebd1a151ec0e99985b687a0ccce4a8bb697ae90ba80a0af1754f3",
+        "width": 960,
+        "height": 540,
+        "profile": "detail",
+        "recipeVersion": "detail-jpeg-v1"
+      },
+      {
+        "id": "ad6ba718f83d12f020936270a5f2e928f8f497d4ddc98e925852572609a1160d",
+        "assetId": "frame-video",
+        "assetName": "红蓝源视频.mp4",
+        "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+        "requestedPositionUs": 1200000,
+        "positionUs": 1200000,
+        "imageSha256": "2b7e5b92ba204f7b19eee7ffaec494cc6252ea2a178ed9f254fe09a92d373fae",
+        "width": 960,
+        "height": 540,
+        "profile": "detail",
+        "recipeVersion": "detail-jpeg-v1"
+      },
+      {
+        "id": "383f91367f551718d01c9211e2febd9c81037ee36ca94bfff715bb64b6a51922",
+        "assetId": "frame-photo",
+        "assetName": "绿色源图.png",
+        "sourceFingerprint": "sha256:eafe34afb66322e036a70f8bda8df03b6e11a9c656bcfbe8059976e11891a66d",
+        "requestedPositionUs": 0,
+        "positionUs": 0,
+        "imageSha256": "982e372c670662486ea34b1cdf33d028b030c735ef044c7d6d1fd37663b725d0",
+        "width": 960,
+        "height": 540,
+        "profile": "detail",
+        "recipeVersion": "detail-jpeg-v1"
+      }
+    ],
+    "pixels": [
+      [
+        254,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        254
+      ],
+      [
+        0,
+        181,
+        0
+      ]
+    ],
+    "realCLIOrModelCalls": 0,
+    "record": {
+      "id": "frame-execution-bab62e4399d4349229440aaa",
+      "provider": "codex",
+      "projectId": "source-frame-demo",
+      "projectRevision": 0,
+      "endRevision": 0,
+      "allowEdits": false,
+      "allowSourceFrames": true,
+      "selection": [],
+      "workflow": "manual-plan",
+      "status": "succeeded",
+      "stage": "completed",
+      "message": "CLI 执行已结束，请核对工程与工具记录；模型请求仍需人工确认",
+      "summary": "本地验收夹具：已通过MCP读取3份源图像与哈希；没有调用真实CLI或模型，没有编辑工程。",
+      "frameEvidence": [
+        {
+          "id": "a9723a8c58a0d53bbf26fda627ebbda61a6487b36c4193bb0c84ceae15e82b38",
+          "assetId": "frame-video",
+          "assetName": "红蓝源视频.mp4",
+          "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+          "requestedPositionUs": 200000,
+          "positionUs": 200000,
+          "imageSha256": "1cb5a74c09bebd1a151ec0e99985b687a0ccce4a8bb697ae90ba80a0af1754f3",
+          "width": 960,
+          "height": 540,
+          "profile": "detail",
+          "recipeVersion": "detail-jpeg-v1"
+        },
+        {
+          "id": "ad6ba718f83d12f020936270a5f2e928f8f497d4ddc98e925852572609a1160d",
+          "assetId": "frame-video",
+          "assetName": "红蓝源视频.mp4",
+          "sourceFingerprint": "sha256:32dda24b10959f69fcb0af57017345133bb0517703a76aca10514fbc1dfacf93",
+          "requestedPositionUs": 1200000,
+          "positionUs": 1200000,
+          "imageSha256": "2b7e5b92ba204f7b19eee7ffaec494cc6252ea2a178ed9f254fe09a92d373fae",
+          "width": 960,
+          "height": 540,
+          "profile": "detail",
+          "recipeVersion": "detail-jpeg-v1"
+        },
+        {
+          "id": "383f91367f551718d01c9211e2febd9c81037ee36ca94bfff715bb64b6a51922",
+          "assetId": "frame-photo",
+          "assetName": "绿色源图.png",
+          "sourceFingerprint": "sha256:eafe34afb66322e036a70f8bda8df03b6e11a9c656bcfbe8059976e11891a66d",
+          "requestedPositionUs": 0,
+          "positionUs": 0,
+          "imageSha256": "982e372c670662486ea34b1cdf33d028b030c735ef044c7d6d1fd37663b725d0",
+          "width": 960,
+          "height": 540,
+          "profile": "detail",
+          "recipeVersion": "detail-jpeg-v1"
+        }
+      ],
+      "createdAt": "2026-10-26T02:21:52.759271Z",
+      "updatedAt": "2026-10-26T02:21:52.863643Z",
+      "audit": [
+        {
+          "id": "call-fa73008532fec164270dab6c",
+          "tool": "aividcut_read_source_frames",
+          "success": true,
+          "revision": 0,
+          "createdAt": "2026-10-26T02:21:52.818625Z"
+        },
+        {
+          "id": "call-6caa6ffa8ff75a81eeb47310",
+          "tool": "aividcut_read_source_frames",
+          "success": true,
+          "revision": 0,
+          "createdAt": "2026-10-26T02:21:52.852722Z"
+        }
+      ],
+      "warnings": [
+        "选区用于任务上下文，编辑许可覆盖整个当前工程。",
+        "每批工具编辑可以撤销；取消会保留已完成编辑。"
+      ]
+    },
+    "revision": 0
+  },
+  "browser": {
+    "images": [
+      {
+        "width": 960,
+        "height": 540
+      },
+      {
+        "width": 960,
+        "height": 540
+      },
+      {
+        "width": 960,
+        "height": 540
+      }
+    ],
+    "errors": [],
+    "sourceFrameReads": 5,
+    "cliOrGenerationStarts": 0,
+    "recordCount": 1,
+    "permissions": {
+      "sourceFrames": true,
+      "edits": false
+    },
+    "final": {
+      "dirty": false,
+      "revision": 0
+    },
+    "inspectionStatusWasFixture": true
+  },
+  "checks": {
+    "go": "全量race21个内部包+1个测试命令包及vet通过；最终高分辨率入口和编码相关race/vet复验通过",
+    "frontend": {
+      "files": 36,
+      "tests": 256,
+      "typecheck": "通过",
+      "format": "通过"
+    },
+    "uiAudit": {
+      "findings": [],
+      "mode": "strict",
+      "projectRoot": "/Users/xvjialing/projects/aividcut",
+      "schemaVersion": 1,
+      "summary": {
+        "errors": 0,
+        "total": 0,
+        "unresolved": 0,
+        "violations": 0,
+        "warnings": 0
+      }
+    },
+    "designLint": "0 errors/0 warnings/1 token-summary info",
+    "wailsLatest": "v3.0.0-beta.34",
+    "build": {
+      "macOS": "本地自签名通过",
+      "windowsAMD64": "交叉编译通过，未实机",
+      "mainChunkKB": 555.17,
+      "agentExecutionChunkKB": 20.3
+    }
+  },
+  "sha256": {
+    "internal/media/thumbnail.go": "f2819e334136a074c12f05419930fad489ac8d582b82657cbf0493f21cb5b397",
+    "internal/media/source_cache.go": "f6fda466ee14d9fb42456cea73d9c89955fa9b890143f74fbc75bbb65c759db4",
+    "internal/localmedia/server.go": "8fd30a4122b99f2d3a74b3df749a66eb0c74b593d23e98928be4a5ce215bc52b",
+    "internal/localmedia/thumbnail_test.go": "6304b8e0378e4ad9348b29748475af8463c5dfd7d33277d0d3afc48da591981a",
+    "internal/mcpserver/types.go": "1ad86fed9cc3e453007cc2a195929ae2b6c799e35341008b11844d7527c71af8",
+    "internal/mcpserver/tools.go": "884674d0452ee4f47dde619b56cdb6c090f4e2f0dbce29c99f8e2e64c1ec230b",
+    "internal/mcpserver/images_test.go": "915a7508d47a58485689e46cc3c89d0f44e3c3a91f72065a7c95f899d86591ce",
+    "internal/application/source_frames.go": "fdb034851d7ea64dc49ba03473c83a0deba25a8e096d2178916595c099bc1b94",
+    "internal/application/thumbnail.go": "114caef99b2fc25f2e50310a72efa70ed3ecc8f762a88385851d170cb60c1cb2",
+    "internal/application/service.go": "baac9953558b6674567ea8a1fe5a3f3d565a4f4cbd413d2bfdb673f763bbacea",
+    "internal/application/mcp.go": "8939229911226e2d1460d4badeabe01ce3d3ace21fc7b9ef2da274d44faf29b2",
+    "internal/application/agent_execution.go": "34bcc35131a99392ac5f9dd424cac437702c9597298b1297916abc70b4f296d1",
+    "internal/application/source_frames_test.go": "153d69b6c9d27c99335b739ceeef9fa84315ba993878243def3dbb2c82c057bb",
+    "internal/localagent/execute.go": "bba81f04056906f632a73d0805498e0c28da25acbe8fd4fa058f58ba9f1af192",
+    "internal/localagent/process.go": "fba08b15720f3ae4d1f6511d91d79ce33c697f3dbca11348287f3b612cd9e7ed",
+    "internal/localagent/types.go": "e6f127f297d8f92af3a79695cdececa29a7a96ac28a07dfb2fb617ab79e8ae6a",
+    "internal/localagent/frame_stream_test.go": "8ce40388119821ef6b888aea8b7f41bd5fe992ba4bc20436a1b1214a35491d09",
+    "internal/workflows/skills.go": "13a4e357c2e068cedb2f0cf6f681b3e27726bd4e3737aa9eca011bbb3d81f630",
+    "internal/workflows/builtin/source-frames/SKILL.md": "3e753ab1b14e7b7aaa6bc0510a7873a2bb109ed534645b5cac1fcf8c8c1cdef4",
+    "app.go": "505171e4fe26ff6bf9c971f0b5a1ed311c58a051a67c1c0a1cf67bfd07620a33",
+    "cmd/devserver/main.go": "bd1dc82217eb4625a33374771f3a71b1159257dd34d0ff38a0962a06e97e4d75",
+    "frontend/src/source-frame-types.ts": "5e1c452c991eb9064bb3b25fd40b395d8b0ee33e1e6b85c2a7762342cee5328f",
+    "frontend/src/components/SourceFrameEvidenceViewer.tsx": "8cf6d39f1c6c496fa4d019caab3d886666af7dee523fa3f62d155cebb487b0b9",
+    "frontend/src/components/AgentExecutionPanel.tsx": "6812d9b79be5b3e8a913d37da14c7bbcc25681a26ee121cc4897f5cb88faa8a0",
+    "frontend/src/components/MCPPanel.tsx": "1108eafb057edd1cfc36930241e6f0513a19e26188d5ee7eedfe785458225a5e",
+    "frontend/src/App.tsx": "828a0839755aade404bc4b8d2c0aca5b801c23db2332f81c5de9cafcd9e82f31",
+    "frontend/src/lib/bridge.ts": "beea3bc2b975cff5c590bda21e97aee16af23cf71af7f5c3fe49da598bc05351",
+    "frontend/tests/source-frame-dom.test.tsx": "24d51bc58bc96da8f1b954f0549ae1db1fc4f0fa7823d2ddae3d7b87f87125aa",
+    "frontend/tests/execution-replacement-dom.test.tsx": "c120aebacd0333b6bb1a5095aa331f46546705c16fa3afe6b52d26c4b41c33ae",
+    "frontend/tests/workflow-mcp-dom.test.tsx": "f93beb69e7e0519379e34c31dfca4feb5a32def6a219336a2c2335c97b3cc3f9",
+    "build/bin/AIVidCut.app/Contents/MacOS/AIVidCut": "d8fe3ac688d000e33c13368725849d7d3ec88afcb15c5d3139fa53e06fdd1748",
+    "build/bin/AIVidCut.exe": "763dc786d0660dc518043151743676466e74e7db6274d36458a5fc404a2f71df",
+    "output/playwright/source-frame-permission.png": "9ef4aed40e44788bb6358411337bfa96d6cf2ba4d21261243acec174f756866c",
+    "output/playwright/source-frame-evidence-0.png": "f4100dcea8eb372632d61900a775332f025968fb048e7e9779584e5dd274f3f9",
+    "output/playwright/source-frame-evidence-1.png": "251227b0d471e29612a172059a43a00c3fb64f3942254a1ceffc6d9498fb746c",
+    "output/playwright/source-frame-evidence-2.png": "0b57e609d6fd57f386bbdb2ccaee2bb867767f0a3cfe3f3d3833c27e1acdcc19",
+    "output/playwright/source-frame-records-900.png": "80e323d9f089e4a8f35944c7f39cac7ad37aac78d1ad7aa78b9524c3f5d6be01"
+  },
+  "documentation": {
+    "Markdown文档数": 77,
+    "本地链接检查数": 385,
+    "正文检查文档数": 50,
+    "需求追踪数": 17,
+    "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+    "错误": []
+  },
+  "cleanup": {
+    "browser": "aividcut-frames已关闭",
+    "vite": "94897 exit130",
+    "goDevserver": "19964 exit1",
+    "earlierDevserver": "74993 exit1"
+  }
+}

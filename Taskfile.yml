@@ -1,0 +1,19 @@
+version: '3'
+
+vars:
+  GOOS: '{{.GOOS | default OS}}'
+  # Wails CLI接收GOARCH，再将ARCH传入Task；直接task命令才使用ARCH。
+  ARCH: '{{.ARCH | default ARCH}}'
+
+tasks:
+  build:
+    desc: 构建当前平台的 Wails v3 开发交付物
+    cmds:
+      - ./scripts/build_desktop.sh
+    env:
+      GOOS: '{{.GOOS}}'
+      GOARCH: '{{.ARCH}}'
+  package:
+    desc: 构建本机客户端；商业签名与安装器另行验收
+    cmds:
+      - task: build

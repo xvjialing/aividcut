@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-27",
+  "requirements": [
+    "FW-R11",
+    "FW-R14",
+    "FW-R16"
+  ],
+  "bundle": {
+    "sdkSchemaVersion": 2,
+    "payloads": 480,
+    "payloadBytes": 116001728,
+    "embeddedManifestCheckExit": 0,
+    "wrongWindowsTargetRejected": true,
+    "strictCodesignExit": 0,
+    "appBlockers": 0,
+    "appReviews": 3,
+    "releaseVerified": false
+  },
+  "sandbox": {
+    "denyHomebrewReads": true,
+    "denyExternalNetworkWithLoopbackAllowed": true,
+    "framesEach": 90,
+    "samplesEach": 144000,
+    "rgbaAndPCMIdentical": true,
+    "cleanMachineVerified": false
+  },
+  "sandboxNegative": {
+    "deniedHomebrewReadExit": 1,
+    "outputBytes": 0
+  },
+  "lut": {
+    "lutIntensity": 0.35,
+    "framesEach": 90,
+    "samplesEach": 144000,
+    "rgbaAndPCMIdentical": true,
+    "homebrewDenied": true
+  },
+  "exports": [
+    {
+      "phase": "lut-before",
+      "frames": 90,
+      "audioSHA256": "7be693f2b0b15b75f83eba5f082e5be3e0280b995c212df52ad6a761a39e96f0",
+      "videoSHA256": "542890151b1782ec83a4ce4e5be72948181abe0cc1c2912b8a895b13adf2736d"
+    },
+    {
+      "phase": "lut-moved",
+      "frames": 90,
+      "audioSHA256": "7be693f2b0b15b75f83eba5f082e5be3e0280b995c212df52ad6a761a39e96f0",
+      "videoSHA256": "542890151b1782ec83a4ce4e5be72948181abe0cc1c2912b8a895b13adf2736d"
+    }
+  ],
+  "architectureImages": 69,
+  "checks": {
+    "goRacePackages": 34,
+    "goVet": true,
+    "relatedRaceAndVet": true,
+    "nativeSDKTopLevelPassed": 34,
+    "nativeSDKTopLevelSkipped": 1,
+    "nativeSDKSeconds": 22.082,
+    "pythonBoundaryTests": 2,
+    "bundledMacOSBuild": true,
+    "windowsDefaultBuild": true,
+    "windowsManifestToolBuild": true,
+    "productionResources": true,
+    "strictAdhocSignatureVerified": true,
+    "wailsLatest": "3.0.0",
+    "documentation": {
+      "Markdown文档数": 136,
+      "本地链接检查数": 692,
+      "正文检查文档数": 108,
+      "需求追踪数": 17,
+      "原始快照SHA256": "110b45b6b108a2a0b9ed9c70b5bfdb0145ae31c7d412ad4a5c18761fab78cfc3",
+      "错误": []
+    },
+    "pythonSyntax": true,
+    "shellSyntax": true,
+    "nativeSkippedReason": "未指定此前保存的旧表达式worker，未据此声明前后对照通过"
+  },
+  "releaseVerified": false,
+  "paidModelCalls": 0,
+  "newNativeMacGUIVerified": false,
+  "windowsSDKRuntimeVerified": false,
+  "sources": [
+    "https://doc.qt.io/qt-6/macos-deployment.html",
+    "https://doc.qt.io/qt-6/qt-conf.html"
+  ],
+  "limitations": [
+    "私有SDK未公开分发，GPL/Qt对应源码及许可闭包仍待审",
+    "DeveloperID/公证/Windows签名和安装更新未验",
+    "禁止Homebrew的测试不等于全格式/最低系统/干净机器完成",
+    "Windows真实SDK/插件/DLL和原生GUI仍待",
+    "真实模型账户与CLI推理后置，完整原目标继续"
+  ],
+  "cleanup": {
+    "servicesStarted": false,
+    "nativeGUIStarted": false,
+    "externalPublication": false
+  }
+}
