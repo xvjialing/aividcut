@@ -50,7 +50,8 @@ export function useEditor() {
     setBootstrap(value);
     clockRef.current.configure(projectEnd(value.project), fps(value.project.settings));
     if (sequenceChanged) clockRef.current.seek(0);
-    document.title = `${value.project.name}${value.dirty ? ' •' : ''} · AIVidCut`;
+    if (document.documentElement.dataset.appView !== 'settings')
+      document.title = `${value.project.name}${value.dirty ? ' •' : ''} · AIVidCut`;
   }, []);
   const deferExternal = useCallback(
     (revision: number, reason = '外部工具已更改工程，本地属性草稿已保留。') => {

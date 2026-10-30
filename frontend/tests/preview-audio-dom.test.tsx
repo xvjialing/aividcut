@@ -496,3 +496,55 @@ describe('本次素材操作的降级提示', () => {
     expect(document.querySelector('[aria-label="本次操作提示"]')).toBeNull();
   });
 });
+
+it('空白与时间线间隙使用工作区表面，只有可见画面或有效合成帧启用媒体画布', async () => {
+  const api = fakePlaybackAPI();
+  const clock = new PlaybackClock();
+  clock.configure(90, 30);
+  const projectWithGap = {
+    ...playbackProject,
+    clips: [...playbackProject.clips, { ...playbackProject.clips[0], id: 'later', startFrame: 60 }],
+  };
+  const view = (
+    project = projectWithGap,
+    composed: import('../src/types').PreviewFrame | null = null,
+  ) => (
+    <TooltipProvider>
+      <Preview
+        project={project}
+        clock={clock}
+        composed={composed}
+        onImport={vi.fn()}
+        playbackAPI={api}
+        clientReason={() => ''}
+      />
+    </TooltipProvider>
+  );
+  await render(view({ ...playbackProject, clips: [], assets: [] }));
+  expect(container.querySelector<HTMLElement>('.preview-stage')!.dataset.hasPicture).toBe('false');
+  expect(container.querySelector<HTMLElement>('.viewer-empty')!.hidden).toBe(false);
+  await render(view());
+  expect(container.querySelector<HTMLElement>('.preview-stage')!.dataset.hasPicture).toBe('true');
+  await act(async () => clock.seek(30));
+  expect(container.querySelector<HTMLElement>('.preview-stage')!.dataset.hasPicture).toBe('false');
+  expect(container.querySelector<HTMLElement>('.viewer-empty')!.hidden).toBe(false);
+  await render(
+    view(projectWithGap, {
+      url: '/fixture/composed.png',
+      frame: 30,
+      revision: projectWithGap.revision,
+    }),
+  );
+  expect(container.querySelector<HTMLElement>('.preview-stage')!.dataset.hasPicture).toBe('true');
+  expect(container.querySelector<HTMLElement>('.viewer-empty')!.hidden).toBe(true);
+  expect(container.querySelector<HTMLImageElement>('.composed-frame')!.hidden).toBe(false);
+  await render(
+    view(projectWithGap, {
+      url: '/fixture/composed.png',
+      frame: 30,
+      revision: projectWithGap.revision - 1,
+    }),
+  );
+  expect(container.querySelector<HTMLElement>('.preview-stage')!.dataset.hasPicture).toBe('false');
+  expect(container.querySelector<HTMLImageElement>('.composed-frame')!.hidden).toBe(true);
+});

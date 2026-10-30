@@ -10,7 +10,7 @@ export const desktopModule = {
     if (!method) throw new ReferenceError('未知的桌面方法');
     return method(...args);
   },
-  onDesktopEvent: vi.fn(async () => () => {}),
+  onDesktopEvent: vi.fn(async (_name: string, _callback: () => void) => () => {}),
 };
 
 export function installDesktop(methods: Record<string, Method>) {

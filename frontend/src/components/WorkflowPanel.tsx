@@ -12,7 +12,16 @@ import {
   workflowDefaults,
   workflowParameterInactive,
 } from '../lib/workflows';
+import { useSettingsFormState, type SettingsFormEvents } from '../lib/settings';
 import { Button, Field, Input, Modal, Select } from './ui';
+
+export type WorkflowPresetDraft = {
+  workflowId: string;
+  parameters: Record<string, unknown>;
+  presetId?: string;
+  presetVersion?: number;
+};
+export const workflowPresetsChangedEvent = 'settings:workflow-presets-changed';
 
 export function WorkflowPanel({
   project,
@@ -21,6 +30,11 @@ export function WorkflowPanel({
   prepareProject,
   applyToProject,
   api = workflowBridge,
+  presetManagement = false,
+  initialDraft,
+  onManagePresets,
+  onBusyChange,
+  onDirtyChange,
 }: {
   project: Project;
   selection: string[];
@@ -28,7 +42,11 @@ export function WorkflowPanel({
   prepareProject?: () => Promise<Project | null>;
   applyToProject?: (action: () => Promise<Bootstrap>) => Promise<Bootstrap | null>;
   api?: WorkflowAPI;
-}) {
+  presetManagement?: boolean;
+  initialDraft?: WorkflowPresetDraft | null;
+  onManagePresets?: (draft: WorkflowPresetDraft) => void;
+} & SettingsFormEvents) {
+  const [dirty, setDirty] = useState(false);
   const [definitions, setDefinitions] = useState<WorkflowDefinition[]>([]);
   const [presets, setPresets] = useState<WorkflowPreset[]>([]);
   const [definitionID, setDefinitionID] = useState('');
@@ -47,6 +65,7 @@ export function WorkflowPanel({
   const [notice, setNotice] = useState('');
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [effectLimit, setEffectLimit] = useState(20);
+  useSettingsFormState(Boolean(busy), presetManagement && dirty, { onBusyChange, onDirtyChange });
   const pending = useRef(false);
   const alive = useRef(false);
   const reads = useRef(0);
@@ -85,8 +104,11 @@ export function WorkflowPanel({
       if (!alive.current || token !== reads.current) return;
       setDefinitions(catalog || []);
       setPresets(values || []);
+      setPresetID((current) => (values?.some((value) => value.id === current) ? current : ''));
       setDefinitionID((current) =>
-        catalog?.some((value) => value.id === current) ? current : catalog?.[0]?.id || '',
+        catalog?.some((value) => value.id === (initialDraft?.workflowId || current))
+          ? initialDraft?.workflowId || current
+          : catalog?.[0]?.id || '',
       );
       setLoaded(true);
     } catch (cause) {
@@ -105,12 +127,20 @@ export function WorkflowPanel({
     if (loaded) void load();
   }, [project.id, project.revision]);
   useEffect(() => {
-    if (definition) setParameters(workflowDefaults(definition));
+    if (definition)
+      setParameters(
+        initialDraft?.workflowId === definition.id
+          ? { ...workflowDefaults(definition), ...initialDraft.parameters }
+          : workflowDefaults(definition),
+      );
+    setDirty(false);
     if (definition?.id === 'audio-fades') setScope('selection');
     setPreview(null);
     setErrors({});
-    setPresetID('');
-    setPresetBaseVersion(null);
+    setPresetID(
+      initialDraft && initialDraft.workflowId === definition?.id ? initialDraft.presetId || '' : '',
+    );
+    setPresetBaseVersion(initialDraft?.presetVersion ?? null);
     setPresetDialog(null);
   }, [definition?.id, definition?.version, project.id]);
   function validated() {
@@ -128,7 +158,7 @@ export function WorkflowPanel({
   }
   async function generatePreview(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (pending.current || !definition?.available) return;
+    if (presetManagement || pending.current || !definition?.available) return;
     const values = validated();
     if (!values) return;
     if (scope === 'selection' && !activeSelection.length) {
@@ -215,6 +245,8 @@ export function WorkflowPanel({
       setPresetID(value.id);
       setPresetBaseVersion(value.version);
       setPresetDialog(null);
+      setDirty(false);
+      window.dispatchEvent(new Event(workflowPresetsChangedEvent));
       setNotice('参数预设已保存，没有应用到工程。');
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : '预设保存失败，输入保留。');
@@ -233,6 +265,8 @@ export function WorkflowPanel({
       setPresets((current) => current.filter((value) => value.id !== preset.id));
       setPresetID('');
       setPresetDialog(null);
+      setDirty(false);
+      window.dispatchEvent(new Event(workflowPresetsChangedEvent));
       setNotice('预设已删除，当前参数与工程保留。');
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : '预设删除失败。');
@@ -241,9 +275,20 @@ export function WorkflowPanel({
       if (alive.current) setBusy('');
     }
   }
+  useEffect(() => {
+    const changed = () => {
+      if (!presetManagement) void load();
+    };
+    window.addEventListener(workflowPresetsChangedEvent, changed);
+    return () => window.removeEventListener(workflowPresetsChangedEvent, changed);
+  }, [api, presetManagement]);
   return (
     <div className="agent-panel workflow-panel">
-      <p className="field-hint">工作流将参数与已有证据编译为可撤销编辑；预览不调用生成模型。</p>
+      <p className="field-hint">
+        {presetManagement
+          ? '管理可复用参数，保存预设不会执行工作流或修改工程；应用时再检查素材与轨道条件。'
+          : '工作流将参数与已有证据编译为可撤销编辑；预览不调用生成模型。'}
+      </p>
       {error ? (
         <p className="form-error" role="alert">
           {error}
@@ -270,7 +315,7 @@ export function WorkflowPanel({
               {definitions.map((value) => (
                 <option key={value.id} value={value.id}>
                   {value.name}
-                  {value.available ? '' : '（前置条件未满足）'}
+                  {presetManagement || value.available ? '' : '（前置条件未满足）'}
                 </option>
               ))}
             </Select>
@@ -280,7 +325,7 @@ export function WorkflowPanel({
               <p className="field-hint">
                 {definition.description} · 版本 {definition.version}
               </p>
-              {!definition.available ? (
+              {!definition.available && !presetManagement ? (
                 <p className="agent-warning">
                   {definition.reason || '当前工程没有此工作流所需的素材或分析证据。'}
                 </p>
@@ -307,6 +352,22 @@ export function WorkflowPanel({
                     ))}
                 </Select>
               </Field>
+              {onManagePresets ? (
+                <Button
+                  variant="ghost"
+                  disabled={Boolean(busy)}
+                  onClick={() =>
+                    onManagePresets({
+                      workflowId: definition.id,
+                      parameters: { ...parameters },
+                      presetId: presetID,
+                      presetVersion: presetBaseVersion ?? preset?.version,
+                    })
+                  }
+                >
+                  管理预设
+                </Button>
+              ) : null}
               {preset ? (
                 <div className="speech-actions">
                   <Button
@@ -319,16 +380,18 @@ export function WorkflowPanel({
                   >
                     载入预设参数
                   </Button>
-                  <Button
-                    variant="ghost"
-                    disabled={Boolean(busy)}
-                    onClick={() => {
-                      setError('');
-                      setPresetDialog('delete');
-                    }}
-                  >
-                    删除此预设…
-                  </Button>
+                  {!onManagePresets ? (
+                    <Button
+                      variant="ghost"
+                      disabled={Boolean(busy)}
+                      onClick={() => {
+                        setError('');
+                        setPresetDialog('delete');
+                      }}
+                    >
+                      删除此预设…
+                    </Button>
+                  ) : null}
                 </div>
               ) : null}
               {preset && !presetMatches ? (
@@ -340,29 +403,42 @@ export function WorkflowPanel({
                 ref={form}
                 noValidate
                 className="agent-form"
-                onSubmit={(event) => void generatePreview(event)}
+                onChange={() => {
+                  if (presetManagement) setDirty(true);
+                }}
+                onSubmit={(event) => {
+                  if (presetManagement) {
+                    event.preventDefault();
+                    return;
+                  }
+                  void generatePreview(event);
+                }}
               >
-                <Field label={definition.id === 'talking-head' ? '停顿候选来源' : '操作范围'}>
-                  <Select
-                    value={scope}
-                    disabled={Boolean(busy)}
-                    onChange={(event) => {
-                      setScope(event.target.value as 'project' | 'selection');
-                      setPreview(null);
-                    }}
-                  >
-                    <option value="project">整个当前工程</option>
-                    <option value="selection">仅当前选中片段</option>
-                  </Select>
-                </Field>
-                {scope === 'selection' ? (
-                  <p className="field-hint">
-                    {activeSelection.length
-                      ? activeSelection
-                          .map((id) => project.clips.find((clip) => clip.id === id)?.name || id)
-                          .join('、')
-                      : '尚未选择片段，不会扩大为整个工程。'}
-                  </p>
+                {!presetManagement ? (
+                  <>
+                    <Field label={definition.id === 'talking-head' ? '停顿候选来源' : '操作范围'}>
+                      <Select
+                        value={scope}
+                        disabled={Boolean(busy)}
+                        onChange={(event) => {
+                          setScope(event.target.value as 'project' | 'selection');
+                          setPreview(null);
+                        }}
+                      >
+                        <option value="project">整个当前工程</option>
+                        <option value="selection">仅当前选中片段</option>
+                      </Select>
+                    </Field>
+                    {scope === 'selection' ? (
+                      <p className="field-hint">
+                        {activeSelection.length
+                          ? activeSelection
+                              .map((id) => project.clips.find((clip) => clip.id === id)?.name || id)
+                              .join('、')
+                          : '尚未选择片段，不会扩大为整个工程。'}
+                      </p>
+                    ) : null}
+                  </>
                 ) : null}
                 {definition.parameters.map((parameter) => {
                   const inactive = workflowParameterInactive(definition, parameters, parameter.id);
@@ -443,37 +519,46 @@ export function WorkflowPanel({
                   );
                 })}
                 <div className="speech-actions">
-                  <Button
-                    type="submit"
-                    variant="primary"
-                    busy={Boolean(busy)}
-                    disabled={
-                      !definition.available || (scope === 'selection' && !activeSelection.length)
-                    }
-                  >
-                    预览影响
-                  </Button>
-                  <Button
-                    disabled={Boolean(busy)}
-                    onClick={() => {
-                      setPresetName(definition.name);
-                      setError('');
-                      setPresetDialog('new');
-                    }}
-                  >
-                    保存为新预设…
-                  </Button>
-                  {presetMatches ? (
-                    <Button
-                      disabled={Boolean(busy)}
-                      onClick={() => {
-                        setPresetName(preset!.name);
-                        setError('');
-                        setPresetDialog('update');
-                      }}
-                    >
-                      更新此预设…
-                    </Button>
+                  {!presetManagement ? (
+                    <>
+                      <Button
+                        type="submit"
+                        variant="primary"
+                        busy={Boolean(busy)}
+                        disabled={
+                          !definition.available ||
+                          (scope === 'selection' && !activeSelection.length)
+                        }
+                      >
+                        预览影响
+                      </Button>
+                    </>
+                  ) : null}
+                  {!onManagePresets ? (
+                    <>
+                      <Button
+                        disabled={Boolean(busy)}
+                        onClick={() => {
+                          setPresetName(definition.name);
+                          setError('');
+                          setPresetDialog('new');
+                        }}
+                      >
+                        保存为新预设…
+                      </Button>
+                      {presetMatches ? (
+                        <Button
+                          disabled={Boolean(busy)}
+                          onClick={() => {
+                            setPresetName(preset!.name);
+                            setError('');
+                            setPresetDialog('update');
+                          }}
+                        >
+                          更新此预设…
+                        </Button>
+                      ) : null}
+                    </>
                   ) : null}
                 </div>
               </form>
@@ -573,7 +658,10 @@ export function WorkflowPanel({
             <Input
               value={presetName}
               disabled={Boolean(busy)}
-              onChange={(event) => setPresetName(event.target.value)}
+              onChange={(event) => {
+                setPresetName(event.target.value);
+                if (presetManagement) setDirty(true);
+              }}
             />
           </Field>
         ) : (

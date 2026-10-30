@@ -139,7 +139,7 @@ describe('语音提交必须明确上传和计费确认', () => {
     expect(
       Array.from(field('语音模型连接').querySelectorAll('option')).map((option) => option.value),
     ).toEqual(['', speechConnections[0].id]);
-    await click(button('连接'));
+    await click(button('管理连接'));
     expect(document.querySelectorAll('.connection-profile')).toHaveLength(3);
     expect(document.querySelector('[role="dialog"]')?.textContent).toContain('旧语音模型');
     expect(document.querySelector('[role="dialog"]')?.textContent).not.toContain('图片连接');
@@ -246,7 +246,7 @@ describe('语音提交必须明确上传和计费确认', () => {
     const api = fakeSpeechAPI();
     api.saveConnection.mockResolvedValue(speechConnections[0]);
     await render(panel(api));
-    await click(button('连接'));
+    await click(button('管理连接'));
     expect(field('服务商').value).toBe('elevenlabs');
     expect(
       Array.from(field('模型').querySelectorAll('option')).map((option) => option.value),
@@ -465,4 +465,28 @@ describe('源词纠错与解绑', () => {
     });
     expect(onBootstrap).toHaveBeenCalledWith(speechBootstrap);
   });
+});
+
+it('连接在设置删除后刷新有效选择，保留语音草稿并禁止隐式提交', async () => {
+  const api = fakeSpeechAPI(),
+    open = vi.fn();
+  const view = (version: number) => (
+    <SpeechPanel
+      project={speechProject}
+      onBootstrap={vi.fn()}
+      api={api}
+      connectionsVersion={version}
+      onOpenConnections={open}
+    />
+  );
+  await render(view(0));
+  await click(button('配音'));
+  await enter(field('配音文本'), '保留语音草稿');
+  await click(button('管理连接'));
+  expect(open).toHaveBeenCalledOnce();
+  api.getConnections.mockResolvedValue([]);
+  await render(view(1));
+  expect(field('语音模型连接').value).toBe('');
+  expect(field('配音文本').value).toBe('保留语音草稿');
+  expect(api.startSpeechJob).not.toHaveBeenCalled();
 });

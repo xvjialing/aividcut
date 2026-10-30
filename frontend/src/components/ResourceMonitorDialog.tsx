@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import type { ProjectScope } from '../types';
 import type { ResourceAPI, ResourcePhase, ResourceState } from '../resource-types';
 import { resourceAPI, isDesktop } from '../lib/bridge';
-import { Button, Field, Input, Modal, Select } from './ui';
+import { useSettingsFormState, type SettingsFormEvents } from '../lib/settings';
+import { Button, Field, Input, SettingsSurface, Select } from './ui';
 const phases: Record<ResourcePhase, string> = {
   idle: '空闲',
   preview: '预览',
@@ -33,6 +34,9 @@ export function ResourceMonitorDialog({
   onClose,
   onRecording,
   onReturnFocus,
+  inline = false,
+  onBusyChange,
+  onDirtyChange,
   api = resourceAPI,
 }: {
   scope: ProjectScope;
@@ -40,7 +44,7 @@ export function ResourceMonitorDialog({
   onRecording: (value: boolean) => void;
   onReturnFocus: () => void;
   api?: ResourceAPI;
-}) {
+} & SettingsFormEvents & { inline?: boolean }) {
   const [state, setState] = useState<ResourceState | null>(null),
     [phase, setPhase] = useState<ResourcePhase>('preview'),
     [selected, setSelected] = useState(''),
@@ -113,8 +117,10 @@ export function ResourceMonitorDialog({
   const sample = state?.latest,
     snapshot = sample?.snapshot,
     report = state?.reports.find((v) => v.id === selected);
+  useSettingsFormState(Boolean(busy) && busy !== '读取', false, { onBusyChange, onDirtyChange });
   return (
-    <Modal
+    <SettingsSurface
+      inline={inline}
       open
       title="资源诊断"
       description="观察应用及已确认后代进程的采样占用。记录不改变工程，GPU/显存与无法确认归属的进程单独标明。"
@@ -357,9 +363,15 @@ export function ResourceMonitorDialog({
       </div>
       <div className="dialog-actions replacement-dialog-actions">
         <Button disabled={Boolean(busy)} onClick={onClose}>
-          {state?.active ? '关闭窗口，继续记录' : '关闭诊断'}
+          {inline
+            ? state?.active
+              ? '返回应用，继续记录'
+              : '返回应用'
+            : state?.active
+              ? '关闭窗口，继续记录'
+              : '关闭诊断'}
         </Button>
       </div>
-    </Modal>
+    </SettingsSurface>
   );
 }

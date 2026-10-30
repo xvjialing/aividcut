@@ -229,3 +229,17 @@ export function Modal({
     </Dialog.Root>
   );
 }
+
+// 配置表单可嵌入设置页面；原独立弹窗继续复用同一内容与行为。
+export function SettingsSurface({
+  inline = false,
+  ...props
+}: Parameters<typeof Modal>[0] & { inline?: boolean }) {
+  if (!inline) return <Modal {...props} />;
+  return (
+    <section className="settings-form-surface" aria-label={props.title}>
+      {props.description ? <p className="field-hint settings-intro">{props.description}</p> : null}
+      {props.children}
+    </section>
+  );
+}

@@ -10,7 +10,8 @@ import type {
 } from '../snapshot-storage-types';
 import { snapshotStorageAPI } from '../lib/bridge';
 import { collectionSize } from '../lib/project-collect';
-import { Button, Modal, PanelTabs } from './ui';
+import { useSettingsFormState, type SettingsFormEvents } from '../lib/settings';
+import { Button, SettingsSurface, PanelTabs } from './ui';
 import { ProjectSnapshotList } from './ProjectSnapshotList';
 
 export function SnapshotStorageDialog({
@@ -18,6 +19,9 @@ export function SnapshotStorageDialog({
   initialKind,
   onClose,
   onReturnFocus,
+  inline = false,
+  onBusyChange,
+  onDirtyChange,
   api = snapshotStorageAPI,
 }: {
   scope: ProjectScope;
@@ -25,7 +29,7 @@ export function SnapshotStorageDialog({
   onClose: () => void;
   onReturnFocus?: () => void;
   api?: SnapshotStorageAPI;
-}) {
+} & SettingsFormEvents & { inline?: boolean }) {
   const [kind, setKind] = useState<StorageKind>(initialKind),
     [view, setView] = useState<StorageView>('active'),
     [offset, setOffset] = useState(0),
@@ -102,8 +106,10 @@ export function SnapshotStorageDialog({
       if (epoch.current === version) setBusy('');
     }
   }
+  useSettingsFormState(Boolean(busy) && busy !== '读取', false, { onBusyChange, onDirtyChange });
   return (
-    <Modal
+    <SettingsSurface
+      inline={inline}
       open
       title="资料管理"
       className="replacement-dialog snapshot-storage-dialog"
@@ -315,6 +321,6 @@ export function SnapshotStorageDialog({
           )}
         </div>
       </div>
-    </Modal>
+    </SettingsSurface>
   );
 }

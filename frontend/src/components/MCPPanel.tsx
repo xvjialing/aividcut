@@ -17,6 +17,7 @@ export function MCPPanel({
   prepareProject,
   onOpenJobs,
   onOpenExecution,
+  onBusyChange,
   api = mcpBridge,
   getConnections = generationBridge.getConnections,
   native = isDesktop(),
@@ -29,6 +30,7 @@ export function MCPPanel({
   prepareProject?: () => Promise<Project | null>;
   onOpenJobs: (kind: MCPAction['kind']) => void;
   onOpenExecution?: () => void;
+  onBusyChange?: (busy: boolean) => void;
   api?: MCPAPI;
   getConnections?: () => Promise<ConnectionProfile[]>;
   native?: boolean;
@@ -58,6 +60,10 @@ export function MCPPanel({
   const [error, setError] = useState('');
   const [notice, setNotice] = useState('');
   const running = current?.running;
+  useEffect(() => {
+    onBusyChange?.(Boolean(busy));
+  }, [busy, onBusyChange]);
+  useEffect(() => () => onBusyChange?.(false), [onBusyChange]);
   const valid = Boolean(current?.scopeValid && current.projectId === project.id);
   function clearConnection() {
     if (connectionInput.current) connectionInput.current.value = '';
@@ -311,7 +317,7 @@ export function MCPPanel({
     (profile) => profile.id === review?.connectionId || profile.id === review?.speech?.connectionId,
   );
   return (
-    <div className="agent-panel mcp-panel">
+    <div className="agent-panel mcp-panel" aria-busy={Boolean(busy)}>
       <p className="field-hint">
         把当前工程连接到支持 MCP
         的本机工具。只读为默认；普通可撤销编辑可单独允许，收费请求始终需要本客户端确认。
@@ -398,6 +404,9 @@ export function MCPPanel({
             刷新工具状态
           </Button>
         </div>
+        <p className="mcp-operation-status field-hint" role="status">
+          {busy ? `${busy}…` : ''}
+        </p>
       </section>
       <section className="agent-plan">
         <h3>待核对请求</h3>

@@ -4,6 +4,9 @@ name: AIVidCut
 description: 安静、精确的 AI 剪辑工作台，以素材、预览、时间线和选区上下文组织创作。
 colors:
   primary: '#aec9ff'
+  brand: '#aec9ff'
+  onBrand: '#14233c'
+  viewerText: '#a4b0bf'
   onPrimary: '#14233c'
   background: '#11151a'
   surface: '#191e25'
@@ -49,6 +52,9 @@ components:
     backgroundColor: '{colors.raised}'
     textColor: '{colors.text}'
     rounded: '{rounded.DEFAULT}'
+  button-ghost:
+    textColor: '{colors.muted}'
+    rounded: '{rounded.DEFAULT}'
   workspace:
     backgroundColor: '{colors.background}'
     textColor: '{colors.text}'
@@ -57,7 +63,10 @@ components:
     textColor: '{colors.text}'
   viewer:
     backgroundColor: '{colors.viewer}'
-    textColor: '{colors.muted}'
+    textColor: '{colors.viewerText}'
+  brand-mark:
+    backgroundColor: '{colors.brand}'
+    textColor: '{colors.onBrand}'
   secondary-label:
     backgroundColor: '{colors.raised}'
     textColor: '{colors.faint}'
@@ -128,6 +137,8 @@ components:
 | primary/onPrimary | `--color-accent` / `--color-on-accent` | 主要行动、焦点、播放头 |
 | background/surface/raised | `--color-background` / `--color-surface` / `--color-surface-raised` | 工作区、面板、控件层级 |
 | text/muted/faint | `--color-text` / `--color-muted` / `--color-faint` | 文字层级与辅助说明 |
+| workspace viewer | `--color-workspace-viewer` / `--color-workspace-viewer-text` | 跟随主题的预览空态、周边和提示 |
+| brand/onBrand/viewerText | `--color-brand` / `--color-on-brand` / `--color-viewer-text` | 固定品牌标记与黑色媒体画布上的提示 |
 | border/controlBorder | `--color-border` / `--color-control-border` | 装饰分隔与需要辨识的控件边界 |
 | video/audio/text/captionTrack | `--color-track-*` | Timeline 片段，另有图标和文字类型 |
 | typography | `--font-sans` / `--font-mono` / `--text-body` | 控件、内容与等宽时间码 |
@@ -141,6 +152,46 @@ components:
 
 四种片段有对应背景与图标。锁轨以锁图标和纹理表达，不整体降低可读内容的不透明度。禁用操作区别于可点击状态。高对比模式保留系统颜色、滚动条和焦点。
 
+### 客户端外观（2026-10-30）
+
+设置按用户提供的参考图改为同窗口的完整页面，通过 macOS 系统应用名菜单“设置…”进入；工作台不再显示设置按钮。左侧是“返回应用”、“偏好 / 外观”和“连接 / MCP”导航，右侧以“主题”分组和“明暗模式”说明配合三张界面缩略图，提供浅色模式、深色模式、跟随系统。没有已实现内容的分类不展示。MCP 页面复用 MCPPanel 的状态、权限、配置查看/复制、请求核对与记录，不创建第二个连接状态所有者。
+
+设置沿用系统字体与语义颜色，左侧240px（窄桌面200px）、正文分组最大900px。设置有独立滚动区，1100px以下将说明与缩略图上下排列。浅/深缩略图用显式 color-scheme 的 Canvas/CanvasText 系统颜色绘制，不创建第二个应用主题；选中边界、勾选标记和键盘焦点沿既有 accent。原生单选与整卡 label 保留方向键/空格行为。外观即时应用、自动保存，返回应用不回滚。
+
+默认深色数值继续由 frontmatter 镜像；浅色覆盖由 `tokens.css` 的 `:root[data-theme='light']` 唯一维护。根节点的 `data-theme` 只表示实际浅/深色，用户的 system 偏好由 `lib/appearance.ts` 保存和解析。共享控件、滚动条、时间线和弹窗消费同一组语义变量，禁止组件各自反色或使用滤镜。
+
+| 语义变量 | 浅色值 |
+| --- | --- |
+| background / surface / surface-raised / surface-hover | `#f2f5f9` / `#ffffff` / `#e7edf4` / `#dce5ef` |
+| text / muted / faint | `#182330` / `#495b70` / `#566579` |
+| border / border-soft / control-border | `#c5ceda` / `#dce3ec` / `#79899c` |
+| accent / on-accent / selection | `#245ba8` / `#ffffff` / `#d4e3fa` |
+| success / warning / danger | `#236943` / `#805300` / `#ac283d` |
+| track-video / track-audio / track-text / track-caption | `#cdddf2` / `#c9e4da` / `#efdfc5` / `#e3d8ef` |
+| scroll-thumb / scroll-track | `#8b9aab` / `#edf1f6` |
+| overlay / clip-hover | `#17253666` / `#14233c0a` |
+| settings-sidebar / settings-group | `#f8f9fb` / `#f4f5f7` |
+
+深色设置侧栏/分组使用 `#151a20` / `#20262e`，对应 `--color-settings-sidebar` / `--color-settings-group`，仍由 tokens.css 维护。
+
+工作区预览的空态与外围使用 `--color-workspace-viewer`，深色沿 `--color-viewer`，浅色沿 `--color-surface-raised`；空态、音频预览与缺失提示使用 `--color-workspace-viewer-text`（沿主题muted）。仅有可见画面或有效合成检查帧时，实际成片画布使用固定 `--color-viewer` 黑底；覆盖真实媒体的提示仍用 `--color-viewer-text`。空态和媒体画布不再共用固定黑底。品牌标记使用独立 brand/on-brand 变量保留现有配色，与系统图标一致。波形跟随实际主题重新绘制已读数据，不重新读取音频，不改变影片字幕或导出内容的颜色。
+
+### MCP 设置（2026-10-30）
+
+MCP 作为设置的连接分类，正文沿同一900px内容上限、独立滚动所有者、系统字体与全局Token。连接状态/权限、待核对请求、工具记录用现有 settings-group 表面分组并留20px间隔，12px说明支持换行；连接地址允许任意断行，避免窄窗口溢出。助手不再保留单独“工具连接”标签，使用“连接设置”直达同一分类；MCP运行时状态栏才显示只读/可编辑/待重连入口，执行专用会话直达执行记录。
+
+设置分类使用具名button和 aria-current，切换更新页面标题并聚焦标题。MCP的凭据查看及请求核对仍复用共享Modal。启停、查看和审批等操作进行中禁用分类/返回，面板提供 aria-busy 和固定高度进度说明；读取失败可刷新，提交失败保留当前面板。具体权限、作用域和确认规则继续归原MCP契约。
+
+### 工作台精简与设置分类（2026-10-30）
+
+用户已授权按分析顺序实施（FW-R20）。设置分为偏好（外观）、AI与连接（模型服务、本地AI、MCP）、应用（媒体工具、诊断）、创作与资料（工作流预设、存储与恢复）。标题由 SettingsPage 的 settingsNavigation 唯一映射；不增加尚未实现分类。
+
+- 工作台保留素材、预览、时间线、片段属性、创作参数与任务结果。安装/路径/登录/隔离诊断移入本地AI，主任务面板显示短状态与直达入口；规划和执行仍分别判断。
+- ConnectionsDialog、MediaToolsDialog、ResourceMonitorDialog、SnapshotStorageDialog 通过共享 SettingsSurface 内嵌设置，独立宿主仍可使用原Modal变体。颜色与控件不另建系统；表单表面20px留白，复用settings-group与field-pair，长内容由设置正文滚动。
+- ProjectMenu 用原生details/summary展开当前工程的版本、收集与恢复操作。菜单外点/ Escape关闭，动作后关闭并回到工程菜单焦点；不假冒缺少键盘实现的ARIA menu。顶部保留打开/保存/导出，移除重复助手入口；任务、MCP、诊断仅运行时保留必要提示。
+- 模型服务和本地AI配置后只刷新相关元信息，不重建创作表单。API密钥默认遮盖，离开实际清空DOM输入；未保存配置离开需核对，操作忙碌时禁止离开和直接退出。SettingsFormState管理共享状态，不复制业务API。
+- 工作流选择、载入、调参、影响预览和应用继续在工作区；预设管理复用WorkflowPanel的管理模式，继承当前草稿和版本基线，不提供执行按钮。版本/恢复资料整理集中设置，工程恢复本身仍归工程菜单。
+
 ## Typography
 
 正文使用系统与中文回退字体，避免新字体下载引起布局跳动；基础正文 13px，密集元信息使用独立小字号 recipe。时间码使用等宽字体和 tabular-nums，固定数字宽度。
@@ -151,7 +202,7 @@ components:
 
 顶部工程操作与工作区工具栏；左侧素材和 LUT；中间预览、播放控制与选区条；右侧属性/生成/语音/助手/导出任务；下方四类时间线轨道。两侧可收起，时间线高度可拖动或用分隔线方向键调整。
 
-生成在同一右侧面板中切换“创作”和“生成任务”；模型连接复用现有 Modal。参数、计费核对与已保存候选使用原有控件、表面及警告 token，不引入独立主题或大卡片后台。候选区显示实际结果的授权本地 URL，没有结果时不放示例图片。
+生成在同一右侧面板中切换“创作”和“生成任务”；模型连接集中在设置的模型服务分类，以图片/视频和语音分组，复用同一表单所有者；创作面板只保留连接选择与管理入口。参数、计费核对与已保存候选使用原有控件、表面及警告 token，不引入独立主题或大卡片后台。候选区显示实际结果的授权本地 URL，没有结果时不放示例图片。
 
 AI 助手沿用同一侧栏、字段、按钮与 Modal，展示本地 CLI 检测、剪辑规划和记录；不另外建立聊天视觉或终端模拟器。隔离检查和结构化 JSON 采用按需展开，主要摘要直接呈现片段、帧数和操作变化。记录首批显示 12 条，单份摘要首批 8 项，剩余内容由用户展开，避免大历史一次挂载全部 DOM。
 
@@ -182,9 +233,9 @@ AI 助手沿用同一侧栏、字段、按钮与 Modal，展示本地 CLI 检测
 - `frontend/src/lib/use-timeline-clipboard.ts`：工程剪贴板摘要与作用域/版本守卫，Timeline沿共享IconButton/Tooltip提供复制、剪切、粘贴及数量标记；输入与其它面板保留系统行为，操作后聚焦时间线。快照内容留Go，不新增主题。
 - `frontend/src/components/ClipWaveform.tsx` 与 `lib/waveform.ts`：音频及有声视频复用22px源峰值包络；继承片段文字色和轨道底色，只分配可见Canvas，后台读取不驱动播放时钟。名称与修剪入口保持原位，失败在波形位置提供重试。
 - `frontend/src/components/Preview.tsx`：仅挂载当前时间活动素材，区分工作区预览、后端合成检查帧与可选的实时合成预览；未实现的 LUT 工作区效果不显示假成功。
-- `frontend/src/components/ProjectVersionsDialog.tsx`：页头History图标进入具名版本，复用共享Modal/Field/Input/Button与replacement-dialog正文/底部滚动所有者，760px业务宽度；版本按真实时间排序，完整名称可读、操作按钮有界省略。恢复采用同窗核对与自动恢复前备份，不新增Token或第二套未保存保护；关闭回入口焦点。
-- `frontend/src/components/ProjectCollectDialog.tsx`：页头Archive图标进入收集副本，复用760px共享Modal业务宽度与内部表单滚动；核对数量/大小、上级目录和副本名后显式启动，任务沿现有面板。底部使用同一dialog-actions间距/对齐，版本窗口同时补齐该共享类；没有新增色彩Token。
-- `frontend/src/components/RecoveryCenterDialog.tsx`与`ProjectSnapshotList.tsx`：恢复入口LifeBuoy图标及现有count-badge叠加计数，760px业务Modal沿同一正文/底部滚动；与具名版本共用历史条目布局，保持全文、真实时间、修订及来源可读。启动不抢输入焦点，错误沿global-alert/同窗form-error；状态每5秒读取且单一在途，不参与播放时钟，没有新增色彩Token。
+- `frontend/src/components/ProjectVersionsDialog.tsx`：工程名称菜单进入具名版本，复用共享Modal/Field/Input/Button与replacement-dialog正文/底部滚动所有者，760px业务宽度；版本按真实时间排序，完整名称可读、操作按钮有界省略。恢复采用同窗核对与自动恢复前备份，不新增Token或第二套未保存保护；关闭回入口焦点。
+- `frontend/src/components/ProjectCollectDialog.tsx`：工程名称菜单进入收集副本，复用760px共享Modal业务宽度与内部表单滚动；核对数量/大小、上级目录和副本名后显式启动，任务沿现有面板。底部使用同一dialog-actions间距/对齐，版本窗口同时补齐该共享类；没有新增色彩Token。
+- `frontend/src/components/RecoveryCenterDialog.tsx`与`ProjectSnapshotList.tsx`：工程名称菜单的恢复入口与工程名count-badge异常/数量提示，760px业务Modal沿同一正文/底部滚动；与具名版本共用历史条目布局，保持全文、真实时间、修订及来源可读。启动不抢输入焦点，错误沿global-alert/同窗form-error；状态每5秒读取且单一在途，不参与播放时钟，没有新增色彩Token。
 - `frontend/src/components/SnapshotStorageDialog.tsx`：版本和恢复窗口以共享业务入口切到资料管理，不嵌套Modal；760px宽、720px高上限，PanelTabs分类型/位置，历史条目沿同一ProjectSnapshotList。只读信息不猜损坏记录的修订，安全动作先聚焦；危险按钮仅在独立永久删除核对出现，原有Token和样式保持。
 - `frontend/src/components/RealtimePreviewSurface.tsx`、`lib/realtime-playback.ts` 与 `playback/audio-processor.js`：按需加载 Canvas、二进制帧队列与 AudioWorklet，声音实际消费驱动外部播放头；能力和工程校验不通过时明确显示不可用，不启动替代假时钟。
 - `frontend/src/lib/legacy-media.ts`：旧 HTML 媒体的真实声音区间和结束保护；保持近似预览标记，不把浏览器媒体调度称为采样精确。

@@ -13,13 +13,14 @@ import type { Bootstrap, Project } from '../types';
 import { agentBridge } from '../lib/bridge';
 import {
   agentApplyBlocked,
-  agentAuthName,
   agentJobStatus,
   agentNames,
   agentUnavailable,
   formatAgentLogin,
   summarizeAgentCommand,
 } from '../lib/agent';
+import { AgentEnvironmentDetails } from './AgentEnvironmentDetails';
+import { agentEnvironmentChangedEvent } from './LocalAISettings';
 import { Button, Field, Modal, Select } from './ui';
 
 type AgentReview = {
@@ -145,6 +146,7 @@ export function AgentPanel({
   applyToProject,
   prepareProject,
   onOpenGeneration,
+  onOpenSettings,
   api = agentBridge,
 }: {
   project: Project;
@@ -153,6 +155,7 @@ export function AgentPanel({
   applyToProject?: (action: () => Promise<Bootstrap>) => Promise<Bootstrap | null>;
   prepareProject?: () => Promise<Project | null>;
   onOpenGeneration: () => void;
+  onOpenSettings?: () => void;
   api?: AgentAPI;
 }) {
   const [installations, setInstallations] = useState<AgentInstallation[]>([]);
@@ -462,6 +465,13 @@ export function AgentPanel({
     }
   }
 
+  useEffect(() => {
+    const changed = () => {
+      void detect();
+    };
+    window.addEventListener(agentEnvironmentChangedEvent, changed);
+    return () => window.removeEventListener(agentEnvironmentChangedEvent, changed);
+  }, [api]);
   return (
     <div className="agent-panel">
       <div className="agent-toolbar">
@@ -481,15 +491,17 @@ export function AgentPanel({
             规划记录{jobs.length ? ` ${jobs.length}` : ''}
           </Button>
         </div>
-        <Button
-          variant="ghost"
-          busy={loading}
-          disabled={Boolean(busy)}
-          onClick={() => void detect()}
-        >
-          <RefreshCw size={12} />
-          重新检测
-        </Button>
+        {!onOpenSettings ? (
+          <Button
+            variant="ghost"
+            busy={loading}
+            disabled={Boolean(busy)}
+            onClick={() => void detect()}
+          >
+            <RefreshCw size={12} />
+            重新检测
+          </Button>
+        ) : null}
       </div>
       {error ? (
         <p className="form-error" role="alert">
@@ -567,60 +579,20 @@ export function AgentPanel({
               ))}
             </Select>
           </Field>
-          {installation ? (
-            <section className="agent-installation" aria-label={`${agentNames[provider]} 检测结果`}>
-              <div className="job-heading">
-                <strong>
-                  {installation.installed
-                    ? `已安装${installation.version ? ` · ${installation.version}` : ''}`
-                    : '未安装'}
-                </strong>
-                <span>{agentAuthName(installation.authState)}</span>
-              </div>
-              <p className="field-hint">{installation.authReason}</p>
-              <p className={unavailable ? 'agent-warning' : 'agent-validation'}>
-                {unavailable || '当前受限规划条件已通过检测'}
+          {onOpenSettings ? (
+            <div className="agent-setup-summary">
+              <p className={unavailable ? 'agent-warning' : 'field-hint'}>
+                {unavailable
+                  ? `${agentNames[provider]} 暂不可用，请检查本地 AI 设置。`
+                  : `${agentNames[provider]} 已就绪`}
               </p>
-              {installation.path ? <p className="file-path">{installation.path}</p> : null}
-              {installation.profileDirectory ? (
-                <p className="file-path">独立作用域：{installation.profileDirectory}</p>
-              ) : null}
-              <details className="agent-details">
-                <summary>隔离检查与限制</summary>
-                <p className="field-hint">状态：{installation.isolation.status}</p>
-                <ul>
-                  {(installation.isolation.checks || []).map((check) => (
-                    <li key={check.id}>
-                      <strong>
-                        {(
-                          { pass: '通过', fail: '未通过', unknown: '待确认' } as Record<
-                            string,
-                            string
-                          >
-                        )[check.status] || '待确认'}{' '}
-                        · {check.id}
-                      </strong>
-                      <span>{check.reason}</span>
-                      {check.nextAction ? <span>下一步：{check.nextAction}</span> : null}
-                    </li>
-                  ))}
-                </ul>
-                {installation.isolation.missingFlags?.length ? (
-                  <p className="field-hint">
-                    缺少选项：{installation.isolation.missingFlags.join('、')}
-                  </p>
-                ) : null}
-                {(installation.isolation.evidence || []).map((value, index) => (
-                  <p className="field-hint" key={`evidence-${index}`}>
-                    {value}
-                  </p>
-                ))}
-                {(installation.isolation.limitations || []).map((value, index) => (
-                  <p className="agent-warning" key={`limit-${index}`}>
-                    {value}
-                  </p>
-                ))}
-              </details>
+              <Button variant="ghost" onClick={onOpenSettings}>
+                本地 AI 设置
+              </Button>
+            </div>
+          ) : installation ? (
+            <>
+              <AgentEnvironmentDetails installation={installation} mode="plan" />
               <Button
                 variant="ghost"
                 disabled={!installation.installed || Boolean(busy)}
@@ -628,7 +600,7 @@ export function AgentPanel({
               >
                 查看登录说明
               </Button>
-            </section>
+            </>
           ) : (
             <p className="agent-warning">尚未检测到此 CLI。请安装后重新检测，不会使用模拟规划。</p>
           )}

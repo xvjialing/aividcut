@@ -90,6 +90,27 @@ async function render(queue: WaveformQueue, input = asset) {
 }
 
 describe('片段波形状态', () => {
+  it('切换界面外观重绘已缓存波形，不重新请求音频', async () => {
+    const api = { read: vi.fn(async () => tile), cancel: vi.fn(async () => {}) };
+    await render(new WaveformQueue(api));
+    await act(async () => {
+      await new Promise((resolve) => setTimeout(resolve, 10));
+    });
+    const reads = api.read.mock.calls.length;
+    const draws = stroke.mock.calls.length;
+    const canvas = element.querySelector('canvas')!;
+    canvas.style.color = 'rgb(24, 35, 48)';
+    await act(async () => {
+      document.documentElement.dataset.theme = 'light';
+      await new Promise((resolve) => setTimeout(resolve, 10));
+    });
+    expect(stroke.mock.calls.length).toBeGreaterThan(draws);
+    expect((canvas.getContext('2d') as CanvasRenderingContext2D).strokeStyle).toBe(
+      'rgb(24, 35, 48)',
+    );
+    expect(api.read).toHaveBeenCalledTimes(reads);
+    delete document.documentElement.dataset.theme;
+  });
   it('浮点源超过满幅时仍显示在画布边缘，负向过载不消失', async () => {
     const api = {
       read: vi.fn(async () => ({ ...tile, peaks: [{ min: -2, max: -1.5, samples: 480 }] })),

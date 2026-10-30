@@ -82,6 +82,8 @@ type Review = {
 
 export function GenerationPanel({
   project,
+  onOpenConnections,
+  connectionsVersion = 0,
   sourceEpoch,
   currentFrame,
   pausePlayback,
@@ -100,6 +102,8 @@ export function GenerationPanel({
   placementAPI,
 }: {
   project: Project;
+  onOpenConnections?: () => void;
+  connectionsVersion?: number;
   sourceEpoch?: number;
   currentFrame?: () => number;
   pausePlayback?: () => void;
@@ -576,6 +580,10 @@ export function GenerationPanel({
         .catch((cause) => setError(safeConnectionError(cause)));
   }
 
+  useEffect(() => {
+    if (connectionsVersion > 0) connectionChanged();
+  }, [connectionsVersion]);
+
   return (
     <div className="generation-panel">
       <div className="generation-toolbar">
@@ -595,9 +603,13 @@ export function GenerationPanel({
             生成任务{jobs.length ? ` ${jobs.length}` : ''}
           </Button>
         </div>
-        <Button variant="ghost" onClick={() => setShowConnections(true)} disabled={!loaded}>
+        <Button
+          variant="ghost"
+          onClick={() => (onOpenConnections ? onOpenConnections() : setShowConnections(true))}
+          disabled={!loaded}
+        >
           <Settings2 size={13} />
-          连接
+          管理连接
         </Button>
       </div>
       {error ? (
@@ -729,7 +741,11 @@ export function GenerationPanel({
               <div className="generation-empty">
                 <p>先连接你的生成服务</p>
                 <span>保存配置不验证账号，也不会发起收费调用。</span>
-                <Button onClick={() => setShowConnections(true)}>
+                <Button
+                  onClick={() =>
+                    onOpenConnections ? onOpenConnections() : setShowConnections(true)
+                  }
+                >
                   <Plus size={13} />
                   配置模型连接
                 </Button>

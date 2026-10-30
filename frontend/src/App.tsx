@@ -1,5 +1,6 @@
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react';
 import { onDesktopEvent } from './lib/desktop';
+import { ProjectMenu } from './components/ProjectMenu';
 import { SourceThumbnail } from './components/SourceThumbnail';
 const ContentSearchPanel = lazy(() =>
   import('./components/ContentSearchPanel').then((module) => ({
@@ -16,6 +17,11 @@ import {
 import { ExportSettings } from './components/ExportSettings';
 import { NewProjectSettings } from './components/NewProjectSettings';
 import { TrackSettingsDialog } from './components/TrackSettingsDialog';
+import { SettingsPage, settingsHeading, type SettingsSection } from './components/SettingsPage';
+import { LocalAISettings } from './components/LocalAISettings';
+import { ModelServicesSettings, type ModelServiceKind } from './components/ModelServicesSettings';
+import { connectionsChangedEvent } from './lib/settings';
+import { useAppearance } from './lib/appearance';
 import { defaultNewProjectDraft, parseNewProject } from './lib/new-project';
 import { currentSequenceID, currentSequenceName } from './lib/sequences';
 import { sequenceAPI } from './lib/bridge';
@@ -24,20 +30,16 @@ import type { NewProjectErrors } from './lib/new-project';
 import { defaultExportDraft, exportOptions, ExportRangeError } from './lib/export-options';
 import {
   ArrowDownToLine,
-  Archive,
   ArrowLeftToLine,
   ArrowRightToLine,
   AudioLines,
   Captions,
-  ChevronDown,
   ChevronLeft,
   ChevronRight,
   Clapperboard,
   Download,
   Film,
   FolderOpen,
-  History,
-  LifeBuoy,
   Image as ImageIcon,
   LayoutPanelLeft,
   LoaderCircle,
@@ -47,7 +49,6 @@ import {
   Scissors,
   Search,
   Settings2,
-  Sparkles,
   Square,
   StepBack,
   StepForward,
@@ -107,7 +108,7 @@ import { SubtitleLibrary } from './components/SubtitleLibrary';
 import { GenerationPanel } from './components/GenerationPanel';
 import { AgentPanel } from './components/AgentPanel';
 import { SpeechPanel } from './components/SpeechPanel';
-import { WorkflowPanel } from './components/WorkflowPanel';
+import { WorkflowPanel, type WorkflowPresetDraft } from './components/WorkflowPanel';
 import { MCPPanel } from './components/MCPPanel';
 const AgentExecutionPanel = lazy(() =>
   import('./components/AgentExecutionPanel').then((module) => ({
@@ -232,6 +233,43 @@ const statusLabels: Record<Job['status'], string> = {
 };
 
 function App() {
+  const appearance = useAppearance();
+  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [settingsSection, setSettingsSection] = useState<SettingsSection>('appearance');
+  const [settingsBusy, setSettingsBusy] = useState(false);
+  const [settingsFormEpoch, setSettingsFormEpoch] = useState(0);
+  const [settingsDirty, setSettingsDirty] = useState(false);
+  const [settingsDestination, setSettingsDestination] = useState<
+    SettingsSection | 'editor' | 'close-app' | null
+  >(null);
+  const [presetSettingsDraft, setPresetSettingsDraft] = useState<WorkflowPresetDraft | null>(null);
+  const [modelSettingsKind, setModelSettingsKind] = useState<ModelServiceKind>('generation');
+  const [connectionsVersion, setConnectionsVersion] = useState(0);
+  useEffect(() => {
+    const changed = () => setConnectionsVersion((value) => value + 1);
+    window.addEventListener(connectionsChangedEvent, changed);
+    return () => window.removeEventListener(connectionsChangedEvent, changed);
+  }, []);
+  const settingsFormRef = useRef({ busy: settingsBusy, dirty: settingsDirty });
+  settingsFormRef.current = { busy: settingsBusy, dirty: settingsDirty };
+  const [settingsCloseBlocked, setSettingsCloseBlocked] = useState(false);
+  function applySettingsNavigation(next: SettingsSection | 'editor' | 'close-app') {
+    setSettingsDirty(false);
+    settingsFormRef.current.dirty = false;
+    if (next === 'close-app') {
+      // 用户明确放弃后立即清理配置表单，后续工程关闭核对仍可取消。
+      setSettingsFormEpoch((value) => value + 1);
+      window.dispatchEvent(new Event('settings:resume-close'));
+      return;
+    }
+    if (next === 'editor') setSettingsOpen(false);
+    else setSettingsSection(next);
+  }
+  function navigateSettings(next: SettingsSection | 'editor') {
+    if (settingsBusy || next === settingsSection) return;
+    if (settingsDirty) setSettingsDestination(next);
+    else applySettingsNavigation(next);
+  }
   const editor = useEditor();
   const {
     bootstrap,
@@ -258,6 +296,76 @@ function App() {
     checkingClose ||
     checkingTransition ||
     (Boolean(editorBusy) && !['更新片段', '修改工程名称'].includes(editorBusy));
+  const settingsReturnFocus = useRef<HTMLElement | null>(null);
+  const enterSettings = useCallback(() => {
+    const visibleDialog = document.querySelector<HTMLElement>(
+      '[role="dialog"], [role="alertdialog"]',
+    );
+    if (visibleDialog) {
+      visibleDialog.focus();
+      return false;
+    }
+    if (document.querySelector('[data-settings-page]')) {
+      document.getElementById('settings-page-title')?.focus();
+      return true;
+    }
+    settingsReturnFocus.current =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    clock.pause();
+    document.querySelectorAll<HTMLDetailsElement>('.project-menu[open]').forEach((menu) => {
+      menu.open = false;
+    });
+    document
+      .querySelectorAll<HTMLMediaElement>('.editor-shell video, .editor-shell audio')
+      .forEach((media) => media.pause());
+    setSettingsOpen(true);
+    return true;
+  }, [clock]);
+  function openSettingsSection(section: SettingsSection, kind?: ModelServiceKind) {
+    if (!enterSettings()) return;
+    if (kind) setModelSettingsKind(kind);
+    setSettingsSection(section);
+  }
+
+  useEffect(() => {
+    if (!isDesktop()) return;
+    let disposed = false;
+    let stop: (() => void) | undefined;
+    void onDesktopEvent('app:open-settings', enterSettings)
+      .then((unsubscribe) => {
+        if (disposed) unsubscribe();
+        else stop = unsubscribe;
+      })
+      .catch((cause) =>
+        setError(
+          cause instanceof Error ? cause.message : '设置菜单连接失败，请使用快捷键打开设置。',
+        ),
+      );
+    return () => {
+      disposed = true;
+      stop?.();
+    };
+  }, [enterSettings, setError]);
+  useEffect(() => {
+    document.documentElement.dataset.appView = settingsOpen ? 'settings' : 'editor';
+    document.title = settingsOpen
+      ? `${settingsHeading(settingsSection)} · 设置 · AIVidCut`
+      : bootstrap
+        ? `${bootstrap.project.name}${bootstrap.dirty ? ' •' : ''} · AIVidCut`
+        : 'AIVidCut';
+    if (!settingsOpen && settingsReturnFocus.current) {
+      const target = settingsReturnFocus.current;
+      settingsReturnFocus.current = null;
+      if (target.isConnected && target !== document.body) target.focus();
+      else document.getElementById('new-project-trigger')?.focus();
+    }
+  }, [settingsOpen, settingsSection, bootstrap?.project.name, bootstrap?.dirty]);
+  useEffect(
+    () => () => {
+      delete document.documentElement.dataset.appView;
+    },
+    [],
+  );
   const selectionContext = `${bootstrap?.project.id || ''}:${bootstrap?.sourceEpoch || 0}`;
   const selectionContextRef = useRef(selectionContext);
   selectionContextRef.current = selectionContext;
@@ -291,12 +399,10 @@ function App() {
   const [trackSettings, setTrackSettings] = useState<{ snapshot: Bootstrap; track: Track } | null>(
     null,
   );
-  const [mediaToolsOpen, setMediaToolsOpen] = useState(false);
-  const [resourceOpen, setResourceOpen] = useState(false),
-    [resourceRecording, setResourceRecording] = useState(false);
+  const [resourceRecording, setResourceRecording] = useState(false);
   const resourceReady = Boolean(bootstrap);
   useEffect(() => {
-    if (!resourceReady || resourceOpen) return;
+    if (!resourceReady || (settingsOpen && settingsSection === 'diagnostics')) return;
     let alive = true,
       reading = false;
     const read = async () => {
@@ -317,7 +423,7 @@ function App() {
       alive = false;
       if (timer) window.clearInterval(timer);
     };
-  }, [resourceReady, resourceOpen, resourceRecording]);
+  }, [resourceReady, resourceRecording, settingsOpen, settingsSection]);
   const [collectionOpen, setCollectionOpen] = useState(false);
   const [batchRelinkOpen, setBatchRelinkOpen] = useState(false);
   const [sequenceDialog, setSequenceDialog] = useState<import('./types').Bootstrap | null>(null);
@@ -347,9 +453,7 @@ function App() {
     'inspector' | 'assistant' | 'jobs' | 'generation' | 'speech'
   >('inspector');
   const [sideOpen, setSideOpen] = useState(true);
-  const [assistantView, setAssistantView] = useState<'cli' | 'execution' | 'workflows' | 'mcp'>(
-    'cli',
-  );
+  const [assistantView, setAssistantView] = useState<'cli' | 'execution' | 'workflows'>('cli');
   const [leftOpen, setLeftOpen] = useState(true);
   const [dialog, setDialog] = useState<DialogKind>(null);
   const [dialogValue, setDialogValue] = useState('');
@@ -411,10 +515,8 @@ function App() {
       !collectionOpen &&
       !batchRelinkOpen &&
       !sequenceDialog &&
-      !storageKind &&
       !draftsOpen &&
-      !resourceOpen &&
-      !mediaToolsOpen &&
+      !settingsOpen &&
       !editing &&
       !hasEditorDraft() &&
       !hasTimelineGesture() &&
@@ -434,10 +536,8 @@ function App() {
     collectionOpen,
     batchRelinkOpen,
     sequenceDialog,
-    storageKind,
     draftsOpen,
-    resourceOpen,
-    mediaToolsOpen,
+    settingsOpen,
     clock,
   ]);
   useEffect(() => {
@@ -471,7 +571,15 @@ function App() {
     if (!readyForClose || !isDesktop()) return;
     let disposed = false;
     let unsubscribe: (() => void) | undefined;
-    void onDesktopEvent('project:close-request', () => {
+    const checkClose = () => {
+      if (settingsFormRef.current.busy) {
+        setSettingsCloseBlocked(true);
+        return;
+      }
+      if (settingsFormRef.current.dirty) {
+        setSettingsDestination('close-app');
+        return;
+      }
       if (closing.current) return;
       closing.current = true;
       clock.pause();
@@ -500,7 +608,9 @@ function App() {
           setDialog('close');
         })
         .finally(() => setCheckingClose(false));
-    })
+    };
+    window.addEventListener('settings:resume-close', checkClose);
+    void onDesktopEvent('project:close-request', checkClose)
       .then((stop) => {
         if (disposed) {
           stop();
@@ -513,6 +623,7 @@ function App() {
         setError(cause instanceof Error ? cause.message : '关闭保护连接未完成，请先保存工程。'),
       );
     return () => {
+      window.removeEventListener('settings:resume-close', checkClose);
       disposed = true;
       unsubscribe?.();
     };
@@ -889,6 +1000,12 @@ function App() {
       const target = event.target as HTMLElement;
       if (target.closest('[role="dialog"], [role="alertdialog"]')) return;
       const command = event.metaKey || event.ctrlKey;
+      if (command && !event.altKey && !event.shiftKey && event.key === ',') {
+        event.preventDefault();
+        enterSettings();
+        return;
+      }
+      if (settingsOpen) return;
       if (command && event.key.toLowerCase() === 's') {
         event.preventDefault();
         if (target.closest('input, textarea, select, [contenteditable="true"]')) target.blur();
@@ -906,6 +1023,7 @@ function App() {
         }
         return;
       }
+      if (target.closest('summary, .project-menu[open]')) return;
       if (busy || target.closest('input, textarea, select, [contenteditable="true"]')) return;
       const clipboardCommand = timelineClipboardShortcut(event);
       if (clipboardCommand) {
@@ -946,6 +1064,8 @@ function App() {
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [
+    settingsOpen,
+    enterSettings,
     dialog,
     busy,
     save,
@@ -1125,10 +1245,45 @@ function App() {
     }
   }
 
+  const settingsLeaveDialog = (
+    <>
+      <Modal
+        open={settingsDestination !== null}
+        title="放弃未保存的设置？"
+        description="离开此分类会清空尚未保存的输入。已保存设置与当前工程不受影响。"
+        onOpenChange={(open) => {
+          if (!open) setSettingsDestination(null);
+        }}
+      >
+        <div className="dialog-actions">
+          <Button onClick={() => setSettingsDestination(null)}>继续编辑</Button>
+          <Button
+            variant="danger"
+            onClick={() => {
+              if (settingsDestination) applySettingsNavigation(settingsDestination);
+              setSettingsDestination(null);
+            }}
+          >
+            放弃并离开
+          </Button>
+        </div>
+      </Modal>
+      <Modal
+        open={settingsCloseBlocked}
+        title="设置操作尚未完成"
+        description="请等待当前操作结束后再退出，已提交的工程保持不变。"
+        onOpenChange={setSettingsCloseBlocked}
+      >
+        <div className="dialog-actions">
+          <Button onClick={() => setSettingsCloseBlocked(false)}>继续等待</Button>
+        </div>
+      </Modal>
+    </>
+  );
   if (!bootstrap)
     return (
       <TooltipProvider>
-        <div className="connection-screen">
+        <div className="connection-screen" hidden={settingsOpen} inert={settingsOpen}>
           <div className="brand-mark large">
             <Clapperboard size={27} />
           </div>
@@ -1148,6 +1303,41 @@ function App() {
             <LoaderCircle className="spin" size={22} />
           )}
         </div>
+        {settingsOpen ? (
+          <SettingsPage
+            key={settingsFormEpoch}
+            appearance={appearance}
+            section={settingsSection}
+            onSectionChange={navigateSettings}
+            onReturn={() => navigateSettings('editor')}
+            busy={settingsBusy}
+            contents={{
+              'local-ai': (
+                <LocalAISettings onBusyChange={setSettingsBusy} onDirtyChange={setSettingsDirty} />
+              ),
+              media: (
+                <Suspense fallback={<p role="status">正在读取媒体工具…</p>}>
+                  <MediaToolsDialog
+                    inline
+                    onClose={() => navigateSettings('editor')}
+                    onReturnFocus={() => {}}
+                    onBusyChange={setSettingsBusy}
+                    onDirtyChange={setSettingsDirty}
+                  />
+                </Suspense>
+              ),
+              models: (
+                <ModelServicesSettings
+                  key={modelSettingsKind}
+                  initialKind={modelSettingsKind}
+                  onBusyChange={setSettingsBusy}
+                  onDirtyChange={setSettingsDirty}
+                />
+              ),
+            }}
+          />
+        ) : null}
+        {settingsLeaveDialog}
       </TooltipProvider>
     );
 
@@ -1187,6 +1377,8 @@ function App() {
     <TooltipProvider>
       <div
         className={`editor-shell ${leftOpen ? '' : 'left-collapsed'} ${sideOpen ? '' : 'right-collapsed'}`}
+        hidden={settingsOpen}
+        inert={settingsOpen}
       >
         <header className="app-header">
           <div className="brand">
@@ -1196,12 +1388,36 @@ function App() {
             <strong>AIVidCut</strong>
             <span className="build-badge">PREVIEW</span>
           </div>
-          <div className="project-heading">
-            <span className={`save-dot ${bootstrap.dirty ? 'dirty' : ''}`} />
-            <span>{bootstrap.project.name}</span>
-            <ChevronDown size={12} />
-            <span className="quiet-badge">本地工程</span>
-          </div>
+          <ProjectMenu
+            name={bootstrap.project.name}
+            dirty={bootstrap.dirty}
+            details={`${bootstrap.project.settings.width} × ${bootstrap.project.settings.height} · ${fps(bootstrap.project.settings).toFixed(2)} fps · ${bootstrap.project.settings.sampleRate / 1000} kHz`}
+            recoveries={
+              recoveryScopeMatches
+                ? (recovery.status?.pending || 0) + (recovery.status?.inputDrafts || 0)
+                : 0
+            }
+            recoveryError={Boolean(recovery.status?.error)}
+            disabled={transitionDisabled}
+            onVersions={() =>
+              void navigateEditor(() => {
+                clock.pause();
+                setVersionsOpen(true);
+              })
+            }
+            onCollect={() =>
+              void navigateEditor(() => {
+                clock.pause();
+                setCollectionOpen(true);
+              })
+            }
+            onRecovery={() =>
+              void navigateEditor(() => {
+                clock.pause();
+                setRecoveryOpen(true);
+              })
+            }
+          />
           <div className="app-header-actions">
             <IconButton label="打开工程" disabled={transitionDisabled} onClick={openProject}>
               <FolderOpen size={17} />
@@ -1209,62 +1425,6 @@ function App() {
             <IconButton label="保存工程 · ⌘/Ctrl S" onClick={() => void save()}>
               <Save size={16} />
             </IconButton>
-            <IconButton
-              id="project-versions-trigger"
-              label="工程版本"
-              disabled={transitionDisabled}
-              onClick={() =>
-                void navigateEditor(() => {
-                  clock.pause();
-                  setVersionsOpen(true);
-                })
-              }
-            >
-              <History size={17} />
-            </IconButton>
-            <IconButton
-              id="project-collect-trigger"
-              label="收集工程副本"
-              disabled={transitionDisabled}
-              onClick={() =>
-                void navigateEditor(() => {
-                  clock.pause();
-                  setCollectionOpen(true);
-                })
-              }
-            >
-              <Archive size={17} />
-            </IconButton>
-            <span className="recovery-entry">
-              <IconButton
-                id="recovery-center-trigger"
-                label="恢复中心"
-                aria-describedby="recovery-entry-summary"
-                disabled={transitionDisabled}
-                onClick={() =>
-                  void navigateEditor(() => {
-                    clock.pause();
-                    setRecoveryOpen(true);
-                  })
-                }
-              >
-                <LifeBuoy size={17} />
-              </IconButton>
-              {recoveryScopeMatches &&
-              (recovery.status?.pending ||
-                recovery.status?.inputDrafts ||
-                recovery.status?.error) ? (
-                <span className="count-badge" aria-hidden="true">
-                  {recovery.status?.error
-                    ? '!'
-                    : (recovery.status?.pending || 0) + (recovery.status?.inputDrafts || 0)}
-                </span>
-              ) : null}
-              <span id="recovery-entry-summary" className="sr-only" role="status">
-                {recovery.status?.error ||
-                  `${recoveryScopeMatches ? recovery.status?.pending || 0 : 0}份可恢复工程，${recoveryScopeMatches ? recovery.status?.inputDrafts || 0 : 0}份属性输入草稿`}
-              </span>
-            </span>
             <Button
               variant="primary"
               disabled={Boolean(busy) || !duration || !exportCapability?.available}
@@ -1315,30 +1475,22 @@ function App() {
             <span className="workspace-line" />
           </div>
           <div className="toolbar-group">
-            <Button
-              variant={sideOpen && sideTab === 'jobs' ? 'outline' : 'ghost'}
-              onClick={() => {
-                void navigateEditor(() => {
-                  setSideOpen(true);
-                  setSideTab('jobs');
-                });
-              }}
-            >
-              <ArrowDownToLine size={14} />
-              任务{activeJobs ? <span className="count-badge">{activeJobs}</span> : null}
-            </Button>
-            <Button
-              variant={sideOpen && sideTab === 'assistant' ? 'outline' : 'ghost'}
-              onClick={() => {
-                void navigateEditor(() => {
-                  setSideOpen((v) => !(v && sideTab === 'assistant'));
-                  setSideTab('assistant');
-                });
-              }}
-            >
-              <Sparkles size={14} />
-              AI 助手
-            </Button>
+            {activeJobs > 0 ? (
+              <>
+                <Button
+                  variant={sideOpen && sideTab === 'jobs' ? 'outline' : 'ghost'}
+                  onClick={() => {
+                    void navigateEditor(() => {
+                      setSideOpen(true);
+                      setSideTab('jobs');
+                    });
+                  }}
+                >
+                  <ArrowDownToLine size={14} />
+                  任务{activeJobs ? <span className="count-badge">{activeJobs}</span> : null}
+                </Button>
+              </>
+            ) : null}
             <IconButton
               label={sideOpen ? '收起右侧面板' : '展开右侧面板'}
               onClick={() => void navigateEditor(() => setSideOpen((v) => !v))}
@@ -1661,6 +1813,7 @@ function App() {
           ) : null}
           <div className="center-workspace">
             <Preview
+              onOpenMediaSettings={() => openSettingsSection('media')}
               onUseCurrentFrame={(intent) => {
                 setCaptureIntent({
                   ...intent,
@@ -1843,6 +1996,8 @@ function App() {
                   )
                 ) : sideTab === 'generation' ? (
                   <GenerationPanel
+                    connectionsVersion={connectionsVersion}
+                    onOpenConnections={() => openSettingsSection('models', 'generation')}
                     timeRange={markedRange}
                     applyPlacement={async (action) => {
                       if (!(await waitForIdle())) return null;
@@ -1886,6 +2041,8 @@ function App() {
                   />
                 ) : sideTab === 'speech' ? (
                   <SpeechPanel
+                    connectionsVersion={connectionsVersion}
+                    onOpenConnections={() => openSettingsSection('models', 'speech')}
                     project={bootstrap.project}
                     sourceEpoch={bootstrap.sourceEpoch}
                     onLocateWords={(value) => {
@@ -1924,12 +2081,11 @@ function App() {
                   />
                 ) : sideTab === 'jobs' ? (
                   <div className="job-list">
-                    <Button id="media-tools-trigger" onClick={() => setMediaToolsOpen(true)}>
-                      媒体工具设置
-                    </Button>
-                    <Button id="resource-monitor-trigger" onClick={() => setResourceOpen(true)}>
-                      资源诊断{resourceRecording ? ' · 记录中' : ''}
-                    </Button>
+                    {resourceRecording ? (
+                      <Button onClick={() => openSettingsSection('diagnostics')}>
+                        资源诊断记录中 · 查看
+                      </Button>
+                    ) : null}
                     {jobs.length ? (
                       jobs.map((job) => (
                         <div className={`job-item job-${job.status}`} key={job.id}>
@@ -2016,10 +2172,13 @@ function App() {
                         { value: 'cli', label: '规划' },
                         { value: 'execution', label: '执行' },
                         { value: 'workflows', label: '工作流' },
-                        { value: 'mcp', label: '工具连接' },
                       ]}
                       onChange={setAssistantView}
-                    />
+                    >
+                      <Button variant="ghost" onClick={() => openSettingsSection('mcp')}>
+                        连接设置
+                      </Button>
+                    </PanelTabs>
                     <div
                       className="assistant-workspace-body"
                       id="assistant-tabs-panel"
@@ -2035,11 +2194,12 @@ function App() {
                           }
                         >
                           <AgentExecutionPanel
+                            onOpenSettings={() => openSettingsSection('local-ai')}
                             sourceEpoch={bootstrap.sourceEpoch}
                             project={bootstrap.project}
                             selection={selectedIds}
                             mcpStatus={editor.mcpStatus}
-                            onOpenMCP={() => setAssistantView('mcp')}
+                            onOpenMCP={() => openSettingsSection('mcp')}
                             onProgress={(job, force) =>
                               editor.syncExternalRevision(job.projectId, job.endRevision, force)
                             }
@@ -2060,6 +2220,10 @@ function App() {
                         </Suspense>
                       ) : assistantView === 'workflows' ? (
                         <WorkflowPanel
+                          onManagePresets={(draft) => {
+                            setPresetSettingsDraft(draft);
+                            openSettingsSection('presets');
+                          }}
                           key={`${bootstrap.project.id}:${bootstrap.sourceEpoch ?? 0}`}
                           project={bootstrap.project}
                           selection={selectedIds}
@@ -2082,39 +2246,9 @@ function App() {
                             return run('应用工作流', action);
                           }}
                         />
-                      ) : assistantView === 'mcp' ? (
-                        <MCPPanel
-                          sourceEpoch={bootstrap.sourceEpoch}
-                          applyAnalysis={(action) => run('接纳画面分析', action)}
-                          onOpenExecution={() => setAssistantView('execution')}
-                          project={bootstrap.project}
-                          status={editor.mcpStatus}
-                          onStatus={editor.acceptMCPStatus}
-                          onOpenJobs={(kind) =>
-                            setSideTab(
-                              kind === 'generation'
-                                ? 'generation'
-                                : kind === 'speech'
-                                  ? 'speech'
-                                  : 'jobs',
-                            )
-                          }
-                          prepareProject={async () => {
-                            const current = await settleProjectState({
-                              commitDraft: commitActiveDraft,
-                              waitForIdle,
-                              read: bridge.bootstrap,
-                              accept: acceptBootstrap,
-                            });
-                            if (current.kind === 'invalid') {
-                              setError('请先处理尚未提交的属性草稿，再启动工具连接。');
-                              return null;
-                            }
-                            return current.snapshot.project;
-                          }}
-                        />
                       ) : (
                         <AgentPanel
+                          onOpenSettings={() => openSettingsSection('local-ai')}
                           project={bootstrap.project}
                           selection={selectedIds}
                           onBootstrap={acceptBootstrap}
@@ -2251,37 +2385,41 @@ function App() {
             <span>{busy || (bootstrap.dirty ? '有未保存的更改' : notice || '工程已就绪')}</span>
           </div>
           <div className="status-meta">
+            {editor.mcpStatus?.running ? (
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  if (editor.mcpStatus?.executionId) {
+                    void navigateEditor(() => {
+                      setSideOpen(true);
+                      setSideTab('assistant');
+                      setAssistantView('execution');
+                    });
+                  } else openSettingsSection('mcp');
+                }}
+              >
+                {editor.mcpStatus.executionId
+                  ? 'AI 执行中'
+                  : !editor.mcpStatus.scopeValid
+                    ? 'MCP 待重连'
+                    : editor.mcpStatus.allowEdits
+                      ? 'MCP 可编辑'
+                      : 'MCP 只读'}
+              </Button>
+            ) : null}
             <span>{bootstrap.project.clips.length} 个片段</span>
             <span>
               {bootstrap.project.settings.width} × {bootstrap.project.settings.height}
             </span>
             <span>{bootstrap.project.settings.sampleRate / 1000} kHz</span>
-            <span className="mono">REV {bootstrap.project.revision}</span>
+            {resourceRecording ? (
+              <Button variant="ghost" onClick={() => openSettingsSection('diagnostics')}>
+                诊断记录中
+              </Button>
+            ) : null}
           </div>
         </footer>
 
-        {mediaToolsOpen ? (
-          <Suspense fallback={<p role="status">正在打开媒体设置…</p>}>
-            <MediaToolsDialog
-              onClose={() => setMediaToolsOpen(false)}
-              onReturnFocus={() => document.getElementById('media-tools-trigger')?.focus()}
-            />
-          </Suspense>
-        ) : null}
-        {resourceOpen ? (
-          <Suspense fallback={<p role="status">正在打开资源诊断…</p>}>
-            <ResourceMonitorDialog
-              scope={{
-                projectId: bootstrap.project.id,
-                projectRevision: bootstrap.project.revision,
-                sourceEpoch: bootstrap.sourceEpoch ?? 0,
-              }}
-              onClose={() => setResourceOpen(false)}
-              onRecording={setResourceRecording}
-              onReturnFocus={() => document.getElementById('resource-monitor-trigger')?.focus()}
-            />
-          </Suspense>
-        ) : null}
         {recoveryOpen ? (
           <Suspense fallback={<p role="status">正在打开恢复中心…</p>}>
             <RecoveryCenterDialog
@@ -2296,7 +2434,7 @@ function App() {
                 setRecoveryOpen(false);
                 void recovery.refresh();
               }}
-              onReturnFocus={() => document.getElementById('recovery-center-trigger')?.focus()}
+              onReturnFocus={() => document.getElementById('project-menu-trigger')?.focus()}
               onDrafts={() => {
                 setRecoveryOpen(false);
                 setDraftsOpen(true);
@@ -2304,6 +2442,9 @@ function App() {
               onManage={() => {
                 setRecoveryOpen(false);
                 setStorageKind('recovery');
+                setSettingsSection('storage');
+                setSettingsOpen(true);
+                settingsReturnFocus.current = document.getElementById('project-menu-trigger');
               }}
               onRestore={async (input) => {
                 if (!(await waitForIdle())) throw new Error('请先处理当前草稿或工程冲突，再恢复。');
@@ -2337,7 +2478,7 @@ function App() {
               }}
               dirty={bootstrap.dirty}
               onClose={() => setDraftsOpen(false)}
-              onReturnFocus={() => document.getElementById('recovery-center-trigger')?.focus()}
+              onReturnFocus={() => document.getElementById('project-menu-trigger')?.focus()}
               onChange={async (action) => {
                 if (!(await waitForIdle())) throw Error('请先处理当前工程冲突。');
                 let failure: unknown;
@@ -2355,31 +2496,6 @@ function App() {
                 setAssetId(null);
                 void recovery.refresh();
               }}
-            />
-          </Suspense>
-        ) : null}
-        {storageKind ? (
-          <Suspense fallback={<p role="status">正在打开资料管理…</p>}>
-            <SnapshotStorageDialog
-              scope={{
-                projectId: bootstrap.project.id,
-                projectRevision: bootstrap.project.revision,
-                sourceEpoch: bootstrap.sourceEpoch ?? 0,
-              }}
-              initialKind={storageKind}
-              onClose={() => {
-                setStorageKind(null);
-                void recovery.refresh();
-              }}
-              onReturnFocus={() =>
-                document
-                  .getElementById(
-                    storageKind === 'version'
-                      ? 'project-versions-trigger'
-                      : 'recovery-center-trigger',
-                  )
-                  ?.focus()
-              }
             />
           </Suspense>
         ) : null}
@@ -2457,7 +2573,7 @@ function App() {
                 setSideTab('jobs');
               }}
               onClose={() => setCollectionOpen(false)}
-              onReturnFocus={() => document.getElementById('project-collect-trigger')?.focus()}
+              onReturnFocus={() => document.getElementById('project-menu-trigger')?.focus()}
             />
           </Suspense>
         ) : null}
@@ -2474,9 +2590,12 @@ function App() {
               onManage={() => {
                 setVersionsOpen(false);
                 setStorageKind('version');
+                setSettingsSection('storage');
+                setSettingsOpen(true);
+                settingsReturnFocus.current = document.getElementById('project-menu-trigger');
               }}
               onClose={() => setVersionsOpen(false)}
-              onReturnFocus={() => document.getElementById('project-versions-trigger')?.focus()}
+              onReturnFocus={() => document.getElementById('project-menu-trigger')?.focus()}
               onRestore={async (input) => {
                 if (!(await waitForIdle()))
                   throw new Error('请先处理当前草稿或工程冲突，再恢复版本。');
@@ -2503,6 +2622,11 @@ function App() {
           open={dialog !== null}
           className={dialog === 'new' ? 'new-project-dialog' : ''}
           onCloseAutoFocus={(event) => {
+            if (settingsOpen) {
+              event.preventDefault();
+              document.getElementById('settings-return')?.focus();
+              return;
+            }
             if (returnToNewTrigger.current) {
               event.preventDefault();
               returnToNewTrigger.current = false;
@@ -2786,6 +2910,117 @@ function App() {
           ) : null}
         </Modal>
       </div>
+      {settingsOpen ? (
+        <SettingsPage
+          key={settingsFormEpoch}
+          appearance={appearance}
+          section={settingsSection}
+          onSectionChange={navigateSettings}
+          onReturn={() => navigateSettings('editor')}
+          busy={settingsBusy}
+          contents={{
+            presets: (
+              <WorkflowPanel
+                presetManagement
+                project={bootstrap.project}
+                selection={[]}
+                onBootstrap={acceptBootstrap}
+                initialDraft={presetSettingsDraft}
+                onBusyChange={setSettingsBusy}
+                onDirtyChange={setSettingsDirty}
+              />
+            ),
+            diagnostics: (
+              <Suspense fallback={<p role="status">正在读取诊断…</p>}>
+                <ResourceMonitorDialog
+                  inline
+                  scope={{
+                    projectId: bootstrap.project.id,
+                    projectRevision: bootstrap.project.revision,
+                    sourceEpoch: bootstrap.sourceEpoch ?? 0,
+                  }}
+                  onClose={() => navigateSettings('editor')}
+                  onReturnFocus={() => {}}
+                  onRecording={setResourceRecording}
+                  onBusyChange={setSettingsBusy}
+                />
+              </Suspense>
+            ),
+            storage: (
+              <Suspense fallback={<p role="status">正在读取资料…</p>}>
+                <SnapshotStorageDialog
+                  inline
+                  scope={{
+                    projectId: bootstrap.project.id,
+                    projectRevision: bootstrap.project.revision,
+                    sourceEpoch: bootstrap.sourceEpoch ?? 0,
+                  }}
+                  initialKind={storageKind || 'version'}
+                  onClose={() => navigateSettings('editor')}
+                  onBusyChange={setSettingsBusy}
+                />
+              </Suspense>
+            ),
+            'local-ai': (
+              <LocalAISettings onBusyChange={setSettingsBusy} onDirtyChange={setSettingsDirty} />
+            ),
+            media: (
+              <Suspense fallback={<p role="status">正在读取媒体工具…</p>}>
+                <MediaToolsDialog
+                  inline
+                  onClose={() => navigateSettings('editor')}
+                  onReturnFocus={() => {}}
+                  onBusyChange={setSettingsBusy}
+                  onDirtyChange={setSettingsDirty}
+                />
+              </Suspense>
+            ),
+            models: (
+              <ModelServicesSettings
+                key={modelSettingsKind}
+                initialKind={modelSettingsKind}
+                onBusyChange={setSettingsBusy}
+                onDirtyChange={setSettingsDirty}
+              />
+            ),
+          }}
+          mcpContent={
+            <MCPPanel
+              key={`${bootstrap.project.id}:${bootstrap.sourceEpoch ?? 0}`}
+              sourceEpoch={bootstrap.sourceEpoch}
+              onBusyChange={setSettingsBusy}
+              applyAnalysis={(action) => run('接纳画面分析', action)}
+              onOpenExecution={() => {
+                setSettingsOpen(false);
+                setSideTab('assistant');
+                setAssistantView('execution');
+              }}
+              project={bootstrap.project}
+              status={editor.mcpStatus}
+              onStatus={editor.acceptMCPStatus}
+              onOpenJobs={(kind) => {
+                setSettingsOpen(false);
+                setSideTab(
+                  kind === 'generation' ? 'generation' : kind === 'speech' ? 'speech' : 'jobs',
+                );
+              }}
+              prepareProject={async () => {
+                const current = await settleProjectState({
+                  commitDraft: commitActiveDraft,
+                  waitForIdle,
+                  read: bridge.bootstrap,
+                  accept: acceptBootstrap,
+                });
+                if (current.kind === 'invalid') {
+                  throw new Error('请返回应用处理尚未提交的属性草稿，再启动工具连接。');
+                }
+                return current.snapshot.project;
+              }}
+            />
+          }
+        />
+      ) : null}
+      {settingsLeaveDialog}
     </TooltipProvider>
   );
 }

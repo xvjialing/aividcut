@@ -29,6 +29,8 @@ import type { TranscriptWordSelection } from '../transcript-cut-types';
 type Review = { input: StartSpeechInput; projectId: string; revision: number };
 export function SpeechPanel({
   project,
+  onOpenConnections,
+  connectionsVersion = 0,
   onBootstrap,
   applyToProject,
   prepareProject,
@@ -37,6 +39,8 @@ export function SpeechPanel({
   onLocateWords,
 }: {
   project: Project;
+  onOpenConnections?: () => void;
+  connectionsVersion?: number;
   onBootstrap: (value: Bootstrap) => void;
   applyToProject?: (label: string, action: () => Promise<Bootstrap>) => Promise<Bootstrap | null>;
   prepareProject?: () => Promise<Project | null>;
@@ -344,13 +348,22 @@ export function SpeechPanel({
       void api
         .getConnections()
         .then((values) => {
-          if (alive.current)
-            setConnections(
-              (values || []).filter((value) => value.providerId === catalog?.providerId),
+          if (alive.current) {
+            const profiles = (values || []).filter(
+              (value) => value.providerId === catalog?.providerId,
             );
+            setConnections(profiles);
+            setConnectionID((current) =>
+              profiles.some((profile) => profile.id === current) ? current : profiles[0]?.id || '',
+            );
+          }
         })
         .catch((cause) => setError(cause instanceof Error ? cause.message : '连接读取失败。'));
   };
+  useEffect(() => {
+    if (connectionsVersion > 0) connectionChanged();
+  }, [connectionsVersion]);
+
   const visibleVoices = voiceConnection === connectionID ? voicePage.voices : [];
   return (
     <div className="speech-panel">
@@ -380,10 +393,10 @@ export function SpeechPanel({
         <Button
           variant="ghost"
           disabled={!loaded || Boolean(busy)}
-          onClick={() => setShowConnections(true)}
+          onClick={() => (onOpenConnections ? onOpenConnections() : setShowConnections(true))}
         >
           <Settings2 size={13} />
-          连接
+          管理连接
         </Button>
       </div>
       {error ? (

@@ -1,0 +1,14 @@
+Window: "AIVidCut", App: AIVidCut.
+0 AIVidCut, ID: handleClick, Secondary Actions: Cancel, Pick
+	1 menu Secondary Actions: Cancel
+		2 About AIVidCut, ID: orderFrontStandardAboutPanel:
+		3 设置…, ID: handleClick
+		4 Services, ID: handleClick
+			5 menu Secondary Actions: Cancel
+				6 No Services Apply
+				7 Services Settings…
+		8 Hide AIVidCut, ID: hide:
+		9 Hide Others, ID: hideOtherApplications:
+		10 Show All, ID: handleClick
+		11 Quit AIVidCut, ID: terminate:
+		12 Quit and Keep Windows

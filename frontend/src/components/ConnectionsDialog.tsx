@@ -3,7 +3,8 @@ import { Eye, EyeOff, Plus, Trash2 } from 'lucide-react';
 import type { ConnectionAPI, ConnectionProfile, GenerationCapability } from '../generation-types';
 import { generationBridge } from '../lib/bridge';
 import { canGenerate, providerNames, safeConnectionError } from '../lib/generation';
-import { Button, Field, Input, Modal, Select } from './ui';
+import { useSettingsFormState, type SettingsFormEvents } from '../lib/settings';
+import { Button, Field, Input, SettingsSurface, Select } from './ui';
 
 export function ConnectionsDialog({
   open,
@@ -13,6 +14,9 @@ export function ConnectionsDialog({
   modelOptions,
   onChanged,
   api = generationBridge,
+  inline = false,
+  onBusyChange,
+  onDirtyChange,
 }: {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -21,8 +25,10 @@ export function ConnectionsDialog({
   modelOptions?: Array<{ providerId: string; modelId: string }>;
   onChanged: (profile?: ConnectionProfile) => void;
   api?: ConnectionAPI;
-}) {
+  inline?: boolean;
+} & SettingsFormEvents) {
   const available = modelOptions || catalog.filter(canGenerate);
+  const [dirty, setDirty] = useState(false);
   const [id, setID] = useState('');
   const [name, setName] = useState('');
   const [provider, setProvider] = useState(available[0]?.providerId || 'openai');
@@ -38,6 +44,7 @@ export function ConnectionsDialog({
   const [health, setHealth] = useState<{ pendingCleanup: number; storage: string } | null>(null);
   const [deleting, setDeleting] = useState<ConnectionProfile | null>(null);
   const errorID = useId();
+  useSettingsFormState(Boolean(busy), dirty, { onBusyChange, onDirtyChange });
   const selected = connections.find((profile) => profile.id === id);
   const canKeepCredential = Boolean(selected?.configured && selected.providerId === provider);
   const models = available.filter((capability) => capability.providerId === provider);
@@ -46,12 +53,19 @@ export function ConnectionsDialog({
     ...new Set([...catalog, ...available].map((capability) => capability.providerId)),
   ];
 
+  useEffect(() => {
+    const element = secretInput.current;
+    return () => {
+      if (element) element.value = '';
+    };
+  }, [open, inline]);
   function clearSecret() {
     if (secretInput.current) secretInput.current.value = '';
     setSecret('');
     setRevealed(false);
   }
   function newConnection() {
+    setDirty(false);
     clearSecret();
     setID('');
     setName('');
@@ -82,6 +96,7 @@ export function ConnectionsDialog({
   }, [open]);
 
   function choose(profile: ConnectionProfile) {
+    setDirty(false);
     clearSecret();
     setID(profile.id);
     setName(profile.name);
@@ -93,6 +108,10 @@ export function ConnectionsDialog({
     setDeleting(null);
   }
   function close() {
+    if (inline) {
+      newConnection();
+      return;
+    }
     if (pending.current) return;
     clearSecret();
     setError('');
@@ -127,6 +146,7 @@ export function ConnectionsDialog({
       clearSecret();
       setID(profile.id);
       setWarning(profile.warning ? safeConnectionError(new Error(profile.warning), secret) : '');
+      setDirty(false);
       setNotice('连接已保存，账号与模型权限尚未验证。');
       onChanged(profile);
       await refreshHealth();
@@ -185,7 +205,8 @@ export function ConnectionsDialog({
   }
 
   return (
-    <Modal
+    <SettingsSurface
+      inline={inline}
       open={open}
       title="模型连接"
       description="API 密钥交给本机凭据存储；保存配置不会验证账号，也不会发起收费生成。"
@@ -237,7 +258,10 @@ export function ConnectionsDialog({
             <Input
               value={name}
               required
-              onChange={(event) => setName(event.target.value)}
+              onChange={(event) => {
+                setDirty(true);
+                setName(event.target.value);
+              }}
               disabled={Boolean(busy)}
             />
           </Field>
@@ -247,6 +271,7 @@ export function ConnectionsDialog({
                 value={provider}
                 disabled={Boolean(busy)}
                 onChange={(event) => {
+                  setDirty(true);
                   clearSecret();
                   setProvider(event.target.value);
                   setModel(
@@ -273,7 +298,10 @@ export function ConnectionsDialog({
               <Select
                 value={model}
                 disabled={Boolean(busy) || !models.length}
-                onChange={(event) => setModel(event.target.value)}
+                onChange={(event) => {
+                  setDirty(true);
+                  setModel(event.target.value);
+                }}
               >
                 {!supported && model ? <option value={model}>{model}（无能力声明）</option> : null}
                 {models.map((capability) => (
@@ -304,6 +332,7 @@ export function ConnectionsDialog({
                 required={!canKeepCredential}
                 spellCheck={false}
                 onChange={(event) => {
+                  setDirty(true);
                   setSecret(event.target.value);
                   if (!event.target.value) setRevealed(false);
                 }}
@@ -336,7 +365,7 @@ export function ConnectionsDialog({
               </Button>
             ) : null}
             <Button disabled={Boolean(busy)} onClick={close}>
-              取消
+              {inline ? '重置输入' : '取消'}
             </Button>
             <Button type="submit" variant="primary" busy={Boolean(busy)} disabled={!supported}>
               保存连接
@@ -367,6 +396,6 @@ export function ConnectionsDialog({
           {error}
         </p>
       ) : null}
-    </Modal>
+    </SettingsSurface>
   );
 }

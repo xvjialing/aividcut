@@ -569,3 +569,57 @@ describe('外部请求只准备，客户端明确审批', () => {
     expect(button('核对本次请求…').disabled).toBe(true);
   });
 });
+
+it('设置中的预设管理载入当前参数但不执行工作流，保存保持版本核对', async () => {
+  const api = fakeWorkflowAPI();
+  const dirty = vi.fn();
+  await render(
+    workflowPanel(api, {
+      presetManagement: true,
+      initialDraft: {
+        workflowId: workflowDefinition.id,
+        parameters: { ...workflowDefinition.defaults, paddingFrames: 14 },
+        presetId: workflowPreset.id,
+        presetVersion: 1,
+      },
+      onDirtyChange: dirty,
+    }),
+  );
+  expect(field('保留边距 · 帧').value).toBe('14');
+  expect(
+    [...document.querySelectorAll('button')].some((b) => b.textContent?.trim() === '预览影响'),
+  ).toBe(false);
+  await enter(field('保留边距 · 帧'), '16');
+  expect(dirty).toHaveBeenLastCalledWith(true);
+  await click(button('更新此预设…'));
+  await click(button('保存预设'));
+  expect(api.saveWorkflowPreset).toHaveBeenCalledWith(
+    expect.objectContaining({
+      id: workflowPreset.id,
+      baseVersion: 1,
+      parameters: expect.objectContaining({ paddingFrames: 16 }),
+    }),
+  );
+  expect(api.previewWorkflow).not.toHaveBeenCalled();
+  expect(api.applyWorkflowPreview).not.toHaveBeenCalled();
+  expect(dirty).toHaveBeenLastCalledWith(false);
+});
+
+it('工作台预设入口传递当前草稿，主面板只保留载入与执行', async () => {
+  const api = fakeWorkflowAPI(),
+    manage = vi.fn();
+  await render(workflowPanel(api, { onManagePresets: manage }));
+  await enter(field('保留边距 · 帧'), '12');
+  await click(button('管理预设'));
+  expect(manage).toHaveBeenCalledWith(
+    expect.objectContaining({
+      workflowId: workflowDefinition.id,
+      parameters: expect.objectContaining({ paddingFrames: '12' }),
+    }),
+  );
+  expect(
+    [...document.querySelectorAll('button')].some((b) => b.textContent?.trim() === '保存为新预设…'),
+  ).toBe(false);
+  expect(api.saveWorkflowPreset).not.toHaveBeenCalled();
+  expect(button('预览影响')).toBeTruthy();
+});

@@ -182,7 +182,7 @@ describe('生成提交的显式计费确认', () => {
         (option) => option.value === 'speech-only',
       ),
     ).toBe(false);
-    await click(button('连接'));
+    await click(button('管理连接'));
     expect(document.querySelector('[role="dialog"]')?.textContent).not.toContain('语音专用连接');
     expect(document.querySelectorAll('.connection-profile')).toHaveLength(0);
     expect(api.submitGeneration).not.toHaveBeenCalled();
@@ -213,7 +213,7 @@ describe('生成提交的显式计费确认', () => {
     ).toEqual(['', configuredConnection.id, unknown.id]);
     await enter(field('模型连接'), unknown.id);
     expect(document.body.textContent).toContain('当前不能提交生成');
-    await click(button('连接'));
+    await click(button('管理连接'));
     expect(document.querySelectorAll('.connection-profile')).toHaveLength(2);
     expect(document.querySelector('[role="dialog"]')?.textContent).toContain('图片旧模型连接');
     expect(document.querySelector('[role="dialog"]')?.textContent).not.toContain('语音连接');
@@ -745,4 +745,28 @@ describe('生成任务恢复与候选导入', () => {
     expect(api.importGenerationResult).not.toHaveBeenCalled();
     expect(api.submitGeneration).not.toHaveBeenCalled();
   });
+});
+
+it('管理连接跳转设置，连接元信息刷新保留创作草稿且不自动生成', async () => {
+  const api = fakeGenerationAPI(),
+    open = vi.fn();
+  const view = (version: number) => (
+    <GenerationPanel
+      project={generationProject}
+      onBootstrap={vi.fn()}
+      api={api}
+      onOpenConnections={open}
+      connectionsVersion={version}
+    />
+  );
+  await render(view(0));
+  await enter(field('内容描述'), '保留当前提示词');
+  await click(button('管理连接'));
+  expect(open).toHaveBeenCalledOnce();
+  expect(document.querySelector('[role="dialog"]')).toBeNull();
+  const reads = api.getConnections.mock.calls.length;
+  await render(view(1));
+  expect(api.getConnections.mock.calls.length).toBeGreaterThan(reads);
+  expect(field('内容描述').value).toBe('保留当前提示词');
+  expect(api.submitGeneration).not.toHaveBeenCalled();
 });

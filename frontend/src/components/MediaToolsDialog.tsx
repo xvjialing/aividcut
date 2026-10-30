@@ -7,7 +7,8 @@ import type {
   MediaToolSettings,
 } from '../media-tools-types';
 import { mediaToolsAPI, isDesktop } from '../lib/bridge';
-import { Button, Field, Input, Modal } from './ui';
+import { useSettingsFormState, type SettingsFormEvents } from '../lib/settings';
+import { Button, Field, Input, SettingsSurface } from './ui';
 const labels: Record<MediaToolKey, string> = {
   ffmpeg: 'FFmpeg程序',
   ffprobe: 'FFprobe程序',
@@ -33,12 +34,16 @@ const empty: MediaToolSettings = {
 export function MediaToolsDialog({
   onClose,
   onReturnFocus,
+  inline = false,
+  onBusyChange,
+  onDirtyChange,
   api = mediaToolsAPI,
 }: {
   onClose: () => void;
   onReturnFocus: () => void;
   api?: MediaToolsAPI;
-}) {
+} & SettingsFormEvents & { inline?: boolean }) {
+  const [reload, setReload] = useState(0);
   const [view, setView] = useState<MediaToolsView | null>(null),
     [draft, setDraft] = useState(empty),
     [inspection, setInspection] = useState<MediaToolsInspection | null>(null),
@@ -73,7 +78,7 @@ export function MediaToolsDialog({
       alive.current = false;
       epoch.current++;
     };
-  }, [api]);
+  }, [api, reload]);
   function change(key: MediaToolKey, value: string) {
     setDraft((old) => {
       const { useBundled: _mode, ...manual } = old;
@@ -112,8 +117,32 @@ export function MediaToolsDialog({
     }
   }, [inspection]);
   const result = inspection?.capabilities;
+  useSettingsFormState(
+    Boolean(busy) && busy !== '读取',
+    Boolean(
+      view &&
+      JSON.stringify([
+        Boolean(draft.useBundled),
+        draft.ffmpeg,
+        draft.ffprobe,
+        draft.worker,
+        draft.repository,
+        draft.profiles,
+      ]) !==
+        JSON.stringify([
+          Boolean(view.saved.useBundled),
+          view.saved.ffmpeg,
+          view.saved.ffprobe,
+          view.saved.worker,
+          view.saved.repository,
+          view.saved.profiles,
+        ]),
+    ),
+    { onBusyChange, onDirtyChange },
+  );
   return (
-    <Modal
+    <SettingsSurface
+      inline={inline}
       open
       title="媒体工具设置"
       description="选择随包或手动配置的媒体工具，检测后保存。重启客户端后生效，当前播放、导出和工程保持使用现有工具。"
@@ -137,6 +166,9 @@ export function MediaToolsDialog({
           </p>
         ) : null}
         {busy === '读取' ? <p role="status">正在读取媒体设置…</p> : null}
+        {!view && !busy && error ? (
+          <Button onClick={() => setReload((value) => value + 1)}>重新读取媒体设置</Button>
+        ) : null}
         {view ? (
           <details>
             <summary>当前会话使用的工具与来源</summary>
@@ -159,32 +191,6 @@ export function MediaToolsDialog({
             </p>
           </details>
         ) : null}
-        <div className="speech-actions">
-          <Button
-            disabled={Boolean(busy) || !view}
-            onClick={() => {
-              if (view) {
-                setDraft({ ...view.active });
-                setInspection(null);
-                setNotice('已填入当前会话路径，请检测后再保存。');
-              }
-            }}
-          >
-            填入当前路径
-          </Button>
-          <Button
-            disabled={Boolean(busy)}
-            variant="ghost"
-            onClick={() => {
-              setDraft(empty);
-              manualDraft.current = empty;
-              setInspection(null);
-              setNotice('已清空候选，FFmpeg/FFprobe改为PATH，原生引擎不配置。请检测后保存。');
-            }}
-          >
-            清空候选路径
-          </Button>
-        </div>
         <label className="checkbox-field">
           <input
             type="checkbox"
@@ -210,49 +216,87 @@ export function MediaToolsDialog({
             从安装目录核对本产品配套工具。没有随包清单时，FFmpeg/FFprobe沿PATH发现；清单校验失败时停止自动回落。保存只记录此模式，重启后应用。
           </p>
         ) : null}
-        {(Object.keys(labels) as MediaToolKey[]).map((key) => (
-          <Field
-            key={key}
-            label={labels[key]}
-            hint={
-              key === 'ffmpeg' || key === 'ffprobe'
-                ? '可留空沿PATH发现；保存的路径需要是本机程序完整路径。'
-                : key === 'worker'
-                  ? '仅使用本产品明确构建与验证的原生媒体程序，配套目录可在下面指定。'
-                  : '选择与该原生媒体程序配套的目录；留空使用程序自身默认。'
-            }
-          >
-            <div className="media-tool-path">
-              <Input
-                id={`media-tools-input-${key}`}
-                aria-label={labels[key]}
-                value={draft[key]}
-                disabled={Boolean(busy) || Boolean(draft.useBundled)}
-                aria-invalid={Boolean(inspection?.errors[key])}
-                aria-describedby={inspection?.errors[key] ? `media-tools-error-${key}` : undefined}
-                onChange={(e) => change(key, e.target.value)}
-              />
-              {isDesktop() ? (
-                <Button
-                  disabled={Boolean(busy) || Boolean(draft.useBundled)}
-                  onClick={() =>
-                    void perform('选择', async () => {
-                      const path = await api.choose(key);
-                      if (path && alive.current) change(key, path);
-                    })
+        {!inline || !draft.useBundled ? (
+          <>
+            <div className="speech-actions">
+              <Button
+                disabled={Boolean(busy) || !view}
+                onClick={() => {
+                  if (view) {
+                    setDraft({ ...view.active });
+                    setInspection(null);
+                    setNotice('已填入当前会话路径，请检测后再保存。');
                   }
-                >
-                  选择…
-                </Button>
-              ) : null}
+                }}
+              >
+                填入当前路径
+              </Button>
+              <Button
+                disabled={Boolean(busy)}
+                variant="ghost"
+                onClick={() => {
+                  setDraft(empty);
+                  manualDraft.current = empty;
+                  setInspection(null);
+                  setNotice('已清空候选，FFmpeg/FFprobe改为PATH，原生引擎不配置。请检测后保存。');
+                }}
+              >
+                清空候选路径
+              </Button>
             </div>
-            {inspection?.errors[key] ? (
-              <p id={`media-tools-error-${key}`} className="form-error">
-                {inspection.errors[key]}
-              </p>
-            ) : null}
-          </Field>
-        ))}
+          </>
+        ) : null}
+        {inline && draft.useBundled ? (
+          <p className="field-hint">自动使用随包媒体工具，无需填写路径。取消上方选项可手动配置。</p>
+        ) : (
+          <>
+            {(Object.keys(labels) as MediaToolKey[]).map((key) => (
+              <Field
+                key={key}
+                label={labels[key]}
+                hint={
+                  key === 'ffmpeg' || key === 'ffprobe'
+                    ? '可留空沿PATH发现；保存的路径需要是本机程序完整路径。'
+                    : key === 'worker'
+                      ? '仅使用本产品明确构建与验证的原生媒体程序，配套目录可在下面指定。'
+                      : '选择与该原生媒体程序配套的目录；留空使用程序自身默认。'
+                }
+              >
+                <div className="media-tool-path">
+                  <Input
+                    id={`media-tools-input-${key}`}
+                    aria-label={labels[key]}
+                    value={draft[key]}
+                    disabled={Boolean(busy) || Boolean(draft.useBundled)}
+                    aria-invalid={Boolean(inspection?.errors[key])}
+                    aria-describedby={
+                      inspection?.errors[key] ? `media-tools-error-${key}` : undefined
+                    }
+                    onChange={(e) => change(key, e.target.value)}
+                  />
+                  {isDesktop() ? (
+                    <Button
+                      disabled={Boolean(busy) || Boolean(draft.useBundled)}
+                      onClick={() =>
+                        void perform('选择', async () => {
+                          const path = await api.choose(key);
+                          if (path && alive.current) change(key, path);
+                        })
+                      }
+                    >
+                      选择…
+                    </Button>
+                  ) : null}
+                </div>
+                {inspection?.errors[key] ? (
+                  <p id={`media-tools-error-${key}`} className="form-error">
+                    {inspection.errors[key]}
+                  </p>
+                ) : null}
+              </Field>
+            ))}
+          </>
+        )}
         <p className="field-hint">
           不自动下载、安装或扫描其它应用。请使用已确认来源的独立工具；检测会启动所选程序查询能力。保存设置不会进入工程包。
         </p>
@@ -340,7 +384,7 @@ export function MediaToolsDialog({
       </div>
       <div className="dialog-actions replacement-dialog-actions">
         <Button disabled={Boolean(busy)} onClick={onClose}>
-          关闭设置
+          {inline ? '返回应用' : '关闭设置'}
         </Button>
         <Button
           variant="primary"
@@ -368,6 +412,6 @@ export function MediaToolsDialog({
           保存，重启后生效
         </Button>
       </div>
-    </Modal>
+    </SettingsSurface>
   );
 }

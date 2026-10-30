@@ -60,14 +60,13 @@ export function ClipWaveform({
     const mins = new Float32Array(width),
       maxs = new Float32Array(width),
       coverage = new Uint8Array(width);
-    const color = getComputedStyle(element).color;
     setStatus('loading');
     setError('');
     let paint = 0;
     const draw = () => {
       paint = 0;
       context.clearRect(0, 0, width, height * ratio);
-      context.strokeStyle = color;
+      context.strokeStyle = getComputedStyle(element).color;
       context.lineWidth = 1;
       context.beginPath();
       const middle = (height * ratio) / 2;
@@ -80,6 +79,14 @@ export function ClipWaveform({
         }
       context.stroke();
     };
+    // 已读波形只重绘颜色，不因界面外观变化重新请求音频。
+    const themeObserver = new MutationObserver(() => {
+      if (!paint) paint = requestAnimationFrame(draw);
+    });
+    themeObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
     void (async () => {
       for (let index = window.first; index <= window.last; index++) {
         const tile = await queue.read(projectId, asset, index, controller.signal);
@@ -96,6 +103,7 @@ export function ClipWaveform({
     });
     return () => {
       controller.abort();
+      themeObserver.disconnect();
       if (paint) cancelAnimationFrame(paint);
       element.width = 0;
       element.height = 0;

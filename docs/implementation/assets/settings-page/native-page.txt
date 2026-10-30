@@ -1,0 +1,43 @@
+Window: "AIVidCut", App: AIVidCut.
+0 standard window AIVidCut, Secondary Actions: Raise
+	1 scroll area
+		2 HTML content Description: 外观 · 设置 · AIVidCut, URL: wails://localhost/
+			3 container 设置导航
+				4 button 返回应用
+				5 container 偏好设置
+					6 text 偏好
+					7 link 外观, Value: wails://localhost/#settings-appearance
+			8 container 外观
+				9 heading 外观, Value: 1
+					10 text 外观
+				11 container 主题
+					12 heading 主题, Value: 2
+						13 text 主题
+					14 container 明暗模式
+						15 text 明暗模式
+						16 heading 明暗模式, Value: 3
+							17 text 明暗模式
+						18 text 选择浅色、深色或跟随系统，立即应用到整个界面。
+						19 container
+							20 radio button 浅色模式, Help: 选择浅色、深色或跟随系统，立即应用到整个界面。, Value: 1
+							21 text 浅色模式
+						22 container
+							23 radio button 深色模式, Help: 选择浅色、深色或跟随系统，立即应用到整个界面。, Value: 0
+							24 text 深色模式
+						25 container
+							26 radio button 跟随系统, Help: 选择浅色、深色或跟随系统，立即应用到整个界面。, Value: 0
+							27 text 跟随系统
+					28 container
+						29 text 外观偏好自动保存。 当前显示为 浅色 模式。
+	30 close button
+	31 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	32 minimize button
+33 menu bar
+	34 AIVidCut, ID: handleClick
+	35 File, ID: handleClick
+	36 Edit, ID: handleClick
+	37 View, ID: handleClick
+	38 Window, ID: handleClick
+	39 Help, ID: handleClick
+
+The focused UI element is 9 heading 外观, Value: 1

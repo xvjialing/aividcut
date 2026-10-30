@@ -34,12 +34,13 @@ import (
 )
 
 type App struct {
-	ctx     context.Context
-	desktop *wails.App
-	window  *wails.WebviewWindow
-	service *application.Service
-	closing atomic.Bool
-	ready   atomic.Bool
+	ctx              context.Context
+	desktop          *wails.App
+	window           *wails.WebviewWindow
+	service          *application.Service
+	closing          atomic.Bool
+	ready            atomic.Bool
+	settingsMenuItem *wails.MenuItem
 }
 
 func NewApp() (*App, error) {
@@ -112,7 +113,12 @@ func (a *App) requestClose() bool {
 	return true
 }
 
-func (a *App) FrontendReady() { a.ready.Store(true) }
+func (a *App) FrontendReady() {
+	a.ready.Store(true)
+	if a.settingsMenuItem != nil {
+		a.settingsMenuItem.SetEnabled(true)
+	}
+}
 
 func (a *App) ConfirmClose(action string) error {
 	switch action {

@@ -25,6 +25,7 @@ export function Preview({
   asset,
   composed,
   onImport,
+  onOpenMediaSettings,
   onUseCurrentFrame,
   prepareProject,
   playbackAPI = playbackBridge,
@@ -36,6 +37,7 @@ export function Preview({
   asset?: Asset;
   composed: PreviewFrame | null;
   onImport: () => void;
+  onOpenMediaSettings?: () => void;
   onUseCurrentFrame?: (
     intent: Omit<
       import('../frame-capture-types').CaptureIntent,
@@ -235,13 +237,18 @@ export function Preview({
               );
         }
       }
-      if (empty.current) empty.current.hidden = visible;
-      if (snapshot.current)
-        snapshot.current.hidden =
-          !composed ||
-          composed.frame !== frame ||
-          clock.isPlaying() ||
-          composed.revision !== project.revision;
+      const composedVisible = Boolean(
+        composed &&
+        composed.frame === frame &&
+        !clock.isPlaying() &&
+        composed.revision === project.revision,
+      );
+      const hasPicture = visible || composedVisible;
+      if (empty.current) empty.current.hidden = hasPicture;
+      // 空白预览跟随界面主题；存在实际画面时才显示影片的画布底色。
+      if (stage.current && stage.current.dataset.hasPicture !== String(hasPicture))
+        stage.current.dataset.hasPicture = String(hasPicture);
+      if (snapshot.current) snapshot.current.hidden = !composedVisible;
     };
     sync();
     syncCurrent.current = sync;
@@ -635,6 +642,11 @@ export function Preview({
           <span className="viewer-note" title={unavailable}>
             实验预览不可用：{unavailable}
           </span>
+        ) : null}
+        {!asset && currentCapabilities && !currentCapabilities.available && onOpenMediaSettings ? (
+          <Button variant="ghost" onClick={onOpenMediaSettings}>
+            检查媒体设置
+          </Button>
         ) : null}
       </div>
     </section>

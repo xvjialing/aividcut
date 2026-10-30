@@ -9,8 +9,10 @@ import type {
 import type { MCPStatus } from '../mcp-types';
 import type { WorkflowDefinition } from '../workflow-types';
 import { agentBridge, executionBridge, workflowBridge } from '../lib/bridge';
-import { agentAuthName, agentNames, formatAgentLogin } from '../lib/agent';
+import { agentNames, formatAgentLogin } from '../lib/agent';
 import { executionUnavailable } from '../lib/agent-execution';
+import { AgentEnvironmentDetails } from './AgentEnvironmentDetails';
+import { agentEnvironmentChangedEvent } from './LocalAISettings';
 import { Button, Field, Modal, Select } from './ui';
 import { SourceFrameEvidenceViewer } from './SourceFrameEvidenceViewer';
 
@@ -36,6 +38,7 @@ export function AgentExecutionPanel({
   prepareProject,
   onProgress,
   onOpenMCP,
+  onOpenSettings,
   api = executionBridge,
   getWorkflows = defaultWorkflowGetter,
   getLoginInstructions = defaultLoginGetter,
@@ -47,6 +50,7 @@ export function AgentExecutionPanel({
   prepareProject?: () => Promise<Project | null>;
   onProgress?: (job: AgentExecution, force: boolean) => void | Promise<unknown>;
   onOpenMCP: () => void;
+  onOpenSettings?: () => void;
   api?: AgentExecutionAPI;
   getWorkflows?: () => Promise<WorkflowDefinition[]>;
   getLoginInstructions?: (provider: AgentProvider) => Promise<AgentLoginCommand>;
@@ -320,6 +324,13 @@ export function AgentExecutionPanel({
       if (alive.current) setBusy('');
     }
   }
+  useEffect(() => {
+    const changed = () => {
+      void detect();
+    };
+    window.addEventListener(agentEnvironmentChangedEvent, changed);
+    return () => window.removeEventListener(agentEnvironmentChangedEvent, changed);
+  }, [api]);
   return (
     <div className="agent-panel execution-panel">
       <div className="agent-toolbar">
@@ -339,14 +350,16 @@ export function AgentExecutionPanel({
             运行记录{jobs.length ? ` ${jobs.length}` : ''}
           </Button>
         </div>
-        <Button
-          variant="ghost"
-          disabled={Boolean(busy)}
-          busy={loading}
-          onClick={() => void detect()}
-        >
-          重查执行能力
-        </Button>
+        {!onOpenSettings ? (
+          <Button
+            variant="ghost"
+            disabled={Boolean(busy)}
+            busy={loading}
+            onClick={() => void detect()}
+          >
+            重查执行能力
+          </Button>
+        ) : null}
       </div>
       {error ? (
         <p className="form-error" role="alert">
@@ -455,43 +468,29 @@ export function AgentExecutionPanel({
               <option value="claude">Claude Code</option>
             </Select>
           </Field>
-          <p className="field-hint">
-            {installation?.installed ? `已安装 ${installation.version}` : '未检测到安装'} ·{' '}
-            {agentAuthName(installation?.authState || 'unknown')} · 执行模式隔离诊断
-          </p>
-          {unavailable ? (
-            <p className="agent-warning">{unavailable}</p>
+          {onOpenSettings ? (
+            <div className="agent-setup-summary">
+              <p className={unavailable ? 'agent-warning' : 'field-hint'}>
+                {unavailable
+                  ? `${agentNames[provider]} 暂不可用，请检查本地 AI 设置。`
+                  : `${agentNames[provider]} 已就绪`}
+              </p>
+              <Button variant="ghost" onClick={onOpenSettings}>
+                本地 AI 设置
+              </Button>
+            </div>
           ) : (
-            <p className="agent-validation">当前执行模式条件已通过</p>
+            <>
+              <AgentEnvironmentDetails installation={installation} mode="execution" />
+              <Button
+                variant="ghost"
+                disabled={!installation?.installed || Boolean(busy)}
+                onClick={() => void showLogin()}
+              >
+                查看执行登录说明
+              </Button>
+            </>
           )}
-          {installation?.profileDirectory ? (
-            <p className="file-path">登录作用域：{installation.profileDirectory}</p>
-          ) : null}
-          <details className="agent-details">
-            <summary>执行隔离证据与限制</summary>
-            <p>{installation?.isolation.reason}</p>
-            {(installation?.isolation.checks || []).map((check) => (
-              <p key={check.id}>
-                {check.id} · {check.status} · {check.reason}
-                {check.nextAction ? ` · ${check.nextAction}` : ''}
-              </p>
-            ))}
-            {(installation?.isolation.evidence || []).map((value, index) => (
-              <p key={index}>{value}</p>
-            ))}
-            {(installation?.isolation.limitations || []).map((value, index) => (
-              <p className="agent-warning" key={index}>
-                {value}
-              </p>
-            ))}
-          </details>
-          <Button
-            variant="ghost"
-            disabled={!installation?.installed || Boolean(busy)}
-            onClick={() => void showLogin()}
-          >
-            查看执行登录说明
-          </Button>
           <Field label="执行工作流">
             <Select
               value={workflow}
